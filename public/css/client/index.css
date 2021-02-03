@@ -12,3 +12,7 @@
   font-family: HKGroteskRegular;
   src: url(/fonts/hk-grotesk/HKGrotesk-Regular.otf);
 }
+
+.paddingLeft{
+  padding-left: 150px !important;
+}

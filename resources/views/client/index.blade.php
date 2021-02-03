@@ -29,10 +29,15 @@
         height:100%;
         margin:0;
         padding:0;
+        background-image: url("/assets/client/images/background-image-landing-page-with-hexagons.png");
+        background-position:right top;
+        background-repeat: no-repeat;
+        background-size: 65%;
       }
     </style>
   </head>
-  <body>
+  <body style="">
+    <!-- START OF NAVBAR -->
     <div class="row m-0" style="z-index:99;padding-top:30px">
       <div class="col-md-12 p-0">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -70,19 +75,70 @@
         </nav>
       </div>
     </div>
+    <!-- END OF NAVBAR -->
 
+    <!-- START OF TOP CONTENT-->
     <div class="row m-0">
-      <div class="col-md-6" style="padding-left:150px">
-        <img src="/assets/client/images/logoflick.png" class="img-fluid" style="width:60%;margin-top:70px"  alt="">
-        <p style="font-size:55px;margin-top:30px;font-family:HKGroteskBlack">Build and grow<br>together with us</p>
-        <p style="font-size:20px;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskRegular">We develop softwares from</span>  <b>mobile apps, <br> web apps, even advanced app-based services</b> </p>
-        <a style="font-size:20px;background-color:#3F92D8;color:#FFFFFF;padding:20px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold" href="#">Discover our works</a>
+      <div class="col-md-6" style="padding-left:150px"> 
+        <div style="display:flex;align-items: center;margin-top:100px">
+          <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:12%;"  alt="">
+          <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:35px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
+        </div>
+        <p style="font-size:64px;margin-top:30px;font-family:HKGroteskBlack"> <b> Build and grow<br>together with us</b></p>
+        <p style="font-size:23px;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskRegular">We develop softwares from</span>  <b>mobile apps, <br> web apps, even advanced app-based services</b> </p>
+        <a style="font-size:23px;background-color:#3F92D8;color:#FFFFFF;padding:14px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold" href="#">Discover our works</a>
       </div>
 
-      <div class="col-md-6 p-0" style="text-align:right">
-        <img src="/assets/client/images/Group_346.png" class="img-fluid" style="margin-top:-160px;" alt="">
+      <div class="col-md-6 p-0">
+        <!--<img src="/assets/client/images/background-image-landing-page-with-hexagons.png" class="img-fluid" style="margin-top:-160px;position:absolute" alt="">-->
       </div>
     </div>
+    <!-- END OF TOP CONTENT -->
+
+    <!-- START OF WHAT WE PROVIDE -->
+    <div class="row m-0" style="padding-left:150px;padding-top:290px;padding-bottom:100px">
+      <div class="col-md-12" >
+        <p style="font-size:64px;font-family:HKGroteskBlack"> <b>What we provide</b></p>
+
+      </div>
+      <div class="col-md-4" style="padding-top:100px">
+        <div >
+          <img src="/assets/client/images/mobile-apps-icon.svg" style="width:25%" alt="">
+          <p style="font-size:25px;font-family:HKGroteskBlack;margin-top:15px">Mobile Apps</p>
+          <div style="padding-right:100px">
+            <p style="font-size:20px;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
+          </div>
+          <a href="" style="font-size:20px;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:25px;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          
+        </div>
+      </div>
+
+      <div class="col-md-4" style="padding-top:100px">
+        <div>
+          <img src="/assets/client/images/websites-icon.svg" style="width:25%" alt="">
+          <p style="font-size:25px;font-family:HKGroteskBlack;margin-top:15px">Websites</p>
+          <div style="padding-right:100px">
+            <p style="font-size:20px;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
+          </div>          
+          <a href="" style="font-size:20px;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:25px;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          
+        </div>
+      </div>
+
+      <div class="col-md-4" style="padding-top:100px">
+        <div>
+          <img src="/assets/client/images/desktop-icon.svg" style="width:25%" alt="">
+          <p style="font-size:25px;font-family:HKGroteskBlack;margin-top:15px">Desktop</p>
+          <div style="padding-right:100px">
+            <p style="font-size:20px;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
+          </div>          
+          <a href="" style="font-size:20px;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:25px;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- END OF WHAT WE PROVIDE -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
