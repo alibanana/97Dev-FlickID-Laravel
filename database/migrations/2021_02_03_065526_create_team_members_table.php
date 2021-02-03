@@ -17,7 +17,7 @@ class CreateTeamMembersTable extends Migration
             $table->id();
             $table->string('name', 40);
             $table->string('email')->unique()->nullable();
-            $table->string('photo_file', 40);
+            $table->string('photo_file', 80);
             $table->unsignedBigInteger('job_id');
             $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
             $table->timestamps();

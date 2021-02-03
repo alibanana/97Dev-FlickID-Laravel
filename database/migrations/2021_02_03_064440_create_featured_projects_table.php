@@ -16,8 +16,8 @@ class CreateFeaturedProjectsTable extends Migration
         Schema::create('featured_projects', function (Blueprint $table) {
             $table->id();
             $table->unsignedTinyInteger('position');
-            $table->string('logo_file', 40);
-            $table->string('ilustration_file', 40);
+            $table->string('logo_file', 80);
+            $table->string('ilustration_file', 80);
             $table->string('color_code', 8);
             $table->unsignedBigInteger('project_id');
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');

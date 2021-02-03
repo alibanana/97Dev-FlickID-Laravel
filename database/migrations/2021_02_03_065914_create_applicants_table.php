@@ -20,7 +20,7 @@ class CreateApplicantsTable extends Migration
             $table->string('email');
             $table->string('phone', 16);
             $table->text('address');
-            $table->string('cv_file', 40);
+            $table->string('cv_file', 80);
             $table->string('status', 8)->default("Pending");
             $table->unsignedBigInteger('job_id');
             $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');

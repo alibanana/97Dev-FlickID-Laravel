@@ -15,15 +15,15 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('ilustration_file', 40);
-            $table->string('logo_file', 40);
+            $table->string('ilustration_file', 80);
+            $table->string('logo_file', 80);
             $table->string('title', 40);
             $table->text('description');
             $table->text('sub-description');
             $table->text('scope');
             $table->text('technologies');
             $table->text('deliverables');
-            $table->string('bg_file', 40);
+            $table->string('bg_file', 80);
             $table->string('headline', 100);
             $table->string('sub-headline', 100);
             $table->unsignedBigInteger('project_type_id');
