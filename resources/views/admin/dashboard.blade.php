@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="card-body" style="background-color:#149211">
-                        <h5 class="card-title" >Finished Clients</h5>
+                        <h5 class="card-title"  >Finished Clients</h5>
                         <div>
                             <p class="card-text">5</p>
                             <i class="fas fa-arrow-circle-right"></i><p>View details</p>

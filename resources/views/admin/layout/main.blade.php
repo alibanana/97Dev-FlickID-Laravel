@@ -62,7 +62,7 @@
  
 <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-3" style="padding:0px 100px">
   <div class="col-4 ">
-    <a class="navbar-brand pl-1" href="#"><img src="assets/logoflick.png" alt=""></a>
+    <a class="navbar-brand pl-1" href="/"><img src="assets/logoflick.png" alt=""></a>
   </div>
     <div class="col-8 row " id="navbarNav" >
       <ul class="justify-content-between nav justify-content-start">
@@ -70,7 +70,7 @@
           <a class="nav-link active" aria-current="page" href="#">Project</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">The Team</a>
+          <a class="nav-link" href="/team">The Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" >Applicant</a>
