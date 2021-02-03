@@ -14,7 +14,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <!-- font awesome -->
+    <!--load all fontawesome -->
+    <link href="/fontawesome/css/all.css" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <title></title>
   </head>
   <!-- styling -->
@@ -38,9 +41,9 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   padding: 16px;
   text-align: left;
-  background-color: #145CA8;
   color: white;   
-  margin-bottom:50px;
+  margin-bottom:25px;
+  
   
 }
 
@@ -50,10 +53,8 @@
 .card-text{
     font-size: 50px;
 }
-.alignleft {
-	float: left;
-    font-size: 50px;
-}
+
+
 
     
   /* end styling */
@@ -66,35 +67,91 @@
     
 <div class="container pt-3">
     <div class="row ">
-        <div class="col-md-4 card ">
+    <!-- start client section -->
+        <div class="col-md-4 p-3">
+            <div class="card">
             <h3>Client</h3>
-            <hr>
-                <div class="card-body " >
-                    <h5 class="card-title">Accepted Client</h5>
-                    <p class="alignleft">5</p>
-                   
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Accepted Client</h5>
-                    <p class="card-text">5</p>                   
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Accepted Client</h5>
-                    <p class="card-text">5</p>                   
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Accepted Client</h5>
-                    <p class="card-text">5</p>                   
-                </div> 
+                <hr>
+                    <div class="card-body" style="background-color:#145CA8">
+                        <h5 class="card-title">Accepted Client</h5>
+                        <div>
+                            <p class="card-text">5</p>
+                            <i class="fas fa-arrow-circle-right"></i><p >View details</p>
+                        </div>
+                    </div>
+                    <div class="card-body" style="background-color:#149211">
+                        <h5 class="card-title" >Finished Clients</h5>
+                        <div>
+                            <p class="card-text">5</p>
+                            <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                        </div>                 
+                    </div>
+                    <div class="card-body" style="background-color:#FFBC69">
+                        <h5 class="card-title" >Pending Clients</h5>
+                        <div>
+                            <p class="card-text">5</p>
+                            <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                        </div>                   
+                    </div>
+                    <div class="card-body" style="background-color:#A02B2B">
+                        <h5 class="card-title">Rejected Client</h5>
+                        <div>
+                            <p class="card-text">5</p>
+                            <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                        </div>                  
+                    </div> 
+            </div>
+            
         </div>
-        <div class="col-md-4 card">
-            <h3>Applicants</h3>
-            <hr>
+        <!-- end client section -->
+        <!-- start applicants section -->
+        <div class="col-md-4 p-3 ">
+            <div class="card">
+                <h3>Applicants</h3>
+                <hr>
+                <div class="card-body" style="background-color:#145CA8">
+                    <h5 class="card-title">Accepted Client</h5>
+                    <div>
+                        <p class="card-text">5</p>
+                        <i class="fas fa-arrow-circle-right"></i><p >View details</p>
+                    </div>
+                </div>
+                <div class="card-body" style="background-color:#FFBC69">
+                    <h5 class="card-title" >Pending Applicants</h5>
+                    <div>
+                        <p class="card-text">5</p>
+                        <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                    </div>                   
+                </div>
+                <div class="card-body" style="background-color:#A02B2B">
+                    <h5 class="card-title">Rejected Applicants</h5>
+                    <div>
+                        <p class="card-text">5</p>
+                        <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                    </div>                  
+                </div>
+                    
+            </div>
+            
         </div>
-        <div class="col-md-4 card">
-            <h3>Client</h3>
-            <hr>
+        <!-- end applicant section -->
+        <!-- start client total project -->
+        <div class="col-md-4 p-3">
+            <div class="card">
+                <h3>Clients</h3>
+                <hr>
+                <div class="card-body" style="background-color:#145CA8">
+                    <h5 class="card-title">Total Projects</h5>
+                    <div>
+                        <p class="card-text">5</p>
+                        <i class="fas fa-arrow-circle-right"></i><p >View details</p>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
+        <!-- end client total project -->
     </div>
 </div>
 

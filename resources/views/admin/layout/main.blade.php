@@ -12,7 +12,7 @@
   </head>
   <style>
   a{
-      color:black;
+      color:black !important;
       font-family: 'Roboto';
       font-size: 22px;
   }
