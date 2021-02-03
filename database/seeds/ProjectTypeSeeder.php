@@ -15,17 +15,17 @@ class ProjectTypeSeeder extends Seeder
     {
         $project_types = [
             [
-                'ilustration_file'=>'/assets/seeder/mobile-apps-icon.svg',
+                'ilustration_file'=>'/assets/seeder/project-type-mobile-apps-icon.svg',
                 'type'=>'Mobile Apps',
                 'description'=>'Creating stable and easy to use application for both Android and iOS.'
             ],
             [
-                'ilustration_file'=>'/assets/seeder/websites-icon.svg',
+                'ilustration_file'=>'/assets/seeder/project-type-websites-icon.svg',
                 'type'=>'Websites',
                 'description'=>'Building responsive websites to fit every business needs.'
             ],
             [
-                'ilustration_file'=>'/assets/seeder/desktop-icon.svg',
+                'ilustration_file'=>'/assets/seeder/project-type-desktop-icon.svg',
                 'type'=>'Desktop',
                 'description'=>'Designing powerful desktop application ready for Windows, Mac and Linux.'
             ]
