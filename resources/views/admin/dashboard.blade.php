@@ -1,3 +1,10 @@
+@yield('container')
+@extends('admin/layout/main')
+
+@section('title', 'Admin Page')
+
+@section('container')
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,46 +15,57 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title></title>
   </head>
+  <!-- styling -->
   <style>
-  a{
-      color:black;
-      font-family: 'Roboto';
-      font-size: 22px;
-  }
-  </style>   
-  <body>
   
- 
-<nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-3" style="padding:0px 100px">
-  <div class="col-4 ">
-    <a class="navbar-brand pl-1" href="#"><img src="assets/logoflick.png" alt=""></a>
-  </div>
-    <div class="col-8 row " id="navbarNav" >
-      <ul class="justify-content-between nav justify-content-start">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Project</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">The Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" >Applicant</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" >Client</a>
-        </li>
-        <div class="nav-item">
-            <button type="button" class="btn btn-primary ">Log out</button>
-        </div>
-        
-        
-        
-      </ul>
+  h2{
+      padding-top: 50px;
+      
+  }
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 16px;
+  text-align: center;
+  background-color: #EEEEEE;    
+}
+.flex-item {
+  justify-content: space-between;
+}
+    
+  /* end styling */
+  </style>
+  <!-- start body -->
+  <body>
+    <div class="container">
+        <h2>Welcome Back, Admin!</h2>
     </div>
-</nav>
-@yield('container')
+    
+    <div class="container pt-3 ">
+  <div class="row ">
+    <div class="col-md-4 card ">
+      <h3>Client</h3>
+      <hr>
+    </div>
+    <div class="col-md-4 card">
+        <h3>Applicants</h3>
+        <hr>
+    </div>
+    <div class="col-md-4 card">
+        <h3>Client</h3>
+        <hr>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    
+    
+    
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -61,3 +79,5 @@
     -->
   </body>
 </html>
+
+@endsection
