@@ -9,8 +9,7 @@ class Project extends Model
     protected $fillable = [
         'ilustration_file', 'logo_file', 'title', 'description', 
         'sub_description', 'scope', 'technologies', 'deliverables', 
-        'bg_file', 'headline', 'sub-headline', 'project_type_id', 
-        'project_detail_id'
+        'bg_file', 'headline', 'sub-headline', 'project_type_id'
     ];
 
     // Get the project's type for a certain project.
