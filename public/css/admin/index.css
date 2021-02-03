@@ -1,0 +1,9 @@
+@font-face {
+    font-family: HKGroteskBold;
+    src: url(/fonts/hk-grotesk/HKGrotesk-Bold.otf);
+  }
+  
+  @font-face {
+    font-family: HKGroteskBlack;
+    src: url(/fonts/hk-grotesk/HKGrotesk-Black.otf);
+  }
