@@ -73,10 +73,10 @@
 
     <div class="row m-0">
       <div class="col-md-6" style="padding-left:150px">
-        <img src="/assets/client/images/logoflick.png" class="img-fluid" style="width:60%;margin-top:100px"  alt="">
-        <p style="font-size:68  px;margin-top:30px;font-family:HKGroteskBlack">Build and grow<br>together with us</p>
-        <p style="font-size:23px;margin-bottom:60px;font-family:HKGroteskBold">We develop softwares from <b>mobile apps, <br> web apps, even advanced app-based services</b> </p>
-        <a style="font-size:23px;background-color:#3F92D8;color:#FFFFFF;padding:20px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold" href="#">Discover our works</a>
+        <img src="/assets/client/images/logoflick.png" class="img-fluid" style="width:60%;margin-top:70px"  alt="">
+        <p style="font-size:55px;margin-top:30px;font-family:HKGroteskBlack">Build and grow<br>together with us</p>
+        <p style="font-size:20px;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskRegular">We develop softwares from</span>  <b>mobile apps, <br> web apps, even advanced app-based services</b> </p>
+        <a style="font-size:20px;background-color:#3F92D8;color:#FFFFFF;padding:20px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold" href="#">Discover our works</a>
       </div>
 
       <div class="col-md-6 p-0" style="text-align:right">
