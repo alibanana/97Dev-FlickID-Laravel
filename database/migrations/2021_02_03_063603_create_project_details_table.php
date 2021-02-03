@@ -17,7 +17,7 @@ class CreateProjectDetailsTable extends Migration
             $table->id();
             $table->string('title', 40);
             $table->text('description');
-            $table->string('ilustration_file', 40);
+            $table->string('ilustration_file', 80);
             $table->timestamps();
         });
     }
