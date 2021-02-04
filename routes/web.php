@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client/index');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Redirects
+Route::redirect('/home', '/');
 
+Route::get('/', 'Client\HomeController@index')->name('home.index');
+
+// Routings from front-end merge.
 Route::get('/contact-us', function () {
     return view('client/contactUs');
 });
