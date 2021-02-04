@@ -22,8 +22,5 @@ Route::redirect('/home', '/');
 Route::get('/', 'Client\HomeController@index')->name('index');
 Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.index');
 Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
-
-// Routings from front-end merge.
-Route::get('/contact-us', function () {
-    return view('client/contactUs');
-});
+Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
+Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
