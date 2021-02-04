@@ -67,7 +67,7 @@
     <div class="col-8 row " id="navbarNav" >
       <ul class="justify-content-between nav justify-content-start">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Project</a>
+          <a class="nav-link active" aria-current="page" href="/projects">Project</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/team">The Team</a>
