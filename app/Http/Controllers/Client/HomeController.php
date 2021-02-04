@@ -16,7 +16,7 @@ class HomeController extends Controller
         $project_types = ProjectType::all();
         $featured_projects = FeaturedProject::all();
 
-        return view('client/index', compact('project_types, featured_projects'));
+        return view('client/index', compact('project_types', 'featured_projects'));
     }
 }
 
