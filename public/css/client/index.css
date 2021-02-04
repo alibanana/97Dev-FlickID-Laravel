@@ -16,3 +16,12 @@
 .paddingLeft{
   padding-left: 150px !important;
 }
+
+#contactInputForm{
+  border-radius: 15px;
+  padding:12px 15px  
+}
+
+.buttonBlue{
+  font-size:25px;background-color:#3F92D8;color:#FFFFFF;padding:12px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold
+}

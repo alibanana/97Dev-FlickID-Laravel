@@ -25,27 +25,51 @@
     transition: 0.3s ease-in-out;
     }
 
-    .nav-active {
-        background-color:red;
+    .navbarText {
+      margin-left:100px
     }
+    /* Container holding the image and the text */
+    .containerImage {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    /* Top left text */
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+
     </style>
   </head>
   <body>
     <!-- NAVBAR DESKTOP -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-fixed" style="padding:14px 0px">
-      <div class="container-fluid container">
-        <div style="display:flex;align-items: center" class="navbar-brand">
-          <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:15%;"  alt="">
-          <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:5px;margin-bottom:0px !important;font-size:20px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
-        </div>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-fixed " style="padding:20px 0px">
+      <div class="container-fluid container"> 
+          <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:18%;margin-right:14%"  alt="" onclick="window.open('/','_self');">
+
+     
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="" style="">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:20px;font-family:HKGroteskBold">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" style="margin-right:65px;color:black">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="margin-right:65px;color:black;">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="margin-right:65px;color:black">The Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="margin-right:65px;color:black">Career</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -55,20 +79,6 @@
         
     @yield('container')
 
-    <!-- NAVBAR CHANNGE COLOR WHEN SCROLL -->
-
-    <script>
-      const navbar = document.querySelector('.nav-fixed');
-      window.onscroll = () => {
-          if (window.scrollY > 300) {
-              navbar.classList.add('nav-active');
-          } else {
-              navbar.classList.remove('nav-active');
-          }
-      };
-    </script>
-
-    <!-- END OF CHANGE NAVBAR COLOR WHEN SCROLL -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
