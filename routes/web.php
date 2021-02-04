@@ -13,13 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client/index');
-});
+Auth::routes();
 
+// Redirects
+Route::redirect('/home', '/');
 
-
-Route::get('/contact-us', function () {
-    return view('client/contactUs');
-});
-
+// Client Pages Routings
+Route::get('/', 'Client\HomeController@index')->name('index');
+Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.index');
+Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
+Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
+Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
