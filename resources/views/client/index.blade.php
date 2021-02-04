@@ -101,7 +101,7 @@
         </div>
         <p  style="font-size:68px;margin-top:30px;font-family:HKGroteskBlack"> <b> Build and grow<br>together with us</b></p>
         <p style="font-size:25px;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskRegular">We develop softwares from</span>  <b>mobile apps, <br> web apps, even advanced app-based services</b> </p>
-        <a style="font-size:25px;background-color:#3F92D8;color:#FFFFFF;padding:14px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold" href="#">Discover our works</a>
+        <a style="" class="buttonBlue" href="#">Discover our works</a>
       </div>
 
       <div class="col-md-6 p-0">
