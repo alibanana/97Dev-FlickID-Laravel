@@ -45,7 +45,7 @@ class ClientController extends Controller
         $client->email = $input['email'];
         $client->description = $input['description'];
         $client->save();
-        
-        return view('client/contactUs');
+
+        return view('client/contactUs')->with('success', 'Your project offer has been submitted...');
     }
 }

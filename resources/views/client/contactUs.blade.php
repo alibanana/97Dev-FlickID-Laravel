@@ -2,7 +2,6 @@
 
 @section('title', 'Flick Software Contact Us')
 
-
 @section('container')
 <div class="row m-0" style="padding-bottom:60px">
     <div class="col-md-6 p-0">  
@@ -18,12 +17,17 @@
                     <p style="font-size:20px;font-family:HKGroteskRegular">If you have some interests in building your project with us,</p>
                     <p style="font-size:20px;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskBold">Fill out the form and one of our team members will get back to you right away.</p>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-6" style="padding-right:15%;padding-top:80px;padding-left:5%">
+        @if (session('success'))
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Alright!</h4>
+                <p>{{ session('success') }}</p>
+            </div>
+        @endif
         <div>
             <form enctype="multipart/form-data" method="POST" action="{{ route('client.store') }}" style="font-family:HKGroteskBold">
                 @csrf
@@ -76,7 +80,7 @@
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-
+                
                 <button type="submit" class="buttonBlue" style="border:0px;width:100%;margin-top:50px">Submit</button>
             </form>
         </div>
