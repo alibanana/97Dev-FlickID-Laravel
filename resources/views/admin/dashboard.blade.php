@@ -7,9 +7,9 @@
 
 
   
-    <div class="container" >
-        <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, Admin!</h2>
-    </div>
+<div class="container" >
+    <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, Admin!</h2>
+</div>
     
 <div class="container pt-3">
     <div class="row ">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="card-body" style="background-color:#149211">
-                        <h5 class="card-title" >Finished Clients</h5>
+                        <h5 class="card-title"  >Finished Clients</h5>
                         <div>
                             <p class="card-text">5</p>
                             <i class="fas fa-arrow-circle-right"></i><p>View details</p>

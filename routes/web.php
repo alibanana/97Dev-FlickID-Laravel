@@ -21,6 +21,14 @@ Route::get('/', function () {
 
 });
 
+Route::get('/projects', function () {
+
+    return view('admin/addproject');
+
+    
+
+});
+
 Route::get('/team', function () {
     return view('admin/teamtable');
 });
