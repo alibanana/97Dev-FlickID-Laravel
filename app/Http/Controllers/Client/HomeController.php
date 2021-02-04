@@ -11,7 +11,7 @@ use App\FeaturedProject;
 class HomeController extends Controller
 {
     // Show Landing Page.
-    public function index(Request $request)
+    public function index()
     {
         $project_types = ProjectType::all();
         $featured_projects = FeaturedProject::all();
