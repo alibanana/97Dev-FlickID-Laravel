@@ -59,8 +59,11 @@
   /* end styling */
   </style>
 <body>
-  <div class="container">
+  <div class="container" style="padding-bottom:20px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
         <h2> FlickSoftware Team</h2>
+        <button type="button" class="btn btn-primary btn-sm" style="background-color:FACA00;  ">Add Member</button>
+      </div>  
     </div>
     <div class="container">
     <table class="table table-hover">
@@ -74,21 +77,24 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th scope="row">j</th>
+      <td>1</td>
+      <td>1</td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm" style="background-color:green">Accept</button>
+        <button type="button" class="btn btn-primary btn-sm" style="background-color:red">Reject</button>
+      </td>
+        
+          
     </tr>
     <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td colspan="2"></td>
-      <td></td>
+      <th scope="row">i</th>
+      <td>2</td>
+      <td>2</td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm" style="background-color:green">Accept</button>
+        <button type="button" class="btn btn-primary btn-sm" style="background-color:red">Reject</button>
+      </td>
     </tr>
   </tbody>
 </table>
