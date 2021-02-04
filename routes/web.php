@@ -18,7 +18,10 @@ Auth::routes();
 // Redirects
 Route::redirect('/home', '/');
 
-Route::get('/', 'Client\HomeController@index')->name('home.index');
+// Client Pages Routings
+Route::get('/', 'Client\HomeController@index')->name('index');
+Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.index');
+Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
 
 // Routings from front-end merge.
 Route::get('/contact-us', function () {
