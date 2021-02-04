@@ -159,19 +159,16 @@
     <!-- WHAT WE HAVE BUILD -->
 
 
-    <div class="row m-0">
+    <div class="row m-0 pb-5" >
 
       <div class="col-md-7 p-0">
         <div class="container" style="margin-left:-400px;">
           <img src="/assets/client/images/Path 2.svg"  style="width:160%;height:700px !important;filter: invert(77%) sepia(68%) saturate(1722%) hue-rotate(3deg) brightness(101%) contrast(101%);" alt="">
           <div class="centered">
               <div style="display:flex;align-items: center">
-                <img src="/assets/client/images/bezlio-product-mockup-epicorcrm-quotedetail-iphonex-sales-app-mock-png-860_792.png" class="img-fluid" style="width:70% !important" alt="">
+                <img src="/assets/client/images/Flick Featured Project Ilustration.png" class="img-fluid" style="width:200px !important" alt="">
                 <div style="margin-left:30px">
-                  <div style="display:flex;align-items: center">
-                    <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:12%;"  alt="">
-                    <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:35px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
-                  </div>
+                    <img src="/assets/client/images/Flick Featured Project Logo.png" class="img-fluid" style="width:45%;"  alt="">
                   <div style="width:300px">
                   <p style="font-family:HKGroteskRegular;font-size:20px;margin-top:22px">A financial technology company providing solutions to users and merchant. <span style="font-family:HKGroteskBold">We have created e-money, peer-to-peer lending, remittance, e-commerce and point-of-sales systems.</span></p>
                   </div>
