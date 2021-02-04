@@ -24,3 +24,15 @@ Route::get('/', function () {
 Route::get('/team', function () {
     return view('admin/teamtable');
 });
+
+Route::get('/project', function () {
+    return view('admin/project');
+});
+
+Route::get('/job', function () {
+    return view('admin/jobs');
+});
+
+Route::get('/client', function () {
+    return view('admin/clients');
+});

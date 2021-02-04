@@ -59,18 +59,50 @@
 <!-- end styling -->
 <body style='font-family:HKGroteskBold ;'>
   
- 
+    <!-- START OF POPUP -->
+    <div id="create_member" class="overlay">
+      <div class="popup">
+        <a class="close" href="#" >&times;</a>
+        
+        <div class="content" style="padding:20px">
+          <h1>Add New Member</h1>
+          <div class="col-md-12">
+          <form>
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <input type="name" class="form-control" id="inputName" placeholder="Enter name">
+            </div>
+            <div class="form-group" style="padding-bottom:10px">
+              <label for="positionControlSelect">Position</label>
+                <select class="form-control" id="postionControlSelect">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+            </div>
+            <div style ="display:flex; justify-content: flex-end; ">
+              <button type="submit" class="btn btn-warning btn-sm">Add Member</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF POPUP -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-3" style="padding:0px 100px">
+<div class="container">
   <div class="col-4 ">
-    <a class="navbar-brand pl-1" href="#"><img src="assets/logoflick.png" alt=""></a>
+    <a class="navbar-brand pl-1" href="/"><img src="assets/logoflick.png" alt=""></a>
   </div>
     <div class="col-8 row " id="navbarNav" >
       <ul class="justify-content-between nav justify-content-start">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Project</a>
+          <a class="nav-link active" aria-current="page" href="/projects">Project</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">The Team</a>
+          <a class="nav-link" href="/team">The Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" >Applicant</a>
@@ -86,6 +118,7 @@
         
       </ul>
     </div>
+  </div>
 </nav>
 @yield('container')
 
