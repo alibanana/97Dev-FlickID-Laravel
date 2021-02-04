@@ -8,22 +8,16 @@
     <!-- INDEX CSS -->
     <link rel="stylesheet"  type="text/css"  href="/css/client/index.css">
 
+
+    <script src="/js/navbar.js"></script>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <title>@yield('title')</title>
 
     <style>
-    .navbar {
-      -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
-      -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
-      box-shadow: 0 10px 6px -6px  #e5e5e5;
-      background-color:white;
-    }
 
-    header.nav-fixed {
-    transition: 0.3s ease-in-out;
-    }
 
     .navbarText {
       margin-left:100px
@@ -41,12 +35,22 @@
       top: 8px;
       left: 16px;
     }
-
+    .nav-colored { 
+      -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
+      -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
+      box-shadow: 0 10px 6px -6px  #e5e5e5;
+      background-color:white;
+      transition: 0.3s ease-in-out;
+    }
+    .nav-transparent { 
+      background-color:transparent;
+      transition: 0.3s ease-in-out;
+    }
     </style>
   </head>
   <body>
     <!-- NAVBAR DESKTOP -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-fixed " style="padding:20px 0px">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
       <div class="container-fluid container"> 
           <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:18%;margin-right:14%"  alt="" onclick="window.open('/','_self');">
 
@@ -78,6 +82,21 @@
 
         
     @yield('container')
+
+    <script>
+      var myNav = document.getElementById('mynav');
+      window.onscroll = function () { 
+          "use strict";
+          if (document.body.scrollTop >= 10 ) {
+              myNav.classList.add("nav-colored");
+              myNav.classList.remove("nav-transparent");
+          } 
+          else {
+              myNav.classList.add("nav-transparent");
+              myNav.classList.remove("nav-colored");
+          }
+      };
+    </script>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
