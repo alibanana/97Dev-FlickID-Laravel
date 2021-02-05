@@ -49,19 +49,23 @@
         <div class="container pt-5 text"   >
             <img src="assets/flick.png" alt="" style="width:60%">
         </div>
-        <div class="text pt-5">
-            <h1>HERE INSERT SOME TEXT</h1>
+        <div class="text pt-3">
+            <h1>New Project Offer Available!</h1>
         </div>
-        <div class="text pt-5" style="padding:0px 50px">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <div class="text pt-3" style="padding:0px 50px">
+            <p>Name: Winson</p>
+            <p>Company:Ninetysevendev</p>
+            <p>Phone:087787280719</p>
+            <p>Email:winson91100@gmail.com</p>
+            <p>Description: TEST TEST TESTTESTTESTTEST TESTTEST TEST</p>
         </div>
-        <div class="text pt-5" >
-            <button type="button" class="block" >Here Insert some text </button>
+        <div class="text pt-3" >
+            <button type="button" class="block" >Click Here to check the new client out </button>
         </div>
         <div class="container pt-5 text"  >
             <img src="assets/logoflick.png" alt="">
         </div>
-        <div class="text pt-5" style="padding:0px 200px">
+        <div class="text pt-5" style="padding:0px 100px">
             <p>This is a no reply email, please do not reply.... contact email@email for any inquiries</p>
         </div>
 
