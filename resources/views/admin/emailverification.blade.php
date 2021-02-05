@@ -29,7 +29,7 @@
     }
     .block {
     display: block;
-    width: 30%;
+    width: 40%;
     border: none;
     background-color: #3F92D8;
     padding: 14px 28px;
@@ -53,10 +53,10 @@
             <h1>HERE INSERT SOME TEXT</h1>
         </div>
         <div class="text pt-5" style="padding:0px 50px">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
         </div>
         <div class="text pt-5" >
-            <button type="button" class="block" >Here Insert something</button>
+            <button type="button" class="block" >Here Insert some text </button>
         </div>
         <div class="container pt-5 text"  >
             <img src="assets/logoflick.png" alt="">
