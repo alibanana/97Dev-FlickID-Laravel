@@ -54,7 +54,7 @@
   <body>
     <div style="background-color:white; margin:50px 400px;">
       <div class="container pt-5 text">
-        <img src="assets/logoflick.svg" alt="Flick Software">
+        <img src="{{ url('/assets/logoflick.svg') }}" alt="Flick Software">
       </div>
       <div class="text pt-5">
         <h1>New Project Offer Available!</h1>
