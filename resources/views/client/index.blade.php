@@ -10,7 +10,6 @@
 
     <!-- INDEX CSS -->
     <link rel="stylesheet"  type="text/css"  href="/css/client/index.css">
-
     <!--load all fontawesome -->
     <link href="/fontawesome/css/all.css" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -56,6 +55,7 @@
         background-repeat: no-repeat;
         background-size: 92%;
       }
+
       /* Container holding the image and the text */
       .container {
         position: relative;
@@ -82,6 +82,13 @@
         position: absolute;
         top: 8px;
         left: 16px;
+      }
+
+      /* Top left text */
+      .top-left2 {
+        position: absolute;
+        top: 8px;
+        left: 0px;
       }
       /* Top right text */
       .top-right {
@@ -140,7 +147,7 @@
           <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:12%;"  alt="">
           <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:35px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
         </div>
-        <p  style="font-size:68px;margin-top:30px;font-family:HKGroteskBlack"> <b> Build and grow<br>together with us</b></p>
+        <p  style="font-size:64px;margin-top:30px;font-family:HKGroteskBlack"> <b> Build and grow<br>together with us</b></p>
         <p style="font-size:25px;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskRegular">We develop softwares from</span>  <b>mobile apps, <br> web apps, even advanced app-based services</b> </p>
         <a style="" class="buttonBlue" href="#">Discover our works</a>
       </div>
@@ -155,7 +162,7 @@
     <!-- START OF WHAT WE PROVIDE -->
     <div class="row m-0" style="padding-left:120px;padding-top:20%;padding-bottom:100px">
       <div class="col-md-12" >
-        <p style="font-size:68px;font-family:HKGroteskBlack"> <b>What we provide</b></p>
+        <p style="font-size:64px;font-family:HKGroteskBlack"> <b>What we provide</b></p>
 
       </div>
       <div class="col-md-4" style="padding-top:70px">
@@ -228,11 +235,19 @@
       </div>
 
       <div class="col-md-5 p-0">
-        <p style="font-size:68px;font-family:HKGroteskBlack"> <b>What we've build</b></p>
-        <div>
-          <p style="font-size:24px;font-family:HKGroteskRegular">We help business to grow to their fullest <br> potential <span style="font-family:HKGroteskBlack">through technology</span></p>
+        <div class="containerImage">
+          <div style="">   
+            <img src="/assets/client/images/Hex_-_What_weve_build.svg" class="img-fluid" alt="Snow" style="width:65%;margin-top:-40px;margin-left:-350px">
+          </div>
+          <div class="top-left2">
+            <div style="text-align:left;!important;margin-left:-40px">
+              <p style="font-size:64px;font-family:HKGroteskBlack"> <b>What we've build</b></p>
+              <div>
+                <p style="font-size:24px;font-family:HKGroteskRegular">We help business to grow to their fullest <br> potential <span style="font-family:HKGroteskBlack">through technology</span></p>
+              </div>              
+            </div>
+          </div>
         </div>
-
       </div>
 
       <div class="col-md-5 p-0">
@@ -287,28 +302,122 @@
         </div>
       </div>
 
-      <div class="col-md-5 p-0">
+      <div class="col-md-5 p-0" style="margin-left:-40px;margin-top:90px;z-index:99">
+        <p style="font-size:64px;font-family:HKGroteskBlack;"> <b>Explore more on <br> our fine works</b></p>
+        <div>
+          <a href="" style="font-size:24px;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:25px;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
       </div>
 
     </div>
     <!-- END OF WHAT WE HAVE BUILD -->
 
     <!-- START OF A TEAM THAT HAS YEARS OF EXPERIENCE -->
-    <div class="row m-0 experienceBG">
+
+    <div class="row m-0 experienceBG" >
       <div class="col-md-12 p-0">
         <div style="padding-left:130px;color:white">
-          <p  style="font-size:68px;margin-top:60px;font-family:HKGroteskBlack;"> <b>A team that has years of experience <br> on developing technologies</b></p>
+          <p  style="font-size:64px;margin-top:40px;font-family:HKGroteskBlack;"> <b>A team that has years of experience <br> on developing technologies</b></p>
           <p style="font-size:25px;margin-bottom:60px;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
+          <div style="display:flex"> 
+            <div style="background-color:#FFA5A5;width:420px;border-radius:15px;color:#142850;padding:25px;">
+              <div style="display:flex;justify-content:space-between;align-items:center ">
+                <div> 
+                  <p style="font-size:35px;font-family:HKGroteskBlack;"> <b>About Us</b></p>
+                  <p style="font-size:24px;font-family:HKGroteskRegular;">Know more about how <br>we work in action</p>
+                </div>
+                <a href="" style="color:white">
+                  <i class="fas fa-chevron-circle-right" style="font-size:40px"></i>
+                </a>
+              </div>
+            </div>
+
+            <div style="background-color:#81D1C7;width:460px;border-radius:15px;color:#142850;padding:25px; margin-left:80px">
+              <div style="display:flex;justify-content:space-between;align-items:center ">
+                <div> 
+                  <p style="font-size:35px;font-family:HKGroteskBlack;"> <b>Join the team!</b></p>
+                  <p style="font-size:24px;font-family:HKGroteskRegular;">Join our journey to enable <br> and deliver technologies</p>
+                </div>
+                <a href="" style="color:white">
+                  <i class="fas fa-chevron-circle-right" style="font-size:40px"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="col-md-12 p-0 topFooterBG">
-
-      </div>
-
     </div>
 
+    <div class="row m-0" style="background-color:#EDF7FF">
+      <div class="col-md-12 p-0" style="margin-top:-180px">
+        <div class="containerImage">
+          <div style="text-align:left">   
+            <img src="assets/client/images/landing_page_bg_4.png" alt="" style="width:92%">
+          </div>
+            <div class="top-left">
+              <div style="text-align:left;!important;padding-top:50px">
+                
+              <div style="padding-left:130px">
+                <p style="font-size:64px;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
+                <div style="margin-top:40px">
+                  <a href="" style="border:2px solid #3F92D9;padding:10px 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:10px;color:#3F92D9;font-size:24px;">Let's Talk! <span style="font-size:25px;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
+                </div>
+                <div>
+                  <hr style="margin-top:140px;width:120%">
+                </div>
+                <div class="row m-0" >
+                  <div class="col-md-6">
+                    <p style="font-size:40px;font-family:HKGroteskBlack;margin-top:60px;color:#142850">Jakarta</p>
+                    <p style="font-family:HKGroteskRegular;font-size:20px;margin-top:10px"> <b>+62 811 8128 171</b></p>
+                    <p style="font-family:HKGroteskRegular;font-size:18px;margin-top:10px">Jl. Harapan 3 No. 5, Malayka Residence <br> Bintaro, Pesanggrahan, Jakarta Selatan, 12330</p>
+                  </div>
+                  <div class="col-md-6" style="padding-left:150px">
+                    <p style="font-size:40px;font-family:HKGroteskBlack;margin-top:60px;color:#142850">Follow us!</p>
+                    <div style="display:flex">
+                      <a href="" style="margin-top:20px !important;margin-right:40px !important">
+                          <img src="/assets/client/images/linkedin.png" class="img-fluid"  alt="" style="width:100%"> 
+                      </a>
+                      <a href="" style="margin-top:20px !important;margin-right:40px !important">
+                          <img src="/assets/client/images/instagram.png"  alt="" style="width:100%"> 
+                      </a>
+                      <a href="" style="margin-top:20px !important;margin-right:40px !important">
+                          <img src="/assets/client/images/youtube.png"  alt="" style="width:100%"> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- END OF A TEAM THAT HAS YEARS OF EXPERIENCE -->
+
+    <!-- Start of footer -->
+    <div class="row m-0" style="padding-left:130px;background-color:#EDF7FF;padding-top:60px;padding-bottom:60px">
+        <div class="col-6 p-0" > 
+          <div style="display:flex;align-items: center;justfiy-content: flex-end;">
+            <div style="display:flex;align-items: center">
+              <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:16%" alt="">
+              <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:35px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div style="display:flex;align-items: center;justfiy-content: space-between;">
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;font-size:22px">Portofolio</a>
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;font-size:22px">Services</a>
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;font-size:22px">The Team</a>
+            <a class="nav-link" aria-current="page" href="#" style="color:#3F92D8;font-family:HKGroteskBold;font-size:22px">Career</a>
+          </div>
+        </div>
+        <div class="col-12" style="text-align:right">
+          <p style="font-size:20px;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;padding-right:84px;margin-top:13px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
+        </div>
+    </div>
+    <!-- end of footer -->
+
 
 
 
@@ -316,7 +425,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9864pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
