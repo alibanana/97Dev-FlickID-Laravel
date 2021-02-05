@@ -47,7 +47,7 @@
   <body>
     <div style="background-color:white; margin:50px 400px;">
         <div class="container pt-5 text"   >
-            <img src="assets/logoflick.svg" alt="">
+            <img src="assets/flick.png" alt="" style="width:60%">
         </div>
         <div class="text pt-5">
             <h1>HERE INSERT SOME TEXT</h1>
