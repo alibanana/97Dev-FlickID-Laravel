@@ -45,7 +45,7 @@
     </style>
   </head>
   <body>
-    <div style="background-color:white; margin:50px 400px;">
+    <div style="background-color:white; margin:30px 400px;">
         <div class="container pt-5 text"   >
             <img src="assets/flick.png" alt="" style="width:60%">
         </div>
