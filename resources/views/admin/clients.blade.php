@@ -11,12 +11,9 @@
   <div class = "row"> 
     <div class ="col-md-6">
       <div style="display:flex;justify-content:flex-start;align-items:center">
-        <h2> FlickSoftware Team</h2>
+        <h2> FlickSoftware Clients</h2>
       </div>  
     </div>  
-      <div style ="display:flex; justify-content: flex-end; ">
-          <a href="#create_member" class="btn btn-warning btn-sm" title="Tooltip">Add Member</a>
-      </div>
   </div>    
 </div>
       
