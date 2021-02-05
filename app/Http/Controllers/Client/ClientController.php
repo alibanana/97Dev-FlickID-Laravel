@@ -49,7 +49,7 @@ class ClientController extends Controller
         $client->description = $input['description'];
         $client->save();
 
-        Mail::to(env('MAIL_USERNAME'))->send(new PostClientAdminMail($client));
+        Mail::to(env('ADMIN_MAIL_ADDRESS'))->send(new PostClientAdminMail($client));
 
         // if ($input['email']) {
         //     Mail::to($input['email'])->send(new PostClientMail($client));
