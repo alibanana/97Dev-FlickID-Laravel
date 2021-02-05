@@ -28,6 +28,7 @@ Route::post('/contact-us', 'Client\ClientController@store')->name('client.store'
 // Admin Pages Routings
 Route::get('/admin', function () {
 	return view('admin/dashboard');
+});
 
 Route::get('/email', function () {
     return view('emails/email');
