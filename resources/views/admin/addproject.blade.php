@@ -8,8 +8,8 @@
 <div class="container" >
     <h2 style="font-family:HKGroteskBold !important;">FlickSoftware add new projects</h2>
 </div>
-
 <div class="container">
+<!-- start form add new projects -->
     <form>
         <div class="row">
             <div class="mb-3 col-6 ">
@@ -31,10 +31,11 @@
                 <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" style="width:70%">
             </div>
         </div>
+        <!-- choosing file -->
         <div class="row">
-            <form action="/action_page.php">
+            <form action="/action_page.php" >
             <label for="myfile">Select a file:</label>
-            <input type="file" id="myfile" name="myfile"><br><br>
+            <input type="file" id="myfile" name="myfile" ><br><br>
             <div style="text-align: right"> 
                 <button type="button" class="" style="background-color:#FACA00; border-radius:10px"> 
                   Add projects
@@ -44,7 +45,9 @@
         </div>
         
     </form>
+    <!-- end form add new project -->
 </div>
+
 
 
 @endsection

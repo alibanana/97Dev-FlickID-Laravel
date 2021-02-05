@@ -14,19 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
     return view('admin/dashboard');
-
-    
-
 });
 
 Route::get('/projects', function () {
-
     return view('admin/addproject');
-
-    
-
+});
+Route::get('/email', function () {
+    return view('admin/emailverification');
 });
 
 Route::get('/team', function () {
