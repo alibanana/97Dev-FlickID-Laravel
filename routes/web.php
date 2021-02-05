@@ -26,12 +26,12 @@ Route::get('/contact-us', 'Client\ClientController@create')->name('client.create
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
 
 // Admin Pages Routings
-Route::get('/admin', function () {
-    return view('admin/dashboard');
+Route::get('/email', function () {
+    return view('admin/emailverification');
 });
 
-Route::get('/admin/projects', function () {
-    return view('admin/addproject');
+Route::get('/admin', function () {
+    return view('admin/dashboard');
 });
 
 Route::get('/admin/team', function () {
