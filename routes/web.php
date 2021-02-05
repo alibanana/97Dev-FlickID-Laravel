@@ -24,3 +24,28 @@ Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.in
 Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
+
+
+Route::get('/admin', function () {
+    return view('admin/dashboard');
+});
+
+Route::get('/admin/projects', function () {
+    return view('admin/addproject');
+});
+
+Route::get('/admin/team', function () {
+    return view('admin/teamtable');
+});
+
+Route::get('/admin/project', function () {
+    return view('admin/project');
+});
+
+Route::get('/admin/job', function () {
+    return view('admin/jobs');
+});
+
+Route::get('/admin/client', function () {
+    return view('admin/clients');
+});
