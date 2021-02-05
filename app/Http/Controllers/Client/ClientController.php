@@ -5,8 +5,11 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
 
 use App\Client;
+use App\Mail\PostClientAdminMail;
+use App\Mail\PostClientMail;
 
 class ClientController extends Controller
 {
@@ -45,6 +48,12 @@ class ClientController extends Controller
         $client->email = $input['email'];
         $client->description = $input['description'];
         $client->save();
+
+        Mail::to(env('MAIL_USERNAME'))->send(new PostClientAdminMail($client));
+
+        // if ($input['email']) {
+        //     Mail::to($input['email'])->send(new PostClientMail($client));
+        // }
 
         return redirect()->route('client.create')->with('success', 'Your project offer has been submitted...');
     }
