@@ -45,14 +45,14 @@
     </style>
   </head>
   <body>
-    <div style="background-color:white; margin:50px 100px;  ">
+    <div style="background-color:white; margin:50px 400px;">
         <div class="container pt-5 text"   >
             <img src="assets/logoflick.svg" alt="">
         </div>
         <div class="text pt-5">
             <h1>HERE INSERT SOME TEXT</h1>
         </div>
-        <div class="text pt-5" style="padding:0px 300px">
+        <div class="text pt-5" style="padding:0px 50px">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
         </div>
         <div class="text pt-5" >
@@ -61,7 +61,7 @@
         <div class="container pt-5 text"  >
             <img src="assets/logoflick.png" alt="">
         </div>
-        <div class="text pt-5" style="padding:0px 500px">
+        <div class="text pt-5" style="padding:0px 200px">
             <p>This is a no reply email, please do not reply.... contact email@email for any inquiries</p>
         </div>
 
