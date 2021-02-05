@@ -62,10 +62,10 @@
         <div class="text pt-3" >
             <button type="button" class="block" >Click Here to check the new client out </button>
         </div>
-        <div class="container pt-5 text"  >
+        <div class="container pt-4 text"  >
             <img src="assets/logoflick.png" alt="">
         </div>
-        <div class="text pt-5" style="padding:0px 100px">
+        <div class="text pt-3" style="padding:0px 100px">
             <p>This is a no reply email, please do not reply.... contact email@email for any inquiries</p>
         </div>
 
