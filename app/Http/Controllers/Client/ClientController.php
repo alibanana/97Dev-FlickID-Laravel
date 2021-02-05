@@ -46,6 +46,6 @@ class ClientController extends Controller
         $client->description = $input['description'];
         $client->save();
 
-        return view('client/contactUs')->with('success', 'Your project offer has been submitted...');
+        return redirect()->route('client.create')->with('success', 'Your project offer has been submitted...');
     }
 }
