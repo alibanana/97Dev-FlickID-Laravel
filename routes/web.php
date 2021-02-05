@@ -25,7 +25,7 @@ Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfoli
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
 
-
+// Admin Pages Routings
 Route::get('/admin', function () {
     return view('admin/dashboard');
 });
