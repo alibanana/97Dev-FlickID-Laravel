@@ -52,7 +52,7 @@
     <!-- NAVBAR DESKTOP -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
       <div class="container-fluid container"> 
-          <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:18%;margin-right:14%"  alt="" onclick="window.open('/','_self');">
+          <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:18%;margin-right:14%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
 
      
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
