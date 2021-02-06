@@ -68,8 +68,6 @@
         <div class="text pt-3" style="padding:0px 100px">
             <p>This is a no reply email, please do not reply.... contact email@email for any inquiries</p>
         </div>
-
-
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->

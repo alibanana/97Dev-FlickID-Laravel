@@ -7,20 +7,20 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class PostClientMail extends Mailable
+class PostApplicantAdminMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $client;
+    public $applicant;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($client)
+    public function __construct($applicant)
     {
-        $this->client = $client;
+        $this->applicant = $applicant;
     }
 
     /**
@@ -30,6 +30,6 @@ class PostClientMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("Project Offer Sent!")->view('emails/email');
+        return $this->subject("New Application Available!")->view('emails/post-applicant-admin');
     }
 }

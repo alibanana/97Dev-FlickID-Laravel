@@ -18,12 +18,18 @@ Auth::routes();
 // Redirects
 Route::redirect('/home', '/');
 
-// Client Pages Routings
+// Client Pages Routings (FIXED)
 Route::get('/', 'Client\HomeController@index')->name('index');
 Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.index');
 Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
+Route::get('/career', 'Client\ApplicantController@create')->name('applicant.create');
+Route::post('/career', 'Client\ApplicantController@store')->name('applicant.store');
+Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
+
+// Admin Pages Routings (FIXED)
+Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 
 // Admin Pages Routings
 Route::get('/admin', function () {
