@@ -24,6 +24,8 @@ Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.in
 Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
+Route::get('/career', 'Client\ApplicantController@create')->name('applicant.create');
+Route::post('/career', 'Client\ApplicantController@store')->name('applicant.store');
 
 // Admin Pages Routings
 Route::get('/email', function () {
