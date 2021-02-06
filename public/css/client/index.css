@@ -1,17 +1,27 @@
-/* Style the navbar */
-#navbar {
-    overflow: hidden;
-  }
-  
+@font-face {
+  font-family: HKGroteskBold;
+  src: url(/fonts/hk-grotesk/HKGrotesk-Bold.otf);
+}
 
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
+@font-face {
+  font-family: HKGroteskBlack;
+  src: url(/fonts/hk-grotesk/HKGrotesk-Black.otf);
+}
+
+@font-face {
+  font-family: HKGroteskRegular;
+  src: url(/fonts/hk-grotesk/HKGrotesk-Regular.otf);
+}
+
+.paddingLeft{
+  padding-left: 150px !important;
+}
+
+#contactInputForm{
+  border-radius: 15px;
+  padding:12px 15px  
+}
+
+.buttonBlue{
+  font-size:25px;background-color:#3F92D8;color:#FFFFFF;padding:12px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold
+}

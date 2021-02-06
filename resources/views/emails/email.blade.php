@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- INDEX CSS -->
@@ -13,34 +12,35 @@
     <title></title>
     <style>
     body{
-        background-color:#EEEEEE;
+      background-color:#EEEEEE;
     }
+
     .text{
-        text-align:center;
+      text-align:center;
     }
-    h1{
-        font-family: 'HKGroteskBold';
-        font-size:30px;
-    }
-    p{
-        font-family: 'HKGroteskBold';
 
-
+    h1 {
+      font-family: 'HKGroteskBold';
+      font-size:30px;
     }
+
+    p {
+      font-family: 'HKGroteskBold';
+    }
+
     .block {
-    display: block;
-    width: 40%;
-    border: none;
-    background-color: #3F92D8;
-    padding: 14px 28px;
-    font-size: 16px;
-    font-family:HKGroteskBold;
-    cursor: pointer;
-    border-radius:10px;
-    text-align: center;
-    margin: 0 auto;
-    color:white;
-
+      display: block;
+      width: 40%;
+      border: none;
+      background-color: #3F92D8;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-family:HKGroteskBold;
+      cursor: pointer;
+      border-radius:10px;
+      text-align: center;
+      margin: 0 auto;
+      color:white;
     }
     </style>
   </head>
@@ -69,12 +69,9 @@
             <p>This is a no reply email, please do not reply.... contact email@email for any inquiries</p>
         </div>
 
+
     </div>
-    
-
-
     <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
