@@ -18,7 +18,7 @@ Auth::routes();
 // Redirects
 Route::redirect('/home', '/');
 
-// Client Pages Routings
+// Client Pages Routings (FIXED)
 Route::get('/', 'Client\HomeController@index')->name('index');
 Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.index');
 Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
@@ -28,14 +28,17 @@ Route::get('/career', 'Client\ApplicantController@create')->name('applicant.crea
 Route::post('/career', 'Client\ApplicantController@store')->name('applicant.store');
 Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
+// Admin Pages Routings (FIXED)
+Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
+
 // Admin Pages Routings
 Route::get('/email', function () {
     return view('emails/email');
 });
 
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
+// Route::get('/admin', function () {
+//     return view('admin/dashboard');
+// });
 
 Route::get('/admin/team', function () {
     return view('admin/teamtable');
