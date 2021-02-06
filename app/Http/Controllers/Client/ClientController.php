@@ -51,10 +51,6 @@ class ClientController extends Controller
 
         Mail::to(env('ADMIN_MAIL_ADDRESS'))->send(new PostClientAdminMail($client));
 
-        // if ($input['email']) {
-        //     Mail::to($input['email'])->send(new PostClientMail($client));
-        // }
-
         return redirect()->route('client.create')->with('success', 'Your project offer has been submitted...');
     }
 }
