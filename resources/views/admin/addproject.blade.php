@@ -37,7 +37,7 @@
             <label for="myfile">Select a file:</label>
             <input type="file" id="myfile" name="myfile" ><br><br>
             <div style="text-align: right"> 
-                <button type="button" class="" style="background-color:#FACA00; border-radius:10px"> 
+                <button type="button" class="" style="background-color:#FACA00; border-radius:10px;border:none;"> 
                   Add projects
                 </button> 
             </div> 
