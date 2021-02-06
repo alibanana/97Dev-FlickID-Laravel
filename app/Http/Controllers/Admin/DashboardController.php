@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Client;
+use App\Applicant;
+use App\Project;
 
 class DashboardController extends Controller
 {
@@ -28,9 +30,24 @@ class DashboardController extends Controller
             'Accepted' => $client_accepted_count,
             'Finished' => $client_finished_count,
         ];
-
         
+        $applicants = Applicant::all();
 
-        return view('admin/dashboard', compact('client_counts'));
+        $applicant_pending_count = 0; $applicant_rejected_count = 0; $applicant_accepted_count = 0;
+        foreach ($applicants as $applicant) {
+            if ($applicant->status == "Pending") { $applicant_pending_count++; }
+            else if ($applicant->status == "Rejected") { $applicant_rejected_count++; }
+            else if ($applicant->status == "Accepted") { $applicant_accepted_count++; }
+        }
+
+        $applicant_counts = [
+            'Pending' => $applicant_pending_count,
+            'Rejected' => $applicant_rejected_count,
+            'Accepted' => $applicant_accepted_count,
+        ];
+
+        $project_count = Project::all()->count();
+
+        return view('admin/dashboard', compact('client_counts', 'applicant_counts', 'project_count'));
     }
 }
