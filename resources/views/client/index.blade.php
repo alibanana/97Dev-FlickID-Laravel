@@ -114,7 +114,7 @@
   </head>
   <body style="">
     <!-- START OF NAVBAR -->
-    <div class="row m-0" style="z-index:99;padding-top:30px">
+    <div class="row m-0" style="z-index:99;padding-top:1.9vw">
       <div class="col-md-12 p-0">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
@@ -128,7 +128,7 @@
 
               </ul>
               <div class="" style="">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.5vw;font-family:HKGroteskBold">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.4vw;font-family:HKGroteskBold">
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#" style="margin-right:65px;color:black">Portofolio</a>
                   </li>
@@ -142,7 +142,7 @@
                     <a class="nav-link" href="#" style="margin-right:65px;color:black">Career</a>
                   </li>
                   <li class="nav-item" style="">
-                    <a class="nav-link" href="#" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 70px;border-radius:10px">Contact us!</a>
+                    <a class="nav-link" href="#" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 70px;border-radius:15px">Contact us!</a>
                   </li>
                 </ul>
               </div>
@@ -185,7 +185,7 @@
           <div style="padding-right:100px">
             <p style="font-size:1.5vw;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
           </div>
-          <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:25px;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.9vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
           
         </div>
       </div>
@@ -197,7 +197,7 @@
           <div style="padding-right:100px">
             <p style="font-size:1.5vw;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
           </div>          
-          <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:25px;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.9vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
           
         </div>
       </div>
@@ -209,7 +209,7 @@
           <div style="padding-right:100px">
             <p style="font-size:1.5vw;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
           </div>          
-          <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:25px;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.9vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
           
         </div>
       </div>
@@ -254,7 +254,7 @@
           </div>
           <div class="top-left2">
             <div style="text-align:left;!important;margin-left:-2vw">
-              <p style="font-size:5vw;font-family:HKGroteskBlack"> <b>What we've build</b></p>
+              <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>What we've build</b></p>
               <div>
                 <p style="font-size:1.8vw;font-family:HKGroteskRegular">We help business to grow to their fullest <br> potential <span style="font-family:HKGroteskBlack">through technology</span></p>
               </div>              
@@ -272,7 +272,7 @@
               <img src="/assets/client/images/Hex_Right_Path.svg" class="img-fluid" alt="Snow" style="width:93%;filter: invert(54%) sepia(94%) saturate(669%) hue-rotate(352deg) brightness(91%) contrast(117%);">
           </div>
             <div class="top-right">
-              <div style="text-align:left;!important;padding-left:8.5%;padding-top:18%">
+              <div style="text-align:left;!important;padding-top:18%">
                 <div style="display:flex;align-items: flex-start">
                   <img src="/assets/client/images/BeePay Featured Project Ilustration.png" class="img-fluid" style="width:16vw" alt="">
                   <div style="margin-left:30px;">
@@ -316,7 +316,7 @@
       </div>
 
       <div class="col-md-5 p-0" style="margin-left:-40px;margin-top:7vw;z-index:99">
-        <p style="font-size:5vw;font-family:HKGroteskBlack;"> <b>Explore more on <br> our fine works</b></p>
+        <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
         <div>
           <a href="" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
         </div>
@@ -329,15 +329,15 @@
 
     <div class="row m-0 experienceBG" >
       <div class="col-md-12 p-0">
-        <div style="padding-left:130px;color:white" >
-          <p  style="font-size:64px;margin-top:50px;font-family:HKGroteskBlack;"> <b>A team that has years of experience <br> on developing technologies</b></p>
-          <p style="font-size:25px;margin-bottom:60px;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
+        <div style="padding-left:8.5%;color:white" >
+          <p  style="font-size:5vw;margin-top:50px;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience <br> on developing technologies</b></p>
+          <p style="font-size:1.9vw;margin-bottom:60px;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
           <div style="display:flex"> 
-            <div style="background-color:#FFA5A5;width:420px;border-radius:15px;color:#142850;padding:25px;">
+            <div style="background-color:#FFA5A5;width:420px;border-radius:15px;color:#142850;padding:1.9vw;">
               <div style="display:flex;justify-content:space-between;align-items:center ">
                 <div> 
-                  <p style="font-size:35px;font-family:HKGroteskBlack;"> <b>About Us</b></p>
-                  <p style="font-size:1.9vw;font-family:HKGroteskRegular;">Know more about how <br>we work in action</p>
+                  <p style="font-size:2.3vw;font-family:HKGroteskBlack;"> <b>About Us</b></p>
+                  <p style="font-size:1.9vw;font-family:HKGroteskRegular;line-height:1.2">Know more about how <br>we work in action</p>
                 </div>
                 <a href="" style="color:white">
                   <i class="fas fa-chevron-circle-right" style="font-size:40px"></i>
@@ -345,11 +345,11 @@
               </div>
             </div>
 
-            <div style="background-color:#81D1C7;width:460px;border-radius:15px;color:#142850;padding:25px; margin-left:80px">
+            <div style="background-color:#81D1C7;width:460px;border-radius:15px;color:#142850;padding:1.9vw; margin-left:80px">
               <div style="display:flex;justify-content:space-between;align-items:center ">
                 <div> 
-                  <p style="font-size:35px;font-family:HKGroteskBlack;"> <b>Join the team!</b></p>
-                  <p style="font-size:1.9vw;font-family:HKGroteskRegular;">Join our journey to enable <br> and deliver technologies</p>
+                  <p style="font-size:2.3vw;font-family:HKGroteskBlack;"> <b>Join the team!</b></p>
+                  <p style="font-size:1.9vw;font-family:HKGroteskRegular;line-height:1.2">Join our journey to enable <br> and deliver technologies</p>
                 </div>
                 <a href="" style="color:white">
                   <i class="fas fa-chevron-circle-right" style="font-size:40px"></i>
@@ -362,39 +362,39 @@
     </div>
 
     <div class="row m-0" style="background-color:#EDF7FF">
-      <div class="col-md-12 p-0" style="margin-top:-180px">
+      <div class="col-md-12 p-0" style="margin-top:-10vw">
         <div class="containerImage">
           <div style="text-align:left">   
-            <img src="assets/client/images/landing_page_bg_4.png" alt="" style="width:93%">
+            <img src="assets/client/images/landing_page_bg_4.png" alt="" style="width:96%">
           </div>
             <div class="top-left">
               <div style="text-align:left;!important;padding-top:50px">
                 
-              <div style="padding-left:130px">
-                <p style="font-size:64px;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
-                <div style="margin-top:40px">
-                  <a href="" style="border:2px solid #3F92D9;padding:10px 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:10px;color:#3F92D9;font-size:1.9 vw;">Let's Talk! <span style="font-size:25px;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
+              <div style="padding-left:8.5%">
+                <p style="font-size:5vw;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
+                <div style="margin-top:2.5vw">
+                  <a href="" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
                 <div>
-                  <hr style="margin-top:140px;width:120%">
+                  <hr style="margin-top:140px;width:80vw">
                 </div>
                 <div class="row m-0" >
                   <div class="col-md-6">
-                    <p style="font-size:40px;font-family:HKGroteskBlack;margin-top:60px;color:#142850">Jakarta</p>
-                    <p style="font-family:HKGroteskRegular;font-size:20px;margin-top:10px"> <b>+62 811 8128 171</b></p>
-                    <p style="font-family:HKGroteskRegular;font-size:18px;margin-top:10px">Jl. Harapan 3 No. 5, Malayka Residence <br> Bintaro, Pesanggrahan, Jakarta Selatan, 12330</p>
+                    <p style="font-size:3vw ;font-family:HKGroteskBlack;margin-top:60px;color:#142850">Jakarta</p>
+                    <p style="font-family:HKGroteskRegular;font-size:1.8vw;margin-top:10px"> <b>+62 811 8128 171</b></p>
+                    <p style="font-family:HKGroteskRegular;font-size:1.8vw;margin-top:10px">Jl. Harapan 3 No. 5, Malayka Residence <br> Bintaro, Pesanggrahan, Jakarta Selatan, 12330</p>
                   </div>
                   <div class="col-md-6" style="padding-left:150px">
-                    <p style="font-size:40px;font-family:HKGroteskBlack;margin-top:60px;color:#142850">Follow us!</p>
+                    <p style="font-size:3vw ;font-family:HKGroteskBlack;margin-top:60px;color:#142850">Follow us!</p>
                     <div style="display:flex">
                       <a href="" style="margin-top:20px !important;margin-right:40px !important">
-                          <img src="/assets/client/images/linkedin.png" class="img-fluid"  alt="" style="width:100%"> 
+                          <img src="/assets/client/images/linkedin.png" class="img-fluid"  alt="" style="width:3vw"> 
                       </a>
                       <a href="" style="margin-top:20px !important;margin-right:40px !important">
-                          <img src="/assets/client/images/instagram.png"  alt="" style="width:100%"> 
+                          <img src="/assets/client/images/instagram.png"  alt="" style="width:3vw"> 
                       </a>
                       <a href="" style="margin-top:20px !important;margin-right:40px !important">
-                          <img src="/assets/client/images/youtube.png"  alt="" style="width:100%"> 
+                          <img src="/assets/client/images/youtube.png"  alt="" style="width:4vw"> 
                       </a>
                     </div>
                   </div>
@@ -408,7 +408,7 @@
     <!-- END OF A TEAM THAT HAS YEARS OF EXPERIENCE -->
 
     <!-- Start of footer -->
-    <div class="row m-0" style="padding-left:130px;background-color:#EDF7FF;padding-top:60px;padding-bottom:60px">
+    <div class="row m-0" style="padding-left:8.5%;background-color:#EDF7FF;padding-top:60px;padding-bottom:60px">
         <div class="col-6 p-0" > 
           <div style="display:flex;align-items: center;justfiy-content: flex-end;">
             <div style="display:flex;align-items: center">
@@ -418,15 +418,15 @@
           </div>
         </div>
         <div class="col-6">
-          <div style="display:flex;align-items: center;justfiy-content: space-between;">
-            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;font-size:22px">Portofolio</a>
-            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;font-size:22px">Services</a>
-            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;font-size:22px">The Team</a>
-            <a class="nav-link" aria-current="page" href="#" style="color:#3F92D8;font-family:HKGroteskBold;font-size:22px">Career</a>
+          <div style="display:flex;align-items: center;justfiy-content: space-between;font-size:1.6vw;align-content:flex-end">
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">Portofolio</a>
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">Services</a>
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">The Team</a>
+            <a class="nav-link" aria-current="page" href="#" style="color:#3F92D8;font-family:HKGroteskBold;">Career</a>
           </div>
         </div>
         <div class="col-12" style="text-align:right">
-          <p style="font-size:20px;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;padding-right:84px;margin-top:13px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
+          <p style="font-size:20px;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;padding-right:8%;margin-top:13px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
         </div>
     </div>
     <!-- end of footer -->
