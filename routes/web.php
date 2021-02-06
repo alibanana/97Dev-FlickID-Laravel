@@ -32,10 +32,6 @@ Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 
 // Admin Pages Routings
-Route::get('/admin', function () {
-	return view('admin/dashboard');
-});
-
 Route::get('/email', function () {
     return view('emails/email');
 });
