@@ -317,7 +317,7 @@
     <div class="row m-0 experienceBG" >
       <div class="col-md-12 p-0">
         <div style="padding-left:130px;color:white">
-          <p  style="font-size:64px;margin-top:40px;font-family:HKGroteskBlack;"> <b>A team that has years of experience <br> on developing technologies</b></p>
+          <p  style="font-size:64px;margin-top:50px;font-family:HKGroteskBlack;"> <b>A team that has years of experience <br> on developing technologies</b></p>
           <p style="font-size:25px;margin-bottom:60px;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
           <div style="display:flex"> 
             <div style="background-color:#FFA5A5;width:420px;border-radius:15px;color:#142850;padding:25px;">
