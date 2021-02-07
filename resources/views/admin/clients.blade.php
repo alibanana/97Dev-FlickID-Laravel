@@ -5,6 +5,13 @@
 
 @section('container')
 <div class="container" style="padding-bottom:20px">
+  @if (session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert">
+        <h4 class="alert-heading">Success!</h4>
+        <p>{{ session()->get('success') }}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  @endif
   <div class = "row"> 
     <div class ="col-md-12">
       <h2 class="pt-4 pb-1"> FlickSoftware Clients</h2>
@@ -77,23 +84,48 @@
           @if ($client->status == "Pending")
             <td scope="col" style="color: orange;">{{ $client->status }}</td>
             <td scope="col" style="white-space: nowrap; width: 1%;">
-              <button type="button" class="btn" style="color: white; background-color:ForestGreen;" onclick='return confirm("Are you sure you want to Accept this client?")'>Accept</button>
-              <button type="button" class="btn" style="color: white; background-color:red;" onclick='return confirm("Are you sure you want to Reject this client?")'>Reject</button>
+              <form action="{{ route('admin.client.update', $client->id) }}" method="post" style="display: inline-block">
+                @csrf
+                @method('PUT')
+                <input type="hidden" name="status" value="Accepted">
+                <button class="btn" type="submit" style="color: white; background-color:ForestGreen;" onclick='return confirm("Are you sure you want to Accept this client?")'>Accept</button>
+              </form>
+              <form action="{{ route('admin.client.update', $client->id) }}" method="post" style="display: inline-block">
+                @csrf
+                @method('PUT')
+                <input type="hidden" name="status" value="Rejected">
+                <button class="btn" type="submit" style="color: white; background-color:red;" onclick='return confirm("Are you sure you want to Reject this client?")'>Reject</button>
+              </form>
             </td>
           @elseif ($client->status == "Rejected")
             <td scope="col" style="color: red;">{{ $client->status }}</td>
             <td scope="col" style="white-space: nowrap; width: 1%;">
-              <button type="button" class="btn" style="color: black; background-color:NavajoWhite;" onclick='return confirm("This will change the client status to Pending, are you sure?")'>Undo</button>
+              <form action="{{ route('admin.client.update', $client->id) }}" method="post" style="display: inline-block">
+                @csrf
+                @method('PUT')
+                <input type="hidden" name="status" value="Pending">
+                <button class="btn" type="submit" style="color: black; background-color:NavajoWhite;" onclick='return confirm("This will change the client status to Pending, are you sure?")'>Undo</button>
+              </form>
             </td>
           @elseif ($client->status == "Accepted")
             <td scope="col" style="color: green;">{{ $client->status }}</td>
             <td scope="col" style="white-space: nowrap; width: 1%;">
-              <button type="button" class="btn" style="color: white; background-color:DarkSlateGrey;" onclick='return confirm("Are you sure you want to Close this client?")'>Close</button>
+              <form action="{{ route('admin.client.update', $client->id) }}" method="post" style="display: inline-block">
+                @csrf
+                @method('PUT')
+                <input type="hidden" name="status" value="Finished">
+                <button class="btn" type="submit" style="color: white; background-color:DarkSlateGrey;" onclick='return confirm("Are you sure you want to Close this client?")'>Close</button>
+              </form>
             </td>
           @elseif ($client->status == "Finished")
             <td scope="col" style="color: DimGrey;">{{ $client->status }}</td>
             <td scope="col" style="white-space: nowrap; width: 1%;">
-              <button type="button" class="btn" style="color: black; background-color:NavajoWhite;" onclick='return confirm("his will change the client status to Accepted, are you sure?")'>Undo</button>
+              <form action="{{ route('admin.client.update', $client->id) }}" method="post" style="display: inline-block">
+                @csrf
+                @method('PUT')
+                <input type="hidden" name="status" value="Accepted">
+                <button class="btn" type="submit" style="color: black; background-color:NavajoWhite;" onclick='return confirm("This will change the client status to Accepted, are you sure?")'>Undo</button>
+              </form>
             </td>
           @endif
         </tr>

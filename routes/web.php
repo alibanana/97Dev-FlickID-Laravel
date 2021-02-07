@@ -34,6 +34,7 @@ Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 // Admin Pages Routings (FIXED)
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
+Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
 
 // Admin Pages Routings
 Route::get('/email', function () {
