@@ -40,7 +40,7 @@
         <form method="GET" action="{{ route('admin.client.index') }}" style="margin-left: 40px">
           <div class="row">
             <div class="col-md-8" style="padding: 0px">
-              <input class="form-control" style="background-color: #EDEDED;color:#B1B1B1;" type="search" name="search" placeholder="Search Posts Here" aria-label="Search" value="{{ Request::get('search') }}">
+              <input class="form-control" style="background-color: #EDEDED;color:#B1B1B1;" type="search" name="search" placeholder="Search Clients Here" aria-label="Search" value="{{ Request::get('search') }}">
               @if (Request::get('filter'))
                 <input name="filter" value="{{ Request::get('filter') }}" hidden>
               @endif
@@ -94,7 +94,7 @@
                 @csrf
                 @method('PUT')
                 <input type="hidden" name="status" value="Rejected">
-                <button class="btn" type="submit" style="color: white; background-color:red;" onclick='return confirm("Are you sure you want to Reject this client?")'>Reject</button>
+                <button class="btn" type="submit" style="color: white; background-color:Crimson;" onclick='return confirm("Are you sure you want to Reject this client?")'>Reject</button>
               </form>
             </td>
           @elseif ($client->status == "Rejected")
@@ -115,6 +115,12 @@
                 @method('PUT')
                 <input type="hidden" name="status" value="Finished">
                 <button class="btn" type="submit" style="color: white; background-color:DarkSlateGrey;" onclick='return confirm("Are you sure you want to Close this client?")'>Close</button>
+              </form>
+              <form action="{{ route('admin.client.update', $client->id) }}" method="post" style="display: inline-block">
+                @csrf
+                @method('PUT')
+                <input type="hidden" name="status" value="Pending">
+                <button class="btn" type="submit" style="color: black; background-color:NavajoWhite;" onclick='return confirm("This will change the client status to Pending, are you sure?")'>Undo</button>
               </form>
             </td>
           @elseif ($client->status == "Finished")
