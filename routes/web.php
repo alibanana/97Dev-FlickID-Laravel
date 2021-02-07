@@ -23,3 +23,9 @@ Route::get('/contact-us', function () {
     return view('client/contactUs');
 });
 
+
+
+Route::get('/portofolio', function () {
+    return view('client/portofolio');
+});
+

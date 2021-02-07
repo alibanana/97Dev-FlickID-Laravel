@@ -12,18 +12,18 @@
                 
             </div>
             <div class="top-left">
-                <div style="text-align:left;padding-right:100px !important;padding-left:100px;padding-top:80px">
-                    <p  style="font-size:55px;font-family:HKGroteskBlack;"><b>Do you have a project to work with? Tell it to us!</b></p>
-                    <div style="padding-right:100px">
-                    <p style="font-size:20px;font-family:HKGroteskRegular">If you have some interests in building your project with us,</p>
-                    <p style="font-size:20px;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskBold">Fill out the form and one of our team members will get back to you right away.</p>
+                <div style="text-align:left;padding-right:6.5vw !important;padding-left:6.5vw;padding-top:5vw">
+                    <p  style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"><b>Do you have a <br> project to work  <br> with? Tell it to us!</b></p>
+                    <div style="padding-right:6.5vw;padding-top:3vw">
+                        <p style="font-size:1.5vw;font-family:HKGroteskRegular">If you have some interests in building your <br> project with us,</p>
+                        <p style="font-size:1.5vw;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskBold">Fill out the form and one of our team <br> members will get back to you right away.</p>
                     </div>
                     
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-6" style="padding-right:15%;padding-top:80px;padding-left:5%">
+    <div class="col-md-6" style="padding-right:15%;padding-top:5vw;padding-left:5%">
         <div>
             <form style="font-family:HKGroteskBold">
                 <div class="form-group">
