@@ -68,32 +68,32 @@
     <tbody>
       @foreach ($clients as $client)
         <tr>
-          <th scope="row">{{ $loop->iteration }}</th>
-          <td @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->name }}</td>
-          <td @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->company }}</td>
-          <td @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->phone }}</td>
-          <td @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->email }}</td>
-          <td @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->description }}</td>
+          <td scope="row">{{ $loop->iteration }}</td>
+          <td scope="col" @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->name }}</td>
+          <td scope="col" @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->company }}</td>
+          <td scope="col" @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->phone }}</td>
+          <td scope="col" @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->email }}</td>
+          <td scope="col" @if($client->status == "Finished")  style="color: DimGrey;" @endif>{{ $client->description }}</td>
           @if ($client->status == "Pending")
-            <td style="color: orange;">{{ $client->status }}</td>
-            <td>
-              <button type="button" class="btn btm-sm mb-2" style="color: white; background-color:ForestGreen; width: 80px;" onclick='return confirm("Are you sure you want to Accept this client?")'>Accept</button>
-              <button type="button" class="btn btm-sm" style="color: white; background-color:red; width: 80px;" onclick='return confirm("Are you sure you want to Reject this client?")'>Reject</button>
+            <td scope="col" style="color: orange;">{{ $client->status }}</td>
+            <td scope="col" style="white-space: nowrap; width: 1%;">
+              <button type="button" class="btn" style="color: white; background-color:ForestGreen;" onclick='return confirm("Are you sure you want to Accept this client?")'>Accept</button>
+              <button type="button" class="btn" style="color: white; background-color:red;" onclick='return confirm("Are you sure you want to Reject this client?")'>Reject</button>
             </td>
           @elseif ($client->status == "Rejected")
-            <td style="color: red;">{{ $client->status }}</td>
-            <td>
-              <button type="button" class="btn btn-sm" style="color: black; background-color:NavajoWhite; width: 80px;" onclick='return confirm("This will change the client status to Pending, are you sure?")'>Undo</button>
+            <td scope="col" style="color: red;">{{ $client->status }}</td>
+            <td scope="col" style="white-space: nowrap; width: 1%;">
+              <button type="button" class="btn" style="color: black; background-color:NavajoWhite;" onclick='return confirm("This will change the client status to Pending, are you sure?")'>Undo</button>
             </td>
           @elseif ($client->status == "Accepted")
-            <td style="color: green;">{{ $client->status }}</td>
-            <td>
-              <button type="button" class="btn btn-sm" style="color: white; background-color:DarkSlateGrey; width: 80px;" onclick='return confirm("Are you sure you want to Close this client?")'>Close</button>
+            <td scope="col" style="color: green;">{{ $client->status }}</td>
+            <td scope="col" style="white-space: nowrap; width: 1%;">
+              <button type="button" class="btn" style="color: white; background-color:DarkSlateGrey;" onclick='return confirm("Are you sure you want to Close this client?")'>Close</button>
             </td>
           @elseif ($client->status == "Finished")
-            <td style="color: DimGrey;">{{ $client->status }}</td>
-            <td>
-              <button type="button" class="btn btn-sm" style="color: black; background-color:NavajoWhite; width: 80px;" onclick='return confirm("his will change the client status to Accepted, are you sure?")'>Undo</button>
+            <td scope="col" style="color: DimGrey;">{{ $client->status }}</td>
+            <td scope="col" style="white-space: nowrap; width: 1%;">
+              <button type="button" class="btn" style="color: black; background-color:NavajoWhite;" onclick='return confirm("his will change the client status to Accepted, are you sure?")'>Undo</button>
             </td>
           @endif
         </tr>
