@@ -17,6 +17,9 @@ Auth::routes();
 
 // Redirects
 Route::redirect('/home', '/');
+Route::redirect('/portfolios', '/portfolio');
+Route::redirect('/careers', '/career');
+Route::redirect('/admin/clients', '/admin/client');
 
 // Client Pages Routings (FIXED)
 Route::get('/', 'Client\HomeController@index')->name('index');
@@ -30,6 +33,7 @@ Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
 // Admin Pages Routings (FIXED)
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
+Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 
 // Admin Pages Routings
 Route::get('/email', function () {
@@ -46,8 +50,4 @@ Route::get('/admin/project', function () {
 
 Route::get('/admin/job', function () {
     return view('admin/jobs');
-});
-
-Route::get('/admin/client', function () {
-    return view('admin/clients');
 });
