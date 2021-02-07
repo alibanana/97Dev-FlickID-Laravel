@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 use App\Client;
 
@@ -51,8 +52,26 @@ class ClientController extends Controller
             }
         }
 
-        $clients = $clients->paginate(15);
+        $clients = $clients->paginate(10);
 
         return view('admin/clients', compact('clients'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $input = $request->all();
+
+        Validator::make($input, [
+            'status' => 'required'
+        ])->validate();
+
+        $client = Client::findorfail($id);
+        $current_status = $client->status;
+        $client->status = $input['status'];
+        $client->save();
+        
+        $message = "Changed ".$client->name."'s status from ".$current_status." to ".$client->status.".";
+
+        return redirect()->back()->with('success', $message);
     }
 }
