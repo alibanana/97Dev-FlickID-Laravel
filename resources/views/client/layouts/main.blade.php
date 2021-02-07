@@ -46,8 +46,7 @@
     .nav-colored { 
       -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
       -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
-      box-shadow: 0 10px 6px -6px  #e5e5e5;
-      background-color:white;
+      box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);      background-color:white;
       transition: 0.3s ease-in-out;
     }
     .nav-transparent { 
@@ -92,14 +91,18 @@
     @yield('container')
 
     <script>
+      console.log('SCRIPT CALLED');
+
       var myNav = document.getElementById('mynav');
       window.onscroll = function () { 
           "use strict";
-          if (document.body.scrollTop >= 10 ) {
+          if (document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10 ){
+              console.log('ADD THE BORDER');
               myNav.classList.add("nav-colored");
               myNav.classList.remove("nav-transparent");
           } 
           else {
+              console.log('REMOVE THE BORDER');
               myNav.classList.add("nav-transparent");
               myNav.classList.remove("nav-colored");
           }
