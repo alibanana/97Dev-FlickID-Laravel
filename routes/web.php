@@ -45,6 +45,7 @@ Route::get('/admin/team', function () {
     return view('admin/teamtable');
 });
 
+
 Route::get('/admin/project', function () {
     return view('admin/project');
 });
@@ -52,3 +53,11 @@ Route::get('/admin/project', function () {
 Route::get('/admin/job', function () {
     return view('admin/jobs');
 });
+
+
+
+Route::get('/portofolio', function () {
+    return view('client/portofolio');
+});
+
+
