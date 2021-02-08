@@ -17,48 +17,37 @@
   <!-- styling -->
   <style>
   a{
-      color:black !important;
-      font-family: 'HKGroteskBold';
-      font-size: 22px;
+    color:black !important;
+    font-family: 'HKGroteskBold';
+    font-size: 22px;
   }
   h2{
-      padding-top: 50px;
-      
+    padding-top: 50px;  
   }
   .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
-  padding: 16px;
-  text-align: center;
-  background-color: #EEEEEE;    
-  border-radius: 10px;
-  margin-bottom: 50px
-  
-  
-}
-.card-body {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
-  padding: 16px;
-  text-align: left;
-  color: white;   
-  margin-bottom:25px;
-  
-  
-}
-
-.flex-item {
-  justify-content: space-between;
-}
-.card-text{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    padding: 16px;
+    text-align: center;
+    background-color: #EEEEEE;    
+    border-radius: 10px;
+    margin-bottom: 50px
+  }
+  .card-body {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    padding: 16px;
+    text-align: left;
+    color: white;   
+    margin-bottom:25px;
+  }
+  .flex-item {
+    justify-content: space-between;
+  }
+  .card-text{
     font-size: 50px;
-}
-
-
-
-    
+  }
 </style>   
 <!-- end styling -->
-<body style='font-family:HKGroteskBold ;'>
-  
+<body style='font-family:HKGroteskBold;'>
     <!-- START OF POPUP -->
     <div id="create_member" class="overlay">
       <div class="popup">

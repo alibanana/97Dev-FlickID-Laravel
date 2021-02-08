@@ -19,13 +19,13 @@ class CreateProjectsTable extends Migration
             $table->string('logo_file', 80);
             $table->string('title', 40);
             $table->text('description');
-            $table->text('sub-description');
+            $table->text('sub_description');
             $table->text('scope');
             $table->text('technologies');
             $table->text('deliverables');
             $table->string('bg_file', 80);
             $table->string('headline', 100);
-            $table->string('sub-headline', 100);
+            $table->string('sub_headline', 100);
             $table->unsignedBigInteger('project_type_id');
             $table->foreign('project_type_id')->references('id')->on('project_types')->onDelete('cascade');
             $table->unsignedBigInteger('project_detail_id');

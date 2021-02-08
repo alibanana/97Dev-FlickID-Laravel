@@ -14,8 +14,10 @@
   @endif
   <div class = "row"> 
     <div class ="col-md-12">
-      <h2 class="pt-4 pb-1"> FlickSoftware Clients</h2>
-      <div style="display:flex; margin-top: 10px">
+      <h2 class="pt-4 pb-4 m-0"> FlickSoftware Clients</h2>
+    </div>
+    <div class="col-md-12">
+      <div style="display:flex">
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
             @if (Request::get('sort')) Sorted By: {{ Request::get('sort') }} @else Sort By @endif
@@ -72,7 +74,7 @@
         <th scope="col">Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody style="font-family: HKGroteskMedium">
       @foreach ($clients as $client)
         <tr>
           <td scope="row">{{ $loop->iteration }}</td>

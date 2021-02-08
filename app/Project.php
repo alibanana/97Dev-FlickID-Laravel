@@ -13,7 +13,7 @@ class Project extends Model
     ];
 
     // Get the project's type for a certain project.
-    public function type()
+    public function project_type()
     {
         return $this->belongsTo('App\ProjectType');
     }
