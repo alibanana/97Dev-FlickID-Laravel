@@ -130,7 +130,7 @@
 
               </ul>
               <div class="" style="">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.4vw;font-family:HKGroteskBold">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="portofolio" style="margin-right:65px;color:black">Portofolio</a>
                   </li>
@@ -229,7 +229,7 @@
                   <p style="font-size:2.3vw;font-family:HKGroteskBlack;"> <b>About Us</b></p>
                   <p style="font-size:1.7vw;font-family:HKGroteskRegular;line-height:1.2">Know more about how <br>we work in action</p>
                 </div>
-                <a href="" style="color:white">
+                <a href="/about-us" style="color:white">
                   <i class="fas fa-chevron-circle-right" style="font-size:40px"></i>
                 </a>
               </div>
