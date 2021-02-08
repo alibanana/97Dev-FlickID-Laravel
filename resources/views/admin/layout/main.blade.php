@@ -91,6 +91,25 @@ cursor: pointer;
                   <option>5</option>
                 </select>
             </div>
+            <h5 style="color:#145CA8;margin-top:30px">Picture</h5>
+            <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" hidden/>
+            <label id="uploadButton" for="image">Choose File</label>
+            @error('image')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+              <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              @error('imagename')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+              <strong>{{ $message }}</strong>
+            </span>
+              @enderror
+            <!-- START OF UPLOADED IMAGE -->
+            <div id="gallery_preview" class="row m-0">
+            </div>
+            <!-- END OF UPLOADED IMAGE -->
+            
+
             <div style ="display:flex; justify-content: flex-end; ">
               <button type="submit" class="btn btn-warning btn-sm">Add Member</button>
             </div>
@@ -103,7 +122,9 @@ cursor: pointer;
 <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-3" style="padding:0px 100px">
 <div class="container">
   <div class="col-4 ">
-    <a class="navbar-brand pl-1" href="/admin"><img src="http://ninetysevendev-flick-profile.herokuapp.com/assets/logoflick.png" alt=""></a>
+
+    <a class="navbar-brand pl-1" href="/"><img src="http://ninetysevendev-flick-profile.herokuapp.com/assets/logoflick.png" alt=""></a>
+
   </div>
     <div class="col-8 row " id="navbarNav" >
       <ul class="justify-content-between nav justify-content-start">
@@ -131,9 +152,50 @@ cursor: pointer;
 </nav>
 @yield('container')
 
-    
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+      if (window.File && window.FileList && window.FileReader) {
+        $("#image").on("change", function(e) {
+          var fileName = document.getElementById("image").value;
+          var idxDot = fileName.lastIndexOf(".") + 1;
+          var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+          if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
+            document.getElementById("gallery_preview").innerHTML = "";
+            var files = e.target.files;
+            var filesLength = files.length;
+            for (var i = 0; i < files.length; i++ ) {
+              var file = files[i];
+              var fileReader = new FileReader();
+
+              fileReader.onload= (function(f) {
+                return function(e) {
+                  $("#gallery_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
+                    "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;width:300px;height:200px\" />" + 
+                    "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove\"></i>" + 
+                    "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
+                  $(".remove").click(function(){
+                    $(this).parent(".pip").remove();
+                  });
+                };
+              })(file);
+
+              fileReader.readAsDataURL(file);
+            }
+          } else {
+              alert("Only jpg/jpeg and png files are allowed!");
+          }
+        });
+      } else {
+        alert("Your browser doesn't support to File API")
+      }
+    });
+    </script>
+
   </body>
 </html>
