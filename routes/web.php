@@ -33,6 +33,7 @@ Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
 // Admin Pages Routings (FIXED)
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
+Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
 
@@ -43,10 +44,6 @@ Route::get('/email', function () {
 
 Route::get('/admin/team', function () {
     return view('admin/teamtable');
-});
-
-Route::get('/admin/project', function () {
-    return view('admin/project');
 });
 
 Route::get('/admin/job', function () {
