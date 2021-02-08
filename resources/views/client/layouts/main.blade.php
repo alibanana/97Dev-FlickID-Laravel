@@ -9,7 +9,9 @@
     <link rel="stylesheet"  type="text/css"  href="/css/client/index.css">
 
 
-    <script src="/js/navbar.js"></script>
+    <!--load all fontawesome -->
+    <link href="/fontawesome/css/all.css" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -35,11 +37,16 @@
       top: 8px;
       left: 16px;
     }
+    /* Top right text */
+    .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+    }
     .nav-colored { 
       -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
       -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
-      box-shadow: 0 10px 6px -6px  #e5e5e5;
-      background-color:white;
+      box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);      background-color:white;
       transition: 0.3s ease-in-out;
     }
     .nav-transparent { 
@@ -51,8 +58,8 @@
   <body>
     <!-- NAVBAR DESKTOP -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
-      <div class="container-fluid container"> 
-          <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:18%;margin-right:14%"  alt="" onclick="window.open('/','_self');">
+      <div class="container-fluid" style="padding-left:60px"> 
+          <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
 
      
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +69,7 @@
           <div class="" style="">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:20px;font-family:HKGroteskBold">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" style="margin-right:65px;color:black">Portofolio</a>
+                <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portofolio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" style="margin-right:65px;color:black;">Services</a>
@@ -84,14 +91,18 @@
     @yield('container')
 
     <script>
+      console.log('SCRIPT CALLED');
+
       var myNav = document.getElementById('mynav');
       window.onscroll = function () { 
           "use strict";
-          if (document.body.scrollTop >= 10 ) {
+          if (document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10 ){
+              console.log('ADD THE BORDER');
               myNav.classList.add("nav-colored");
               myNav.classList.remove("nav-transparent");
           } 
           else {
+              console.log('REMOVE THE BORDER');
               myNav.classList.add("nav-transparent");
               myNav.classList.remove("nav-colored");
           }

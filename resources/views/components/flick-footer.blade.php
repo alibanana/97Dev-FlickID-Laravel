@@ -6,7 +6,7 @@
                 <img src="/assets/client/images/Footer.png" class="img-fluid" alt="Snow" style="width:92%;"> 
             </div>
         </div>
-        <div class="col-8" style="padding-right:100px;padding-top:40px">
+        <div class="col-8" style="padding-right:4vw;padding-top:40px">
             <div style="display:flex;justify-content:flex-end">
                 <p style="font-size:20px;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;padding-right:70px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
                 <a href="" style="margin-top:4px !important;margin-right:10px !important">
