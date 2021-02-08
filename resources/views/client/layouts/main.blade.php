@@ -37,22 +37,64 @@
       top: 8px;
       left: 16px;
     }
+    
     /* Top right text */
     .top-right {
       position: absolute;
       top: 8px;
       right: 16px;
     }
+
     .nav-colored { 
       -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
       -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
       box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);      background-color:white;
       transition: 0.3s ease-in-out;
     }
+
     .nav-transparent { 
       background-color:transparent;
       transition: 0.3s ease-in-out;
     }
+
+    .memberCard{
+      background-color:#E8F5FF;
+      padding:2.4vw;
+      border-radius:3vw
+    }
+
+    .experienceBG{
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+        background-image: url("/assets/client/images/landing_page_bg_3.png");
+        background-position:right top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      .aboutUsBackground{
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+        background-image: url("/assets/client/images/About_Us_Top_Background.png");
+        background-position:left top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      .aboutUsBottomBG{
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+        background-image: url("/assets/client/images/About_Us_Bottom_Background.png");
+        background-position:left top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
     </style>
   </head>
   <body>
