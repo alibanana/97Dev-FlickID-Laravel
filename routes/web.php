@@ -44,7 +44,14 @@ Route::get('/email', function () {
 
 Route::get('/admin/team', function () {
     return view('admin/teamtable');
-});
+
+// Route::get('/about-us', function () {
+//     return view('client/aboutUs');
+// });
+
+// Route::get('/contact-us', function () {
+//     return view('client/contactUs');
+// });
 
 Route::get('/admin/job', function () {
     return view('admin/jobs');
