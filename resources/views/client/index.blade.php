@@ -188,7 +188,6 @@
               <p style="font-size:1.3vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
             </div>
             <a href="" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-            
           </div>
         </div>
       @endforeach
@@ -200,11 +199,31 @@
     
     <div class="row m-0" style="padding-bottom:7vw" >
 
-    <x-mobile-left :flag="1"/>
-    <x-desktop-right :flag="0"/>
-    <x-mobile-left :flag="0"/>
-    <x-mobile-right :flag="2"/>
+    <?php $counter = 0 ?>
+    @foreach($featured_projects as $featured_project)
+      <?php $flag = 0 ?>
+      @if($loop->first)
+        <?php $flag = 1 ?>
+      @elseif ($loop->last)
+        <?php $flag = 2 ?>
+      @endif
 
+      @if($counter == 0)
+        @if($featured_project->project->project_type->type == 'Mobile Apps')
+          <x-mobile-left :flag="$flag" :featuredProject="$featured_project" />
+        @else
+          <x-desktop-left :flag="$flag" :featuredProject="$featured_project" />
+        @endif
+        <?php $counter++ ?>
+      @else
+        @if($featured_project->project->project_type->type == 'Mobile Apps')
+          <x-mobile-right :flag="$flag" :featuredProject="$featured_project" />
+        @else
+          <x-desktop-right :flag="$flag" :featuredProject="$featured_project" />
+        @endif
+        <?php $counter = 0 ?>
+      @endif
+    @endforeach
 
       <!-- <div class="col-md-5 p-0" style="margin-left:-40px;margin-top:7vw;z-index:99">
         <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>

@@ -1,26 +1,24 @@
 @if($flag == 1)
-    <div class="col-md-7 p-0" >
-    @else
-
-    <div class="col-md-7 p-0" style="margin-top:-24vw" >
-    @endif
+<div class="col-md-7 p-0" >
+@else
+<div class="col-md-7 p-0" style="margin-top:-24vw" >
+@endif
     <div class="containerImage">
     <div style="text-align:left">   
-        <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%;filter: invert(52%) sepia(78%) saturate(1172%) hue-rotate(200deg) brightness(105%) contrast(101%);">
+        <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->filter_invert }}%) sepia({{ $featuredProject->filter_sepia }}%) saturate({{ $featuredProject->filter_saturate }}%) hue-rotate({{ $featuredProject->filter_hue_rotate }}deg) brightness({{ $featuredProject->filter_brightness }}%) contrast({{ $featuredProject->filter_contrast }}%);">
     </div>
         <div class="top-left">
             <div style="text-align:left !important;padding-left:10%;padding-top:7%">
-                <img src="/assets/client/images/mobilocal Featured Project Ilustration.png" class="img-fluid" style="width:28vw" alt="">
+                <img src="{{ asset($featuredProject->ilustration_file) }}" class="img-fluid" style="width:28vw" alt="">
                 <div style="margin-top:40px">
-                    <img src="/assets/client/images/mobilocal Featured Project Logo.png" class="img-fluid" style="width:11vw"  alt="">
+                    <img src="{{ asset($featuredProject->logo_file) }}" class="img-fluid" style="width:11vw"  alt="">
                     <div style="width:75%">
-                    <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:10px">Mobilocal is a car purchasing platform that connects buyers and dealers in an instant. We help buyers choose and purchase their perfect car as efficiently as possible by comparing best offers from dealers around.<span style="font-family:HKGroteskBold"></span></p>
+                    <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:10px">{{ $featuredProject->project->description }} <span style="font-family:HKGroteskBold">{{ $featuredProject->project->sub_description }}</span></p>
                     </div>
                     <div style="padding-top:15px">
-                    <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8;">See our work <i style="font-size:1.5vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+                    <a href="{{ url('portfolio').'/'.$featuredProject->project->id }}" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8;">See our work <i style="font-size:1.5vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
-                            
             </div>
         </div>
     </div>
