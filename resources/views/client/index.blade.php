@@ -178,43 +178,20 @@
     <div class="row m-0" style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
       <div class="col-md-12" >
         <p style="font-size:5vw;font-family:HKGroteskBlack"> <b>What we provide</b></p>
-
       </div>
-      <div class="col-md-4" style="padding-top:4vw">
-        <div >
-          <img src="/assets/client/images/mobile-apps-icon.svg" style="width:8vw" alt="">
-          <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">Mobile Apps</p>
-          <div style="padding-right:100px">
-            <p style="font-size:1.3vw;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
+      @foreach ($project_types as $project_type)
+        <div class="col-md-4" style="padding-top:4vw">
+          <div >
+            <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
+            <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
+            <div style="padding-right:100px">
+              <p style="font-size:1.3vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
+            </div>
+            <a href="" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+            
           </div>
-          <a href="" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-          
         </div>
-      </div>
-
-      <div class="col-md-4" style="padding-top:4vw">
-        <div>
-          <img src="/assets/client/images/websites-icon.svg" style="width:8vw" alt="">
-          <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">Websites</p>
-          <div style="padding-right:100px">
-            <p style="font-size:1.3vw;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
-          </div>          
-          <a href="" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-          
-        </div>
-      </div>
-
-      <div class="col-md-4" style="padding-top:4vw">
-        <div>
-          <img src="/assets/client/images/desktop-icon.svg" style="width:8vw" alt="">
-          <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">Desktop</p>
-          <div style="padding-right:100px">
-            <p style="font-size:1.3vw;font-family:HKGroteskRegular">Android Java, Android Kotlin, iOS Objective C, iOS Swift</p>
-          </div>          
-          <a href="" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-          
-        </div>
-      </div>
+      @endforeach
     </div>
 
     <!-- END OF WHAT WE PROVIDE -->
@@ -229,8 +206,6 @@
     <x-mobile-right :flag="2"/>
 
 
-      
-
       <!-- <div class="col-md-5 p-0" style="margin-left:-40px;margin-top:7vw;z-index:99">
         <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
         <div>
@@ -242,7 +217,6 @@
     <!-- END OF WHAT WE HAVE BUILD -->
 
     <!-- START OF A TEAM THAT HAS YEARS OF EXPERIENCE -->
-
     <div class="row m-0 experienceBG" >
       <div class="col-md-12 p-0">
         <div style="padding-left:8.5%;color:white" >

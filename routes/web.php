@@ -53,5 +53,3 @@ Route::get('/admin/job', function () {
 Route::get('/portofolio', function () {
     return view('client/portofolio');
 });
-
-

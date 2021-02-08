@@ -21,14 +21,14 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6" style="padding-right:15%;padding-top:5vw;padding-left:5%">
+    <div class="col-md-6" style="padding-right:15%;padding-top:80px;padding-left:5%">
         @if (session()->has('success'))
             <div class="alert alert-success" role="alert">
                 <h4 class="alert-heading">Alright!</h4>
                 <p>{{ session()->get('success') }}</p>
             </div>
         @endif
-
+        <div>
             <form enctype="multipart/form-data" method="POST" action="{{ route('client.store') }}" style="font-family:HKGroteskBold">
                 @csrf
                 <div class="form-group">
