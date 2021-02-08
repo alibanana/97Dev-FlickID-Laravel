@@ -18,7 +18,12 @@ class CreateFeaturedProjectsTable extends Migration
             $table->unsignedTinyInteger('position');
             $table->string('logo_file', 80);
             $table->string('ilustration_file', 80);
-            $table->string('color_code', 8);
+            $table->unsignedTinyInteger('filter_invert');
+            $table->unsignedTinyInteger('filter_sepia');
+            $table->unsignedSmallInteger('filter_saturate');
+            $table->unsignedSmallInteger('filter_hue_rotate');
+            $table->unsignedTinyInteger('filter_brightness');
+            $table->unsignedTinyInteger('filter_contrast');
             $table->unsignedBigInteger('project_id');
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->timestamps();

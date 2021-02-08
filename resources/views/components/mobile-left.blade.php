@@ -7,19 +7,19 @@
 
     <div class="containerImage">
         <div style="text-align:left">   
-            <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%;filter: invert(88%) sepia(22%) saturate(3974%) hue-rotate(357deg) brightness(94%) contrast(108%);">
+            <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->filter_invert }}%) sepia({{ $featuredProject->filter_sepia }}%) saturate({{ $featuredProject->filter_saturate }}%) hue-rotate({{ $featuredProject->filter_hue_rotate }}deg) brightness({{ $featuredProject->filter_brightness }}%) contrast({{ $featuredProject->filter_contrast }}%);">
         </div>
         <div class="top-left">
             <div style="text-align:left !important;padding-left:15%;padding-top:18%">
             <div style="display:flex;align-items: flex-start">
-                <img src="/assets/client/images/Flick Featured Project Ilustration.png" class="img-fluid" style="width:16vw" alt="">
+                <img src="{{ asset($featuredProject->ilustration_file) }}" class="img-fluid" style="width:16vw" alt="">
                 <div style="margin-left:30px">
-                    <img src="/assets/client/images/Flick Featured Project Logo.png" class="img-fluid" style="width:11vw"  alt="">
+                    <img src="{{ asset($featuredProject->logo_file) }}" class="img-fluid" style="width:11vw"  alt="">
                 <div style="width:22vw">
-                    <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:3vw">A financial technology company providing solutions to users and merchant. <span style="font-family:HKGroteskBold">We have created e-money, peer-to-peer lending, remittance, e-commerce and point-of-sales systems.</span></p>
+                    <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:3vw">{{ $featuredProject->project->description }} <span style="font-family:HKGroteskBold">{{ $featuredProject->project->sub_description }}</span></p>
                 </div>
                 <div style="padding-top:15px">
-                    <a href="" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8;">See our work <i style="font-size:1.5vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+                    <a href="{{ url('portfolio').'/'.$featuredProject->project->id }}" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8;">See our work <i style="font-size:1.5vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
                 </div>
                 </div>
             </div>                
