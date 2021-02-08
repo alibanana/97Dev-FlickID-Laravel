@@ -223,7 +223,7 @@
           <p  style="font-size:5vw;margin-top:50px;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience <br> on developing technologies</b></p>
           <p style="font-size:1.9vw;margin-bottom:60px;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
           <div style="display:flex"> 
-            <div style="background-color:#FFA5A5;width:420px;border-radius:15px;color:#142850;padding:1.9vw;">
+            <div style="background-color:#FFA5A5;width:29vw;border-radius:15px;color:#142850;padding:1.9vw;">
               <div style="display:flex;justify-content:space-between;align-items:center ">
                 <div> 
                   <p style="font-size:2.3vw;font-family:HKGroteskBlack;"> <b>About Us</b></p>
@@ -235,7 +235,7 @@
               </div>
             </div>
 
-            <div style="background-color:#81D1C7;width:460px;border-radius:15px;color:#142850;padding:1.7vw; margin-left:80px">
+            <div style="background-color:#81D1C7;width:29vw;border-radius:15px;color:#142850;padding:1.7vw; margin-left:80px">
               <div style="display:flex;justify-content:space-between;align-items:center ">
                 <div> 
                   <p style="font-size:2.3vw;font-family:HKGroteskBlack;"> <b>Join the team!</b></p>
