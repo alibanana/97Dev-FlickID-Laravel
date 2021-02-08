@@ -97,13 +97,13 @@
             </div>
         </div>
 
-        <div class="row" >
-            <div class="mb-3 col-6 mt-5">
-            <button type="button" class="" style="background-color:#3F92D8; border-radius:10px;border:none;color:white"> Add project Details</button> 
+        <div class="row">
+            <div class="mb-3 col-6 mt-5" >
+            <button type="button" class="" style="background-color:#3F92D8; border-radius:10px;border:none;color:white;padding: 6px 12px;"> Add project Details</button> 
             </div>
-            <div class="mb-3 col-6 mt-5" style="text-align:right">
-                <button type="button" class="" style="background-color:#FACA00; border-radius:10px;border:none;"> Add projects</button> 
-            </div>
+        </div>
+        <div class="container" style="text-align:right;padding-right:12.5vw;padding-bottom:7vw">
+            <button type="button" class="" style="background-color:#FACA00; border-radius:10px;border:none;color:black;padding: 6px 12px;"> Add projects</button> 
         </div>
             
             

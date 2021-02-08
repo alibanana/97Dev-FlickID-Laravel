@@ -60,6 +60,35 @@ border-radius: 0.3rem;
 cursor: pointer;
 
 }
+.block-left {
+        display: block;
+        width: 30%;
+        border: none;
+        background-color: #3F92D8;
+        padding: 6px 12px;
+        margin-left:0px;
+        font-size: 14px;
+        font-family:HKGroteskBold;
+        cursor: pointer;
+        border-radius:10px;
+        text-align: center;
+        
+        color:white;
+      }
+.block {
+    display: block;
+    width: 30%;
+    border: none;
+    background-color: #3F92D8;
+    padding: 6px 12px;
+    
+    font-size: 14px;
+    font-family:HKGroteskBold;
+    cursor: pointer;
+    border-radius:10px;
+    text-align: center;
+    color:white;
+}
 
 
 
