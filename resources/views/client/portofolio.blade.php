@@ -1,6 +1,6 @@
 @extends('client/layouts/main')
 
-@section('title', 'Flick Software Contact Us')
+@section('title', 'Flick Software Portofolio')
 
 
 @section('container')
