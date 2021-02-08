@@ -80,7 +80,7 @@
       </div>
     </div>
     <!-- END OF POPUP -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-3 mb-3" style="padding:0px 100px">
+<nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-4 mb-3" style="padding:0px 100px">
 <div class="container">
   <div class="col-4 ">
     <a class="navbar-brand pl-1" href="/"><img style="width: 250px" src="{{ asset('assets/client/images/Flick Software Logo Blue.png') }}" alt="Flick Software"></a>

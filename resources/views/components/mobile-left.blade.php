@@ -7,7 +7,7 @@
 
     <div class="containerImage">
         <div style="text-align:left">   
-            <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%;filter: invert(88%) sepia(22%) saturate(3974%) hue-rotate(357deg) brightness(94%) contrast(108%);">
+            <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert(88%) sepia(22%) saturate(3974%) hue-rotate(357deg) brightness(94%) contrast(108%);">
         </div>
         <div class="top-left">
             <div style="text-align:left !important;padding-left:15%;padding-top:18%">

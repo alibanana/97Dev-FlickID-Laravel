@@ -14,7 +14,7 @@
   @endif
   <div class = "row"> 
     <div class ="col-md-12">
-      <h2 class="pt-4 pb-4 m-0"> FlickSoftware Clients</h2>
+      <h2 class="pt-4 pb-4 m-0">FlickSoftware Clients</h2>
     </div>
     <div class="col-md-12">
       <div style="display:flex">
