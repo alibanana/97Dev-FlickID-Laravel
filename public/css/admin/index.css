@@ -1,13 +1,22 @@
 @font-face {
-    font-family: HKGroteskBold;
-    src: url(/fonts/hk-grotesk/HKGrotesk-Bold.otf);
-  }
+  font-family: HKGroteskBold;
+  src: url(/fonts/hk-grotesk/HKGrotesk-Bold.otf);
+}
   
-  @font-face {
-    font-family: HKGroteskBlack;
-    src: url(/fonts/hk-grotesk/HKGrotesk-Black.otf);
-  }
+@font-face {
+  font-family: HKGroteskBlack;
+  src: url(/fonts/hk-grotesk/HKGrotesk-Black.otf);
+}
 
+@font-face {
+  font-family: HKGroteskRegular;
+  src: url(/fonts/hk-grotesk/HKGrotesk-Regular.otf);
+}
+
+@font-face {
+  font-family: HKGroteskMedium;
+  src: url(/fonts/hk-grotesk/HKGrotesk-Medium.otf);
+}
   
 .overlay {
   position: fixed;
