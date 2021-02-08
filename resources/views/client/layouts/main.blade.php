@@ -37,7 +37,7 @@
       top: 8px;
       left: 16px;
     }
-    
+
     /* Top right text */
     .top-right {
       position: absolute;
@@ -109,7 +109,7 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div class="" style="">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:20px;font-family:HKGroteskBold">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portofolio</a>
               </li>
