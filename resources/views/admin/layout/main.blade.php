@@ -51,6 +51,15 @@
 .card-text{
     font-size: 50px;
 }
+#uploadButton{
+
+background-color: #145CA8;
+color: white;
+padding: 8px 15px;
+border-radius: 0.3rem;
+cursor: pointer;
+
+}
 
 
 
@@ -94,15 +103,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-3" style="padding:0px 100px">
 <div class="container">
   <div class="col-4 ">
-    <a class="navbar-brand pl-1" href="/"><img src="assets/logoflick.png" alt=""></a>
+    <a class="navbar-brand pl-1" href="/admin"><img src="http://ninetysevendev-flick-profile.herokuapp.com/assets/logoflick.png" alt=""></a>
   </div>
     <div class="col-8 row " id="navbarNav" >
       <ul class="justify-content-between nav justify-content-start">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/projects">Project</a>
+          <a class="nav-link active" aria-current="page" href="/admin/project">Project</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/team">The Team</a>
+          <a class="nav-link" href="/admin/team">The Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" >Applicant</a>
@@ -122,15 +131,9 @@
 </nav>
 @yield('container')
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
+    
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   </body>
 </html>

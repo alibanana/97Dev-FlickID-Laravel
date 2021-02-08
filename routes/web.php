@@ -39,7 +39,7 @@ Route::get('/admin/team', function () {
 });
 
 Route::get('/admin/project', function () {
-    return view('admin/project');
+    return view('admin/addproject');
 });
 
 Route::get('/admin/job', function () {
