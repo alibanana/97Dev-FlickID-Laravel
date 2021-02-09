@@ -58,3 +58,10 @@ Route::get('/admin/team', function () {
 Route::get('/admin/job', function () {
     return view('admin/jobs');
 });
+
+
+
+// Frontend testing routings
+Route::get('/join-us', function () {
+    return view('client/joinUs');
+});
