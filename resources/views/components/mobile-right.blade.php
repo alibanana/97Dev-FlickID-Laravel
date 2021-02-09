@@ -8,11 +8,10 @@
         </div>
     </div>
 </div>
-
 @else
-<div class="col-md-5 p-0">
-</div>
+<div class="col-md-5 p-0"></div>
 @endif
+
 <div class="col-md-7 p-0" style="margin-top:-21vw">
     <div class="containerImage">
         <div style="text-align:right">   
