@@ -5,17 +5,26 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\ProjectType;
 use App\FeaturedProject;
-use App\Project;
 
-class PortfolioController extends Controller
+class PagesController extends Controller
 {
-    // Show Portfolio Page.
+    // Show Landing Page.
     public function index()
+    {
+        $project_types = ProjectType::all();
+        $featured_projects = FeaturedProject::all();
+
+        return view('client/index', compact('project_types', 'featured_projects'));
+    }
+
+    // Show Portfolio Page.
+    public function portfolio_index()
     {
         $featured_projects = FeaturedProject::all();
 
-        return view('client/portfolio', compact('featured_projects'));
+        return view('client/portofolio', compact('featured_projects'));
     }
 
     // Show a certain project.

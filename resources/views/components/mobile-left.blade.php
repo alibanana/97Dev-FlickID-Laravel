@@ -1,10 +1,8 @@
 @if($flag == 1)
 <div class="col-md-7 p-0" >
 @else
-
 <div class="col-md-7 p-0" style="margin-top:-24vw" >
 @endif
-
     <div class="containerImage">
         <div style="text-align:left">   
             <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->filter_invert }}%) sepia({{ $featuredProject->filter_sepia }}%) saturate({{ $featuredProject->filter_saturate }}%) hue-rotate({{ $featuredProject->filter_hue_rotate }}deg) brightness({{ $featuredProject->filter_brightness }}%) contrast({{ $featuredProject->filter_contrast }}%);">
@@ -48,11 +46,9 @@
 <div class="col-md-5 p-0" style="margin-left:-40px;margin-top:7vw;z-index:99">
     <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
     <div>
-        <a href="" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+        <a href="{{ url()->route('portfolio.index') }}" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
     </div>
 </div>
-
 @else
-<div class="col-md-5 p-0">
-</div>
+<div class="col-md-5 p-0"></div>
 @endif

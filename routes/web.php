@@ -17,14 +17,15 @@ Auth::routes();
 
 // Redirects
 Route::redirect('/home', '/');
+Route::redirect('/portofolio', '/portfolio');
 Route::redirect('/portfolios', '/portfolio');
 Route::redirect('/careers', '/career');
 Route::redirect('/admin/clients', '/admin/client');
 
 // Client Pages Routings (FIXED)
-Route::get('/', 'Client\HomeController@index')->name('index');
-Route::get('/portfolio', 'Client\PortfolioController@index')->name('portfolio.index');
-Route::get('/portfolio/{id}', 'Client\PortfolioController@show')->name('portfolio.show');
+Route::get('/', 'Client\PagesController@index')->name('index');
+Route::get('/portfolio', 'Client\PagesController@portfolio_index')->name('portfolio.index');
+Route::get('/portfolio/{id}', 'Client\PagesController@portfolio_show')->name('portfolio.show');
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
 Route::get('/career', 'Client\ApplicantController@create')->name('applicant.create');
@@ -56,8 +57,4 @@ Route::get('/admin/team', function () {
 
 Route::get('/admin/job', function () {
     return view('admin/jobs');
-});
-
-Route::get('/portofolio', function () {
-    return view('client/portofolio');
 });
