@@ -69,3 +69,13 @@
   max-height: 30%;
   overflow: auto;
 }
+
+#uploadButton{
+
+  background-color: #145CA8;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+}

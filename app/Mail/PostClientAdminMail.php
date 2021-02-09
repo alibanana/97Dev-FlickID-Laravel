@@ -30,6 +30,6 @@ class PostClientAdminMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("New Project Offer!")->view('emails/post-client-admin');
+        return $this->subject("New Project Offer!")->view('emails/email');
     }
 }
