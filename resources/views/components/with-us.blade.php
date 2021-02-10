@@ -10,7 +10,7 @@
     @endif
         <div class="containerImage">
             <div style="text-align:left">   
-            <img src="assets/client/images/landing_page_bg_4.png" alt="" style="width:96%">
+            <img src="/assets/client/images/landing_page_bg_4.png" alt="" style="width:96%">
             </div>
             <div class="top-left">
                 <div style="text-align:left !important;padding-top:50px">
@@ -21,7 +21,7 @@
                         <a href="" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
                     </div>
                     <div>
-                        <hr style="margin-top:140px;width:80vw">
+                        <hr style="margin-top:140px;width:80vw;height:0.2vw;color:grey">
                     </div>
                     <div class="row m-0" >
                         <div class="col-md-6" style="color:#142850">

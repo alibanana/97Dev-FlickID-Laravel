@@ -114,13 +114,13 @@
                 <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portofolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="margin-right:65px;color:black;">Services</a>
+                <a class="nav-link" href="/#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="margin-right:65px;color:black">The Team</a>
+                <a class="nav-link" href="/about-us" style="margin-right:65px;color:black">The Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" style="margin-right:65px;color:black">Career</a>
+                <a class="nav-link" href="/join-us" style="margin-right:65px;color:black">Career</a>
               </li>
             </ul>
           </div>

@@ -65,3 +65,7 @@ Route::get('/admin/job', function () {
 Route::get('/join-us', function () {
     return view('client/joinUs');
 });
+
+Route::get('/portofolio/1', function () {
+    return view('client/portofolio-detail');
+});
