@@ -24,7 +24,7 @@
                     <div style="margin-left:30px;">
                         <img src="{{ asset($featuredProject->logo_file) }}" class="img-fluid" style="width:11vw !important"  alt="">
                     <div style="width:22vw;padding-right:3.1vw">
-                        <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:22px">{{ $featuredProject->project->description }} <span style="font-family:HKGroteskBold">{{ $featuredProject->project->sub_description }}</span></p>
+                        <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:22px;color:black">{{ $featuredProject->project->description }} <span style="font-family:HKGroteskBold">{{ $featuredProject->project->sub_description }}</span></p>
                     </div>
                     <div style="padding-top:15px">
                         <a href="{{ url('portfolio').'/'.$featuredProject->project->id }}" style="font-size:1.5vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8;">See our work <i style="font-size:1.5vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>

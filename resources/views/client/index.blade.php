@@ -132,19 +132,19 @@
               <div class="" style="">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="portofolio" style="margin-right:65px;color:black">Portofolio</a>
+                    <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portofolio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style="margin-right:65px;color:black;">Services</a>
+                    <a class="nav-link" href="#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style="margin-right:65px;color:black">The Team</a>
+                    <a class="nav-link" href="/about-us" style="margin-right:65px;color:black">The Team</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style="margin-right:65px;color:black">Career</a>
+                    <a class="nav-link" href="/join-us" style="margin-right:65px;color:black">Career</a>
                   </li>
                   <li class="nav-item" style="">
-                    <a class="nav-link" href="contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 60px;border-radius:15px">Contact us!</a>
+                    <a class="nav-link" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 60px;border-radius:15px">Contact us!</a>
                   </li>
                 </ul>
               </div>
@@ -177,7 +177,7 @@
     <!-- START OF WHAT WE PROVIDE -->
     <div class="row m-0" style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
       <div class="col-md-12" >
-        <p style="font-size:5vw;font-family:HKGroteskBlack"> <b>What we provide</b></p>
+        <p style="font-size:5vw;font-family:HKGroteskBlack" id="whatWeProvide"> <b>What we provide</b></p>
       </div>
       @foreach ($project_types as $project_type)
         <div class="col-md-4" style="padding-top:4vw">
@@ -332,7 +332,7 @@
         <div class="col-6">
           <div style="display:flex;align-items: center;justify-content: space-between;font-size:1.6vw;align-content:flex-end">
             <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">Portofolio</a>
-            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">Services</a>
+            <a class="nav-link" aria-current="page" href="#whatWeProvide" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">Services</a>
             <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">The Team</a>
             <a class="nav-link" aria-current="page" href="#" style="color:#3F92D8;font-family:HKGroteskBold;">Career</a>
           </div>
