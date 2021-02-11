@@ -167,49 +167,13 @@
 @yield('container')
 
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script>
-    $(document).ready(function() {
-      if (window.File && window.FileList && window.FileReader) {
-        $("#image").on("change", function(e) {
-          var fileName = document.getElementById("image").value;
-          var idxDot = fileName.lastIndexOf(".") + 1;
-          var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-          if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
-            document.getElementById("gallery_preview").innerHTML = "";
-            var files = e.target.files;
-            var filesLength = files.length;
-            for (var i = 0; i < files.length; i++ ) {
-              var file = files[i];
-              var fileReader = new FileReader();
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
-              fileReader.onload= (function(f) {
-                return function(e) {
-                  $("#gallery_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
-                    "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;width:300px;height:200px\" />" + 
-                    "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove\"></i>" + 
-                    "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
-                  $(".remove").click(function(){
-                    $(this).parent(".pip").remove();
-                  });
-                };
-              })(file);
-
-              fileReader.readAsDataURL(file);
-            }
-          } else {
-              alert("Only jpg/jpeg and png files are allowed!");
-          }
-        });
-      } else {
-        alert("Your browser doesn't support to File API")
-      }
-    });
-    </script>
 
   </body>
 </html>
