@@ -47,13 +47,9 @@ Route::get('/admin/team', function () {
     return view('admin/teamtable');
 });
 
-// Route::get('/about-us', function () {
-//     return view('client/aboutUs');
-// });
-
-// Route::get('/contact-us', function () {
-//     return view('client/contactUs');
-// });
+Route::get('/admin/project', function () {
+    return view('admin/addproject');
+});
 
 Route::get('/admin/job', function () {
     return view('admin/jobs');

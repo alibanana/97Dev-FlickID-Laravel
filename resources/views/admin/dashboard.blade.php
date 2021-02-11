@@ -84,7 +84,7 @@
         <!-- start client total project -->
         <div class="col-md-4 p-3">
             <div class="card">
-                <h3>Clients</h3>
+                <h3>Projects</h3>
                 <hr>
                 <div class="card-body" style="background-color:#145CA8">
                     <h5 class="card-title">Total Projects</h5>
