@@ -35,14 +35,12 @@ Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 // Admin Pages Routings (FIXED)
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
+Route::get('/admin/project/create', 'Admin\ProjectController@create')->name('admin.project.create');
+Route::post('/admin/project', 'Admin\ProjectController@store')->name('admin.project.store');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
 
 // Admin Pages Routings
-// Route::get('/admin', function () {
-// 	return view('admin/dashboard');
-// });
-
 Route::get('/email', function () {
     return view('emails/email');
 });
@@ -57,10 +55,6 @@ Route::get('/admin/team', function () {
 
 // Route::get('/contact-us', function () {
 //     return view('client/contactUs');
-// });
-
-// Route::get('/admin/project', function () {
-//     return view('admin/addproject');
 // });
 
 Route::get('/admin/job', function () {
