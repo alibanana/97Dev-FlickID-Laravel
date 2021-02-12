@@ -23,7 +23,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
@@ -33,7 +33,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
@@ -43,7 +43,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
@@ -53,7 +53,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
