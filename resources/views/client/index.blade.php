@@ -105,25 +105,68 @@
 
       /* ipad and small laptops */
       @media only screen and (min-width: 768px) {
-       
+        .withUsComponent{
+          margin-top:-15vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:-39vw !important
+        }
+      }
+
+     
+
+      
+
+       /* larger desktops and monitors */
+       @media only screen and (min-width: 1000px) {
+        .withUsComponent{
+          margin-top:-15vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:-35vw !important
+        }
       }
 
       /* larger desktops and monitors */
-      @media only screen and (min-width: 1000px) {
+      @media only screen and (min-width: 1000px) and (min-height:1300px) {
         .withUsComponent{
-          margin-top:-85vw !important
+          margin-top:-15vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:-70vw !important
         }
       }
 
       @media only screen and (min-width: 1200px) {
         .withUsComponent{
-          margin-top:-30vw !important
+          margin-top:-10vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:-22vw !important
         }
       }
 
       @media only screen and (min-width: 1400px) {
         .withUsComponent{
-          margin-top:-8vw !important
+          margin-top:-25vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:0vw !important
+        }
+      }
+
+      @media only screen and (min-width: 1500px) {
+        .withUsComponent{
+          margin-top:-10vw !important
+        }
+      }
+
+      @media only screen and (min-width: 1600px) and (min-height:1015px) {
+        .withUsComponent{
+          margin-top:-20vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:0vw !important
         }
       }
 
