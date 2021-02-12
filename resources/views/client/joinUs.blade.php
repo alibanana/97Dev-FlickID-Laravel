@@ -103,18 +103,15 @@
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
             <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Added Information</b></p>
         </div>
-        <div class="col-md-12">
-            <div class="form-group">
-                <label for="" style="margin:2vw 0px 7px 0px">How long have you been working in the related field?</label> <br>
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                    <label for="customRange1">1 year</label>
-                    <input name="" type="range" class="custom-range" style="width:85%" id="customRange1">
-                    <label for="customRange1">10+ years</label>
-                </div>
+        <x-slider-question />
+        <x-mcq-question />
+        <x-open-question />
 
-            </div>
-            <!-- END OF ADDED INFORMATION -->
-        </div>
+       
+
+
+        
+        <!-- END OF ADDED INFORMATION -->
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
             <button type="submit" class="buttonBlue w-100" style="border:0px">Submit</button>
         </div>
