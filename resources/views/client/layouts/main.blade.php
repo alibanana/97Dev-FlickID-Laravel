@@ -22,7 +22,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    
+    <!-- wow js -->
+    <link rel="stylesheet" href="/WOW-master/css/libs/animate.css">
  
     <title>@yield('title')</title>
 
@@ -157,7 +158,7 @@
           <div class="" style="padding-right:4vw">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portofolio</a>
+                <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portfolio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
@@ -204,7 +205,11 @@
     </script>
 
  
-
+    <!-- WOW JS -->
+    <script src="/WOW-master/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

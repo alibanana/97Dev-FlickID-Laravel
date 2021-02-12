@@ -15,6 +15,9 @@
     <link href="/fontawesome/css/all.css" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
+    <!-- wow js -->
+    <link rel="stylesheet" href="/WOW-master/css/libs/animate.css">
+
     
     <title>Flick Software</title>
     <style>
@@ -240,8 +243,8 @@
     <!-- END OF NAVBAR -->
 
     <!-- START OF TOP CONTENT-->
-    <div class="row m-0">
-      <div class="col-md-6 testing" style="padding-left:8.5%" id="paddingLeft"> 
+    <div class="row m-0 ">
+      <div class="col-md-6 testing wow fadeInLeft" style="padding-left:8.5%" id="paddingLeft"> 
         <div style="display:flex;align-items: center;margin-top:6vw">
           <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:13%;"  id="flickLogo">
           <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:3vw" id="flickLogo"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
@@ -264,7 +267,7 @@
         <p style="font-size:5vw;font-family:HKGroteskBlack" id="whatWeProvide"> <b>What we provide</b></p>
       </div>
       @foreach ($project_types as $project_type)
-        <div class="col-md-4" style="padding-top:4vw">
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s"style="padding-top:4vw">
           <div >
             <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
             <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
@@ -429,8 +432,11 @@
 
 
 
-
-
+    <!-- WOW JS -->
+    <script src="/WOW-master/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -31,6 +31,8 @@
       <th scope="col">CV</th>
       <th scope="col">Job Position</th>
       <th scope="col">Info</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody style="font-family:HKGroteskRegular !important">
@@ -42,6 +44,14 @@
       <td scope="col"> <a  style="font-family:HKGroteskRegular !important" href="/assets/client/applicants_cv/CV FERNANDHA DZAKY 2021.pdf" target="_blank">Open CV</a></td>
       <td scope="col">Software Developer</td>
       <td scope="col">How long have you been working in the related field? : 2 years</td>
+      <td scope="col" style="color: orange;">Pending</td>
+      <td>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <button type="button" class="btn btn-success" >Accept</button>
+          <button type="button" class="btn btn-danger" >Reject</button>
+        </td>
+      </div>
+      
     </tr>
   </tbody>
 </table>

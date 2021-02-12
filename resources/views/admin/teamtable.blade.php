@@ -41,7 +41,7 @@
           </span>
             @enderror
           <!-- START OF UPLOADED IMAGE -->
-          <div id="gallery_preview" class="row m-0">
+          <div id="image_preview" class="row m-0">
           </div>
           <!-- END OF UPLOADED IMAGE -->
           
@@ -153,3 +153,49 @@
 </div>
 
 @endsection
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+     //your script here
+
+// START OF IMAGE PREVIEW AND DELETE
+$(document).ready(function() {
+  if (window.File && window.FileList && window.FileReader) {
+    $("#image").on("change", function(e) {
+      var fileName = document.getElementById("image").value;
+      var idxDot = fileName.lastIndexOf(".") + 1;
+      var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+      if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
+        document.getElementById("image_preview").innerHTML = "";
+        var files = e.target.files;
+        var filesLength = files.length;
+        for (var i = 0; i < files.length; i++ ) {
+          var file = files[i];
+          var fileReader = new FileReader();
+
+          fileReader.onload= (function(f) {
+            return function(e) {
+              $("#image_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
+                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
+                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove\"></i>" + 
+                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
+              $(".remove").click(function(){
+                $(this).parent(".pip").remove();
+              });
+            };
+          })(file);
+
+          fileReader.readAsDataURL(file);
+        }
+      } else {
+          alert("Only jpg/jpeg and png files are allowed!");
+      }
+    });
+  } else {
+    alert("Your browser doesn't support to File API")
+  }
+});
+// END OF IMAGE PREVIEW AND DELETE
+
+</script>

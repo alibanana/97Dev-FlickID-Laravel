@@ -71,7 +71,7 @@ Route::get('/portofolio/1', function () {
 });
 
 
-Route::get('/admin/login', function () {
+Route::get('/admin-login', function () {
     return view('admin/login');
 });
 

@@ -3,13 +3,13 @@
     <div style="padding-left:15%">
         @if (Request::path() == '/')
         <p style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
+        <div>
+            <a href="{{ url()->route('portfolio.index') }}" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
         @else
         <p style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Loving what<br>you're seeing?</b></p>
 
         @endif
-        <div>
-            <a href="{{ url()->route('portfolio.index') }}" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-        </div>
     </div>
 </div>
 @else

@@ -3,6 +3,32 @@
 @section('title', 'Flick Software Contact Us')
 
 @section('container')
+<!-- START OF POPUP -->
+<div id="forgot_password" class="overlay">
+    <div class="popup">
+    <a class="close" href="#" >&times;</a>
+    
+    <div class="content" style="padding:20px">
+        <h1>Forgot your password?</h1>
+        <div class="col-md-12">
+        <form>
+        <div class="form-group">
+            <label for="inputName">Enter your email</label>
+            <input type="email" class="form-control" id="" placeholder="Here insert your registered email">
+        </div>
+
+        <div style="text-align:right;margin-top:10px">
+            <button type="submit" class="btn btn-warning btn-sm" >Send Email</button>
+        </div>
+        
+        </form>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- END OF POPUP -->
+
+
 <div class="row m-0" style="padding-bottom:60px">
     <div class="col-md-6 p-0">  
         <div class="containerImage">
@@ -13,7 +39,6 @@
             <div class="top-left">
                 <div style="text-align:left;padding-right:6.5vw !important;padding-left:6.5vw;padding-top:8vw">
                     <p  style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"><b>Login to admin dashboard</b></p>
-                    
                 </div>
             </div>
         </div>
@@ -47,8 +72,9 @@
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-
-                
+                <div  style="padding-top:10px !important">
+                    <a href="#forgot_password">Forgot your password?</a>
+                </div>
                 <button type="submit" class="buttonBlue" style="border:0px;width:100%;margin-top:50px">Login</button>
             </form>
         </div>

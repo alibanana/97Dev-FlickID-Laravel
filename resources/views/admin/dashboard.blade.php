@@ -4,11 +4,46 @@
 @section('title', 'Admin Page')
 
 @section('container')
-
+<!-- START OF POPUP -->
+<div id="change_password" class="overlay">
+    <div class="popup">
+    <a class="close" href="#" >&times;</a>
+    
+    <div class="content" style="padding:20px">
+        <h1>Change password</h1>
+        <div class="col-md-12">
+            <form>
+                <div class="form-group  pt-3">
+                    <label for="inputName">Old password</label>
+                    <input type="password" class="form-control mt-2" id="" placeholder="Here insert old password">
+                </div>
+                <div class="form-group  pt-3">
+                    <label for="inputName">New password</label>
+                    <input type="password" class="form-control mt-2" id="" placeholder="Here insert new password">
+                </div>
+                <div class="form-group  pt-3">
+                    <label for="inputName">New Confirmed password</label>
+                    <input type="password" class="form-control mt-2" id="" placeholder="Here insert new password">
+                </div>
+                <div style="text-align:right;margin-top:10px">
+                    <button type="submit" class="btn btn-primary btn-sm" >Change Password</button>
+                </div>
+            
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- END OF POPUP -->
 
   
 <div class="container" >
-    <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, Admin!</h2>
+
+    <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, Admin!</h2>
+        <a href="#change_password" class="btn btn-warning" title="Tooltip">Change Passsword</a>
+
+    </div>
 </div>
     
 <div class="container pt-3">
