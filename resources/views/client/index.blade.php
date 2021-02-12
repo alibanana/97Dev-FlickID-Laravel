@@ -120,10 +120,10 @@
        /* larger desktops and monitors */
        @media only screen and (min-width: 1000px) {
         .withUsComponent{
-          margin-top:-15vw !important
+          margin-top:-10vw !important
         }
         .withUsComponentHeader{
-          margin-top:-35vw !important
+          margin-top:-20vw !important
         }
       }
 
@@ -170,6 +170,32 @@
         }
       }
 
+      @media only screen and (min-width: 1800px) {
+        .withUsComponent{
+          margin-top:-15vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:0vw !important
+        }
+      }
+
+      @media only screen and (min-width: 2000px) {
+        .withUsComponent{
+          margin-top:-10vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:0vw !important
+        }
+      }
+      @media only screen and (min-width: 2300px) {
+        .withUsComponent{
+          margin-top:-5vw !important
+        }
+        .withUsComponentHeader{
+          margin-top:0vw !important
+        }
+      }
+
     </style>
   </head>
   <body style="">
@@ -178,7 +204,7 @@
       <div class="col-md-12 p-0">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
-            <!--<a class="navbar-brand" href="#">Navbar</a>-->
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <p></p>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -388,10 +414,10 @@
           </div>
         </div>
         <div class="col-6">
-          <div style="display:flex;align-items: center;justify-content: space-between;font-size:1.6vw;align-content:flex-end">
-            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">Portofolio</a>
-            <a class="nav-link" aria-current="page" href="#whatWeProvide" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">Services</a>
-            <a class="nav-link" aria-current="page" href="#" style="margin-right:30px;color:#3F92D8;font-family:HKGroteskBold;">The Team</a>
+          <div style="display:flex;align-items: center;justify-content: space-between;font-size:1.4vw;align-content:flex-end">
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:2vw;color:#3F92D8;font-family:HKGroteskBold;">Portofolio</a>
+            <a class="nav-link" aria-current="page" href="#whatWeProvide" style="margin-right:2vw;color:#3F92D8;font-family:HKGroteskBold;">Services</a>
+            <a class="nav-link" aria-current="page" href="#" style="margin-right:2vw;color:#3F92D8;font-family:HKGroteskBold;">The Team</a>
             <a class="nav-link" aria-current="page" href="#" style="color:#3F92D8;font-family:HKGroteskBold;">Career</a>
           </div>
         </div>
