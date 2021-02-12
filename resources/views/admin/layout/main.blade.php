@@ -83,6 +83,17 @@ cursor: pointer;
     text-align: center;
     color:white;
 }
+.nav-colored { 
+      -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
+      -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
+      box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);      background-color:white;
+      transition: 0.3s ease-in-out;
+    }
+
+    .nav-transparent { 
+      background-color:transparent;
+      transition: 0.3s ease-in-out;
+    }
 
 
 
@@ -90,58 +101,49 @@ cursor: pointer;
 </style>   
 <!-- end styling -->
 <body style='font-family:HKGroteskBold;'>
-    <!-- START OF POPUP -->
-    <div id="create_member" class="overlay">
-      <div class="popup">
-        <a class="close" href="#" >&times;</a>
-        
-        <div class="content" style="padding:20px">
-          <h1>Add New Member</h1>
-          <div class="col-md-12">
-          <form>
-            <div class="form-group">
-              <label for="inputName">Name</label>
-              <input type="name" class="form-control" id="inputName" placeholder="Enter name">
-            </div>
-            <div class="form-group" style="padding-bottom:10px">
-              <label for="positionControlSelect">Position</label>
-                <select class="form-control" id="postionControlSelect">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-            </div>
-            <h5 style="color:#145CA8;margin-top:30px">Picture</h5>
-            <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" hidden/>
-            <label id="uploadButton" for="image">Choose File</label>
-            @error('image')
-              <span class="invalid-feedback" role="alert" style="display: block !important;">
-              <strong>{{ $message }}</strong>
-              </span>
-              @enderror
-              @error('imagename')
-              <span class="invalid-feedback" role="alert" style="display: block !important;">
-              <strong>{{ $message }}</strong>
-            </span>
-              @enderror
-            <!-- START OF UPLOADED IMAGE -->
-            <div id="gallery_preview" class="row m-0">
-            </div>
-            <!-- END OF UPLOADED IMAGE -->
-            
 
-            <div style ="display:flex; justify-content: flex-end; ">
-              <button type="submit" class="btn btn-warning btn-sm">Add Member</button>
-            </div>
-          </form>
+ <!-- START OF NAVBAR -->
+
+ <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
+      <div class="container-fluid" style="padding-left:4vw"> 
+        <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/admin','_self');">
+        <p></p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          </ul>
+          <div class="" style="padding-right:4vw">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/admin/project" style="margin-right:65px;color:black">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/team" style="margin-right:65px;color:black;">The Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/applicant" style="margin-right:65px;color:black">Applicant</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/client" style="margin-right:65px;color:black">Client</a>
+              </li>
+              
+              <li class="nav-item" style="">
+                <a class="nav-link" href="/logout" style="color:#3F92D8;border:3px solid #3F92D8;padding:8px 50px;border-radius:15px">Logout</a>
+              </li>
+              
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <!-- END OF POPUP -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-4 mb-3" style="padding:0px 100px">
+    </nav>
+
+    <!-- END OF NAVBAR -->
+
+   
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-4 mb-3" style="padding:0px 100px">
 <div class="container">
   <div class="col-4 ">
 
@@ -171,16 +173,34 @@ cursor: pointer;
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
+
 @yield('container')
 
+<script>
+      console.log('SCRIPT CALLED');
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      var myNav = document.getElementById('mynav');
+      window.onscroll = function () { 
+          "use strict";
+          if (document.body.scrollTop >= 10 || document.documentElement.scrollTop >= 10 ){
+              console.log('ADD THE BORDER');
+              myNav.classList.add("nav-colored");
+              myNav.classList.remove("nav-transparent");
+          } 
+          else {
+              console.log('REMOVE THE BORDER');
+              myNav.classList.add("nav-transparent");
+              myNav.classList.remove("nav-colored");
+          }
+      };
+    </script>
+    
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>    <script>
     $(document).ready(function() {
       if (window.File && window.FileList && window.FileReader) {
         $("#image").on("change", function(e) {

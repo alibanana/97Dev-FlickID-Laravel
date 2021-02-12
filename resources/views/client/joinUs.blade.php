@@ -80,9 +80,11 @@
             <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Profile</b></p>
         </div>
         <div class="col-md-12">
-            <div class="form-group">
-                <input name="address" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="HERE INSERT DRAG AND DROP">
-            </div>
+            <div class="content">
+                <!-- Dropzone -->
+                <form action="" class="dropzone" >
+                </form> 
+            </div> 
         </div>
         <!-- end of drag and drop -->
 
@@ -123,4 +125,18 @@
 </div>
 <x-flick-footer />
 
+
+<!-- Script -->
+<script>
+    var CSRF_TOKEN = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
+
+    Dropzone.autoDiscover = false;
+    var myDropzone = new Dropzone(".dropzone",{ 
+        maxFilesize: 3,  // 3 mb
+        acceptedFiles: ".jpeg,.jpg,.png,.pdf",
+    });
+    myDropzone.on("sending", function(file, xhr, formData) {
+       formData.append("_token", CSRF_TOKEN);
+    }); 
+</script>
 @endsection

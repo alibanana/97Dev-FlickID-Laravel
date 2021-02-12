@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="col-md-2">
-      <input class="btn btn-warning pull-right" type="submit" value="Add Project">
+      <a href="/admin/add-project" class="btn btn-warning pull-right">Add Project</a>
     </div>
   </div> 
 </div>
