@@ -1,11 +1,11 @@
     @if($flag == '1')
     <div class="row m-0" style="background-color:#EDF7FF">
-    <div class="col-md-12 p-0" style="margin-top:-10vw">
+    <div class="col-md-12 p-0 withUsComponent">
 
     @else
     <div class="row m-0" style="padding-top:2vw;color:#142850">
 
-    <div class="col-md-12 p-0">
+    <div class="col-md-12 p-0 withUsComponent">
 
     @endif
         <div class="containerImage">

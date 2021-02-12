@@ -105,11 +105,26 @@
 
       /* ipad and small laptops */
       @media only screen and (min-width: 768px) {
+       
       }
 
       /* larger desktops and monitors */
-      @media only screen and (min-width: 1500px) {
+      @media only screen and (min-width: 1000px) {
+        .withUsComponent{
+          margin-top:-85vw !important
+        }
+      }
 
+      @media only screen and (min-width: 1200px) {
+        .withUsComponent{
+          margin-top:-30vw !important
+        }
+      }
+
+      @media only screen and (min-width: 1400px) {
+        .withUsComponent{
+          margin-top:-8vw !important
+        }
       }
 
     </style>
@@ -185,7 +200,7 @@
             <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
             <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
             <div style="padding-right:100px">
-              <p style="font-size:1.3vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
+              <p style="font-size:1.2vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
             </div>
             <a href="" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
           </div>
