@@ -30,19 +30,16 @@ class JobSeeder extends Seeder
                 'description' => 'This is the job description for a CMO.'
             ],
             [
-                'shortTitle' => 'Back-end Engineer',
                 'longTitle' => 'Backend Engineer',
                 'description' => 'This is the job description for a Back-end Engineer.',
                 'offerable' => 1
             ],
             [
-                'shortTitle' => 'Front-end Engineer',
                 'longTitle' => 'Front-end Engineer',
                 'description' => 'This is the job description for a Front-end Engineer.',
                 'offerable' => 1
             ],
             [
-                'shortTitle' => 'Fullstack Engineer',
                 'longTitle' => 'Fullstack Engineer',
                 'description' => 'This is the job description for a Fullstack Engineer.',
                 'offerable' => 1
