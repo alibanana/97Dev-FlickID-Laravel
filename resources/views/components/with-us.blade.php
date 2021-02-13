@@ -19,7 +19,7 @@
                     <p style="font-size:5vw;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
 
                     <div style="margin-top:2.5vw">
-                        <a href="" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
+                        <a href="/contact-us" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
                     </div>
                     <div>
                         <hr style="margin-top:11vw;width:80vw;height:0.2vw;color:grey">

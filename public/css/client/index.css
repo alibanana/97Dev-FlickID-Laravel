@@ -25,7 +25,9 @@
 .buttonBlue{
   font-size:1.8vw;background-color:#3F92D8;color:#FFFFFF;padding:12px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold
 }
-
+.buttonBlue:hover{
+  font-size:1.8vw;background-color:#3F92D8;color:#FFFFFF;padding:12px 40px;text-decoration:none;border-radius:15px;font-family:HKGroteskBold
+}
 
 
 .overlay {
