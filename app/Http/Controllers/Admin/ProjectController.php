@@ -10,6 +10,7 @@ use Intervention\Image\ImageManagerStatic as ImageManager;
 
 use App\ProjectType;
 use App\Project;
+use App\ProjectDetail;
 
 class ProjectController extends Controller
 {
@@ -78,47 +79,56 @@ class ProjectController extends Controller
 
         $validator = Validator::make($input, [
             'project_type_id' => 'required|digits:1',
-            'ilustration_file' => 'required|image|mimes:png,svg',
-            'ilustration_filename' => 'required',
             'logo_file' => 'required|image|mimes:jpeg,jpg,png,svg',
-            'logo_filename' => 'required',
+            'ilustration_file' => 'required|image|mimes:png,svg',
+            'background_file' => 'required|image|mimes:jpeg,jpg,png',
             'title' => 'required|max:40',
             'description' => 'required',
             'sub_description' => 'required',
             'scope' => 'required',
             'technologies' => 'required',
             'deliverables' => 'required',
-            'background_file' => 'required|image|mimes:jpeg,jpg,png,svg',
-            'background_filename' => 'required',
             'headline' => 'required|max:100',
             'sub_headline' => 'required|max:100',
+            'project_detail_title.*' => 'max:40',
+            'project_detail_ilustration.*' => 'image|mimes:png,svg',
         ]);
-
-        $validator->setAttributeNames(['project_type_id'=>'project_type']);
-        $validator->setAttributeNames(['ilustration_file'=>'ilustration']);
-        $validator->setAttributeNames(['ilustration_filename'=>'ilustration']);
-        $validator->setAttributeNames(['logo_file'=>'logo']);
-        $validator->setAttributeNames(['logo_filename'=>'logo']);
-        $validator->setAttributeNames(['sub_description'=>'sub-description']);
-        $validator->setAttributeNames(['background_file'=>'background']);
-        $validator->setAttributeNames(['background_filename'=>'background']);
-        $validator->setAttributeNames(['sub_headline'=>'sub-headline']);
+        $validator->setAttributeNames([
+            'project_detail_title.*'=>'title',
+            'project_detail_ilustration.*'=>'ilustration',
+        ]);
         $validator->validate();
 
         $project = New Project;
         $project->ilustration_file = $this->storeImage($request->file('ilustration_file'), 'ilustrations/', 'ilustration');
         $project->logo_file = $this->storeImage($request->file('logo_file'), 'logos/', 'logo');
-        $project->title = input['title'];
-        $project->description = input['description'];
-        $project->sub_description = input['sub_description'];
-        $project->scope = input['scope'];
-        $project->technologies = input['technologies'];
-        $project->deliverables = input['deliverables'];
+        $project->title = $input['title'];
+        $project->description = $input['description'];
+        $project->sub_description = $input['sub_description'];
+        $project->scope = $input['scope'];
+        $project->technologies = $input['technologies'];
+        $project->deliverables = $input['deliverables'];
         $project->bg_file = $this->storeImage($request->file('background_file'), 'background_file/', 'background');
-        $project->headline = input['headline'];
-        $project->sub_headline = input['sub_headline'];
-        $project->project_type_id = input['project_type_id'];
+        $project->headline = $input['headline'];
+        $project->sub_headline = $input['sub_headline'];
+        $project->project_type_id = $input['project_type_id'];
         $project->save();
+
+        $project_detail_ilustration_list = $request->file('project_detail_ilustration');
+
+        for ($i = 0; $i <= count($input['project_detail_title']); $i++) {
+            if (empty($input['project_detail_title'][$i]) || empty($input['project_detail_description'][$i]) || empty($input['project_detail_ilustration'][$i])) {
+                break;
+            } else {
+                $project_detail = new ProjectDetail;
+                $project_detail->title = $input['project_detail_title'][$i];
+                $project_detail->description = $input['project_detail_description'][$i];
+                $project_detail->ilustration_file = $this->storeImage($project_detail_ilustration_list[$i], 'ilustrations/', 'ilustration');
+                // $project_detail->ilustration_file = "test";
+                $project_detail->project_id = $project->id;
+                $project_detail->save();
+            }
+        }
         
         return redirect()->route('admin.project.index')->with('success', 'A new project has been added to the database!');
     }
@@ -147,5 +157,23 @@ class ProjectController extends Controller
         }
 
         return $destinationPath.$newName;
+    }
+
+    public function destroy($id)
+    {
+        $project = Project::findorfail($id);
+
+        unlink($project->ilustration_file);
+        unlink($project->logo_file);
+        unlink($project->bg_file);
+        
+        foreach($project->project_details as $project_detail) {
+            unlink($project_detail->ilustration_file);
+            $project_detail->delete();
+        }
+
+        $project->delete();
+
+        return redirect()->route('admin.project.index')->with('success', 'A project has been deleted from the database!');
     }
 }

@@ -37,6 +37,7 @@ Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
 Route::get('/admin/project/create', 'Admin\ProjectController@create')->name('admin.project.create');
 Route::post('/admin/project', 'Admin\ProjectController@store')->name('admin.project.store');
+Route::delete('/admin/project/{id}', 'Admin\ProjectController@destroy')->name('admin.project.destroy');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
 

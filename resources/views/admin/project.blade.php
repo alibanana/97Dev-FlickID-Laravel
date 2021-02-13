@@ -81,14 +81,14 @@
         <tr>
           <td scope="row" style="font-family: HKGroteskBold">{{ $loop->iteration }}</td>
           <td scope="col">
-            <img style="height: 50px" class="mb-1" src="{{ $project->logo_file }}" alt="{{ $project->title }}">
+            <img style="height: 50px" class="mb-1" src="{{ asset($project->logo_file) }}" alt="{{ $project->title }}">
             <p style="font-family: HKGroteskBold" class="mb-1">{{ $project->description }}</p>
             <p>{{ $project->sub_description }}</p>
           </td>
-          <td scope="col">{{ $project->scope }}</td>
-          <td scope="col">{{ $project->technologies }}</td>
-          <td scope="col">{{ $project->deliverables }}</td>
-          <td scope="col">
+          <td scope="col" style="white-space: pre-wrap; min-width: 150px">@foreach(explode("\r\n", $project->scope) as $scope)&bull; {{ $scope."\r\n" }}@endforeach</td>
+          <td scope="col" style="white-space: pre-wrap; min-width: 150px">@foreach(explode("\r\n", $project->technologies) as $technologies)&bull; {{ $technologies."\r\n" }}@endforeach</td>
+          <td scope="col" style="white-space: pre-wrap; min-width: 220px">@foreach(explode("\r\n", $project->deliverables) as $deliverables)&bull; {{ $deliverables."\r\n" }}@endforeach</td>
+          <td scope="col" style="min-width: 200px">
             <p style="font-family: HKGroteskBold" class="mb-1">{{ $project->headline }}</p>
             <p>{{ $project->sub_headline }}</p>
           </td>
@@ -98,7 +98,12 @@
             @if (!$project->featured_project) 
               <button class="btn btn-info mb-2" type="button" style="color: white; background-color:DarkCyan;" onclick='return confirm("Are you sure you want to Feature this project?")'>Feature</button>
             @endif
-            <button class="btn" type="button" style="color: white; background-color:Crimson;" onclick='return confirm("Are you sure you want to Delete this project?")'>Delete</button>
+            <form action="{{ route('admin.project.destroy', $project->id) }}" method="post" style="display: inline-block">
+              @csrf
+              @method('DELETE')
+              <button class="btn" type="submit" style="color: white; background-color:Crimson;" onclick='return confirm("Are you sure you want to Delete this project?")'>Delete</button>
+            </form>
+            {{-- <button class="btn" type="button" style="color: white; background-color:Crimson;" onclick='return confirm("Are you sure you want to Delete this project?")'>Delete</button> --}}
           </td>
         </tr>
       @endforeach

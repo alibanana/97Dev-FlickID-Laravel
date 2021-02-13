@@ -19,7 +19,7 @@ class Project extends Model
     }
 
     // Get all the project-details (child) for a certain project.
-    public function details()
+    public function project_details()
     {
         return $this->hasMany('App\ProjectDetail');
     }
