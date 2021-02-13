@@ -72,7 +72,7 @@
             <div style="padding-left:9%;color:white" >
                 <p  style="font-size:5vw;margin-top:7vw;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience <br> on developing technologies</b></p>
                 <div> 
-                    <div style="background-color:#81D1C7;width:460px;border-radius:15px;color:#142850;padding:1.7vw;margin-top:3vw">
+                    <div style="background-color:#81D1C7;width:30vw;border-radius:15px;color:#142850;padding:1.7vw;margin-top:3vw">
                         <div style="display:flex;justify-content:space-between;align-items:center ">
                             <div> 
                             <p style="font-size:2.3vw;font-family:HKGroteskBlack;"> <b>Join the team!</b></p>

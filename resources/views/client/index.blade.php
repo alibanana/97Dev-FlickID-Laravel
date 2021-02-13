@@ -320,7 +320,7 @@
     <!-- WHAT WE PROVIDE MOBILE -->
     <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
       <div class="col-12 p-0" >
-        <p style="font-size:10vw;font-family:HKGroteskBlack" id="whatWeProvide"> <b>What we provide</b></p>
+        <p style="font-size:10vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
       </div>
     </div>
 
@@ -365,8 +365,8 @@
     <!-- END OF WHAT WE PROVIDE MOBILE -->
 
     <!-- START OF WHAT WE PROVIDE -->
-    <div class="row m-0 DesktopView" style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
-      <div class="col-md-12" >
+    <div class="row m-0 DesktopView"style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
+      <div class="col-md-12"   id="whatWeProvide" >
         <p style="font-size:5vw;font-family:HKGroteskBlack" id="whatWeProvide"> <b>What we provide</b></p>
       </div>
       @foreach ($project_types as $project_type)
