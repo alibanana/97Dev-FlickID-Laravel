@@ -15,30 +15,24 @@ class JobSeeder extends Seeder
     {
         $jobs = [
             [
-                'title' => 'CEO',
-                'description' => 'This is the job description for a CEO.'
+                'title' => 'CEO'
             ],
             [
-                'title' => 'CTO',
-                'description' => 'This is the job description for a CTO.'
+                'title' => 'CTO'
             ],
             [
-                'title' => 'CMO',
-                'description' => 'This is the job description for a CMO.'
+                'title' => 'CMO'
             ],
             [
                 'title' => 'Backend Engineer',
-                'description' => 'This is the job description for a Back-end Engineer.',
                 'offerable' => 1
             ],
             [
                 'title' => 'Front-end Engineer',
-                'description' => 'This is the job description for a Front-end Engineer.',
                 'offerable' => 1
             ],
             [
                 'title' => 'Fullstack Engineer',
-                'description' => 'This is the job description for a Fullstack Engineer.',
                 'offerable' => 1
             ],
         ];
