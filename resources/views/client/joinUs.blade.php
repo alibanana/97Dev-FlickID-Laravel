@@ -80,11 +80,9 @@
             <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Profile</b></p>
         </div>
         <div class="col-md-12">
-            <div class="content">
-                <!-- Dropzone -->
-                <form action="" class="dropzone" >
-                </form> 
-            </div> 
+            <div class="form-group">
+                <input type="file">
+            </div>
         </div>
         <!-- end of drag and drop -->
 
