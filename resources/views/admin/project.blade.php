@@ -4,6 +4,63 @@
 @section('title', 'Admin Page')
 
 @section('container')
+<!-- START OF POPUP -->
+<div id="featured_form" class="overlay">
+    <div class="popup">
+    <a class="close" href="#" >&times;</a>
+    
+    <div class="content" style="padding:20px">
+        <h1>Add Featured Project</h1>
+        <form>
+        <div class="row m-0">
+          <div class="col-md-6 mb-4">
+              <p>Logo</p>
+              <input type="file" id="logo_image" name="image" accept=".jpg,.jpeg,.png" hidden/>
+              <label id="uploadButton" for="logo_image">Choose Image</label>
+              @error('image')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              @error('imagename')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              <!-- START OF UPLOADED IMAGE -->
+              <div id="logo_preview" class="row m-0">
+              </div>
+          </div>  
+          <div class="col-md-6 mb-4" style>
+              <p>Project Illustration</p>
+              <input type="file" id="project_illustration" name="image" accept=".jpg,.jpeg,.png" hidden/>
+              <label id="uploadButton" for="project_illustration">Choose Image</label>
+              @error('image')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              @error('imagename')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              <!-- START OF UPLOADED IMAGE -->
+              <div id="illustration_preview" class="row m-0">
+              </div>
+          </div>
+          <div class="col-md-12 mb-4" style>
+          </div>
+        </div>
+      </form>
+        
+    </div>
+    </div>
+</div>
+<!-- END OF POPUP -->
+
+
+
 <div class="container" style="padding-bottom:20px">
   @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert">
@@ -96,7 +153,7 @@
           <td>
             <button class="btn mb-2" type="button" style="color: white; background-color:CornflowerBlue;" onclick="parent.open('{{ url('/project').'/'.$project->id }}')">View</button>
             @if (!$project->featured_project) 
-              <button class="btn btn-info mb-2" type="button" style="color: white; background-color:DarkCyan;" onclick='return confirm("Are you sure you want to Feature this project?")'>Feature</button>
+              <a href="#featured_form" class="btn btn-info mb-2" style="color: white !important; background-color:DarkCyan;">Feature</a>
             @endif
             <form action="{{ route('admin.project.destroy', $project->id) }}" method="post" style="display: inline-block">
               @csrf

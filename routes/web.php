@@ -58,10 +58,13 @@ Route::get('/admin/team', function () {
 //     return view('client/contactUs');
 // });
 
-Route::get('/admin/job', function () {
-    return view('admin/jobs');
+Route::get('/admin/applicant', function () {
+    return view('admin/applicant');
 });
 
+Route::get('/admin/applicant/questions', function () {
+    return view('admin/question');
+});
 
 // Frontend testing routings
 Route::get('/join-us', function () {
@@ -70,4 +73,13 @@ Route::get('/join-us', function () {
 
 Route::get('/portofolio/1', function () {
     return view('client/portofolio-detail');
+});
+
+
+Route::get('/admin-login', function () {
+    return view('admin/login');
+});
+
+Route::get('/admin/add-project', function () {
+    return view('admin/addProject');
 });

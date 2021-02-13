@@ -80,9 +80,11 @@
             <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Profile</b></p>
         </div>
         <div class="col-md-12">
-            <div class="form-group">
-                <input name="address" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="HERE INSERT DRAG AND DROP">
-            </div>
+            <div class="content">
+                <!-- Dropzone -->
+                <form action="" class="dropzone" >
+                </form> 
+            </div> 
         </div>
         <!-- end of drag and drop -->
 
@@ -103,18 +105,15 @@
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
             <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Added Information</b></p>
         </div>
-        <div class="col-md-12">
-            <div class="form-group">
-                <label for="" style="margin:2vw 0px 7px 0px">How long have you been working in the related field?</label> <br>
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                    <label for="customRange1">1 year</label>
-                    <input name="" type="range" class="custom-range" style="width:85%" id="customRange1">
-                    <label for="customRange1">10+ years</label>
-                </div>
+        <x-slider-question />
+        <x-mcq-question />
+        <x-open-question />
 
-            </div>
-            <!-- END OF ADDED INFORMATION -->
-        </div>
+       
+
+
+        
+        <!-- END OF ADDED INFORMATION -->
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
             <button type="submit" class="buttonBlue w-100" style="border:0px">Submit</button>
         </div>
@@ -126,4 +125,18 @@
 </div>
 <x-flick-footer />
 
+
+<!-- Script -->
+<script>
+    var CSRF_TOKEN = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
+
+    Dropzone.autoDiscover = false;
+    var myDropzone = new Dropzone(".dropzone",{ 
+        maxFilesize: 3,  // 3 mb
+        acceptedFiles: ".jpeg,.jpg,.png,.pdf",
+    });
+    myDropzone.on("sending", function(file, xhr, formData) {
+       formData.append("_token", CSRF_TOKEN);
+    }); 
+</script>
 @endsection

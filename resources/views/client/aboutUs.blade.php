@@ -23,7 +23,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
@@ -33,7 +33,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
@@ -43,7 +43,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
@@ -53,7 +53,7 @@
             <!-- start of one card -->
             <div class="col-6 pt-5">
                 <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:10vw" alt="">
+                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
                     <p style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
 
                 </div>
@@ -78,7 +78,7 @@
                             <p style="font-size:2.3vw;font-family:HKGroteskBlack;"> <b>Join the team!</b></p>
                             <p style="font-size:1.7vw;font-family:HKGroteskRegular;line-height:1.2">Join our journey to enable <br> and deliver technologies</p>
                             </div>
-                            <a href="" style="color:white">
+                            <a href="/join-us" style="color:white">
                             <i class="fas fa-chevron-circle-right" style="font-size:40px"></i>
                             </a>
                         </div>
@@ -87,7 +87,7 @@
                 <div style="margin-top:9vw">
                     <p style="font-size:5vw;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
                     <div style="margin-top:2.5vw">
-                        <a href="" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
+                        <a href="/contact-us" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
                     </div>
                 </div>
             </div>

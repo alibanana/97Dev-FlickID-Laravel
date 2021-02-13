@@ -8,6 +8,13 @@
     <!-- INDEX CSS -->
     <link rel="stylesheet"  type="text/css"  href="/css/client/index.css">
 
+    <!-- CSS -->
+    
+    <!-- <link rel="stylesheet" type="text/css" href="/dropzone-5.7.0/dist/min/dropzone.min.css"> -->
+
+    <!-- JS -->
+    <!-- <script src="/dropzone-5.7.0/dist/min/dropzone.min.js'" type="text/javascript"></script> -->
+    
 
     <!--load all fontawesome -->
     <link href="/fontawesome/css/all.css" rel="stylesheet"> 
@@ -15,7 +22,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <!-- wow js -->
+    <link rel="stylesheet" href="/WOW-master/css/libs/animate.css">
+ 
     <title>@yield('title')</title>
 
     <style>
@@ -99,7 +108,7 @@
   </head>
   <body>
     <!-- NAVBAR DESKTOP -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
       <div class="container-fluid" style="padding-left:60px"> 
           <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
 
@@ -109,7 +118,7 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div class="" style="">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold;text-align:right !important">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portofolio</a>
               </li>
@@ -122,12 +131,56 @@
               <li class="nav-item">
                 <a class="nav-link" href="/join-us" style="margin-right:65px;color:black">Career</a>
               </li>
+              @if (Request::path() != 'contact-us')
+              <li class="nav-item" style="">
+                <a class="nav-link" href="/contact-us" style="color:#3F92D8;border:3px solid #3F92D8;padding:8px 50px;border-radius:15px">Contact us!</a>
+              </li>
+              @endif
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+    <!-- END OF NAVBAR DESKTOP -->
+    <!-- START OF NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
+      <div class="container-fluid" style="padding-left:4vw"> 
+        <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
+        <p></p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          </ul>
+          <div class="" style="padding-right:4vw">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about-us" style="margin-right:65px;color:black">The Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/join-us" style="margin-right:65px;color:black">Career</a>
+              </li>
+              @if (Request::path() != 'contact-us')
+              <li class="nav-item" style="">
+                <a class="nav-link" href="/contact-us" style="color:#3F92D8;border:3px solid #3F92D8;padding:8px 50px;border-radius:15px">Contact us!</a>
+              </li>
+              @endif
             </ul>
           </div>
         </div>
       </div>
     </nav>
-    <!-- END OF NAVBAR DESKTOP -->
+
+    <!-- END OF NAVBAR -->
 
         
     @yield('container')
@@ -151,6 +204,12 @@
       };
     </script>
 
+ 
+    <!-- WOW JS -->
+    <script src="/WOW-master/dist/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
