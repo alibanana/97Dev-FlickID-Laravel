@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             ProjectDetailSeeder::class,
             FeaturedProjectSeeder::class,
             ClientSeeder::class,
+            JobSeeder::class,
         ]);
     }
 }
