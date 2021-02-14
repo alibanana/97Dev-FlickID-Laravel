@@ -35,31 +35,38 @@ Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 // Admin Pages Routings (FIXED)
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
+Route::get('/admin/project/create', 'Admin\ProjectController@create')->name('admin.project.create');
+Route::post('/admin/project', 'Admin\ProjectController@store')->name('admin.project.store');
+Route::delete('/admin/project/{id}', 'Admin\ProjectController@destroy')->name('admin.project.destroy');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
+Route::get('/admin/team', 'Admin\TeamController@index')->name('admin.team.index');
+Route::post('/admin/team', 'Admin\TeamController@storeTeamMember')->name('admin.team.store');
+Route::delete('/admin/team/{id}', 'Admin\TeamController@destroyTeamMember')->name('admin.team.destroy');
+Route::post('/admin/job', 'Admin\TeamController@storeJob')->name('admin.job.store');
+Route::put('/admin/job/{id}/change-offerable', 'Admin\TeamController@changeOfferable')->name('admin.job.changeOfferable');
+Route::delete('/admin/job/{id}', 'Admin\TeamController@destroyJob')->name('admin.job.destroy');
 
 // Admin Pages Routings
 Route::get('/email', function () {
     return view('emails/email');
 });
 
-Route::get('/admin/team', function () {
-    return view('admin/teamtable');
-});
+// Route::get('/about-us', function () {
+//     return view('client/aboutUs');
+// });
 
-// Route::get('/admin/project', function () {
-//     return view('admin/addproject');
+// Route::get('/contact-us', function () {
+//     return view('client/contactUs');
 // });
 
 Route::get('/admin/applicant', function () {
     return view('admin/applicant');
 });
+
 Route::get('/admin/applicant/questions', function () {
     return view('admin/question');
 });
-
-
-
 
 // Frontend testing routings
 Route::get('/join-us', function () {

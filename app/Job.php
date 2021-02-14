@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     protected $fillable = [
-        'shortTitle', 'longTitle', 'description', 'offerable'
+        'title', 'offerable'
     ];
 
     // Get all the team members with a certain job.

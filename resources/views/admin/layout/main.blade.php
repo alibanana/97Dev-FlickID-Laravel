@@ -44,60 +44,52 @@
   }
   .card-text{
     font-size: 50px;
-}
-#uploadButton{
-
-background-color: #145CA8;
-color: white;
-padding: 8px 15px;
-border-radius: 0.3rem;
-cursor: pointer;
-
-}
-.block-left {
-        display: block;
-        width: 30%;
-        border: none;
-        background-color: #3F92D8;
-        padding: 6px 12px;
-        margin-left:0px;
-        font-size: 14px;
-        font-family:HKGroteskBold;
-        cursor: pointer;
-        border-radius:10px;
-        text-align: center;
-        
-        color:white;
-      }
-.block {
+  }
+  #uploadButton{
+    background-color: #145CA8;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+  .block-left {
     display: block;
     width: 30%;
     border: none;
     background-color: #3F92D8;
     padding: 6px 12px;
+    margin-left:0px;
+    font-size: 14px;
+    font-family:HKGroteskBold;
+    cursor: pointer;
+    border-radius:10px;
+    text-align: center;
     
+    color:white;
+  }
+  .block {
+    display: block;
+    width: 30%;
+    border: none;
+    background-color: #3F92D8;
+    padding: 6px 12px;
     font-size: 14px;
     font-family:HKGroteskBold;
     cursor: pointer;
     border-radius:10px;
     text-align: center;
     color:white;
-}
-.nav-colored { 
-      -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
-      -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
-      box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);      background-color:white;
-      transition: 0.3s ease-in-out;
-    }
-
-    .nav-transparent { 
-      background-color:transparent;
-      transition: 0.3s ease-in-out;
-    }
-
-
-
-    
+  }
+  .nav-colored { 
+    -webkit-box-shadow: 0 10px 6px -6px  #e5e5e5;
+    -moz-box-shadow: 0 10px 6px -6px  #e5e5e5;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);      background-color:white;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-transparent { 
+    background-color:transparent;
+    transition: 0.3s ease-in-out;
+  }
 </style>   
 <!-- end styling -->
 <body style='font-family:HKGroteskBold;'>
@@ -146,9 +138,7 @@ cursor: pointer;
 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 mt-4 mb-3" style="padding:0px 100px">
 <div class="container">
   <div class="col-4 ">
-
-    <a class="navbar-brand pl-1" href="/"><img src="http://ninetysevendev-flick-profile.herokuapp.com/assets/logoflick.png" alt=""></a>
-
+    <a class="navbar-brand pl-1" href="/"><img style="width: 250px" src="{{ asset('assets/client/images/Flick Software Logo Blue.png') }}" alt="Flick Software"></a>
   </div>
     <div class="col-8 row " id="navbarNav" >
       <ul class="justify-content-between nav justify-content-start">
@@ -196,48 +186,11 @@ cursor: pointer;
       };
     </script>
     
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>    <script>
-    $(document).ready(function() {
-      if (window.File && window.FileList && window.FileReader) {
-        $("#image").on("change", function(e) {
-          var fileName = document.getElementById("image").value;
-          var idxDot = fileName.lastIndexOf(".") + 1;
-          var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-          if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
-            document.getElementById("gallery_preview").innerHTML = "";
-            var files = e.target.files;
-            var filesLength = files.length;
-            for (var i = 0; i < files.length; i++ ) {
-              var file = files[i];
-              var fileReader = new FileReader();
-
-              fileReader.onload= (function(f) {
-                return function(e) {
-                  $("#gallery_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
-                    "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;width:300px;height:200px\" />" + 
-                    "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove\"></i>" + 
-                    "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
-                  $(".remove").click(function(){
-                    $(this).parent(".pip").remove();
-                  });
-                };
-              })(file);
-
-              fileReader.readAsDataURL(file);
-            }
-          } else {
-              alert("Only jpg/jpeg and png files are allowed!");
-          }
-        });
-      } else {
-        alert("Your browser doesn't support to File API")
-      }
-    });
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
   </body>
 </html>

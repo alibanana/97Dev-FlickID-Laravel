@@ -197,7 +197,6 @@ body {font-family: 'Muli', sans-serif;}
                   <a class="btnLogin" href="" style="display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none;" target="_blank">Verify Email Now</a>
               </td>
             </tr>
-
           </tbody>
         </table>
       </td>
@@ -220,7 +219,6 @@ body {font-family: 'Muli', sans-serif;}
   </tr>
 </tbody>
 </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a265ebb9-ab9c-43e8-9009-54d6151b1600" data-mc-module-version="2019-10-22">
-
     </div>
   </center>
 

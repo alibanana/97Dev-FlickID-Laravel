@@ -9,7 +9,9 @@ class Project extends Model
     protected $fillable = [
         'ilustration_file', 'logo_file', 'title', 'description', 
         'sub_description', 'scope', 'technologies', 'deliverables', 
-        'bg_file', 'headline', 'sub-headline', 'project_type_id'
+        'bg_file', 'headline', 'sub-headline', 'featured_ilustration_file',
+        'filter_invert', 'filter_sepia', 'filter_saturate', 'filter_hue_rotate',
+        'filter_brightness', 'filter_contrast', 'project_type_id'
     ];
 
     // Get the project's type for a certain project.
@@ -19,7 +21,7 @@ class Project extends Model
     }
 
     // Get all the project-details (child) for a certain project.
-    public function details()
+    public function project_details()
     {
         return $this->hasMany('App\ProjectDetail');
     }
