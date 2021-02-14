@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterProjectDetailsTable extends Migration
+class CreateProjectDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class AlterProjectDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::table('project_details', function (Blueprint $table) {
+        Schema::create('project_details', function (Blueprint $table) {
+            $table->id();
+            $table->string('title', 40);
+            $table->text('description');
+            $table->string('ilustration_file', 80);
             $table->unsignedBigInteger('project_id');
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -26,9 +31,6 @@ class AlterProjectDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::table('project_details', function (Blueprint $table) {
-            $table->dropForeign('project_details_project_id_foreign');
-            $table->dropColumn('project_id');
-        });
+        Schema::dropIfExists('project_details');
     }
 }
