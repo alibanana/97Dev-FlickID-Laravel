@@ -15,26 +15,22 @@ class TeamMemberSeeder extends Seeder
     {
         $team_members = [
             [
-                'name' => 'Abhista Gatya',
-                'email' => 'abhista@test.com',
+                'name' => 'Abhista Gatya',                
                 'photo_file' => '/assets/seeder/team-member-abhista-gatya.png',
                 'job_id' => 1,
             ],
             [
-                'name' => 'Alifio Rasyid',
-                'email' => 'alifio@test.com',
+                'name' => 'Alifio Rasyid',                
                 'photo_file' => '/assets/seeder/team-member-abhista-gatya.png',
                 'job_id' => 2,
             ],
             [
-                'name' => 'Fernandha Dzaky',
-                'email' => 'fernandha@test.com',
+                'name' => 'Fernandha Dzaky',                
                 'photo_file' => '/assets/seeder/team-member-abhista-gatya.png',
                 'job_id' => 2,
             ],
             [
-                'name' => 'Gabriel Amilaeno',
-                'email' => 'gabriel@test.com',
+                'name' => 'Gabriel Amilaeno',                
                 'photo_file' => '/assets/seeder/team-member-abhista-gatya.png',
                 'job_id' => 3,
             ],
