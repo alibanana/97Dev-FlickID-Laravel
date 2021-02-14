@@ -32,7 +32,7 @@
 
 .drop-zone {
   max-width: 100%;
-  height: 200px;
+  height: 14vw;
   padding: 4vw;
   display: flex;
   align-items: center;

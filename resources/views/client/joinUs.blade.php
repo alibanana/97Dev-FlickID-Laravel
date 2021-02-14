@@ -77,6 +77,9 @@
         </div>
         <!-- start of drag and drop -->
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
+            <p id="titleText" style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Profile</b></p>
+        </div>
+        <div class="col-md-12" style="text-align:left;">
             <div class="drop-zone">
                 <span class="drop-zone__prompt" style="font-family:HKGroteskBold;color:black;font-size:2vw"> <span style="color:#3F92D8" >Upload a file</span> or drag and drop here</span>
                 <input type="file" name="myFile" class="drop-zone__input">
