@@ -30,6 +30,61 @@
     <style>
 
 
+.drop-zone {
+  max-width: 100%;
+  height: 200px;
+  padding: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 4px dashed #707070;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #707070;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+    
+
+
     .navbarText {
       margin-left:100px
     }
@@ -104,7 +159,24 @@
         background-repeat: no-repeat;
         background-size: 100%;
       }
-      @media only screen and (max-width: 768px) {
+
+      @media only screen and (device-width: 768px) {
+        #navbar_text{
+          font-size: 3vw !important;
+        }
+        #buttonContactUs{
+          border: 3px solid  #3F92D8;
+          text-align: center;
+          padding: 10px !important;
+          width: 50% !important;
+          margin-top: 10px;
+        }
+        #mynav img{
+          margin-right: 5% !important;
+          width: 30% !important;
+        }
+      }
+      @media only screen and (max-width: 600px) {
 
         #navbar_text{
           font-size: 5vw !important;
@@ -129,6 +201,116 @@
         }
         #paddingTopFooter img{
           width: 40% !important
+        }
+        .MobileView{
+          display: block !important;
+        }
+        .DesktopView{
+          display: none !important;
+        }
+        .marginTopPortofolio{
+          margin-top:4vw !important
+        }
+        .portofolioTextAndImage{
+          padding-left: 4% !important;
+        }
+        .portofolioTextAndImage #illustration{
+          width: 28vw !important;
+        }
+        .portofolioTextAndImage #illustrationDesktop{
+          width: 50vw !important;
+        }
+        
+        .portofolioTextAndImage #logo{
+          width: 20vw !important;
+        }
+        .portofolioTextAndImage p{
+          font-size: 3vw !important;
+        }
+        .portofolioTextAndImage a{
+          font-size: 3vw !important;
+        }
+        #portofolioTextPadding{
+          padding-top: 0px !important;
+        }
+        #desktopMarginTop{
+          margin-top: 1vw !important;
+        }
+        #portofolioTextWidth{
+          width: 40vw !important;
+        }
+        .portofolioTextAndImageInner{
+          margin-left: 15px !important;
+        }
+
+        .withUsSection{
+          padding-top: 2vw !important;
+        }
+        #readyToStartWithUs{
+          font-size: 4.5vw !important;
+        }
+        #withUsHr{
+          width:70vw !important;
+          margin-top:4vw !important;
+        }
+        #jakartaText{
+          margin-top: 0vw !important;
+        }
+        #noTelp{
+          margin-bottom: 0px !important;
+          font-size: 1.5vw !important;
+        }
+        .socmedLogo a{
+          margin-right: 10px !important;
+          margin-top: 10px !important
+        }
+        .buttonBlue{
+          padding:2vw 3.5vw;
+          font-size: 4vw !important
+        }
+        #portofolioBGImage{
+          width: 80% !important;
+        }
+
+        #project_illustration{
+          width: 45vw !important;
+        }
+        #logoPorto{
+          width: 30vw !important;
+          margin-top: 5vw !important;
+        }
+        #titleText{
+          font-size: 5vw !important
+        }
+        #descriptionText{
+          font-size: 3vw !important
+        }
+        #project_detail_img{
+          width: 35vw !important;
+        }
+        .mobilePadding{
+          padding: 0vw 5vw !important;
+        }
+        .joinUsForm label{
+          font-size: 4vw !important;
+        }
+        #contactIllustration{
+          width: 100% !important;
+        }
+        #CotactTitleText{
+          font-size: 8vw !important;
+        }
+        #CotactDescriptionText{
+          font-size: 5vw !important;
+        }
+        #CotactSubDescriptionText{
+          font-size: 4vw !important;
+        }
+        .formContactUs{
+          padding: 5vw !important;
+        }
+        .memberCard img{
+          width: 30vw !important;
         }
       }
 

@@ -19,14 +19,14 @@
 <div class="col-md-7 p-0 marginTopPortofolio" style="margin-top:-21vw">
     <div class="containerImage">
         <div style="text-align:right">   
-            <img src="/assets/client/images/Hex_Right_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->filter_invert }}%) sepia({{ $featuredProject->filter_sepia }}%) saturate({{ $featuredProject->filter_saturate }}%) hue-rotate({{ $featuredProject->filter_hue_rotate }}deg) brightness({{ $featuredProject->filter_brightness }}%) contrast({{ $featuredProject->filter_contrast }}%);">
+            <img src="/assets/client/images/Hex_Right_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->project->filter_invert }}%) sepia({{ $featuredProject->project->filter_sepia }}%) saturate({{ $featuredProject->project->filter_saturate }}%) hue-rotate({{ $featuredProject->project->filter_hue_rotate }}deg) brightness({{ $featuredProject->project->filter_brightness }}%) contrast({{ $featuredProject->project->filter_contrast }}%);">
         </div>
         <div class="top-right">
             <div style="text-align:left !important;padding-top:18%">
                 <div style="display:flex;align-items: flex-start" class="portofolioTextAndImage">
-                    <img id="illustration" src="{{ asset($featuredProject->ilustration_file) }}" class="img-fluid" style="width:16vw" alt="">
+                    <img id="illustration" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="width:16vw" alt="">
                     <div style="margin-left:30px;" class="portofolioTextAndImageInner">
-                        <img  id="logo" src="{{ asset($featuredProject->logo_file) }}" class="img-fluid" style="width:11vw "  alt="">
+                        <img  id="logo" src="{{ asset($featuredProject->project->logo_file) }}" class="img-fluid" style="width:11vw "  alt="">
                     <div style="width:22vw;padding-right:3.1vw" id="portofolioTextWidth">
                         <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:22px;color:black">{{ $featuredProject->project->description }} <span style="font-family:HKGroteskBold">{{ $featuredProject->project->sub_description }}</span></p>
                     </div>
