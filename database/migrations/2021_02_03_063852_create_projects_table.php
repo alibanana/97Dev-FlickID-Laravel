@@ -26,10 +26,15 @@ class CreateProjectsTable extends Migration
             $table->string('bg_file', 80);
             $table->string('headline', 100);
             $table->string('sub_headline', 100);
+            $table->string('featured_ilustration_file', 80);
+            $table->unsignedTinyInteger('filter_invert');
+            $table->unsignedTinyInteger('filter_sepia');
+            $table->unsignedSmallInteger('filter_saturate');
+            $table->unsignedSmallInteger('filter_hue_rotate');
+            $table->unsignedTinyInteger('filter_brightness');
+            $table->unsignedTinyInteger('filter_contrast');
             $table->unsignedBigInteger('project_type_id');
             $table->foreign('project_type_id')->references('id')->on('project_types')->onDelete('cascade');
-            $table->unsignedBigInteger('project_detail_id');
-            $table->foreign('project_detail_id')->references('id')->on('project_details')->onDelete('cascade');
             $table->timestamps();
         });
     }
