@@ -101,6 +101,20 @@
       top: 8px;
       left: 16px;
     }
+    .top-left-3{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    /* Bottom left text */
+    .bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+    }
 
     /* Top right text */
     .top-right {

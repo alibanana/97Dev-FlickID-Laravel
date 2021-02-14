@@ -13,10 +13,10 @@
     </div>
 </div>
 @else
-<div class="col-md-5 p-0  DesktopView"></div>
+<div class="col-md-5 p-0  DesktopView "></div>
 @endif
 
-<div class="col-md-7 p-0 marginTopPortofolio" style="margin-top:-21vw">
+<div class="col-md-7 p-0 marginTopPortofolio wow fadeInRight" style="margin-top:-21vw">
     <div class="containerImage">
         <div style="text-align:right">   
             <img src="/assets/client/images/Hex_Right_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->project->filter_invert }}%) sepia({{ $featuredProject->project->filter_sepia }}%) saturate({{ $featuredProject->project->filter_saturate }}%) hue-rotate({{ $featuredProject->project->filter_hue_rotate }}deg) brightness({{ $featuredProject->project->filter_brightness }}%) contrast({{ $featuredProject->project->filter_contrast }}%);">

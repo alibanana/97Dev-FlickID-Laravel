@@ -1,7 +1,7 @@
 @if($flag == 1)
-<div class="col-md-7 p-0" >
+<div class="col-md-7 p-0 wow fadeInLeft" >
 @else
-<div class="col-md-7 p-0 marginTopPortofolio" style="margin-top:-24vw" >
+<div class="col-md-7 p-0 marginTopPortofolio wow fadeInLeft" style="margin-top:-24vw" >
 @endif
     <div class="containerImage">
         <div style="text-align:left">   
