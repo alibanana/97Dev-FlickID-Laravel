@@ -124,7 +124,6 @@ class ProjectController extends Controller
                 $project_detail->title = $input['project_detail_title'][$i];
                 $project_detail->description = $input['project_detail_description'][$i];
                 $project_detail->ilustration_file = $this->storeImage($project_detail_ilustration_list[$i], 'ilustrations/', 'ilustration');
-                // $project_detail->ilustration_file = "test";
                 $project_detail->project_id = $project->id;
                 $project_detail->save();
             }
