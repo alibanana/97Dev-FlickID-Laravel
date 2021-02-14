@@ -104,6 +104,34 @@
         background-repeat: no-repeat;
         background-size: 100%;
       }
+      @media only screen and (max-width: 768px) {
+
+        #navbar_text{
+          font-size: 5vw !important;
+        }
+        #buttonContactUs{
+          border: 3px solid  #3F92D8;
+          text-align: center;
+          padding: 10px !important;
+          width: 50% !important;
+          margin-top: 10px;
+        }
+        #mynav img{
+          margin-right: 5% !important;
+          width: 40% !important;
+        }
+        #paddingTopFooter{
+          padding-top: 0px !important;
+        }
+        #paddingTopFooter p{
+          font-size: 2vw!important;
+          padding-right: 0px !important;
+        }
+        #paddingTopFooter img{
+          width: 40% !important
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -144,8 +172,8 @@
     <!-- END OF NAVBAR DESKTOP -->
     <!-- START OF NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
-      <div class="container-fluid" style="padding-left:4vw"> 
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 4vw">
+      <div class="container-fluid" > 
         <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
         <p></p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -155,23 +183,23 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
           </ul>
-          <div class="" style="padding-right:4vw">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
+          <div class="" style="">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar_text" style="font-size:1.3vw;font-family:HKGroteskBold">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portfolio</a>
+                <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:5vw;color:black;padding-top:10px">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
+                <a class="nav-link" href="/#whatWeProvide" style="margin-right:5vw;color:black;padding-top:10px">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about-us" style="margin-right:65px;color:black">The Team</a>
+                <a class="nav-link" href="/about-us" style="margin-right:5vw;color:black;padding-top:10px">The Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/join-us" style="margin-right:65px;color:black">Career</a>
+                <a class="nav-link" href="/join-us" style="margin-right:5vw;color:black;padding-top:10px">Career</a>
               </li>
               @if (Request::path() != 'contact-us')
               <li class="nav-item" style="">
-                <a class="nav-link" href="/contact-us" style="color:#3F92D8;border:3px solid #3F92D8;padding:8px 50px;border-radius:15px">Contact us!</a>
+                <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;border:3px solid #3F92D8;padding:10px 3vw;border-radius:15px;">Contact us!</a>
               </li>
               @endif
             </ul>

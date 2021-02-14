@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <!-- INDEX CSS -->
     <link rel="stylesheet"  type="text/css"  href="/css/client/index.css">
@@ -105,11 +105,111 @@
 
       /* mobile */
       @media only screen and (max-width: 768px) {
+        .DesktopView{
+          display: none !important;
+        }
+        #footer_h2{
+          font-size:6vw !important
+        }
+        #footer_a{
+          font-size:3vw !important;
+          margin-top: 2vw !important;
+        }
+        .experienceSection{
+          padding-top: 4vw !important;
+        }
+        .withUsSection{
+          padding-top: 5vw !important;
+        }
+        #readyToStartWithUs{
+          font-size: 4.5vw !important;
+        }
+        #withUsHr{
+          width:70vw !important;
+          margin-top:8vw !important;
+        }
+        #jakartaText{
+          margin-top: 0vw !important;
+        }
+        #noTelp{
+          margin-bottom: 0px !important;
+        }
+        .socmedLogo a{
+          margin-right: 10px !important;
+          margin-top: 10px !important
+        }
+        .buttonBlue{
+          padding:2vw 3.5vw;
+          font-size: 4vw !important
+        }
+        body{
+          background-image: none !important;
+          
+        }
+        #titleText{
+          font-size: 10vw !important;
+          padding-top: 5vw !important
+        }
+        #descriptionText{
+          font-size: 4vw !important;
+          padding-top:4vw !important
+        }
+        #flickLogo{
+          font-size: 7vw !important
+        }
+        #navbar_text{
+          font-size: 5vw !important;
+        }
+        #buttonContactUs{
+          border: 3px solid  #3F92D8;
+          text-align: center;
+          padding: 0px !important;
+          width: 50% !important;
+          margin-top: 10px;
+        }
+        .MobileView{
+          display: block !important;
+        }
+        .marginTopPortofolio{
+          margin-top:4vw !important
+        }
+        .portofolioTextAndImage{
+          padding-left: 4% !important;
+        }
+        .portofolioTextAndImage #illustration{
+          width: 28vw !important;
+        }
+        .portofolioTextAndImage #illustrationDesktop{
+          width: 50vw !important;
+        }
+        
+        .portofolioTextAndImage #logo{
+          width: 20vw !important;
+        }
+        .portofolioTextAndImage p{
+          font-size: 3vw !important;
+        }
+        .portofolioTextAndImage a{
+          font-size: 3vw !important;
+        }
+        #portofolioTextPadding{
+          padding-top: 0px !important;
+        }
+        #desktopMarginTop{
+          margin-top: 1vw !important;
+        }
+        #portofolioTextWidth{
+          width: 40vw !important;
+        }
+        .portofolioTextAndImageInner{
+          margin-left: 15px !important;
+        }
+
       }
 
       /* ipad and small laptops */
       @media only screen and (min-width: 768px) {
-   
+       
       }
 
 
@@ -128,17 +228,38 @@
       }
 
   
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        outline: black;
+        background-size: 100%, 100%;
+        border-radius: 50%;
+        background-image: none;
+      }
 
-    
+      .carousel-control-next-icon:after
+      {
+        content: '>';
+        font-size: 30px;
+        color: blue;
+      }
+
+      .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 30px;
+        color: blue;
+      }
+          
 
       
      
 
     </style>
   </head>
-  <body style="">
+  <body >
     <!-- START OF NAVBAR -->
-    <div class="row m-0" style="z-index:99;padding-top:1.9vw">
+    <div class="row m-0" style="padding-top:1.9vw">
       <div class="col-md-12 p-0">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
@@ -152,7 +273,7 @@
 
               </ul>
               <div class="" style="">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar_text" style="font-size:1.3vw;font-family:HKGroteskBold">
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portfolio</a>
                   </li>
@@ -166,7 +287,7 @@
                     <a class="nav-link" href="/join-us" style="margin-right:65px;color:black">Career</a>
                   </li>
                   <li class="nav-item" style="">
-                    <a class="nav-link" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 60px;border-radius:15px">Contact us!</a>
+                    <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 60px;border-radius:1vw">Contact us!</a>
                   </li>
                 </ul>
               </div>
@@ -179,7 +300,7 @@
 
     <!-- START OF TOP CONTENT-->
     <div class="row m-0 ">
-      <div class="col-md-6 testing wow fadeInLeft" style="padding-left:8.5%" id="paddingLeft"> 
+      <div class="col-md-6 wow fadeInLeft" style="padding-left:8.5%" id="paddingLeft"> 
         <div style="display:flex;align-items: center;margin-top:6vw">
           <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:13%;"  id="flickLogo">
           <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:3vw" id="flickLogo"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
@@ -196,9 +317,56 @@
     </div>
     <!-- END OF TOP CONTENT -->
 
+    <!-- WHAT WE PROVIDE MOBILE -->
+    <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
+      <div class="col-12 p-0" >
+        <p style="font-size:10vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
+      </div>
+    </div>
+
+    <div class="row m-0 MobileView" style="padding-top:4vw;padding-bottom:4vw;display:none">
+      <div class="col-12 p-0" >
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            @foreach ($project_types as $project_type)
+            @if($loop->iteration == '1')
+
+            <div class="carousel-item active">
+            @else
+            <div class="carousel-item ">
+
+            @endif
+              <div style="text-align: center;">
+                  <img src="{{ asset($project_type->ilustration_file) }}" style="width:40vw" alt="">
+                  <p style="font-size:8vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
+                  <div style="padding: 0px 10px">
+                    <p style="font-size:5vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
+                  </div>
+                  <a href="/portfolio" target="_blank" style="font-size:6vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:6vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+              </div>
+            </div>
+            @endforeach
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- END OF WHAT WE PROVIDE MOBILE -->
+
     <!-- START OF WHAT WE PROVIDE -->
-    <div class="row m-0" style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
-      <div class="col-md-12" >
+    <div class="row m-0 DesktopView"style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
+      <div class="col-md-12"   id="whatWeProvide" >
         <p style="font-size:5vw;font-family:HKGroteskBlack" id="whatWeProvide"> <b>What we provide</b></p>
       </div>
       @foreach ($project_types as $project_type)
@@ -218,9 +386,16 @@
     <!-- END OF WHAT WE PROVIDE -->
 
     <!-- WHAT WE HAVE BUILD -->
-    
-    <div class="row m-0" style="padding-bottom:7vw" >
+    <!-- mobile view -->
+    <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
+      <div class="col-12 p-0" >
+        <p style="font-size:10vw;font-family:HKGroteskBlack" id="whatWeProvide"> <b>What we've build</b></p>
+        <p style="font-size:4vw;font-family:HKGroteskRegular">We help business to grow to their fullest <br> potential <span style="font-family:HKGroteskBlack">through technology</span></p>
 
+      </div>
+    </div>
+    <!-- end of mobile view -->
+    <div class="row m-0 " style="padding-bottom:7vw" >
     <?php $counter = 0 ?>
     @foreach($featured_projects as $featured_project)
       <?php $flag = 0 ?>
@@ -255,6 +430,16 @@
       </div> -->
 
     </div>
+    <!-- mobile view -->
+    <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:4vw;padding-bottom:4vw;display:none">
+      <div class="col-12 p-0" >
+        <p style="font-size:10vw;font-family:HKGroteskBlack" id="whatWeProvide"><b>Explore more on <br> our fine works</b></p>
+        <div>
+          <a href="/portofolio" style="font-size:6vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:6vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+      </div>
+      </div>
+    </div>
+    <!-- end of mobile view -->
     <!-- END OF WHAT WE HAVE BUILD -->
 
     <!-- START OF A TEAM THAT HAS YEARS OF EXPERIENCE -->
@@ -264,7 +449,7 @@
           <p  style="font-size:5vw;margin-top:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience <br> on developing technologies</b></p>
           <p style="font-size:1.9vw;margin-bottom:3vw;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
           <div style="display:flex"> 
-            <div style="background-color:#FFA5A5;width:29vw;border-radius:15px;color:#142850;padding:1.9vw;">
+            <div style="background-color:#FFA5A5;width:29vw;border-radius:1.5vw;color:#142850;padding:1.9vw;">
               <div style="display:flex;justify-content:space-between;align-items:center ">
                 <div> 
                   <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-bottom:0px !important"> <b>About Us</b></p>
@@ -276,7 +461,7 @@
               </div>
             </div>
 
-            <div style="background-color:#81D1C7;width:29vw;border-radius:15px;color:#142850;padding:1.7vw; margin-left:80px">
+            <div style="background-color:#81D1C7;width:29vw;border-radius:1.5vw;color:#142850;padding:1.7vw; margin-left:80px">
               <div style="display:flex;justify-content:space-between;align-items:center ">
                 <div> 
                   <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-bottom:0px !important"> <b>Join the team!</b></p>
@@ -297,7 +482,7 @@
             <p style="font-size:5vw;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
 
             <div style="margin-top:2.5vw">
-              <a href="" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
+              <a href="" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:1.5vw;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
             </div>
             <div>
               <hr style="margin-top:11vw;width:80vw;height:0.2vw;color:grey">
@@ -330,7 +515,7 @@
       </div>
     </div> -->
 
-    <div class="row m-0">
+    <div class="row m-0 experienceSection">
       <div class="col-md-12 p-0 ">
         <div class="containerImage">
             <div style="text-align:left">   
@@ -342,7 +527,7 @@
                 <p  style="font-size:5vw;margin-top:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience <br> on developing technologies</b></p>
                 <p style="font-size:1.9vw;margin-bottom:3vw;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
                 <div style="display:flex"> 
-                  <div class="wow fadeInUp" style="background-color:#FFA5A5;width:29vw;border-radius:15px;color:#142850;padding:1.9vw;">
+                  <div class="wow fadeInUp" style="background-color:#FFA5A5;width:29vw;border-radius:1.5vw;color:#142850;padding:1.9vw;">
                     <div  style="display:flex;justify-content:space-between;align-items:center">
                       <div> 
                         <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-bottom:0px !important"> <b>About Us</b></p>
@@ -354,7 +539,7 @@
                     </div>
                   </div>
 
-                  <div class="wow fadeInUp" style="background-color:#81D1C7;width:29vw;border-radius:15px;color:#142850;padding:1.7vw; margin-left:80px">
+                  <div class="wow fadeInUp" style="background-color:#81D1C7;width:29vw;border-radius:1.5vw;color:#142850;padding:1.7vw; margin-left:7vw">
                     <div  style="display:flex;justify-content:space-between;align-items:center ">
                       <div> 
                         <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-bottom:0px !important"> <b>Join the team!</b></p>
@@ -368,32 +553,32 @@
                 </div>
               </div>
             
-              <div style="text-align:left !important;padding-top:10vw">
+              <div style="text-align:left !important;padding-top:10vw" class="withUsSection">
                 <div style="padding-left:8.5%">
-                    <p style="font-size:5vw;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
+                    <p id="readyToStartWithUs" style="font-size:5vw;font-family:HKGroteskBlack;color:#142850"> Ready to start a project with us?</p>
 
                     <div class="wow fadeInLeft" style="margin-top:2.5vw">
-                        <a href="/contact-us" style="border:4px solid #3F92D9;padding:1vw 50px;text-decoration:none;font-family:HKGroteskBold;border-radius:15px;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
+                        <a href="/contact-us" style="border:4px solid #3F92D9;padding:1vw 4vw;text-decoration:none;font-family:HKGroteskBold;border-radius:1.5vw;color:#3F92D9;font-size:2vw;">Let's Talk! <span style="font-size:2vw;margin-left:5px;margin-top:200px !important"> <i  class="fas fa-long-arrow-alt-right"></i></span></a>
                     </div>
                     <div>
-                        <hr style="margin-top:11vw;width:80vw;height:0.2vw;color:grey">
+                        <hr id="withUsHr" style="margin-top:11vw;width:80vw;height:0.2vw;color:grey">
                     </div>
                     <div class="row m-0" >
-                        <div class="col-md-6" style="color:#142850">
-                            <p style="font-size:3vw ;font-family:HKGroteskBlack;margin-top:3vw;color:#142850">Jakarta</p>
-                            <p style="font-family:HKGroteskRegular;font-size:1.8vw;margin-top:1vw"> <b>+62 811 8128 171</b></p>
+                        <div class="col-6" style="color:#142850">
+                            <p id="jakartaText" style="font-size:3vw ;font-family:HKGroteskBlack;margin-top:3vw;color:#142850">Jakarta</p>
+                            <p id="noTelp" style="font-family:HKGroteskRegular;font-size:1.8vw;margin-top:1vw"> <b>+62 811 8128 171</b></p>
                             <p style="font-family:HKGroteskRegular;font-size:1.8vw;margin-top:1vw">Jl. Harapan 3 No. 5, Malayka Residence <br> Bintaro, Pesanggrahan, Jakarta Selatan, 12330</p>
                         </div>
-                        <div class="col-md-6" style="padding-left:9vw">
-                            <p style="font-size:3vw ;font-family:HKGroteskBlack;margin-top:3vw;color:#142850">Follow us!</p>
-                            <div style="display:flex">
-                                <a href="" style="margin-top:20px !important;margin-right:40px !important">
+                        <div class="col-6" style="padding-left:9vw">
+                            <p id="jakartaText" style="font-size:3vw ;font-family:HKGroteskBlack;margin-top:3vw;color:#142850">Follow us!</p>
+                            <div style="display:flex" class="socmedLogo">
+                                <a href="" style="margin-top:20px ;margin-right:40px ">
                                     <img src="/assets/client/images/linkedin.png" class="img-fluid"  alt="" style="width:3vw"> 
                                 </a>
-                                <a href="" style="margin-top:20px !important;margin-right:40px !important">
+                                <a href="" style="margin-top:20px ;margin-right:40px ">
                                     <img src="/assets/client/images/instagram.png"  alt="" style="width:3vw"> 
                                 </a>
-                                <a href="" style="margin-top:20px !important;margin-right:40px !important">
+                                <a href="" style="margin-top:20px ;margin-right:40px ">
                                     <img src="/assets/client/images/youtube.png"  alt="" style="width:4vw"> 
                                 </a>
                             </div>
@@ -412,16 +597,16 @@
 
     <!-- Start of footer -->
     <div class="row m-0" style="padding-left:8.5%;background-color:#EDF7FF;padding-bottom:4vw;padding-right:4vw;padding-top:5vw">
-        <div class="col-6 p-0" > 
+        <div class="col-md-6 p-0" > 
           <div style="display:flex;align-items: center;align-content: flex-start;">
             <div style="display:flex;align-items: center">
               <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:16%" alt="">
-              <h2 style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:35px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
+              <h2 id="footer_h2" style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:35px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
             </div>
           </div>
         </div>
-        <div class="col-6">
-          <div style="display:flex;align-items: center;justify-content: space-between;font-size:1.4vw;align-content:flex-end">
+        <div class="col-md-6">
+          <div style="display:flex;align-items: center;justify-content: space-between;font-size:1.4vw;align-content:flex-end" id="footer_a">
             <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:2vw;color:#3F92D8;font-family:HKGroteskBold;">Portfolio</a>
             <a class="nav-link" aria-current="page" href="/#whatWeProvide" style="margin-right:2vw;color:#3F92D8;font-family:HKGroteskBold;">Services</a>
             <a class="nav-link" aria-current="page" href="/about-us" style="margin-right:2vw;color:#3F92D8;font-family:HKGroteskBold;">The Team</a>
@@ -429,12 +614,15 @@
           </div>
         </div>
         <div class="col-12" style="text-align:right">
-          <p style="font-size:20px;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;margin-top:13px;padding-right:16px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
+          <p id="footer_a" style="font-size:20px;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;margin-top:13px;padding-right:16px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
         </div>
     </div>
     <!-- end of footer -->
+    
 
 
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- WOW JS -->
     <script src="/WOW-master/dist/wow.min.js"></script>
@@ -443,13 +631,11 @@
     </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9864pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script> -->
+  
   </body>
 </html>

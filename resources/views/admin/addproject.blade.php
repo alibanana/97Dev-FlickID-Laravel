@@ -69,6 +69,56 @@
         <!-- end of choosing file -->
 
         <hr>
+        <h3 style="font-family:HKGroteskBold !important;margin-top:40px">Featured Project Asset</h3>
+
+        <div class="row">    
+          <div class="col-md-12 pt-2 mb-4" style>
+              <p>Featured Illustration</p>
+              <input type="file" id="featured_project_illustration" name="image" accept=".jpg,.jpeg,.png" hidden/>
+              <label id="uploadButton" for="featured_project_illustration">Choose Image</label>
+              <label for="" style="margin-left:10px;font-family:HKGroteskBold">max 1 image</label>
+              @error('image')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              @error('imagename')
+              <span class="invalid-feedback" role="alert" style="display: block !important;">
+                  <strong>{{ $message }}</strong>
+              </span>
+              @enderror
+              <!-- START OF UPLOADED IMAGE -->
+              <div id="featured_illustration_preview" class="row m-0">
+              </div>
+          </div>
+          <div class="mb-3 col-6">
+              <label for="Insert_invert" class="form-label">Invert</label>
+              <input name="invert" type="text" class="form-control border" id="Insert_invert" aria-describedby="Insert_invert" style="width:70%;">
+          </div>
+          <div class="mb-3 col-6">
+              <label for="Insert_Sepia" class="form-label">Sepia</label>
+              <input name="sepia" type="text" class="form-control border " id="Insert_Sepia" aria-describedby="Insert_invert" style="width:70%;">
+          </div>
+          <div class="mb-3 col-6">
+              <label for="Insert_Saturate" class="form-label">Saturate</label>
+              <input name="saturate" type="text" class="form-control border " id="Insert_Saturate" aria-describedby="Insert_invert" style="width:70%;">
+          </div>
+          <div class="mb-3 col-6">
+              <label for="Insert_Hue_Rotate" class="form-label">Hue_Rotate</label>
+              <input name="hue_Rotate" type="text" class="form-control border " id="Insert_Hue_Rotate" aria-describedby="Insert_invert" style="width:70%;">
+          </div>
+          <div class="mb-3 col-6">
+              <label for="Insert_Brightness" class="form-label">Brightness</label>
+              <input name="brightness" type="text" class="form-control border " id="Insert_Brightness" aria-describedby="Insert_invert" style="width:70%;">
+          </div>
+          <div class="mb-3 col-6">
+              <label for="Insert_Contrast" class="form-label">Contrast</label>
+              <input name="contrast" type="text" class="form-control border " id="Insert_Contrast" aria-describedby="Insert_invert" style="width:70%;">
+          </div>
+
+        </div>
+
+        <hr>
         <div class="row">
             <div class="mb-3 col-6 pt-5">
                 <label for="title" class="form-label">Title</label>
@@ -205,102 +255,167 @@
 <script>
 // START OF IMAGE PREVIEW AND DELETE
 $(document).ready(function() {
-    if (window.File && window.FileList && window.FileReader) {
-        $("#logo_image").on("change", function(e) {
-            var fileName = document.getElementById("logo_image").value;
-            var idxDot = fileName.lastIndexOf(".") + 1;
-            var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-            if (extFile=="jpg" || extFile=="jpeg" || extFile=="png" || extFile=="svg") {
-                document.getElementById("logo_preview").innerHTML = "";
-                var files = e.target.files;
-                var filesLength = files.length;
-                for (var i = 0; i < files.length; i++ ) {
-                    var file = files[i];
-                    var fileReader = new FileReader();
+  if (window.File && window.FileList && window.FileReader) {
+    $("#logo_image").on("change", function(e) {
+      var fileName = document.getElementById("logo_image").value;
+      var idxDot = fileName.lastIndexOf(".") + 1;
+      var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+      if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
+        document.getElementById("logo_preview").innerHTML = "";
+        var files = e.target.files;
+        var filesLength = files.length;
+        for (var i = 0; i < files.length; i++ ) {
+          var file = files[i];
+          var fileReader = new FileReader();
 
-                    fileReader.onload= (function(f) {
-                        return function(e) {
-                            $("#logo_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
-                                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
-                                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove\"></i>" + 
-                                "<input name=\"logo_filename\" value=\"" + f.name + "\" hidden/>" + "</div>");
-                            $(".remove").click(function(){
-                                $(this).parent(".pip").remove();
-                            });
-                        };
-                    })(file);
+          fileReader.onload= (function(f) {
+            return function(e) {
+              $("#logo_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
+                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
+                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove\"></i>" + 
+                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
+              $(".remove").click(function(){
+                $(this).parent(".pip").remove();
+              });
+            };
+          })(file);
 
-                    fileReader.readAsDataURL(file);
-                }
-            } else {
-                alert("Only jpg/jpeg, png and svg files are allowed!");
-            }
-        });
+          fileReader.readAsDataURL(file);
+        }
+      } else {
+          alert("Only jpg/jpeg and png files are allowed!");
+      }
+    });
+    $("#image-background").on("change", function(e) {
+      var fileName = document.getElementById("image-background").value;
+      console.log("test")
+      var idxDot = fileName.lastIndexOf(".") + 1;
+      var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+      if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
+        document.getElementById("background_preview").innerHTML = "";
+        var files = e.target.files;
+        var filesLength = files.length;
+        for (var i = 0; i < files.length; i++ ) {
+          var file = files[i];
+          var fileReader = new FileReader();
 
-        $("#project_illustration").on("change", function(e) {
-            var fileName = document.getElementById("project_illustration").value;
-            var idxDot = fileName.lastIndexOf(".") + 1;
-            var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-            if (extFile=="png" || extFile=="svg") {
-                document.getElementById("illustration_preview").innerHTML = "";
-                var files = e.target.files;
-                var filesLength = files.length;
-                for (var i = 0; i < files.length; i++ ) {
-                    var file = files[i];
-                    var fileReader = new FileReader();
+          fileReader.onload= (function(f) {
+            return function(e) {
+              $("#background_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
+                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
+                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove1\"></i>" + 
+                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
+              $(".remove1").click(function(){
+                $(this).parent(".pip").remove();
+              });
+            };
+          })(file);
 
-                    fileReader.onload= (function(f) {
-                        return function(e) {
-                            $("#illustration_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
-                                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
-                                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove1\"></i>" + 
-                                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
-                            $(".remove1").click(function(){
-                                $(this).parent(".pip").remove();
-                            });
-                        };
-                    })(file);
+          fileReader.readAsDataURL(file);
+        }
+      } else {
+          alert("Only jpg/jpeg and png files are allowed!");
+      }
+    });
 
-                    fileReader.readAsDataURL(file);
-                }
-            } else {
-                alert("Only png and svg files are allowed!");
-            }
-        });
+    $("#image-portofolio").on("change", function(e) {
+      var fileName = document.getElementById("image-portofolio").value;
+      var idxDot = fileName.lastIndexOf(".") + 1;
+      var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+      if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
+        document.getElementById("project_detail_preview").innerHTML = "";
+        var files = e.target.files;
+        var filesLength = files.length;
+        for (var i = 0; i < files.length; i++ ) {
+          var file = files[i];
+          var fileReader = new FileReader();
 
-        $("#image-background").on("change", function(e) {
-            var fileName = document.getElementById("image-background").value;
-            var idxDot = fileName.lastIndexOf(".") + 1;
-            var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-            if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
-                document.getElementById("background_preview").innerHTML = "";
-                var files = e.target.files;
-                var filesLength = files.length;
-                for (var i = 0; i < files.length; i++ ) {
-                    var file = files[i];
-                    var fileReader = new FileReader();
+          fileReader.onload= (function(f) {
+            return function(e) {
+              $("#project_detail_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
+                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
+                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove1\"></i>" + 
+                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
+              $(".remove1").click(function(){
+                $(this).parent(".pip").remove();
+              });
+            };
+          })(file);
 
-                    fileReader.onload= (function(f) {
-                        return function(e) {
-                            $("#background_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
-                                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
-                                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove1\"></i>" + 
-                                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
-                            $(".remove1").click(function(){
-                                $(this).parent(".pip").remove();
-                            });
-                        };
-                    })(file);
+          fileReader.readAsDataURL(file);
+        }
+      } else {
+          alert("Only jpg/jpeg and png files are allowed!");
+      }
+    });
 
-                    fileReader.readAsDataURL(file);
-                }
-            } else {
-                alert("Only jpg/jpeg and png files are allowed!");
-            }
-        });
-    } else {
-        alert("Your browser doesn't support to File API")
-    }
+    $("#project_illustration").on("change", function(e) {
+      var fileName = document.getElementById("project_illustration").value;
+      var idxDot = fileName.lastIndexOf(".") + 1;
+      var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+      if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
+        document.getElementById("illustration_preview").innerHTML = "";
+        var files = e.target.files;
+        var filesLength = files.length;
+        for (var i = 0; i < files.length; i++ ) {
+          var file = files[i];
+          var fileReader = new FileReader();
+
+          fileReader.onload= (function(f) {
+            return function(e) {
+              $("#illustration_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
+                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
+                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove1\"></i>" + 
+                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
+              $(".remove1").click(function(){
+                $(this).parent(".pip").remove();
+              });
+            };
+          })(file);
+
+          fileReader.readAsDataURL(file);
+        }
+      } else {
+          alert("Only jpg/jpeg and png files are allowed!");
+      }
+    });
+
+    $("#featured_project_illustration").on("change", function(e) {
+      var fileName = document.getElementById("featured_project_illustration").value;
+      var idxDot = fileName.lastIndexOf(".") + 1;
+      var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+      if (extFile=="jpg" || extFile=="jpeg" || extFile=="png") {
+        document.getElementById("featured_illustration_preview").innerHTML = "";
+        var files = e.target.files;
+        var filesLength = files.length;
+        for (var i = 0; i < files.length; i++ ) {
+          var file = files[i];
+          var fileReader = new FileReader();
+
+          fileReader.onload= (function(f) {
+            return function(e) {
+              $("#featured_illustration_preview").append("<div class=\"col-md-3 mt-4 pip\"  style=\"text-align: center;\">"+
+                "<img src=\"" + e.target.result + "\" class=\"img-fluid\" style=\"object-fit: cover;max-width:px;max-height:px\" />" + 
+                "<i style=\"color:#145CA8;font-size:20px\" class=\"fas fa-minus-circle mt-2 remove1\"></i>" + 
+                "<input name=\"imagename\" value=\"" + f.name + "\" hidden/>" + "</div>");
+              $(".remove1").click(function(){
+                $(this).parent(".pip").remove();
+              });
+            };
+          })(file);
+
+          fileReader.readAsDataURL(file);
+        }
+      } else {
+          alert("Only jpg/jpeg and png files are allowed!");
+      }
+    });
+
+
+
+  } else {
+    alert("Your browser doesn't support to File API")
+  }
 });
 // END OF IMAGE PREVIEW AND DELETE
 </script>
