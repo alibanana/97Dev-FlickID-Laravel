@@ -97,27 +97,45 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">Full Name</th>
+            <th scope="col">Full Name & Image</th>
             <th scope="col">Position</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($team_members as $team_member)
-            <form action="{{ route('admin.team.destroy', $team_member->id) }}" method="post" style="display: inline-block">
+            <form enctype="multipart/form-data" action="{{ route('admin.team.update', $team_member->id) }}" method="post" style="display: inline-block">
             @csrf
-            @method('DELETE')
+            @method('PUT')
             <tr>
-              <td>
-                <input name="name" type="text" value="{{ $team_member->name }}">
+              <td style="width: 40%;">
+                <input name="name" type="text" value="{{ $team_member->name }}"><br>
+                <label style="font-family: HKGroteskRegular">Current Pic: </label>
+                <img style="object-fit: cover; width: 100px; margin-top: 10px" src="{{ asset($team_member->photo_file) }}" alt="">
+                <div class="form-group" style="margin-top: 20px">
+                  <label for="photo_file">Upload New File</label>
+                  <input type="file" class="form-control-file" id="photo_file" name="photo_file" style="width: 100%; margin-top: 10px">
+                </div>
               </td>
               <td>
-                <input name="title" type="text" value=" {{ $team_member->job->title }}">
+                <select id="postionControlSelect" name="job_id" style="width: 80%">
+                  @foreach ($jobs as $job)
+                    @if ($job == $team_member->job)
+                      <option value="{{ $job->id }}" selected="selected">{{ $job->title }}</option>
+                    @else
+                      <option value="{{ $job->id }}">{{ $job->title }}</option>
+                    @endif
+                  @endforeach
+                </select>
               </td>
               <td>
-                <button type="button" class="btn btn-secondary" style="margin-right: 10px">Update</button>
+                <button type="submit" class="btn btn-secondary" style="margin-right: 10px" onclick='return confirm("Are you sure you want to Update this team member?")'>Update</button>
                 </form>
-                <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this team member?")'>Delete</button>
+                <form action="{{ route('admin.team.destroy', $team_member->id) }}" method="post" style="display: inline-block">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this team member?")'>Delete</button>
+                </form>
               </td>
             </tr>
           @endforeach
@@ -130,15 +148,21 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col" >Title</th>
-            <th scope="col" >Offerable</th>
+            <th scope="col">Title</th>
+            <th scope="col">Offerable</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($jobs as $job)
             <tr>
-              <td scope="col">{{ $job->title }}</td>
+              <td scope="col">
+                <form id="job-update-{{ $job->id }}" action="{{ route('admin.job.update', $job->id) }}" method="post" style="display: inline-block">
+                  @csrf
+                  @method('PUT')
+                  <input name="title" type="text" value="{{ $job->title }}">
+                </form>
+              </td>
               @if ($job->offerable)
                 <td scope="col" style="color:green">
                   <p style="display: inline-block">True</p>
@@ -159,6 +183,7 @@
                 </td>
               @endif
               <td scope="col">
+                <button type="submit" form="job-update-{{ $job->id }}" class="btn btn-secondary" style="margin-right: 10px" onclick='return confirm("Are you sure you want to Update this team member?")'>Update</button>
                 <form action="{{ route('admin.job.destroy', $job->id) }}" method="post" style="display: inline-block">
                   @csrf
                   @method('DELETE')

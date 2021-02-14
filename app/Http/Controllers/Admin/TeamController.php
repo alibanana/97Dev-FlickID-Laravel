@@ -70,6 +70,30 @@ class TeamController extends Controller
         return $destinationPath.$newName;
     }
 
+    public function updateTeamMember(Request $request, $id)
+    {
+        $input = $request->all();
+
+        Validator::make($input, [
+            'name' => 'max:40',
+            'job_id' => 'max:40',
+            'photo_file' => 'mimes:jpeg,jpg,png'
+        ])->validate();
+        
+        $team_member = TeamMember::findorfail($id);
+        $team_member->name = $input['name'];
+        $team_member->job_id = $input['job_id'];
+
+        if ($request->has('photo_file')) {
+            unlink($team_member->photo_file);
+            $team_member->photo_file = $this->storeImage($request->file('photo_file'), 'profiles/', 'profile');
+        }
+
+        $team_member->save();
+
+        return redirect()->route('admin.team.index')->with('success', 'Team Member has been updated!');
+    }
+
     public function destroyTeamMember($id)
     {
         $team_member = TeamMember::findorfail($id);
@@ -93,6 +117,21 @@ class TeamController extends Controller
         $job->save();
 
         return redirect()->route('admin.team.index')->with('success', 'A new Position has been stored in the database!');
+    }
+
+    public function updateJob(Request $request, $id)
+    {
+        $input = $request->all();
+
+        Validator::make($input, [
+            'title' => 'max:40',
+        ])->validate();
+        
+        $job = Job::findorfail($id);
+        $job->title = $input['title'];
+        $job->save();
+        
+        return redirect()->route('admin.team.index')->with('success', 'Job has been updated!');
     }
 
     public function changeOfferable($job_id)
