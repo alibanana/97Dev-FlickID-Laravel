@@ -91,13 +91,18 @@
           </tr>
         </thead>
         <tbody>
+          <form action="">
           <tr>
-            <td>Fernandha Dzaky</td>
-            <td>Chief Executive Officer</td>
+            <td>
+            <input type="text" value="Fernandha Dzaky">
+            </td>
+            <td>
+            <input type="text" value="CEO">
+            </td>
             <td>
               <div style="display:flex;justify-content:space-between;align-items:center">
-
-                <button type="button" class="btn btn-secondary" >Update</button>
+                <button type="submit" class="btn btn-secondary" >Update</button>
+                </form>
                 <button type="button" class="btn btn-danger" >Reject</button>
               </div>
             </td>
