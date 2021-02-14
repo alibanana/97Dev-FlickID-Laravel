@@ -40,14 +40,14 @@ Route::post('/admin/project', 'Admin\ProjectController@store')->name('admin.proj
 Route::delete('/admin/project/{id}', 'Admin\ProjectController@destroy')->name('admin.project.destroy');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
+Route::get('/admin/team', 'Admin\TeamController@index')->name('admin.team.index');
+Route::post('/admin/job', 'Admin\TeamController@storeJob')->name('admin.job.store');
+Route::put('/admin/job/{id}/change-offerable', 'Admin\TeamController@changeOfferable')->name('admin.job.changeOfferable');
+Route::delete('/admin/job/{id}', 'Admin\TeamController@destroyJob')->name('admin.job.destroy');
 
 // Admin Pages Routings
 Route::get('/email', function () {
     return view('emails/email');
-});
-
-Route::get('/admin/team', function () {
-    return view('admin/teamtable');
 });
 
 // Route::get('/about-us', function () {
