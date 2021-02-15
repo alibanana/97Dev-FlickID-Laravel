@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             ClientSeeder::class,
             JobSeeder::class,
             TeamMemberSeeder::class,
+            QuestionTypeSeeder::class,
         ]);
     }
 }
