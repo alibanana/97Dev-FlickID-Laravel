@@ -19,47 +19,14 @@
 
         <!-- START OF MEMBER IMAGE -->
         <div class="row m-0" style="padding-bottom:5vw;padding-top:2vw">
-
-            <!-- start of one card -->
-            <div class="col-md-6 pt-5">
-                <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
-                    <p id="titleText" style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
-
-                </div>
-            </div>
-            <!-- end of one card -->
-
-            <!-- start of one card -->
-            <div class="col-md-6 pt-5">
-                <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
-                    <p id="titleText" style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
-
-                </div>
-            </div>
-            <!-- end of one card -->
-
-            <!-- start of one card -->
-            <div class="col-md-6 pt-5">
-                <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
-                    <p id="titleText" style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
-
-                </div>
-            </div>
-            <!-- end of one card -->
-
-            <!-- start of one card -->
-            <div class="col-md-6 pt-5">
-                <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                    <img src="/assets/client/images/member_photo_dummy.png" style="width:180px" alt="">
-                    <p id="titleText" style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>Abhista Gatya</b> <br> <span style="font-family:HKGroteskRegular !important">CEO</span></p>
-
-                </div>
-            </div>
-            <!-- end of one card -->
-            
+            @foreach ($team_members as $team_member)
+                <div class="col-md-6 pt-5">
+                    <div class="memberCard" style="display:flex;align-content:flex-start;" >
+                        <img src="{{ asset($team_member->photo_file) }}" style="width:180px" alt="">
+                        <p id="titleText" style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>{{ $team_member->name }}</b> <br> <span style="font-family:HKGroteskRegular !important">{{ $team_member->job->title }}</span></p>
+                    </div>
+                </div>  
+            @endforeach
         </div>
         <!-- END OF MEMBER IMAGE -->
     </div>
