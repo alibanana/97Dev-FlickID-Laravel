@@ -67,11 +67,6 @@ Route::get('/join-us', function () {
     return view('client/joinUs');
 });
 
-Route::get('/portofolio/1', function () {
-    return view('client/portofolio-detail');
-});
-
-
 Route::get('/admin-login', function () {
     return view('admin/login');
 });

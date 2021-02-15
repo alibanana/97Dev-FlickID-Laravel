@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class detailRight extends Component
 {
+    public $projectDetail;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($projectDetail)
     {
-        //
+        $this->projectDetail = $projectDetail;
     }
 
     /**
