@@ -132,7 +132,7 @@ class ProjectController extends Controller
 
         for ($i = 0; $i <= count($input['project_detail_title']); $i++) {
             if (empty($input['project_detail_title'][$i]) || empty($input['project_detail_description'][$i]) || empty($input['project_detail_ilustration'][$i])) {
-                break;
+                continue;
             } else {
                 $project_detail = new ProjectDetail;
                 $project_detail->title = $input['project_detail_title'][$i];
@@ -172,6 +172,20 @@ class ProjectController extends Controller
         return $destinationPath.$newName;
     }
 
+    public function edit($id)
+    {
+        $project_types = ProjectType::all();
+        
+        $project = Project::findorfail($id);
+
+        return view('admin/updateproject', compact('project_types', 'project'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $project = Project::findorfail($id);
+    }
+    
     public function destroy($id)
     {
         $project = Project::findorfail($id);
