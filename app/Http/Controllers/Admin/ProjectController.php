@@ -89,6 +89,13 @@ class ProjectController extends Controller
             'technologies' => 'required',
             'deliverables' => 'required',
             'headline' => 'required|max:100',
+            'featured_ilustration_file' => 'required|image|mimes:png,svg',
+            'filter_invert' => 'required|digits_between:1,3',
+            'filter_sepia' => 'required|digits_between:1,3',
+            'filter_saturate' => 'required|digits_between:1,5',
+            'filter_hue_rotate' => 'required|digits_between:1,5',
+            'filter_brightness' => 'required|digits_between:1,3',
+            'filter_contrast' => 'required|digits_between:1,3',
             'sub_headline' => 'required|max:100',
             'project_detail_title.*' => 'max:40',
             'project_detail_ilustration.*' => 'image|mimes:png,svg',
@@ -111,6 +118,13 @@ class ProjectController extends Controller
         $project->bg_file = $this->storeImage($request->file('background_file'), 'background_file/', 'background');
         $project->headline = $input['headline'];
         $project->sub_headline = $input['sub_headline'];
+        $project->featured_ilustration_file = $this->storeImage($request->file('featured_ilustration_file'), 'ilustrations/', 'ilustration');
+        $project->filter_invert = $input['filter_invert'];
+        $project->filter_sepia = $input['filter_sepia'];
+        $project->filter_saturate = $input['filter_saturate'];
+        $project->filter_hue_rotate = $input['filter_hue_rotate'];
+        $project->filter_brightness = $input['filter_brightness'];
+        $project->filter_contrast = $input['filter_contrast'];
         $project->project_type_id = $input['project_type_id'];
         $project->save();
 

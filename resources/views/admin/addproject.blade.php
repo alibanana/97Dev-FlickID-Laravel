@@ -74,15 +74,10 @@
         <div class="row">    
           <div class="col-md-12 pt-2 mb-4" style>
               <p>Featured Illustration</p>
-              <input type="file" id="featured_project_illustration" name="image" accept=".jpg,.jpeg,.png" hidden/>
+              <input type="file" id="featured_project_illustration" name="featured_ilustration_file" accept=".jpg,.jpeg,.png" hidden/>
               <label id="uploadButton" for="featured_project_illustration">Choose Image</label>
               <label for="" style="margin-left:10px;font-family:HKGroteskBold">max 1 image</label>
-              @error('image')
-              <span class="invalid-feedback" role="alert" style="display: block !important;">
-                  <strong>{{ $message }}</strong>
-              </span>
-              @enderror
-              @error('imagename')
+              @error('featured_ilustration_file')
               <span class="invalid-feedback" role="alert" style="display: block !important;">
                   <strong>{{ $message }}</strong>
               </span>
@@ -92,30 +87,59 @@
               </div>
           </div>
           <div class="mb-3 col-6">
-              <label for="Insert_invert" class="form-label">Invert</label>
-              <input name="invert" type="text" class="form-control border" id="Insert_invert" aria-describedby="Insert_invert" style="width:70%;">
+            <label for="Insert_invert" class="form-label">Invert</label>
+            <input name="filter_invert" value="{{ old('filter_invert') }}" type="text" class="form-control border" id="Insert_invert" aria-describedby="Insert_invert" style="width:70%;">
+            @error('filter_invert')
+            <span class="invalid-feedback" role="alert" style="display: block !important;">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
           <div class="mb-3 col-6">
-              <label for="Insert_Sepia" class="form-label">Sepia</label>
-              <input name="sepia" type="text" class="form-control border " id="Insert_Sepia" aria-describedby="Insert_invert" style="width:70%;">
+            <label for="Insert_Sepia" class="form-label">Sepia</label>
+            <input name="filter_sepia" value="{{ old('filter_sepia') }}" type="text" class="form-control border " id="Insert_Sepia" aria-describedby="Insert_invert" style="width:70%;">
+            @error('filter_sepia')
+            <span class="invalid-feedback" role="alert" style="display: block !important;">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
           <div class="mb-3 col-6">
-              <label for="Insert_Saturate" class="form-label">Saturate</label>
-              <input name="saturate" type="text" class="form-control border " id="Insert_Saturate" aria-describedby="Insert_invert" style="width:70%;">
+            <label for="Insert_Saturate" class="form-label">Saturate</label>
+            <input name="filter_saturate" value="{{ old('filter_saturate') }}" type="text" class="form-control border " id="Insert_Saturate" aria-describedby="Insert_invert" style="width:70%;">
+            @error('filter_saturate')
+            <span class="invalid-feedback" role="alert" style="display: block !important;">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
           <div class="mb-3 col-6">
-              <label for="Insert_Hue_Rotate" class="form-label">Hue_Rotate</label>
-              <input name="hue_Rotate" type="text" class="form-control border " id="Insert_Hue_Rotate" aria-describedby="Insert_invert" style="width:70%;">
+            <label for="Insert_Hue_Rotate" class="form-label">Hue_Rotate</label>
+            <input name="filter_hue_rotate" value="{{ old('filter_hue_rotate') }}" type="text" class="form-control border " id="Insert_Hue_Rotate" aria-describedby="Insert_invert" style="width:70%;">
+            @error('filter_hue_rotate')
+            <span class="invalid-feedback" role="alert" style="display: block !important;">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
           <div class="mb-3 col-6">
-              <label for="Insert_Brightness" class="form-label">Brightness</label>
-              <input name="brightness" type="text" class="form-control border " id="Insert_Brightness" aria-describedby="Insert_invert" style="width:70%;">
+            <label for="Insert_Brightness" class="form-label">Brightness</label>
+            <input name="filter_brightness" value="{{ old('filter_brightness') }}" type="text" class="form-control border " id="Insert_Brightness" aria-describedby="Insert_invert" style="width:70%;">
+            @error('filter_brightness')
+            <span class="invalid-feedback" role="alert" style="display: block !important;">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
           <div class="mb-3 col-6">
-              <label for="Insert_Contrast" class="form-label">Contrast</label>
-              <input name="contrast" type="text" class="form-control border " id="Insert_Contrast" aria-describedby="Insert_invert" style="width:70%;">
+            <label for="Insert_Contrast" class="form-label">Contrast</label>
+            <input name="filter_contrast" value="{{ old('filter_contrast') }}" type="text" class="form-control border " id="Insert_Contrast" aria-describedby="Insert_invert" style="width:70%;">
+            @error('filter_contrast')
+            <span class="invalid-feedback" role="alert" style="display: block !important;">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
-
         </div>
 
         <hr>

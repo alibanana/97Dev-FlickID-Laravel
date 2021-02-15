@@ -54,14 +54,6 @@ Route::get('/email', function () {
     return view('emails/email');
 });
 
-// Route::get('/about-us', function () {
-//     return view('client/aboutUs');
-// });
-
-// Route::get('/contact-us', function () {
-//     return view('client/contactUs');
-// });
-
 Route::get('/admin/applicant', function () {
     return view('admin/applicant');
 });
@@ -82,8 +74,4 @@ Route::get('/portofolio/1', function () {
 
 Route::get('/admin-login', function () {
     return view('admin/login');
-});
-
-Route::get('/admin/add-project', function () {
-    return view('admin/addProject');
 });
