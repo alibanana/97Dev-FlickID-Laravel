@@ -72,3 +72,8 @@ Route::get('/join-us', function () {
 Route::get('/admin-login', function () {
     return view('admin/login');
 });
+
+// Frontend testing routings
+Route::get('admin/featured-project', function () {
+    return view('admin/featured_project');
+});

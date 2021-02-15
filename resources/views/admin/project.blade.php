@@ -18,7 +18,7 @@
     <div class ="col-md-12">
       <h2 class="pt-4 pb-4 m-0">FlickSoftware Projects</h2>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <div style="display:flex">
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,6 +57,9 @@
           </div>
         </form>
       </div>
+    </div>
+    <div class="col-md-2">
+      <a href="/admin/featured-project" style="color:white !important" class="btn btn-primary pull-right">View Featured Projects</a>
     </div>
     <div class="col-md-2">
       <a href="{{ url()->route('admin.project.create') }}" class="btn btn-warning pull-right">Add Project</a>
