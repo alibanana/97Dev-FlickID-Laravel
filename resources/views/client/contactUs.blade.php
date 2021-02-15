@@ -7,21 +7,21 @@
     <div class="col-md-6 p-0">  
         <div class="containerImage">
             <div style="text-align:left">   
-                <img src="/assets/client/images/Contact_Us_Background.png" class="img-fluid" alt="Snow" style="width:92%;">
+                <img id="contactIllustration" src="/assets/client/images/Contact_Us_Background.png" class="img-fluid" alt="Snow" style="width:92%;">
                 
             </div>
             <div class="top-left">
                 <div style="text-align:left;padding-right:6.5vw !important;padding-left:6.5vw;padding-top:5vw">
-                    <p  style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"><b>Do you have a <br> project to work  <br> with? Tell it to us!</b></p>
+                    <p id="CotactTitleText" style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"><b>Do you have a <br> project to work  <br> with? Tell it to us!</b></p>
                     <div style="padding-right:6.5vw;padding-top:3vw">
-                        <p style="font-size:1.5vw;font-family:HKGroteskRegular">If you have some interests in building your <br> project with us,</p>
-                        <p style="font-size:1.5vw;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskBold">Fill out the form and one of our team <br> members will get back to you right away.</p>
+                        <p id="CotactDescriptionText" style="font-size:1.5vw;font-family:HKGroteskRegular">If you have some interests in building your <br> project with us,</p>
+                        <p id="CotactSubDescriptionText" style="font-size:1.5vw;margin-bottom:60px;font-family:HKGroteskBold"><span style="font-family:HKGroteskBold">Fill out the form and one of our team <br> members will get back to you right away.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-6" style="padding-right:15%;padding-top:80px;padding-left:5%">
+    <div class="col-md-6 formContactUs" style="padding-right:15%;padding-top:80px;padding-left:5%">
         @if (session()->has('success'))
             <div class="alert alert-success" role="alert">
                 <h4 class="alert-heading">Alright!</h4>
