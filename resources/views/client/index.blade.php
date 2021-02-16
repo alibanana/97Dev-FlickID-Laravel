@@ -335,6 +335,28 @@
     </div>
     <!-- END OF TOP CONTENT -->
 
+
+    <!-- START OF WHAT WE PROVIDE -->
+    <div class="row m-0 DesktopView"style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
+      <div class="col-md-12"   id="whatWeProvide" >
+        <p style="font-size:5vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
+      </div>
+      @foreach ($project_types as $project_type)
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s"style="padding-top:4vw">
+          <div >
+            <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
+            <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
+            <div style="padding-right:100px">
+              <p style="font-size:1.2vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
+            </div>
+            <a href="/portfolio" target="_blank" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+      @endforeach
+    </div>
+
+    <!-- END OF WHAT WE PROVIDE -->
+    
     <!-- WHAT WE PROVIDE MOBILE -->
     <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
       <div class="col-12 p-0" >
@@ -343,7 +365,7 @@
     </div>
 
     <div class="row m-0 MobileView" style="padding-top:4vw;padding-bottom:4vw;display:none">
-      <div class="col-12 p-0" >
+      <div class="col-12 p-0" id="whatWeProvide">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             @foreach ($project_types as $project_type)
@@ -381,27 +403,6 @@
 
 
     <!-- END OF WHAT WE PROVIDE MOBILE -->
-
-    <!-- START OF WHAT WE PROVIDE -->
-    <div class="row m-0 DesktopView"style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
-      <div class="col-md-12"   id="whatWeProvide" >
-        <p style="font-size:5vw;font-family:HKGroteskBlack" id="whatWeProvide"> <b>What we provide</b></p>
-      </div>
-      @foreach ($project_types as $project_type)
-        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s"style="padding-top:4vw">
-          <div >
-            <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
-            <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
-            <div style="padding-right:100px">
-              <p style="font-size:1.2vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
-            </div>
-            <a href="/portfolio" target="_blank" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-          </div>
-        </div>
-      @endforeach
-    </div>
-
-    <!-- END OF WHAT WE PROVIDE -->
 
     <!-- WHAT WE HAVE BUILD -->
     <!-- mobile view -->

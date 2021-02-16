@@ -8,12 +8,12 @@
         <div class="col-md-12 p-0">  
             <div class="containerImage">
                 <div style="text-align:left">   
-                    <img src="/assets/client/images/Career_Background_Top.png" class="img-fluid" alt="Snow" style="">
+                    <img src="/assets/client/images/Career_Background_Top.png" class="img-fluid" alt="Snow" style="width:100%">
                     
                 </div>
-                <div class="top-left">
+                <div class="top-left wow fadeInLeft">
                     <div style="text-align:left;padding-right:6.5vw !important;padding-left:6.5vw;padding-top:12vw">
-                        <p  style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"><b>Join our <br> incredible Journey</b></p>
+                        <p  style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"><b>Join our <br> incredible journey!</b></p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
         </div>
         <div class="col-md-12" style="text-align:left;">
             <div class="drop-zone">
-                <span class="drop-zone__prompt" style="font-family:HKGroteskBold;color:black;font-size:2vw"> <span style="color:#3F92D8" >Upload a file</span> or drag and drop here</span>
+                <span class="drop-zone__prompt" style="font-family:HKGroteskBold;color:black;font-size:1.7vw"> <span style="color:#3F92D8" >Upload a file</span> or drag and drop here</span>
                 <input type="file" name="myFile" class="drop-zone__input">
             </div>      
         </div>

@@ -151,6 +151,19 @@
         background-repeat: no-repeat;
         background-size: 100%;
       }
+      .topPortofolioDetail{
+        /* width:100%;
+        height:100%; */
+        margin:0;
+        top: 10vw;
+        padding:0;
+    
+        background-image: url("/assets/client/images/Portofolio_Detail_Top_BG.png");
+        background-position:left top;
+        background-repeat: no-repeat;
+        /* background-position: left; */
+        background-size: 40%;
+      }
 
       .aboutUsBackground{
         width:100%;
@@ -172,6 +185,26 @@
         background-position:left top;
         background-repeat: no-repeat;
         background-size: 100%;
+      }
+      .portofolioBG{
+        /* width:100%;
+        height:100%; */
+        margin:0;
+        padding:0;
+        background-image: url("/assets/client/images/Portofolio_BG_Top.png");
+        background-position:top right;
+        background-repeat: no-repeat;
+        background-size: 30%;
+      }
+      .project_detail_BG{
+        /* width:100%;
+        height:100%; */
+        margin:0;
+        /* padding:20vw; */
+        background-image: url("/assets/client/images/PortofolioDetail_Detail_BG.png");
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: 80%;
       }
 
       @media only screen and (device-width: 768px) {

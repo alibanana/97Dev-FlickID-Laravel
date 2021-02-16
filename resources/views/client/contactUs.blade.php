@@ -10,7 +10,7 @@
                 <img id="contactIllustration" src="/assets/client/images/Contact_Us_Background.png" class="img-fluid" alt="Snow" style="width:92%;">
                 
             </div>
-            <div class="top-left">
+            <div class="top-left wow fadeInLeft">
                 <div style="text-align:left;padding-right:6.5vw !important;padding-left:6.5vw;padding-top:5vw">
                     <p id="CotactTitleText" style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"><b>Do you have a <br> project to work  <br> with? Tell it to us!</b></p>
                     <div style="padding-right:6.5vw;padding-top:3vw">
