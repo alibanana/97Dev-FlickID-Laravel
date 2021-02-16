@@ -5,7 +5,15 @@
 
 @section('container')
 <div class="container">
-    <h2 style="font-family:HKGroteskBold !important;">FlickSoftware - Update Project {{ $project->title }}</h2>
+  @if (session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert">
+        <h4 class="alert-heading">Success!</h4>
+        <p>{{ session()->get('success') }}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  @endif
+
+  <h2 style="font-family:HKGroteskBold !important;">FlickSoftware - Update Project {{ $project->title }}</h2>
 </div>
 
 <div class="container">
@@ -270,7 +278,7 @@
               @if($loop->first)
                 <div class="row" id="project_detail_duplicater">
               @else
-                <div class="row" id="project_detail_duplicater{{ $loop->iteration }}">
+                <div class="row" id="project_detail_duplicater{{ $loop->index }}">
               @endif
                 <div class="mb-3 col-6 mt-5">
                   <label for="Insert name" class="form-label">Title</label>
@@ -298,18 +306,15 @@
               <div class="row">
                 <div class="col-md-6 mt-3">
                   <p>Current Ilustration: </p>
-                  <img class="mb-3" style="width: 200px;" src="{{ $project_detail->ilustration_file }}" alt=""><br>
+                  <img class="mb-3" style="width: 200px;" src="{{ asset($project_detail->ilustration_file) }}" alt="{{ $project_detail->ilustration_file }}"><br>
                 </div>
                 <div class="col-md-6 mt-3">
                   <p>Click the button below if you would like to delete this project detail</p>
-                  <form action="" method="post" style="display: inline-block">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Delete</button>
-                  </form>              
+                  <button class="btn btn-danger" type="submit" form="project-detail-{{ $project_detail->id }}-delete">Delete</button>
                 </div>
               </div>
               <hr>
+              <input type="hidden" name="project_detail_ids[]" value="{{ $project_detail->id }}">
             @endforeach
           @else
             <div class="row" id="project_detail_duplicater">
@@ -348,11 +353,21 @@
         </div>
 
         <div class="container" style="text-align:right;padding-right:12.5vw;padding-bottom:7vw">
-            <button type="submit" class="" style="background-color:#FACA00; border-radius:10px;border:none;color:black;padding: 6px 12px;font-size:20px"> Submit New Project</button> 
+            <button type="submit" style="background-color:#FACA00; border-radius:10px;border:none;color:black;padding: 6px 12px;font-size:20px"> Submit New Project</button> 
         </div>
         <!-- END OF UPLOADED IMAGE -->
     </form>
     <!-- end form add new project -->
+
+    {{-- Hidden Form to delete project details --}}
+    @if ($project->project_details->toArray())
+      @foreach ($project->project_details as $project_detail)
+        <form id="project-detail-{{ $project_detail->id }}-delete" action="{{ route('admin.projectDetail.destroy', $project_detail->id) }}" method="post" style="display: inline-block">
+          @csrf
+          @method('DELETE')
+        </form> 
+      @endforeach
+    @endif
 </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

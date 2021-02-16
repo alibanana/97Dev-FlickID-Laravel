@@ -183,7 +183,148 @@ class ProjectController extends Controller
 
     public function update(Request $request, $id)
     {
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
+            'project_type_id' => 'required|digits:1',
+            'logo_file' => 'mimes:jpeg,jpg,png,svg',
+            'logo_filename' => 'max:80',
+            'ilustration_file' => 'mimes:png,svg',
+            'ilustration_filename' => 'max:80',
+            'background_file' => 'mimes:jpeg,jpg,png',
+            'background_filename' => 'max:80',
+            'title' => 'required|max:40',
+            'description' => 'required',
+            'sub_description' => 'required',
+            'scope' => 'required',
+            'technologies' => 'required',
+            'deliverables' => 'required',
+            'headline' => 'required|max:100',
+            'featured_ilustration_file' => 'mimes:png,svg',
+            'featured_ilustration_filename' => 'max:80',
+            'filter_invert' => 'required|digits_between:1,3',
+            'filter_sepia' => 'required|digits_between:1,3',
+            'filter_saturate' => 'required|digits_between:1,5',
+            'filter_hue_rotate' => 'required|digits_between:1,5',
+            'filter_brightness' => 'required|digits_between:1,3',
+            'filter_contrast' => 'required|digits_between:1,3',
+            'sub_headline' => 'required|max:100',
+            'project_detail_title.*' => 'max:40',
+            'project_detail_ilustration.*' => 'image|mimes:png,svg',
+        ]);
+        $validator->setAttributeNames([
+            'logo_filename'=>'logo_file',
+            'ilustration_filename'=>'ilustration_file',
+            'background_filename'=>'background_file',
+            'featured_ilustration_filename'=>'featured_ilustration_file',
+            'project_detail_title.*'=>'title',
+            'project_detail_ilustration.*'=>'ilustration',
+        ]);
+        $validator->validate();
+        
         $project = Project::findorfail($id);
+
+        if ($request->has('ilustration_file')) {
+            unlink($project->ilustration_file);
+            $project->ilustration_file = $this->storeImage($request->file('ilustration_file'), 'ilustrations/', 'ilustration');
+        }
+
+        if ($request->has('logo_file')) {
+            unlink($project->logo_file);
+            $project->logo_file = $this->storeImage($request->file('logo_file'), 'logos/', 'logo');
+        }
+
+        $project->title = $input['title'];
+        $project->description = $input['description'];
+        $project->sub_description = $input['sub_description'];
+        $project->scope = $input['scope'];
+        $project->technologies = $input['technologies'];
+        $project->deliverables = $input['deliverables'];
+
+        if ($request->has('background_file')) {
+            unlink($project->bg_file);
+            $project->bg_file = $this->storeImage($request->file('background_file'), 'background_file/', 'background');
+        }
+
+        $project->headline = $input['headline'];
+        $project->sub_headline = $input['sub_headline'];
+
+        if ($request->has('featured_ilustration_file')) {
+            unlink($project->featured_ilustration_file);
+            $project->featured_ilustration_file = $this->storeImage($request->file('featured_ilustration_file'), 'ilustrations/', 'ilustration');
+        }
+
+        $project->filter_invert = $input['filter_invert'];
+        $project->filter_sepia = $input['filter_sepia'];
+        $project->filter_saturate = $input['filter_saturate'];
+        $project->filter_hue_rotate = $input['filter_hue_rotate'];
+        $project->filter_brightness = $input['filter_brightness'];
+        $project->filter_contrast = $input['filter_contrast'];
+        $project->project_type_id = $input['project_type_id'];
+        $project->save();
+
+        if ($request->file('project_detail_ilustration')) {
+            $project_detail_ilustration_list = $request->file('project_detail_ilustration');
+        }
+
+        // Combine Project Details Data
+        $counter = 0; $project_details = [];
+        while (true) {
+            if (($counter >= count($input['project_detail_title'])) || ($counter >= count($input['project_detail_description']))) {
+                break;
+            }
+
+            if ($counter >= count($input['project_detail_ids'])) {
+                $pd_id = null;
+            } else {
+                $pd_id = $input['project_detail_ids'][$counter];
+            }
+
+            $pd_title = $input['project_detail_title'][$counter];
+            $pd_description = $input['project_detail_description'][$counter];
+
+            $pd_ilustration = null;
+            if ($request->file('project_detail_ilustration') && array_key_exists($counter, $project_detail_ilustration_list)) {
+                $pd_ilustration = $project_detail_ilustration_list[$counter];
+            }
+
+            $temp = [
+                'id' => $pd_id,
+                'title' => $pd_title,
+                'description' => $pd_description,
+                'ilustration' => $pd_ilustration
+            ];
+
+            array_push($project_details, $temp);
+            $counter++;
+        }
+
+        foreach ($project_details as $project_detail) {
+            if (is_null($project_detail['id'])) {
+                if (empty($project_detail['title']) || empty($project_detail['description']) || empty($project_detail['ilustration'])) {
+                    continue;
+                } else {
+                    $pd = new ProjectDetail;
+                    $pd->title = $project_detail['title'];
+                    $pd->description = $project_detail['description'];
+                    $pd->ilustration_file = $this->storeImage($project_detail['ilustration'], 'ilustrations/', 'ilustration');
+                    $pd->project_id = $project->id;
+                    $pd->save();
+                }
+            } else {
+                $pd = ProjectDetail::findorfail(intval($project_detail['id']));
+                $pd->title = $project_detail['title'];
+                $pd->description = $project_detail['description'];
+                if ($project_detail['ilustration']) {
+                    unlink($pd->ilustration_file);
+                    $pd->ilustration_file = $this->storeImage($project_detail['ilustration'], 'ilustrations/', 'ilustration');
+                }
+                $pd->project_id = $project->id;
+                $pd->save();
+            }
+        }
+
+        return redirect()->route('admin.project.index')->with('success', 'Project has been updated!');
     }
     
     public function destroy($id)
@@ -202,5 +343,16 @@ class ProjectController extends Controller
         $project->delete();
 
         return redirect()->route('admin.project.index')->with('success', 'A project has been deleted from the database!');
+    }
+
+    public function destroyProjectDetail($id)
+    {
+        $project_detail = ProjectDetail::findorfail($id);
+        $project_id = $project_detail->project_id;
+
+        unlink($project_detail->ilustration_file);
+        $project_detail->delete();
+
+        return redirect()->route('admin.project.edit', $project_id)->with('success', 'Project Detail has been deleted from the database!');
     }
 }

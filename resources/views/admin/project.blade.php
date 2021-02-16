@@ -99,7 +99,7 @@
           </td>
           <td scope="col" style="font-family: HKGroteskBold">{{ $project->project_type->type }}</td>
           <td>
-            <button class="btn mb-2" type="button" style="color: white; background-color:CornflowerBlue;" onclick="parent.open('{{ url('/project').'/'.$project->id }}')">View</button>
+            <button class="btn mb-2" type="button" style="color: white; background-color:CornflowerBlue;" onclick="parent.open('{{ route('portfolio.show', $project->id) }}')">View</button>
             @if (!$project->featured_project) 
               <a href="#" class="btn btn-info mb-2" style="color: white !important; background-color:DarkCyan;">Feature</a>
             @endif
