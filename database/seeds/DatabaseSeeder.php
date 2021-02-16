@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             JobSeeder::class,
             TeamMemberSeeder::class,
             QuestionTypeSeeder::class,
+            QuestionSeeder::class,
+            QuestionAnswerSeeder::class,
         ]);
     }
 }
