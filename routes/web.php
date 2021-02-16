@@ -50,6 +50,7 @@ Route::post('/admin/job', 'Admin\TeamController@storeJob')->name('admin.job.stor
 Route::put('/admin/job/{id}', 'Admin\TeamController@updateJob')->name('admin.job.update');
 Route::put('/admin/job/{id}/change-offerable', 'Admin\TeamController@changeOfferable')->name('admin.job.changeOfferable');
 Route::delete('/admin/job/{id}', 'Admin\TeamController@destroyJob')->name('admin.job.destroy');
+Route::get('/admin/question', 'Admin\QuestionController@index')->name('admin.question.index');
 
 // Admin Pages Routings
 Route::get('/email', function () {
@@ -58,10 +59,6 @@ Route::get('/email', function () {
 
 Route::get('/admin/applicant', function () {
     return view('admin/applicant');
-});
-
-Route::get('/admin/applicant/questions', function () {
-    return view('admin/question');
 });
 
 // Frontend testing routings

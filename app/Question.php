@@ -15,14 +15,14 @@ class Question extends Model
     }
 
     // Get the answers (choices) of a particular question.
-    public function question_answer()
+    public function question_answers()
     {
         return $this->hasMany('App\QuestionAnswer');
     }
 
-    // Get the applicant's answer to a particular question.
-    public function applicant_answer()
+    // Get the applicant answers to a particular question.
+    public function applicant_answers()
     {
-        return $this->hasOne('App\ApplicantAnswer');
+        return $this->hasMany('App\ApplicantAnswer');
     }
 }

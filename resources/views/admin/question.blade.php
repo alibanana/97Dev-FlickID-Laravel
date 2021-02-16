@@ -124,37 +124,49 @@
             <a href="#add_open_ended" class="btn btn-info" style="color:white !important" title="Tooltip">Add Open Ended</a>
       </div>  
     </div> 
-
-
-
   </div>    
 </div>
       
-      </div>
-    <div class="container">
-    <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Question</th>
-      <th scope="col">Choice</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody style="font-family:HKGroteskRegular !important">
-    <tr>
-      <td scope="col">How long have you been working in the related field?</td>
-      <td scope="col">fernandhadzaky@gmail.com</td>
-      <td>
-        <div style="display:flex;justify-content:space-between;align-items:center">
-
-            <button type="button" class="btn btn-secondary" >Update</button>
-            <button type="button" class="btn btn-danger" >Delete</button>
-        </div>
-        </td>    
-    </tr>
-  </tbody>
-</table>
-    </div>  
+</div>
+  <div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Question</th>
+        <th scope="col">Choices</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody style="font-family:HKGroteskRegular !important">
+      @foreach ($questions as $question)
+        <tr>
+          <td scope="col">{{ $question->question }}</td>
+          <td scope="col">
+            @if ($question->question_type->type == 'Multiple-Choice')
+              @foreach ($question->question_answers as $question_answer)
+                <b>{{ $loop->iteration }}.</b> {{ $question_answer->question_answer }}<br>
+              @endforeach
+            @elseif($question->question_type->type == 'Slider')
+              <b>Min Value:</b> {{$question->question_answers[0]->question_answer}}<br>
+              <b>Max Value:</b> {{$question->question_answers[1]->question_answer}}<br>
+              <b>Steps: </b> {{$question->question_answers[2]->question_answer}}<br>
+              <b>Min Label:</b> {{$question->question_answers[3]->question_answer}}<br>
+              <b>Max Label:</b> {{$question->question_answers[4]->question_answer}}
+            @elseif($question->question_type->type == 'Open-Ended')
+              -
+            @endif
+          </td>
+          <td>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <button type="button" class="btn btn-secondary" >Update</button>
+              <button type="button" class="btn btn-danger" >Delete</button>
+            </div>
+          </td>    
+        </tr>
+      @endforeach
+    </tbody>
+  </table>
+</div>  
 
 
 @endsection
