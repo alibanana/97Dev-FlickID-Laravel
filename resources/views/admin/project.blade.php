@@ -100,6 +100,7 @@
             @if (!$project->featured_project) 
               <a href="#" class="btn btn-info mb-2" style="color: white !important; background-color:DarkCyan;">Feature</a>
             @endif
+            <a type="button" href="{{ route('admin.project.edit', $project->id) }}" class="btn btn-secondary mb-2" style="color: white !important;">Update</a>
             <form action="{{ route('admin.project.destroy', $project->id) }}" method="post" style="display: inline-block">
               @csrf
               @method('DELETE')

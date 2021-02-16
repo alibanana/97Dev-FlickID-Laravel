@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\ProjectType;
 use App\FeaturedProject;
+use App\Project;
 
 class PagesController extends Controller
 {
@@ -28,7 +29,7 @@ class PagesController extends Controller
     }
 
     // Show a certain project.
-    public function show($id)
+    public function portfolio_show($id)
     {
         $project = Project::findorfail($id);
 
@@ -40,6 +41,6 @@ class PagesController extends Controller
             $related_projects = Project::where('id', '!=', $project->id)->get();
         }
         
-        return view('client/portfolioDetail', compact('project'));
+        return view('client/portofolio-detail', compact('project', 'related_projects'));
     }
 }

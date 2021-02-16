@@ -89,6 +89,13 @@ class ProjectController extends Controller
             'technologies' => 'required',
             'deliverables' => 'required',
             'headline' => 'required|max:100',
+            'featured_ilustration_file' => 'required|image|mimes:png,svg',
+            'filter_invert' => 'required|digits_between:1,3',
+            'filter_sepia' => 'required|digits_between:1,3',
+            'filter_saturate' => 'required|digits_between:1,5',
+            'filter_hue_rotate' => 'required|digits_between:1,5',
+            'filter_brightness' => 'required|digits_between:1,3',
+            'filter_contrast' => 'required|digits_between:1,3',
             'sub_headline' => 'required|max:100',
             'project_detail_title.*' => 'max:40',
             'project_detail_ilustration.*' => 'image|mimes:png,svg',
@@ -111,6 +118,13 @@ class ProjectController extends Controller
         $project->bg_file = $this->storeImage($request->file('background_file'), 'background_file/', 'background');
         $project->headline = $input['headline'];
         $project->sub_headline = $input['sub_headline'];
+        $project->featured_ilustration_file = $this->storeImage($request->file('featured_ilustration_file'), 'ilustrations/', 'ilustration');
+        $project->filter_invert = $input['filter_invert'];
+        $project->filter_sepia = $input['filter_sepia'];
+        $project->filter_saturate = $input['filter_saturate'];
+        $project->filter_hue_rotate = $input['filter_hue_rotate'];
+        $project->filter_brightness = $input['filter_brightness'];
+        $project->filter_contrast = $input['filter_contrast'];
         $project->project_type_id = $input['project_type_id'];
         $project->save();
 
@@ -118,13 +132,12 @@ class ProjectController extends Controller
 
         for ($i = 0; $i <= count($input['project_detail_title']); $i++) {
             if (empty($input['project_detail_title'][$i]) || empty($input['project_detail_description'][$i]) || empty($input['project_detail_ilustration'][$i])) {
-                break;
+                continue;
             } else {
                 $project_detail = new ProjectDetail;
                 $project_detail->title = $input['project_detail_title'][$i];
                 $project_detail->description = $input['project_detail_description'][$i];
                 $project_detail->ilustration_file = $this->storeImage($project_detail_ilustration_list[$i], 'ilustrations/', 'ilustration');
-                // $project_detail->ilustration_file = "test";
                 $project_detail->project_id = $project->id;
                 $project_detail->save();
             }
@@ -159,6 +172,20 @@ class ProjectController extends Controller
         return $destinationPath.$newName;
     }
 
+    public function edit($id)
+    {
+        $project_types = ProjectType::all();
+        
+        $project = Project::findorfail($id);
+
+        return view('admin/updateproject', compact('project_types', 'project'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $project = Project::findorfail($id);
+    }
+    
     public function destroy($id)
     {
         $project = Project::findorfail($id);

@@ -4,59 +4,56 @@
 @section('title', 'Admin Page')
 
 @section('container')
- <!-- START OF POPUP -->
- <div id="create_member" class="overlay">
-    <div class="popup">
-      <a class="close" href="#" >&times;</a>
-      
-      <div class="content" style="padding:20px">
-        <h1>Add New Member</h1>
-        <div class="col-md-12">
-        <form>
-          <div class="form-group">
-            <label for="inputName">Full Name</label>
-            <input type="name" class="form-control" id="inputName" placeholder="Enter name">
-          </div>
-          <div class="form-group" style="padding-bottom:10px">
-            <label for="positionControlSelect">Position</label>
-              <select class="form-control" id="postionControlSelect">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-          </div>
-          <h5 style="color:#145CA8;margin-top:30px">Picture</h5>
-          <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" hidden/>
-          <label id="uploadButton" for="image">Choose File</label>
-          @error('image')
-            <span class="invalid-feedback" role="alert" style="display: block !important;">
-            <strong>{{ $message }}</strong>
-            </span>
-            @enderror
-            @error('imagename')
-            <span class="invalid-feedback" role="alert" style="display: block !important;">
-            <strong>{{ $message }}</strong>
+<!-- START OF POPUP -->
+<div id="create_member" class="overlay">
+  <div class="popup">
+    <a class="close" href="#" >&times;</a>
+    
+    <div class="content" style="padding:20px">
+      <h1>Add New Member</h1>
+      <div class="col-md-12">
+      <form enctype="multipart/form-data" method="POST" action="{{ route('admin.team.store') }}">
+        @csrf
+        <div class="form-group">
+          <label for="inputName">Full Name</label>
+          <input type="name" class="form-control" id="inputName" name="name" placeholder="Enter name">
+          @error('name')
+          <span class="invalid-feedback" role="alert" style="display: block !important;">
+              <strong>{{ $message }}</strong>
           </span>
-            @enderror
-          <!-- START OF UPLOADED IMAGE -->
-          <div id="image_preview" class="row m-0">
-          </div>
-          <!-- END OF UPLOADED IMAGE -->
-          
-
-          <div style ="display:flex; justify-content: flex-end; ">
-            <button type="submit" class="btn btn-warning btn-sm">Add Member</button>
-          </div>
-        </form>
+          @enderror
         </div>
+        <div class="form-group" style="padding-bottom:10px">
+          <label for="positionControlSelect">Position</label>
+            <select class="form-control" id="postionControlSelect" name="job_id">
+              @foreach ($jobs as $job)
+                <option value="{{ $job->id }}">{{ $job->title }}</option>
+              @endforeach
+            </select>
+        </div>
+        <h5 style="color:#145CA8;margin-top:30px">Picture</h5>
+        <input type="file" id="image" name="photo_file" accept=".jpg,.jpeg,.png" hidden/>
+        <label id="uploadButton" for="image">Choose File</label>
+        @error('photo_file')
+        <span class="invalid-feedback" role="alert" style="display: block !important;">
+        <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+        <!-- START OF UPLOADED IMAGE -->
+        <div id="image_preview" class="row m-0">
+        </div>
+        <!-- END OF UPLOADED IMAGE -->
+
+        <div style ="display:flex; justify-content: flex-end; ">
+          <button type="submit" class="btn btn-warning btn-sm">Add Member</button>
+        </div>
+      </form>
       </div>
     </div>
   </div>
-  <!-- END OF POPUP -->
+</div>
+<!-- END OF POPUP -->
 
- 
 <div class="container" style="padding-bottom:20px;padding-top:40px !important">
   @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
@@ -82,6 +79,13 @@
             <button type="submit" class="btn btn-warning">Add New Position</button>
           </form>
         </div>
+        @error('title')
+        <div class="p-0 m-0" style="text-align: center">
+          <span class="invalid-feedback" role="alert" style="display: block !important;">
+            <strong>{{ $message }}</strong>
+          </span>
+        </div>
+        @enderror
       </div>  
     </div>    
 </div>
@@ -93,21 +97,45 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">Full Name</th>
+            <th scope="col">Full Name & Image</th>
             <th scope="col">Position</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($team_members as $team_member)
+            <form enctype="multipart/form-data" action="{{ route('admin.team.update', $team_member->id) }}" method="post" style="display: inline-block">
+            @csrf
+            @method('PUT')
             <tr>
-              <td>{{ $team_member->name }}</td>
-              <td>{{ $team_member->job->title }}</td>
-              <td>
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                  <button type="button" class="btn btn-secondary">Update</button>
-                  <button type="button" class="btn btn-danger">Delete</button>
+              <td style="width: 40%;">
+                <input name="name" type="text" value="{{ $team_member->name }}"><br>
+                <label style="font-family: HKGroteskRegular">Current Pic: </label>
+                <img style="object-fit: cover; width: 100px; margin-top: 10px" src="{{ asset($team_member->photo_file) }}" alt="">
+                <div class="form-group" style="margin-top: 20px">
+                  <label for="photo_file">Upload New File</label>
+                  <input type="file" class="form-control-file" id="photo_file" name="photo_file" style="width: 100%; margin-top: 10px">
                 </div>
+              </td>
+              <td>
+                <select id="postionControlSelect" name="job_id" style="width: 80%">
+                  @foreach ($jobs as $job)
+                    @if ($job == $team_member->job)
+                      <option value="{{ $job->id }}" selected="selected">{{ $job->title }}</option>
+                    @else
+                      <option value="{{ $job->id }}">{{ $job->title }}</option>
+                    @endif
+                  @endforeach
+                </select>
+              </td>
+              <td>
+                <button type="submit" class="btn btn-secondary" style="margin-right: 10px" onclick='return confirm("Are you sure you want to Update this team member?")'>Update</button>
+                </form>
+                <form action="{{ route('admin.team.destroy', $team_member->id) }}" method="post" style="display: inline-block">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this team member?")'>Delete</button>
+                </form>
               </td>
             </tr>
           @endforeach
@@ -120,15 +148,21 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col" >Title</th>
-            <th scope="col" >Offerable</th>
+            <th scope="col">Title</th>
+            <th scope="col">Offerable</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($jobs as $job)
             <tr>
-              <td scope="col">{{ $job->title }}</td>
+              <td scope="col">
+                <form id="job-update-{{ $job->id }}" action="{{ route('admin.job.update', $job->id) }}" method="post" style="display: inline-block">
+                  @csrf
+                  @method('PUT')
+                  <input name="title" type="text" value="{{ $job->title }}">
+                </form>
+              </td>
               @if ($job->offerable)
                 <td scope="col" style="color:green">
                   <p style="display: inline-block">True</p>
@@ -149,11 +183,12 @@
                 </td>
               @endif
               <td scope="col">
-                  <form action="{{ route('admin.job.destroy', $job->id) }}" method="post" style="display: inline-block">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this job?")'>Delete</button>
-                  </form>
+                <button type="submit" form="job-update-{{ $job->id }}" class="btn btn-secondary" style="margin-right: 10px" onclick='return confirm("Are you sure you want to Update this team member?")'>Update</button>
+                <form action="{{ route('admin.job.destroy', $job->id) }}" method="post" style="display: inline-block">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this job?")'>Delete</button>
+                </form>
               </td>
             </tr>
           @endforeach

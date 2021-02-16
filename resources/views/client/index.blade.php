@@ -102,9 +102,27 @@
         top: 8px;
         right: 16px;
       }
+       /* i pad */
+      @media only screen and (device-width: 768px) {
+        #navbar_text{
+          font-size: 3vw !important;
+          padding-left: 6%;
+        }
+        #buttonContactUs{
+          border: 3px solid  #3F92D8;
+          text-align: center;
+          padding: 10px !important;
+          width: 40% !important;
+          margin-top: 10px;
+        }
+        #mynav img{
+          margin-right: 5% !important;
+          width: 30% !important;
+        }
+      }
 
       /* mobile */
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 600px) {
         .DesktopView{
           display: none !important;
         }
@@ -433,7 +451,7 @@
     <!-- mobile view -->
     <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:4vw;padding-bottom:4vw;display:none">
       <div class="col-12 p-0" >
-        <p style="font-size:10vw;font-family:HKGroteskBlack" id="whatWeProvide"><b>Explore more on <br> our fine works</b></p>
+        <p style="font-size:10vw;font-family:HKGroteskBlack;line-height:1.2" id="whatWeProvide"><b>Explore more on <br> our fine works</b></p>
         <div>
           <a href="/portofolio" style="font-size:6vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:6vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
       </div>

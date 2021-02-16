@@ -19,29 +19,29 @@
             </div>
         </div>        
     </div>
-    <div class="row m-0" style="padding:0px 16vw">
+    <div class="row m-0 mobilePadding" style="padding:0px 16vw">
         <div class="col-md-12" style="text-align:center;padding:0px 10vw">
-            <div style="background-color:#E8F5FF;border-radius:60px;padding:3vw">
-                <p  style="font-size:3.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Apply now!</b></p>
-                <p  style="font-size:1.4vw;font-family:HKGroteskRegular;color:#262626"><b>Team up with talented people inside FlickSoftware! <br>
-                    We are working together making the utmost of technology,<br>
+            <div style="background-color:#E8F5FF;border-radius:4vw;padding:3vw">
+                <p  style="font-size:3.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626" id="titleText"><b>Apply now!</b></p>
+                <p  style="font-size:1.4vw;font-family:HKGroteskRegular;color:#262626" id="descriptionText"><b>Team up with talented people inside FlickSoftware!
+                    We are working together making the utmost of technology,
                     helping businesses to grow and fulfill their potential.</b>
                 </p>
             </div>
         </div>
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
-            <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Personal Information</b></p>
+            <p id="titleText" style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Personal Information</b></p>
         </div>
     </div>
 
 
     <!-- START OF FORM -->
 
-    <form enctype="multipart/form-data" method="" action="" style="font-family:HKGroteskBold">
-    <div class="row m-0" style="padding:0px 16vw;font-size:1.2vw">
+    <form enctype="multipart/form-data" method="" action="" style="font-family:HKGroteskBold" class="joinUsForm">
+    <div class="row m-0 mobilePadding" style="padding:0px 16vw;font-size:1.2vw" >
         <div class="col-md-6" style="text-align:left">
             <div class="form-group">
-                <label for="" style="margin:2vw 0px 7px 0px">First Name</label>
+                <label for="" style="margin:2vw 0px 7px 0px;">First Name</label>
                 <input name="firstName" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Rizha">
             </div>
         </div>
@@ -66,7 +66,7 @@
                     +62
                     </div>
                 </div>
-                <input name="phone" type="number" style="border:1px solid gray;border-radius: 0px 15px 15px 0px;padding:12px 15px" class="form-control" placeholder="Username">
+                <input name="phone" type="number" style="border:1px solid gray;border-radius: 0px 15px 15px 0px;padding:12px 15px" class="form-control" placeholder="08111377883">
             </div>
         </div>
         <div class="col-md-12">
@@ -77,17 +77,18 @@
         </div>
         <!-- start of drag and drop -->
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
-            <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Profile</b></p>
+            <p id="titleText" style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Profile</b></p>
         </div>
-        <div class="col-md-12">
-            <div class="form-group">
-                <input type="file">
-            </div>
+        <div class="col-md-12" style="text-align:left;">
+            <div class="drop-zone">
+                <span class="drop-zone__prompt" style="font-family:HKGroteskBold;color:black;font-size:2vw"> <span style="color:#3F92D8" >Upload a file</span> or drag and drop here</span>
+                <input type="file" name="myFile" class="drop-zone__input">
+            </div>      
         </div>
         <!-- end of drag and drop -->
 
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
-            <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Job Position</b></p>
+            <p id="titleText" style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Job Position</b></p>
         </div>
         <div class="col-md-12">
             <div class="form-group">
@@ -101,7 +102,7 @@
 
         <!-- START OF ADDED INFORMATION-->
         <div class="col-md-12" style="text-align:left;margin-top:5vw">
-            <p  style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Added Information</b></p>
+            <p id="titleText" style="font-size:2.5vw;font-family:HKGroteskBlack;line-height:1.2;color:#262626"><b>Added Information</b></p>
         </div>
         <x-slider-question />
         <x-mcq-question />
@@ -124,17 +125,5 @@
 <x-flick-footer />
 
 
-<!-- Script -->
-<script>
-    var CSRF_TOKEN = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
-
-    Dropzone.autoDiscover = false;
-    var myDropzone = new Dropzone(".dropzone",{ 
-        maxFilesize: 3,  // 3 mb
-        acceptedFiles: ".jpeg,.jpg,.png,.pdf",
-    });
-    myDropzone.on("sending", function(file, xhr, formData) {
-       formData.append("_token", CSRF_TOKEN);
-    }); 
-</script>
+<script src="/js/main.js"></script>
 @endsection
