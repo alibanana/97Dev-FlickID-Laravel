@@ -295,10 +295,21 @@
                     @enderror
                 </div>
               </div>
-              <div class="col-md-3 mt-3">
-                <p>Current Ilustration: </p>
-                <img class="mb-3" style="width: 200px;" src="{{ $project_detail->ilustration_file }}" alt=""><br>
+              <div class="row">
+                <div class="col-md-6 mt-3">
+                  <p>Current Ilustration: </p>
+                  <img class="mb-3" style="width: 200px;" src="{{ $project_detail->ilustration_file }}" alt=""><br>
+                </div>
+                <div class="col-md-6 mt-3">
+                  <p>Click the button below if you would like to delete this project detail</p>
+                  <form action="" method="post" style="display: inline-block">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>              
+                </div>
               </div>
+              <hr>
             @endforeach
           @else
             <div class="row" id="project_detail_duplicater">
@@ -328,7 +339,7 @@
           @endif
         </div>
         <!-- end of project details -->
-        <hr>
+        <!-- <hr> -->
 
         <div class="row">
             <div class="mb-3 col-6 mt-5" >
