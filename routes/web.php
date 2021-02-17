@@ -41,6 +41,10 @@ Route::get('/admin/project/{id}/edit', 'Admin\ProjectController@edit')->name('ad
 Route::put('/admin/project/{id}', 'Admin\ProjectController@update')->name('admin.project.update');
 Route::delete('/admin/project/{id}', 'Admin\ProjectController@destroy')->name('admin.project.destroy');
 Route::delete('/admin/project-detail/{id}', 'Admin\ProjectController@destroyProjectDetail')->name('admin.projectDetail.destroy');
+Route::get('/admin/featured-project', 'Admin\FeaturedProjectController@index')->name('admin.featuredProject.index');
+Route::post('/admin/featured-project', 'Admin\FeaturedProjectController@store')->name('admin.featuredProject.store');
+Route::put('/admin/featured-project/{id}', 'Admin\FeaturedProjectController@update')->name('admin.featuredProject.update');
+Route::delete('/admin/featured-project/{id}', 'Admin\FeaturedProjectController@destroy')->name('admin.featuredProject.destroy');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
 Route::get('/admin/team', 'Admin\TeamController@index')->name('admin.team.index');
@@ -69,9 +73,4 @@ Route::get('/join-us', function () {
 
 Route::get('/admin-login', function () {
     return view('admin/login');
-});
-
-// Frontend testing routings
-Route::get('admin/featured-project', function () {
-    return view('admin/featured_project');
 });

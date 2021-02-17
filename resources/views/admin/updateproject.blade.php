@@ -70,7 +70,7 @@
                 <select class="form-control" id="project_type" name="project_type_id" style="width:70%;">
                 @foreach ($project_types as $project_type)
                   @if ($project_type->id == $project->project_type->id)
-                    <option value="{{ $project_type->id }}" selected="selected">Max 1 Image</option>
+                    <option value="{{ $project_type->id }}" selected="selected">{{ $project_type->type }}</option>
                   @else
                     <option value="{{ $project_type->id }}">{{ $project_type->type }}</option>
                   @endif
