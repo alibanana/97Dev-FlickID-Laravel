@@ -56,6 +56,10 @@ Route::put('/admin/job/{id}', 'Admin\TeamController@updateJob')->name('admin.job
 Route::put('/admin/job/{id}/change-offerable', 'Admin\TeamController@changeOfferable')->name('admin.job.changeOfferable');
 Route::delete('/admin/job/{id}', 'Admin\TeamController@destroyJob')->name('admin.job.destroy');
 Route::get('/admin/question', 'Admin\QuestionController@index')->name('admin.question.index');
+Route::post('/admin/question-mcq', 'Admin\QuestionController@storeMCQ')->name('admin.question.storeMCQ');
+Route::post('/admin/question-slider', 'Admin\QuestionController@storeSlider')->name('admin.question.storeSlider');
+Route::post('/admin/question-open-ended', 'Admin\QuestionController@storeOpenEnded')->name('admin.question.storeOpenEnded');
+Route::delete('/admin/question/{id}', 'Admin\QuestionController@destroy')->name('admin.question.destroy');
 
 // Admin Pages Routings
 Route::get('/email', function () {
