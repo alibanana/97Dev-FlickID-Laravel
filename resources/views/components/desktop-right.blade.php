@@ -1,15 +1,24 @@
 @if($flag == 2)
 <div class="col-md-5 p-0 DesktopView" style="margin-top:7vw;z-index:99">
     <div style="padding-left:15%">
-        @if (Request::path() == '/')
-        <p style="font-size:4.5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
-        <div>
-            <a href="{{ url()->route('portfolio.index') }}" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-        </div>
-        @else
-        <p style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Loving what<br>you're seeing?</b></p>
+        
+        <div class="containerImage">
+            <div style="text-align:left">   
+                <img src="/assets/client/images/Portofolio_Bottom_BG.png" class="img-fluid" alt="Snow" style="width:100%">
+                
+            </div>
+            <div class="top-left">
+                @if (Request::path() == '/')
+                <p style="font-size:4.5vw;font-family:HKGroteskBlack;line-height:1.2;color:black"> <b>Explore more on <br> our fine works</b></p>
+                <div>
+                    <a href="{{ url()->route('portfolio.index') }}" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+                @else
+                <p style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2;color:black;text-align:left !important;margin-top:5vw"> <b>Loving what<br>you're seeing?</b></p>
 
-        @endif
+                @endif
+            </div>
+        </div>
     </div>
 </div>
 @else

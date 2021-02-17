@@ -7,7 +7,7 @@
 <div class="aboutUsBackground">
     <div style="padding-right:9%;padding-left:9%">
         <div class="row m-0">
-            <div class="col-md-12" style="padding-top:22vw;">
+            <div class="col-md-12 wow fadeInLeft" style="padding-top:22vw;">
                 <p id="titleText" style="font-size:3.5vw;font-family:HKGroteskRegular;color:#FFFFFF">Built by <span style="font-family:HKGroteskBlack;">young minds</span> to deliver technology <br> that the world needs</p>
             </div>
         </div>
@@ -22,7 +22,7 @@
             @foreach ($team_members as $team_member)
                 <div class="col-md-6 pt-5">
                     <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                        <img src="{{ asset($team_member->photo_file) }}" style="width:180px" alt="">
+                        <img src="{{ asset($team_member->photo_file) }}" style="width:11vw" alt="">
                         <p id="titleText" style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>{{ $team_member->name }}</b> <br> <span style="font-family:HKGroteskRegular !important">{{ $team_member->job->title }}</span></p>
                     </div>
                 </div>  

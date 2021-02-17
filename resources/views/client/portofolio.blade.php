@@ -6,12 +6,12 @@
 @section('container')
 <!-- START OF PORTOFOLIO-->
 <div class="row m-0" style="padding-bottom:4vw;">
-    <div class="col-md-12 p-0">
+    <div class="col-md-12 p-0 portofolioBG">
         <div class="containerImage">
             <div style="text-align:left">   
                 <img id="portofolioBGImage" src="/assets/client/images/portofolio_image_header.png" style="width:57%" alt="">
             </div>
-            <div class="top-left">
+            <div class="top-left wow fadeInDown">
                 <div style="text-align:left !important;padding-top:3vw;padding-left:6.5vw;">
                     <div style="width:120%">
                         <p style="font-size:3.5vw;font-family:HKGroteskBlack;color:#FFFFFF">Explore our finest work, <br> our portofolio</p>    
