@@ -101,7 +101,7 @@
       top: 8px;
       left: 16px;
     }
-    .top-left-3{
+    .top-right-3{
       position: absolute;
       top: 0;
       left: 0;
@@ -316,7 +316,10 @@
           font-size: 4vw !important
         }
         #portofolioBGImage{
-          width: 80% !important;
+          width: 65% !important;
+        }
+        #exploreOurFinest{
+          font-size: 4.5vw !important
         }
 
         #project_illustration{
@@ -331,6 +334,10 @@
         }
         #descriptionText{
           font-size: 3vw !important
+        }
+        #descriptionText2{
+          font-size: 2.5vw !important
+
         }
         #project_detail_img{
           width: 35vw !important;

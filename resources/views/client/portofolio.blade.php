@@ -14,15 +14,16 @@
             <div class="top-left wow fadeInDown">
                 <div style="text-align:left !important;padding-top:3vw;padding-left:6.5vw;">
                     <div style="width:120%">
-                        <p style="font-size:3.5vw;font-family:HKGroteskBlack;color:#FFFFFF">Explore our finest work, <br> our portofolio</p>    
-                        <p style="font-size:1.8vw;margin-bottom:6vw;font-family:HKGroteskBold;margin-top:4vw" id="descriptionText"><span style="font-family:HKGroteskRegular">We help businesses to grow to their <br> fullest potential</span>  <b> through technology</b> </p>
+                        <p style="font-size:3.5vw;font-family:HKGroteskBlack;color:#FFFFFF" id="exploreOurFinest">Explore our finest work, <br> our portofolio</p>    
+                        <p style="font-size:1.8vw;margin-bottom:6vw;font-family:HKGroteskBold;margin-top:4vw" id="descriptionText2"><span style="font-family:HKGroteskRegular">We help businesses to grow to their <br> fullest potential</span>  <b> through technology</b> </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <?php $counter = 0 ?>
+    <?php $counter = 0;
+     $relatedProject = null; ?>
     @foreach($featured_projects as $featured_project)
         <?php $flag = 0 ?>
         @if($loop->first)
@@ -33,16 +34,16 @@
 
         @if($counter == 0)
             @if($featured_project->project->project_type->type == 'Mobile Apps')
-                <x-mobile-right :flag="$flag" :featuredProject="$featured_project" />
+                <x-mobile-right :flag="$flag" :relatedProject="$relatedProject  " :featuredProject="$featured_project" />
             @else
-                <x-desktop-right :flag="$flag" :featuredProject="$featured_project" />
+                <x-desktop-right :flag="$flag" :relatedProject="$relatedProject " :featuredProject="$featured_project" />
             @endif
             <?php $counter++ ?>
         @else
             @if($featured_project->project->project_type->type == 'Mobile Apps')
-                <x-mobile-left :flag="$flag" :featuredProject="$featured_project" />
+                <x-mobile-left :flag="$flag" :relatedProject="$relatedProject   " :featuredProject="$featured_project" />
             @else
-                <x-desktop-left :flag="$flag" :featuredProject="$featured_project" />
+                <x-desktop-left :flag="$flag" :relatedProject="$relatedProject  " :featuredProject="$featured_project" />
             @endif
             <?php $counter = 0 ?>
         @endif

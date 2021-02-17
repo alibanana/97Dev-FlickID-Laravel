@@ -65,7 +65,7 @@
 <div style="text-align:left">   
     <img src="{{ asset($project->bg_file) }}" class="img-fluid w-100 wow fadeInRight" alt="">
 </div>
-<div class="top-left-3">
+<div class="top-right-3">
     <div style="">
         <img src="/assets/client/images/portofolio_detail.png" class="" alt="" style="width: 100%;">
     </div>
@@ -94,6 +94,37 @@
     </div>  
 </div>
 <!-- END OF SLOGAN -->
+
+<div class="row m-0 " style="padding-bottom:7vw;padding-top:7vw" >
+    <?php $counter = 0;
+        $featuredDiscussion = null;
+    ?>
+    @foreach($related_projects as $related_project)
+      <?php $flag = 0 ?>
+      @if($loop->first)
+        <?php $flag = 1 ?>
+      @elseif ($loop->last)
+        <?php $flag = 2 ?>
+      @endif
+
+      @if($counter == 0)
+        @if($related_project->project_type->type == 'Mobile Apps')
+          <x-mobile-left :flag="$flag" :relatedProject="$related_project" :featuredProject="$featuredDiscussion" />
+        @else
+          <x-desktop-left :flag="$flag" :relatedProject="$related_project" :featuredProject="$featuredDiscussion"/>
+        @endif
+        <?php $counter++ ?>
+      @else
+        @if($related_project->project_type->type == 'Mobile Apps')
+          <x-mobile-right :flag="$flag" :relatedProject="$related_project" :featuredProject="$featuredDiscussion"/>
+        @else
+          <x-desktop-right :flag="$flag" :relatedProject="$related_project" :featuredProject="$featuredDiscussion" />
+        @endif
+        <?php $counter = 0 ?>
+      @endif
+    @endforeach
+
+    </div>
 
 <!-- RELATED PORTOFOLIO -->
 <div class="row m-0" style="padding-bottom:7vw" >

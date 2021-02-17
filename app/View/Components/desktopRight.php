@@ -8,15 +8,18 @@ class desktopRight extends Component
 {
     public $flag;
     public $featuredProject;
+    public $relatedProject;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($flag, $featuredProject)
+    public function __construct($flag, $featuredProject, $relatedProject)
     {
         $this->flag = $flag;
         $this->featuredProject = $featuredProject;
+        $this->relatedProject = $relatedProject;
         //
     }
 
