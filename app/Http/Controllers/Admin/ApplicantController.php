@@ -10,9 +10,49 @@ use App\Applicant;
 
 class ApplicantController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $applicants = Applicant::all();
+        $applicants = new Applicant;
+
+        if ($request->has('sort')) {
+            if ($request['sort'] == "latest") {
+                $applicants = $applicants->orderBy('created_at');
+            } else {
+                $applicants = $applicants->orderBy('created_at', 'desc');
+            }
+        } else {
+            $applicants = $applicants->orderBy('created_at');
+        }
+
+        if ($request->has('filter')) {
+            if ($request['filter'] == "") {
+                $url = route('admin.applicant.index', request()->except('filter'));
+                return redirect($url);
+            } else {
+                $applicant_status_list= ['Pending', 'Rejected', 'Accepted'];
+                foreach ($applicant_status_list as $status) {
+                    if ($request['filter'] == strToLower($status)) {
+                        $applicants = $applicants->where('status', $status);
+                    }
+                }
+            }
+        }
+
+        if ($request->has('search')) {
+            if ($request['search'] == "") {
+                $url = route('admin.applicant.index', request()->except('search'));
+                return redirect($url);
+            } else {
+                $search = $request['search'];
+                $applicants = $applicants->where(function ($query) use ($search) {
+                    $query->where([['firstname', 'like', "%".$search."%"]])
+                    ->orWhere([['lastname', 'like', "%".$search."%"]])
+                    ->orWhere([['email', 'like', "%".$search."%"]]);
+                });
+            }
+        }
+
+        $applicants = $applicants->paginate(5);
 
         return view('admin/applicant', compact('applicants'));
     }
