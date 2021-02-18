@@ -40,7 +40,7 @@ class PagesController extends Controller
         if ($related_projects->isEmpty()) {
             $related_projects = Project::where('id', '!=', $project->id)->get();
         }
-        
+        // dd($related_projects);
         return view('client/portofolio-detail', compact('project', 'related_projects'));
     }
 }

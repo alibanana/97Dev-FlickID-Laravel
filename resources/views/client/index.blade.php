@@ -415,7 +415,8 @@
     </div>
     <!-- end of mobile view -->
     <div class="row m-0 " style="padding-bottom:7vw" >
-    <?php $counter = 0 ?>
+    <?php $counter = 0;
+    $related_project = null; ?>
     @foreach($featured_projects as $featured_project)
       <?php $flag = 0 ?>
       @if($loop->first)
@@ -426,27 +427,20 @@
 
       @if($counter == 0)
         @if($featured_project->project->project_type->type == 'Mobile Apps')
-          <x-mobile-left :flag="$flag" :featuredProject="$featured_project" />
+          <x-mobile-left :flag="$flag" :relatedProject="$related_project" :featuredProject="$featured_project" />
         @else
-          <x-desktop-left :flag="$flag" :featuredProject="$featured_project" />
+          <x-desktop-left :flag="$flag" :relatedProject="$related_project" :featuredProject="$featured_project" />
         @endif
         <?php $counter++ ?>
       @else
         @if($featured_project->project->project_type->type == 'Mobile Apps')
-          <x-mobile-right :flag="$flag" :featuredProject="$featured_project" />
+          <x-mobile-right :flag="$flag" :relatedProject="$related_project" :featuredProject="$featured_project" />
         @else
-          <x-desktop-right :flag="$flag" :featuredProject="$featured_project" />
+          <x-desktop-right :flag="$flag" :relatedProject="$related_project" :featuredProject="$featured_project" />
         @endif
         <?php $counter = 0 ?>
       @endif
     @endforeach
-
-      <!-- <div class="col-md-5 p-0" style="margin-left:-40px;margin-top:7vw;z-index:99">
-        <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
-        <div>
-          <a href="" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-        </div>
-      </div> -->
 
     </div>
     <!-- mobile view -->
