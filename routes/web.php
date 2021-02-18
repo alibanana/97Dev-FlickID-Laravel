@@ -60,14 +60,12 @@ Route::post('/admin/question-mcq', 'Admin\QuestionController@storeMCQ')->name('a
 Route::post('/admin/question-slider', 'Admin\QuestionController@storeSlider')->name('admin.question.storeSlider');
 Route::post('/admin/question-open-ended', 'Admin\QuestionController@storeOpenEnded')->name('admin.question.storeOpenEnded');
 Route::delete('/admin/question/{id}', 'Admin\QuestionController@destroy')->name('admin.question.destroy');
+Route::get('/admin/applicants', 'Admin\ApplicantController@index')->name('admin.applicant.index');
+Route::put('/admin/applicant/{id}', 'Admin\ApplicantController@update')->name('admin.applicant.update');
 
 // Admin Pages Routings
 Route::get('/email', function () {
     return view('emails/email');
-});
-
-Route::get('/admin/applicant', function () {
-    return view('admin/applicant');
 });
 
 Route::get('/admin-login', function () {
