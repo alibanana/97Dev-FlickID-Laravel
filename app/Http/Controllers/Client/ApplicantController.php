@@ -105,13 +105,13 @@ class ApplicantController extends Controller
 
         // Generate Name for file
         while(true){
-            $newName = 'CV_'.$firstname.'_'.$lastname.rand(100000, PHP_INT_MAX).'.'.$ext;
+            $newName = 'CV_'.$firstname.'_'.$lastname.'_'.rand(100000, PHP_INT_MAX).'.'.$ext;
             if (!file_exists($destinationPath.$newName)){
                 $file->move($destinationPath, $newName);    
                 break;
             }
         }
 
-        return $newName;
+        return $destinationPath.$newName;
     }
 }
