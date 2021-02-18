@@ -16,12 +16,12 @@ class ClientController extends Controller
         
         if ($request->has('sort')) {
             if ($request['sort'] == "latest") {
-                $clients = $clients->orderBy('created_at');
-            } else {
                 $clients = $clients->orderBy('created_at', 'desc');
+            } else {
+                $clients = $clients->orderBy('created_at');
             }
         } else {
-            $clients = $clients->orderBy('created_at');
+            $clients = $clients->orderBy('created_at', 'desc');
         }
 
         if ($request->has('filter')) {

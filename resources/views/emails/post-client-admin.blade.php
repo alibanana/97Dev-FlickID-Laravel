@@ -1,90 +1,221 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title></title>
-    <style>
-      @font-face {
-        font-family: HKGroteskBold;
-        src: url(/fonts/hk-grotesk/HKGrotesk-Bold.otf);
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html data-editor-version="2" class="sg-campaigns" xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!--<![endif]-->
+  <!--[if (gte mso 9)|(IE)]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+  <!--[if (gte mso 9)|(IE)]>
+<style type="text/css">
+body {width: 600px;margin: 0 auto;}
+table {border-collapse: collapse;}
+table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+img {-ms-interpolation-mode: bicubic;}
+</style>
+<![endif]-->
+<style type="text/css">
 
-      @font-face {
-        font-family: HKGroteskRegular;
-        src: url(/fonts/hk-grotesk/HKGrotesk-Regular.otf);
-      }
+.btnLogin{
+  background-color: #145CA8;
+  color:white !important;
+  border-radius: 10px;
+  border: none;
+}
+body, p, div {
+  font-family: inherit;
+  font-size: 14px;
+}
+body {
+  color: #000000;
+}
+body a {
+  color: #1188E6;
+  text-decoration: none;
+}
+p { margin: 0; padding: 0; }
+table.wrapper {
+  width:100% !important;
+  table-layout: fixed;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+img.max-width {
+  max-width: 100% !important;
+}
+.column.of-2 {
+  width: 50%;
+}
+.column.of-3 {
+  width: 33.333%;
+}
+.column.of-4 {
+  width: 25%;
+}
+@media screen and (max-width:480px) {
+  .preheader .rightColumnContent,
+  .footer .rightColumnContent {
+    text-align: left !important;
+  }
+  .preheader .rightColumnContent div,
+  .preheader .rightColumnContent span,
+  .footer .rightColumnContent div,
+  .footer .rightColumnContent span {
+    text-align: left !important;
+  }
+  .preheader .rightColumnContent,
+  .preheader .leftColumnContent {
+    font-size: 80% !important;
+    padding: 5px 0;
+  }
+  table.wrapper-mobile {
+    width: 100% !important;
+    table-layout: fixed;
+  }
+  img.max-width {
+    height: auto !important;
+    max-width: 100% !important;
+  }
+  a.bulletproof-button {
+    display: block !important;
+    width: auto !important;
+    font-size: 80%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .columns {
+    width: 100% !important;
+  }
+  .column {
+    display: block !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+</style>
+  <!--user entered Head Start--><link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"><style>
+body {font-family: 'Muli', sans-serif;}
+</style><!--End Head user entered-->
+</head>
+<body>
+  <center class="wrapper" data-link-color="#1188E6" data-body-style="font-size:14px; font-family:inherit; color:#000000; background-color:#FFFFFF;">
+    <div class="webkit">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" class="wrapper" bgcolor="#FFFFFF">
+        <tbody><tr>
+          <td valign="top" bgcolor="#FFFFFF" width="100%">
+            <table width="100%" role="content-container" class="outer" align="center" cellpadding="0" cellspacing="0" border="0">
+              <tbody><tr>
+                <td width="100%">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tbody><tr>
+                      <td>
+                        <!--[if mso]>
+<center>
+<table><tr><td width="600">
+<![endif]-->
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px;" align="center">
+                                  <tbody><tr>
+                                    <td role="modules-container" style="padding:0px 0px 0px 0px; color:#000000; text-align:left;" bgcolor="#FFFFFF" width="100%" align="left"><table class="module preheader preheader-hide" role="module" data-type="preheader" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: none !important; mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">
+<tbody><tr>
+  <td role="module-content">
+    <p></p>
+  </td>
+</tr>
+</tbody></table><table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="module" data-type="columns" style="padding:30px 20px 30px 20px;" bgcolor="#f6f6f6">
+<tbody>
+  <tr role="module-content">
+    <td height="100%" valign="top">
+      <table class="column" width="540" style="width:540px; border-spacing:0; border-collapse:collapse; margin:0px 10px 0px 10px;" cellpadding="0" cellspacing="0" align="left" border="0" bgcolor="">
+        <tbody>
+          <tr>
+            <td style="padding:0px;margin:0px;border-spacing:0;"><table class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="72aac1ba-9036-4a77-b9d5-9a60d9b05cba">
+<tbody>
+  <tr>
+    <td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
+      <img class="max-width" src="http://ninetysevendev-flick-profile.herokuapp.com/assets/logoflick.png" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px;width:40%" alt="" data-proportionally-constrained="true" data-responsive="false" >
+    </td>
+  </tr>
+</tbody>
+</table>
 
-      body{
-        background-color:#EEEEEE;
-      }
 
-      .text{
-        text-align:center;
-      }
+<table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="948e3f3f-5214-4721-a90e-625a47b1c957" data-mc-module-version="2019-10-22">
+<tbody>
+  <tr>
+    <td style="padding:50px 30px 18px 30px; line-height:36px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: center;"><span style="font-size: 43px">New Job Offer!&nbsp;</span></div><div></div></div></td>
+  </tr>
+</tbody>
+</table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10dcb57-ad22-4f4d-b765-1d427dfddb4e" data-mc-module-version="2019-10-22">
+<tbody>
+  <tr>
+    <td style="padding:18px 30px 18px 30px; line-height:22px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content">
+    <div>
+        <div style="font-family: inherit; text-align: center">
+        <span style="font-size: 18px"></span>
+        <p><b>Client Details:</b></p>
+        <p><b>Name: </b>{{ $client->name }}</p>
+        <p><b>Company: </b>{{ $client->company }}</p>
+        <p><b>Phone: </b>{{ $client->phone }}</p>
+        <p><b>Email: </b>{{ $client->email }}</p>
+        <p><b>Description: </b>{{ $client->description }}</p>
 
-      h1 {
-        font-family: 'HKGroteskBold';
-        font-size:30px;
-      }
-
-      h5, p {
-        font-family: 'HKGroteskRegular';
-      }
-
-      .block {
-        display: block;
-        width: 40%;
-        border: none;
-        background-color: #3F92D8;
-        padding: 14px 28px;
-        font-size: 16px;
-        font-family:HKGroteskBold;
-        cursor: pointer;
-        border-radius:10px;
-        text-align: center;
-        margin: 0 auto;
-        color:white;
-      }
-    </style>
-  </head>
-  <body>
-    <div style="background-color:white; margin:50px 400px;">
-      <div class="container pt-5 text">
-        <img src="{{ url('/assets/logoflick.svg') }}" alt="Flick Software">
-      </div>
-      <div class="text pt-5">
-        <h1>New Project Offer Available!</h1>
-      </div>
-      <div class="text pt-3" style="padding:0px 50px">
-        <h5 class="pb-2" ><b>Client Details:</b></h5>
-        <p><b>Name:</b> {{ $client->name }}</p>
-        <p><b>Company:</b> {{ $client->company }}</p>
-        <p><b>Phone:</b> {{ $client->phone }}</p>
-        <p><b>Email:</b> {{ $client->email }}</p>
-        <p><b>Description:</b> {{ $client->description }}</p>
-        {{-- Example Data --}}
-        {{-- <p><b>Name:</b> Alifio Rasendriya Rasyid</p>
-        <p><b>Company:</b> NinetySevenDevID</p>
-        <p><b>Phone:</b> 08112383399</p>
-        <p><b>Email:</b> official.alifio@gmail.com</p>
-        <p><b>Description:</b> I want to build an app that travels through time!</p> --}}
-      </div>
-      <div class="text pt-3 pb-4">
-        <a type="button" class="block" href="{{ url('/admin/client') }}">Click here to check the new client out.</a>
-      </div>
     </div>
-    <!-- Optional JavaScript; choose one of the two! -->
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <div></div></div></td>
+  </tr>
+</tbody>
+</table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="7770fdab-634a-4f62-a277-1c66b2646d8d">
+<tbody>
+  <tr>
+    <td style="padding:0px 0px 20px 0px;" role="module-content" bgcolor="#ffffff">
+    </td>
+  </tr>
+</tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed;" width="100%" data-muid="d050540f-4672-4f31-80d9-b395dc08abe1">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#ffffff" class="outer-td" style="padding:0px 0px 0px 0px;">
+        <table border="0" cellpadding="0" cellspacing="0" class="wrapper-mobile" style="text-align:center;">
+          <tbody>
+            <tr>
+              <td align="center" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;">
+                  <a class="btnLogin" href="{{ route('admin.client.index') }}" style="display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none;" target="_blank">Click here to view CV</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:18px 30px 18px 30px; line-height:22px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content">
+        <div>
+          <div style="font-family: inherit; text-align: center">
+          <span style="font-size: 18px">Having trouble accessing the button above? Use this link:</span><br>
+          <span style="color: #000000; font-size: 18px; font-family: arial,helvetica,sans-serif"><a href="{{ route('admin.client.index') }}">{{ route('admin.client.index') }}</a></span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="7770fdab-634a-4f62-a277-1c66b2646d8d.1">
+<tbody>
+  <tr>
+    <td style="padding:0px 0px 50px 0px;" role="module-content" bgcolor="#ffffff">
+    </td>
+  </tr>
+</tbody>
+</table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a265ebb9-ab9c-43e8-9009-54d6151b1600" data-mc-module-version="2019-10-22">
+    </div>
+  </center>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
+
+</body></html>
