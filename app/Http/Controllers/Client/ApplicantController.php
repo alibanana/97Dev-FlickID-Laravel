@@ -39,7 +39,7 @@ class ApplicantController extends Controller
                 'job_id' => 'required',
                 'question_ids' => 'required|array',
                 'applicant_answers' => 'required|array',
-                'applicant_answers.*' => 'max:30'
+                'applicant_answers.*' => 'max:100'
             ]);
 
             if ($validator->fails()) {
