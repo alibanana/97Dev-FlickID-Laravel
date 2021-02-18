@@ -12,6 +12,7 @@ use App\Question;
 use App\Job;
 use App\Applicant;
 use App\ApplicantAnswer;
+use App\Mail\PostApplicantAdminMail;
 
 class ApplicantController extends Controller
 {
@@ -89,7 +90,7 @@ class ApplicantController extends Controller
             }
         }
 
-        // Mail::to(env('ADMIN_MAIL_ADDRESS'))->send(new PostApplicantAdminMail($applicant));
+        Mail::to(env('ADMIN_MAIL_ADDRESS'))->send(new PostApplicantAdminMail($applicant));
 
         return redirect()->route('applicant.create')->with('success', 'Your application has been submitted...');
     }

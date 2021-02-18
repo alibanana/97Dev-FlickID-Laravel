@@ -16,12 +16,12 @@ class ApplicantController extends Controller
 
         if ($request->has('sort')) {
             if ($request['sort'] == "latest") {
-                $applicants = $applicants->orderBy('created_at');
-            } else {
                 $applicants = $applicants->orderBy('created_at', 'desc');
+            } else {
+                $applicants = $applicants->orderBy('created_at');
             }
         } else {
-            $applicants = $applicants->orderBy('created_at');
+            $applicants = $applicants->orderBy('created_at', 'desc');
         }
 
         if ($request->has('filter')) {

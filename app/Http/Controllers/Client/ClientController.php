@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Mail;
 
 use App\Client;
 use App\Mail\PostClientAdminMail;
-use App\Mail\PostClientMail;
 
 class ClientController extends Controller
 {

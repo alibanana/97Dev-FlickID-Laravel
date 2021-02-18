@@ -30,6 +30,6 @@ class PostApplicantAdminMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("New Application Available!")->view('emails/post-applicant-admin');
+        return $this->subject("New Application Available!")->attach($this->applicant->cv_file)->view('emails/post-applicant-admin');
     }
 }
