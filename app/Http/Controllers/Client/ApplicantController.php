@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 
+use App\Question;
+use App\Job;
 use App\Applicant;
 use App\ApplicantAnswer;
 
@@ -16,39 +18,54 @@ class ApplicantController extends Controller
     // Show Career Page.
     public function create()
     {
-        return view('client/career');
+        $questions = Question::all();
+        $offerable_positions = Job::where('offerable', 1)->get();
+
+        return view('client/joinUs', compact('questions', 'offerable_positions'));
     }
 
     public function store(Request $request)
     {
         $input = $request->all();
 
-        if ($input['question_ids']) {
-            Validator::make($input, [
+        if ($request->has('question_ids')) {
+            $validator = Validator::make($input, [
                 'firstname' => 'required|max:40',
                 'lastname' => 'required|max:40',
-                'email' => 'email|max:191',
+                'email' => 'required|email|max:191',
                 'phone' => 'required|digits_between:7,16',
                 'address' => 'required',
                 'cv_file' => 'required|mimes:pdf',
-                'status' => 'required|max:8',
                 'job_id' => 'required',
-                'question_ids' => 'required',
-                'answers' => 'required',
-                'answers.*' => 'required|max:30'
-            ])->validate();
+                'question_ids' => 'required|array',
+                'applicant_answers' => 'required|array',
+                'applicant_answers.*' => 'max:30'
+            ]);
+
+            if ($validator->fails()) {
+                if (count($input['question_ids']) != count($input['applicant_answers'])) {
+                    return redirect()->route('applicant.create')
+                        ->withErrors($validator)
+                        ->withInput()
+                        ->with('question_unanswered_error', 'All the questions must be answered!');
+                } else {
+                    return redirect()->route('applicant.create')
+                        ->withErrors($validator)
+                        ->withInput();
+                }
+                
+            }
         } else {
             Validator::make($input, [
                 'firstname' => 'required|max:40',
                 'lastname' => 'required|max:40',
-                'email' => 'email|max:191',
+                'email' => 'required|email|max:191',
                 'phone' => 'required|digits_between:7,16',
                 'address' => 'required',
                 'cv_file' => 'required|mimes:pdf',
-                'status' => 'required|max:8',
                 'job_id' => 'required',
             ])->validate();
-        }        
+        }      
 
         $applicant = new Applicant;
         $applicant->firstname = $input['firstname'];
@@ -62,7 +79,7 @@ class ApplicantController extends Controller
 
         if ($input['question_ids']) {
             $counter = 0;
-            foreach ($input['answers'] as $answer) {
+            foreach ($input['applicant_answers'] as $answer) {
                 $applicant_answer = new ApplicantAnswer;
                 $applicant_answer->answer = $answer;
                 $applicant_answer->question_id = $input['question_ids'][$counter];
@@ -72,7 +89,7 @@ class ApplicantController extends Controller
             }
         }
 
-        Mail::to(env('ADMIN_MAIL_ADDRESS'))->send(new PostApplicantAdminMail($applicant));
+        // Mail::to(env('ADMIN_MAIL_ADDRESS'))->send(new PostApplicantAdminMail($applicant));
 
         return redirect()->route('applicant.create')->with('success', 'Your application has been submitted...');
     }

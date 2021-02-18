@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class sliderQuestion extends Component
 {
+    public $question;
+    
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($question)
     {
-        //
+        $this->question = $question;
     }
 
     /**

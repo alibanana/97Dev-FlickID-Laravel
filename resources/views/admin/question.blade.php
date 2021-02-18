@@ -217,20 +217,16 @@
           </td>
           <td>
             <div style="display:flex;justify-content:space-between;align-items:center">
-              <button type="button" class="btn btn-secondary" >Update</button>
               <form action="{{ route('admin.question.destroy', $question->id) }}" method="post" style="display: inline-block">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this question?")'>Delete</button>
               </form>
-              {{-- <button type="button" class="btn btn-danger" >Delete</button> --}}
             </div>
           </td>    
         </tr>
       @endforeach
     </tbody>
   </table>
-</div>  
-
-
+</div>
 @endsection

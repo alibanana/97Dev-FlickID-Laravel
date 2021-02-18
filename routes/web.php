@@ -28,8 +28,8 @@ Route::get('/portfolio', 'Client\PagesController@portfolio_index')->name('portfo
 Route::get('/portfolio/{id}', 'Client\PagesController@portfolio_show')->name('portfolio.show');
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
-Route::get('/career', 'Client\ApplicantController@create')->name('applicant.create');
-Route::post('/career', 'Client\ApplicantController@store')->name('applicant.store');
+Route::get('/join-us', 'Client\ApplicantController@create')->name('applicant.create');
+Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.store');
 Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
 // Admin Pages Routings (FIXED)
@@ -68,11 +68,6 @@ Route::get('/email', function () {
 
 Route::get('/admin/applicant', function () {
     return view('admin/applicant');
-});
-
-// Frontend testing routings
-Route::get('/join-us', function () {
-    return view('client/joinUs');
 });
 
 Route::get('/admin-login', function () {
