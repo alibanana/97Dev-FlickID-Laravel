@@ -15,7 +15,7 @@ class CreateApplicantAnswersTable extends Migration
     {
         Schema::create('applicant_answers', function (Blueprint $table) {
             $table->id();
-            $table->string('answer', 30);
+            $table->string('answer', 100);
             $table->unsignedBigInteger('question_id');
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
             $table->unsignedBigInteger('applicant_id');
