@@ -10,18 +10,23 @@ use App\Client;
 
 class ClientController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index(Request $request)
     {
         $clients = new Client;
         
         if ($request->has('sort')) {
             if ($request['sort'] == "latest") {
-                $clients = $clients->orderBy('created_at');
-            } else {
                 $clients = $clients->orderBy('created_at', 'desc');
+            } else {
+                $clients = $clients->orderBy('created_at');
             }
         } else {
-            $clients = $clients->orderBy('created_at');
+            $clients = $clients->orderBy('created_at', 'desc');
         }
 
         if ($request->has('filter')) {

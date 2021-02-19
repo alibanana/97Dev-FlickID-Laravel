@@ -99,9 +99,13 @@
           </td>
           <td scope="col" style="font-family: HKGroteskBold">{{ $project->project_type->type }}</td>
           <td>
-            <button class="btn mb-2" type="button" style="color: white; background-color:CornflowerBlue;" onclick="parent.open('{{ url('/project').'/'.$project->id }}')">View</button>
-            @if (!$project->featured_project) 
-              <a href="#" class="btn btn-info mb-2" style="color: white !important; background-color:DarkCyan;">Feature</a>
+            <button class="btn mb-2" type="button" style="color: white; background-color:CornflowerBlue;" onclick="parent.open('{{ route('portfolio.show', $project->id) }}')">View</button>
+            @if (!$project->featured_project)
+            <form action="{{ route('admin.featuredProject.store') }}" method="post" style="display: inline-block">
+              @csrf
+              <input type="hidden" name="project_id" value="{{ $project->id }}">
+              <button class="btn btn-info mb-2" type="submit" style="color: white !important; background-color:DarkCyan;">Feature</button>
+            </form> 
             @endif
             <a type="button" href="{{ route('admin.project.edit', $project->id) }}" class="btn btn-secondary mb-2" style="color: white !important;">Update</a>
             <form action="{{ route('admin.project.destroy', $project->id) }}" method="post" style="display: inline-block">

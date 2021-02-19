@@ -123,7 +123,10 @@
               </li>
               
               <li class="nav-item" style="">
-                <a class="nav-link" href="/logout" style="color:#3F92D8;border:3px solid #3F92D8;padding:8px 50px;border-radius:15px">Logout</a>
+                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color:#3F92D8;border:3px solid #3F92D8;padding:8px 50px;border-radius:15px">Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+                </form>
               </li>
               
             </ul>

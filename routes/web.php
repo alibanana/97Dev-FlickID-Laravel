@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+Route::redirect('/admin-login', '/login');
 
 // Redirects
 Route::redirect('/home', '/');
@@ -28,8 +29,8 @@ Route::get('/portfolio', 'Client\PagesController@portfolio_index')->name('portfo
 Route::get('/portfolio/{id}', 'Client\PagesController@portfolio_show')->name('portfolio.show');
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
-Route::get('/career', 'Client\ApplicantController@create')->name('applicant.create');
-Route::post('/career', 'Client\ApplicantController@store')->name('applicant.store');
+Route::get('/join-us', 'Client\ApplicantController@create')->name('applicant.create');
+Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.store');
 Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
 // Admin Pages Routings (FIXED)
@@ -37,9 +38,14 @@ Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
 Route::get('/admin/project/create', 'Admin\ProjectController@create')->name('admin.project.create');
 Route::post('/admin/project', 'Admin\ProjectController@store')->name('admin.project.store');
-Route::get('/admin/project/{id}/update', 'Admin\ProjectController@edit')->name('admin.project.edit');
-Route::put('/admin/project/{id}', 'Admin\ProjectController@edit')->name('admin.project.update');
+Route::get('/admin/project/{id}/edit', 'Admin\ProjectController@edit')->name('admin.project.edit');
+Route::put('/admin/project/{id}', 'Admin\ProjectController@update')->name('admin.project.update');
 Route::delete('/admin/project/{id}', 'Admin\ProjectController@destroy')->name('admin.project.destroy');
+Route::delete('/admin/project-detail/{id}', 'Admin\ProjectController@destroyProjectDetail')->name('admin.projectDetail.destroy');
+Route::get('/admin/featured-project', 'Admin\FeaturedProjectController@index')->name('admin.featuredProject.index');
+Route::post('/admin/featured-project', 'Admin\FeaturedProjectController@store')->name('admin.featuredProject.store');
+Route::put('/admin/featured-project/{id}', 'Admin\FeaturedProjectController@update')->name('admin.featuredProject.update');
+Route::delete('/admin/featured-project/{id}', 'Admin\FeaturedProjectController@destroy')->name('admin.featuredProject.destroy');
 Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
 Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
 Route::get('/admin/team', 'Admin\TeamController@index')->name('admin.team.index');
@@ -50,34 +56,15 @@ Route::post('/admin/job', 'Admin\TeamController@storeJob')->name('admin.job.stor
 Route::put('/admin/job/{id}', 'Admin\TeamController@updateJob')->name('admin.job.update');
 Route::put('/admin/job/{id}/change-offerable', 'Admin\TeamController@changeOfferable')->name('admin.job.changeOfferable');
 Route::delete('/admin/job/{id}', 'Admin\TeamController@destroyJob')->name('admin.job.destroy');
+Route::get('/admin/question', 'Admin\QuestionController@index')->name('admin.question.index');
+Route::post('/admin/question-mcq', 'Admin\QuestionController@storeMCQ')->name('admin.question.storeMCQ');
+Route::post('/admin/question-slider', 'Admin\QuestionController@storeSlider')->name('admin.question.storeSlider');
+Route::post('/admin/question-open-ended', 'Admin\QuestionController@storeOpenEnded')->name('admin.question.storeOpenEnded');
+Route::delete('/admin/question/{id}', 'Admin\QuestionController@destroy')->name('admin.question.destroy');
+Route::get('/admin/applicant', 'Admin\ApplicantController@index')->name('admin.applicant.index');
+Route::put('/admin/applicant/{id}', 'Admin\ApplicantController@update')->name('admin.applicant.update');
 
 // Admin Pages Routings
 Route::get('/email', function () {
     return view('emails/email');
-});
-
-Route::get('/admin/applicant', function () {
-    return view('admin/applicant');
-});
-
-Route::get('/admin/applicant/questions', function () {
-    return view('admin/question');
-});
-
-// Frontend testing routings
-Route::get('/join-us', function () {
-    return view('client/joinUs');
-});
-
-Route::get('/admin-login', function () {
-    return view('admin/login');
-});
-
-// Frontend testing routings
-Route::get('admin/featured-project', function () {
-    return view('admin/featured_project');
-});
-
-Route::get('/admin/forget-password', function () {
-    return view('admin/forget-password');
 });

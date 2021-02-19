@@ -13,6 +13,11 @@ use App\Job;
 
 class TeamController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $team_members = TeamMember::all();

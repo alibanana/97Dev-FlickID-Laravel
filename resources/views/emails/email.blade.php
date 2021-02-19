@@ -164,7 +164,7 @@ body {font-family: 'Muli', sans-serif;}
         <div style="font-family: inherit; text-align: center">
         <span style="font-size: 18px"></span>
         <p>Applicant Details:</p>
-        <p><b>Name: </b> Winson Wardana</p>
+        <p><b>Name: </b>Winson Wardana</p>
         <p><b>Email: </b> Winson91100@gmail.com</p>
         <p><b>Phone: </b> 087887280719</p>
         <p><b>Address: </b>Jl. Cipete 3 No. 10, Jakarta Selatan</p> 

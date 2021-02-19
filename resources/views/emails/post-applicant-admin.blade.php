@@ -143,7 +143,7 @@ body {font-family: 'Muli', sans-serif;}
 <tbody>
   <tr>
     <td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
-      <img class="max-width" src="http://ninetysevendev-flick-profile.herokuapp.com/assets/logoflick.png" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px;width:40%" alt="" data-proportionally-constrained="true" data-responsive="false" >
+      <img class="max-width" src="{{ asset('assets/logoflick.png') }}" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px;width:40%" alt="" data-proportionally-constrained="true" data-responsive="false" >
     </td>
   </tr>
 </tbody>
@@ -153,7 +153,7 @@ body {font-family: 'Muli', sans-serif;}
 <table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="948e3f3f-5214-4721-a90e-625a47b1c957" data-mc-module-version="2019-10-22">
 <tbody>
   <tr>
-    <td style="padding:50px 30px 18px 30px; line-height:36px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: center;"><span style="font-size: 43px">New Project Offer!&nbsp;</span></div><div></div></div></td>
+    <td style="padding:50px 30px 18px 30px; line-height:36px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: center;"><span style="font-size: 43px">New Job Applicant!&nbsp;</span></div><div></div></div></td>
   </tr>
 </tbody>
 </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10dcb57-ad22-4f4d-b765-1d427dfddb4e" data-mc-module-version="2019-10-22">
@@ -163,13 +163,12 @@ body {font-family: 'Muli', sans-serif;}
     <div>
         <div style="font-family: inherit; text-align: center">
         <span style="font-size: 18px"></span>
-        <p><b>Client Details:</b></p>
-        <p><b>Name: </b>{{ $client->name }}</p>
-        <p><b>Company: </b>{{ $client->company }}</p>
-        <p><b>Phone: </b>{{ $client->phone }}</p>
-        <p><b>Email: </b>{{ $client->email }}</p>
-        <p><b>Description: </b>{{ $client->description }}</p>
-
+        <p><b>Applicant Details:</b></p>
+        <p><b>Name: </b>{{ $applicant->firstname }} {{ $applicant->lastname }}</p>
+        <p><b>Email: </b>{{ $applicant->email }}</p>
+        <p><b>Phone: </b>{{ $applicant->phone }}</p>
+        <p><b>Address: </b>{{ $applicant->address }}</p> 
+        <p><b>Position Applied: </b>{{ $applicant->job->title }}</p>
     </div>
     <div></div></div></td>
   </tr>
@@ -189,7 +188,7 @@ body {font-family: 'Muli', sans-serif;}
           <tbody>
             <tr>
               <td align="center" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;">
-                  <a class="btnLogin" href="{{ route('admin.client.index') }}" style="display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none;" target="_blank">Click here to view CV</a>
+                <a class="btnLogin" href="{{ route('admin.applicant.index') }}" style="display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none;" target="_blank">Click here to view CV</a>
               </td>
             </tr>
           </tbody>
@@ -201,7 +200,7 @@ body {font-family: 'Muli', sans-serif;}
         <div>
           <div style="font-family: inherit; text-align: center">
           <span style="font-size: 18px">Having trouble accessing the button above? Use this link:</span><br>
-          <span style="color: #000000; font-size: 18px; font-family: arial,helvetica,sans-serif"><a href="{{ route('admin.client.index') }}">{{ route('admin.client.index') }}</a></span>
+          <span style="color: #000000; font-size: 18px; font-family: arial,helvetica,sans-serif"><a href="{{ route('admin.applicant.index') }}">{{ route('admin.applicant.index') }}</a></span>
         </div>
       </td>
     </tr>

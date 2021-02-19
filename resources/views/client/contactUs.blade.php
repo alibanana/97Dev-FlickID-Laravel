@@ -23,9 +23,10 @@
     </div>
     <div class="col-md-6 formContactUs" style="padding-right:15%;padding-top:80px;padding-left:5%">
         @if (session()->has('success'))
-            <div class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Alright!</h4>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">Success!</h4>
                 <p>{{ session()->get('success') }}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
         <div>

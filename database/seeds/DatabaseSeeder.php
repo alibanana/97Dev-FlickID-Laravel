@@ -19,6 +19,11 @@ class DatabaseSeeder extends Seeder
             ClientSeeder::class,
             JobSeeder::class,
             TeamMemberSeeder::class,
+            QuestionTypeSeeder::class,
+            QuestionSeeder::class,
+            QuestionAnswerSeeder::class,
+            ApplicantSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
