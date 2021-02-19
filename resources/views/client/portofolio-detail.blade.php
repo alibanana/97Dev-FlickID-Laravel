@@ -95,6 +95,17 @@
 </div>
 <!-- END OF SLOGAN -->
 
+<!-- mobile view -->
+<div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:10vw;padding-bottom:4vw;display:none">
+    <div class="col-12 p-0" >
+    <p style="font-size:10vw;font-family:HKGroteskBlack;line-height:1.2" id="whatWeProvide"><b>See other projects</b></p>
+    <div>
+        <a href="/portofolio" style="font-size:6vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:6vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+    </div>
+    </div>
+</div>
+<!-- end of mobile view -->
+
 <div class="row m-0 " style="padding-bottom:7vw;padding-top:7vw" >
     <?php $counter = 0;
         $featuredDiscussion = null;
@@ -127,7 +138,7 @@
     </div>
 
 <!-- RELATED PORTOFOLIO -->
-<div class="row m-0" style="padding-bottom:7vw" >
+<div class="row m-0" style="padding-bottom:0vw" >
 </div>
 <!-- END OF RELATED PORTOFOLIO -->
 

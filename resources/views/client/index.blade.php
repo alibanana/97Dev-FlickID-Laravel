@@ -537,7 +537,7 @@
             <div class="top-left" style="text-align:left">
             
               <div style="padding-left:8.5%;color:white;width:90vw !important" >
-                <p  style="font-size:5vw;margin-top:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience <br> on developing technologies</b></p>
+                <p  style="font-size:5vw;margin-top:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience on developing technologies</b></p>
                 <p style="font-size:1.9vw;margin-bottom:3vw;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
                 <div style="display:flex"> 
                   <div class="wow fadeInUp" style="background-color:#FFA5A5;width:29vw;border-radius:1.5vw;color:#142850;padding:1.9vw;">
