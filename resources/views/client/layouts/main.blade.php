@@ -316,7 +316,7 @@
           font-size: 4vw !important
         }
         #portofolioBGImage{
-          width: 65% !important;
+          width: 68% !important;
         }
         #exploreOurFinest{
           font-size: 4.5vw !important

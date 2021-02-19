@@ -65,7 +65,7 @@
             </div>              
         </div>
         @else
-        <div style="text-align:left !important;margin-left:-2vw">
+        <div style="text-align:left !important;margin-left:-4vw">
             <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2;color:black"> <b>See other projects</b></p>
             <div>
                 <a href="{{ url()->route('portfolio.index') }}" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
