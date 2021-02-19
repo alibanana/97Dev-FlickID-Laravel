@@ -77,3 +77,7 @@ Route::get('/admin-login', function () {
 Route::get('admin/featured-project', function () {
     return view('admin/featured_project');
 });
+
+Route::get('/admin/forget-password', function () {
+    return view('admin/forget-password');
+});
