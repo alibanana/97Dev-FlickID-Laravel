@@ -14,6 +14,11 @@ use App\ProjectDetail;
 
 class ProjectController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     // Show Admin Project Page
     public function index(Request $request)
     {
