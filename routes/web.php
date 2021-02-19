@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+Route::redirect('/admin-login', '/login');
 
 // Redirects
 Route::redirect('/home', '/');
@@ -66,8 +67,4 @@ Route::put('/admin/applicant/{id}', 'Admin\ApplicantController@update')->name('a
 // Admin Pages Routings
 Route::get('/email', function () {
     return view('emails/email');
-});
-
-Route::get('/admin-login', function () {
-    return view('admin/login');
 });

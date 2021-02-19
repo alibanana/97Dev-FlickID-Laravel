@@ -14,7 +14,6 @@
 
     <!-- JS -->
     <!-- <script src="/dropzone-5.7.0/dist/min/dropzone.min.js'" type="text/javascript"></script> -->
-    
 
     <!--load all fontawesome -->
     <link href="/fontawesome/css/all.css" rel="stylesheet"> 
@@ -78,12 +77,6 @@
   font-size: 14px;
   text-align: center;
 }
-
-
-
-
-    
-
 
     .navbarText {
       margin-left:100px
