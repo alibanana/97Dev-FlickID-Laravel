@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
             QuestionTypeSeeder::class,
             QuestionSeeder::class,
             QuestionAnswerSeeder::class,
-            ApplicantSeeder::class
+            ApplicantSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
