@@ -34,6 +34,7 @@ Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.sto
 Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
 // Admin Pages Routings (FIXED)
+Route::put('/admin/password/update', 'Admin\UserController@passwordUpdate')->name('admin.user.passwordUpdate');
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
 Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
 Route::get('/admin/project/create', 'Admin\ProjectController@create')->name('admin.project.create');

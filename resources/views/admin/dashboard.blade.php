@@ -12,23 +12,41 @@
     <div class="content" style="padding:20px">
         <h1>Change password</h1>
         <div class="col-md-12">
-            <form>
-                <div class="form-group  pt-3">
+            @if (session('error'))
+                <div class="alert alert-danger alert-dismissible fade show mt-2 mb-0" role="alert">
+                    <h4 class="alert-heading">Error!</h4>
+                    <p>{{ session('error') }}</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <form action="{{ route('admin.user.passwordUpdate') }}" method="POST">
+                @csrf
+                @method('PUT')
+                <div class="form-group pt-3">
                     <label for="inputName">Old password</label>
-                    <input type="password" class="form-control mt-2" id="" placeholder="Here insert old password">
+                    <input name="old_password" type="password" class="form-control mt-2" id="" placeholder="Here insert old password">
+                    @error('old_password')
+                    <span class="invalid-feedback" role="alert" style="display: block !important;">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
-                <div class="form-group  pt-3">
+                <div class="form-group pt-3">
                     <label for="inputName">New password</label>
-                    <input type="password" class="form-control mt-2" id="" placeholder="Here insert new password">
+                    <input name="password" type="password" class="form-control mt-2" id="" placeholder="Here insert new password">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert" style="display: block !important;">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
-                <div class="form-group  pt-3">
+                <div class="form-group pt-3">
                     <label for="inputName">New Confirmed password</label>
-                    <input type="password" class="form-control mt-2" id="" placeholder="Here insert new password">
+                    <input name="password_confirmation" type="password" class="form-control mt-2" id="" placeholder="Here insert new password">
                 </div>
                 <div style="text-align:right;margin-top:10px">
                     <button type="submit" class="btn btn-primary btn-sm" >Change Password</button>
                 </div>
-            
             </form>
         </div>
     </div>
@@ -38,6 +56,13 @@
 
   
 <div class="container" >
+    @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert">
+            <h4 class="alert-heading">Success!</h4>
+            <p>{{ session()->get('success') }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 
     <div style="display:flex;justify-content:space-between;align-items:center">
         <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, Admin!</h2>
@@ -135,14 +160,4 @@
         <!-- end client total project -->
     </div>
 </div>
-
-
-
-    
-    
-    
-    
-
-
-
 @endsection
