@@ -13,10 +13,21 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Admin Flick Software',
-            'email' => 'official.alifio@gmail.com',
-            'password' => bcrypt('7312081Alifio')
-        ]);
+        $users = [
+            [
+                'name' => 'Alifio Rasyid',
+                'email' => 'official.alifio@gmail.com',
+                'password' => bcrypt('password')
+            ],
+            [
+                'name' => 'Fernandha Dzaky',
+                'email' => 'fernandhadzaky@hotmail.com',
+                'password' => bcrypt('password')
+            ]
+        ];
+        
+        foreach ($users as $key => $value) {
+            User::create($value);
+        }
     }
 }
