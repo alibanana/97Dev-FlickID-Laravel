@@ -8,7 +8,6 @@
         <div class="containerImage">
             <div style="text-align:left">   
                 <img id="contactIllustration" src="/assets/client/images/Contact_Us_Background.png" class="img-fluid" alt="Snow" style="width:92%;">
-                
             </div>
             <div class="top-left wow fadeInLeft">
                 <div style="text-align:left;padding-right:6.5vw !important;padding-left:6.5vw;padding-top:5vw">

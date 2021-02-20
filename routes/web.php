@@ -32,6 +32,9 @@ Route::post('/contact-us', 'Client\ClientController@store')->name('client.store'
 Route::get('/join-us', 'Client\ApplicantController@create')->name('applicant.create');
 Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.store');
 Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
+Route::get('/forgot-password', function () {
+    return view('admin.forget-password');
+});
 
 // Admin Pages Routings (FIXED)
 Route::put('/admin/password/update', 'Admin\UserController@passwordUpdate')->name('admin.user.passwordUpdate');
