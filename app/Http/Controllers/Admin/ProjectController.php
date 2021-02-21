@@ -18,7 +18,7 @@ class ProjectController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     // Show Admin Project Page
     public function index(Request $request)
     {
@@ -38,12 +38,12 @@ class ProjectController extends Controller
 
         if ($request->has('sort')) {
             if ($request['sort'] == "latest") {
-                $projects = $projects->orderBy('created_at');
-            } else {
                 $projects = $projects->orderBy('created_at', 'desc');
+            } else {
+                $projects = $projects->orderBy('created_at');
             }
         } else {
-            $projects = $projects->orderBy('created_at');
+            $projects = $projects->orderBy('created_at', 'desc');
         }
 
         if ($request->has('search')) {
