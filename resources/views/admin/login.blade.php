@@ -50,9 +50,10 @@
     </div>
     <div class="col-md-6" style="padding-right:15%;padding-top:80px;padding-left:5%">
         @if (session('status'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <h4 class="alert-heading">Alright!</h4>
                 {{ session('status') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
         <div>
