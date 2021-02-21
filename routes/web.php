@@ -64,6 +64,12 @@ Route::delete('/admin/question/{id}', 'Admin\QuestionController@destroy')->name(
 Route::get('/admin/applicant', 'Admin\ApplicantController@index')->name('admin.applicant.index');
 Route::put('/admin/applicant/{id}', 'Admin\ApplicantController@update')->name('admin.applicant.update');
 
+//front end routing
+Route::get('/admin/services', function () {
+    return view('admin/services');
+});
+
+
 // Admin Pages Routings
 Route::get('/email', function () {
     return view('emails/email');
