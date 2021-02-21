@@ -65,7 +65,7 @@
     @endif
 
     <div style="display:flex;justify-content:space-between;align-items:center">
-        <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, Admin!</h2>
+        <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, {{ Auth::user()->name }}!</h2>
         <a href="#change_password" class="btn btn-warning" title="Tooltip">Change Passsword</a>
 
     </div>
