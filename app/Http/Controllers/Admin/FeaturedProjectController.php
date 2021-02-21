@@ -17,7 +17,7 @@ class FeaturedProjectController extends Controller
     
     public function index()
     {
-        $featured_projects = FeaturedProject::all();
+        $featured_projects = FeaturedProject::orderBy('position')->get();
 
         return view('admin/featured_project', compact('featured_projects'));
     }

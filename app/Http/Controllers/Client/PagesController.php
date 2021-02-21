@@ -15,7 +15,7 @@ class PagesController extends Controller
     public function index()
     {
         $project_types = ProjectType::all();
-        $featured_projects = FeaturedProject::all();
+        $featured_projects = FeaturedProject::orderBy('position')->get();
 
         return view('client/index', compact('project_types', 'featured_projects'));
     }
@@ -23,7 +23,7 @@ class PagesController extends Controller
     // Show Portfolio Page.
     public function portfolio_index()
     {
-        $featured_projects = FeaturedProject::all();
+        $featured_projects = FeaturedProject::orderBy('position')->get();
 
         return view('client/portofolio', compact('featured_projects'));
     }
