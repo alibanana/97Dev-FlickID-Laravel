@@ -16,7 +16,8 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.4",
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "ext-exif":"*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
