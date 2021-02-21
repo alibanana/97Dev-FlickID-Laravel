@@ -64,10 +64,17 @@
         </div>
     @endif
 
+    @if (session('status'))
+        <div class="alert alert-success alert-dismissible fade show mt-2 mb-0" role="alert">
+            <h4 class="alert-heading">Success!</h4>
+            <p>{{ session('status') }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
     <div style="display:flex;justify-content:space-between;align-items:center">
         <h2 style="font-family:HKGroteskBlack !important;">Welcome Back, {{ Auth::user()->name }}!</h2>
         <a href="#change_password" class="btn btn-warning" title="Tooltip">Change Passsword</a>
-
     </div>
 </div>
     
