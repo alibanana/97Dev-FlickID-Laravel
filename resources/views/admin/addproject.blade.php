@@ -231,7 +231,9 @@
 
         <hr>
         <!-- start of project detail -->
-        <h3 style="font-family:HKGroteskBold !important;margin-top:40px">Project Details</h3>
+        <h3 style="font-family:HKGroteskBold !important;margin-top:40px">Project Details (Optional)</h3>
+        <p style="font-family: HKGroteskRegular; color: red">*Don't forget to fill in all of the fields (Title, Description & Illustration).*<br>
+          *Project Details will only be added if all fields are filled in.*</p>
         
         <div>
             <div class="row" id="project_detail_duplicater">
