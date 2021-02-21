@@ -279,10 +279,14 @@ class ProjectController extends Controller
                 break;
             }
 
-            if ($counter >= count($input['project_detail_ids'])) {
-                $pd_id = null;
+            if ($request->has('project_detail_ids')) {
+                if ($counter >= count($input['project_detail_ids'])) {
+                    $pd_id = null;
+                } else {
+                    $pd_id = $input['project_detail_ids'][$counter];
+                }
             } else {
-                $pd_id = $input['project_detail_ids'][$counter];
+                $pd_id = null;
             }
 
             $pd_title = $input['project_detail_title'][$counter];
