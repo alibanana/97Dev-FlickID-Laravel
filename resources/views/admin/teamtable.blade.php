@@ -86,6 +86,7 @@
           </span>
         </div>
         @enderror
+        <p class="m-0" style="color: red">WARNING - Deleting a Job will delete all corresponding Team Members & Applicants.</p>
       </div>  
     </div>    
 </div>
@@ -187,7 +188,7 @@
                 <form action="{{ route('admin.job.destroy', $job->id) }}" method="post" style="display: inline-block">
                   @csrf
                   @method('DELETE')
-                  <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this job?")'>Delete</button>
+                  <button class="btn btn-danger" type="submit" onclick='return confirm("WARNING - Deleting this job will delete all corresponding Team Members & Applicants. Are you sure you still want to Delete this job?")'>Delete</button>
                 </form>
               </td>
             </tr>
