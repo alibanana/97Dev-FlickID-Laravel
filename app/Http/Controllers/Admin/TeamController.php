@@ -152,7 +152,18 @@ class TeamController extends Controller
     public function destroyJob($job_id)
     {
         $job = Job::findorfail($job_id);
-        $job->delete();
+
+        foreach ($job->team_members as $team_member) {
+            unlink($team_member->photo_file);
+            $team_member->delete();
+        }
+
+        foreach ($job->applicants as $applicant) {
+            unlink($applicant->cv_file);
+            $applicant->delete();
+        }
+
+        $job->delete();        
 
         return redirect()->route('admin.team.index')->with('success', 'Job has been removed from the database!');
     }
