@@ -113,7 +113,7 @@
             <form action="" method="post" style="display: inline-block">
               @csrf
               @method('DELETE')
-              <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this Service?")'>Delete</button>
+              <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to Delete this Service? By Deleting this service, you will delete all project")'>Delete</button>
             </form>
           </td>
         </tr>

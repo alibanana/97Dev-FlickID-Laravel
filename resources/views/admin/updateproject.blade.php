@@ -353,7 +353,7 @@
         </div>
 
         <div class="container" style="text-align:right;padding-right:12.5vw;padding-bottom:7vw">
-            <button type="submit" style="background-color:#FACA00; border-radius:10px;border:none;color:black;padding: 6px 12px;font-size:20px"> Submit New Project</button> 
+            <button type="submit" style="background-color:#FACA00; border-radius:10px;border:none;color:black;padding: 6px 12px;font-size:20px">Update Project</button> 
         </div>
         <!-- END OF UPLOADED IMAGE -->
     </form>

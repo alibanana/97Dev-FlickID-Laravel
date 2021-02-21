@@ -37,9 +37,9 @@
         <div class="top-right">
             <div style="text-align:right !important;padding-left:15%;padding-top:7%;padding-right:3.1vw" class="portofolioTextAndImage">
                 @if($featuredProject)
-                    <img id="illustrationDesktop" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="width:28vw" alt="">
+                    <img id="illustrationDesktop" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="max-width:28vw;height:auto" alt="">
                 @else
-                    <img id="illustrationDesktop" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="width:28vw" alt="">
+                    <img id="illustrationDesktop" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="max-width:28vw;height:auto" alt="">
                 @endif
                 <div style="margin-top:40px"  id="desktopMarginTop">
                     @if($featuredProject)
