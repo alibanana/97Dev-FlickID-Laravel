@@ -16,10 +16,10 @@
             <div style="text-align:left !important;padding-left:15%;padding-top:18%" class="portofolioTextAndImage">
             <div style="display:flex;align-items: flex-start">
                 @if($featuredProject)
-                <img id="illustration" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="width:16vw" alt="">
+                <img id="illustration" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="max-width:16vw;height:auto" alt="">
 
                 @else
-                <img id="illustration" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="width:16vw" alt="">
+                <img id="illustration" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="max-width:16vw;height:auto" alt="">
 
                 @endif
                 <div style="margin-left:30px">

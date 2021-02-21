@@ -16,9 +16,9 @@
         <div class="top-left">
             <div style="text-align:left !important;padding-left:10%;padding-top:7%" class="portofolioTextAndImage">
                 @if($featuredProject)
-                    <img id="illustrationDesktop" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="width:28vw" alt="">
+                    <img id="illustrationDesktop" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="max-width:28vw;height:auto" alt="">
                 @else
-                    <img id="illustrationDesktop" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="width:28vw" alt="">
+                    <img id="illustrationDesktop" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="max-width:28vw;height:auto" alt="">
                 @endif
                 <div style="margin-top:40px" id="desktopMarginTop">
                     @if($featuredProject)
