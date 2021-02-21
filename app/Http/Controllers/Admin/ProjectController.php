@@ -343,6 +343,7 @@ class ProjectController extends Controller
         unlink($project->ilustration_file);
         unlink($project->logo_file);
         unlink($project->bg_file);
+        unlink($project->featured_ilustration_file);
         
         foreach($project->project_details as $project_detail) {
             unlink($project_detail->ilustration_file);
