@@ -87,30 +87,34 @@
                 <hr>
                     <div class="card-body" style="background-color:#145CA8">
                         <h5 class="card-title">Accepted Client</h5>
-                        <div>
-                            <p class="card-text">{{ $client_counts['Accepted'] }}</p>
-                            <i class="fas fa-arrow-circle-right"></i><p >View details</p>
+                        <p class="card-text">{{ $client_counts['Accepted'] }}</p>
+                        <div onclick="window.open('{{ route('admin.client.index', ['filter' => 'accepted']) }}')" style="cursor: pointer">
+                            <i class="fas fa-arrow-circle-right"></i>
+                            <p>View details</p>
                         </div>
                     </div>
                     <div class="card-body" style="background-color:#149211">
                         <h5 class="card-title">Finished Clients</h5>
-                        <div>
-                            <p class="card-text">{{ $client_counts['Finished'] }}</p>
-                            <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                        <p class="card-text">{{ $client_counts['Finished'] }}</p>
+                        <div onclick="window.open('{{ route('admin.client.index', ['filter' => 'finished']) }}')" style="cursor: pointer">
+                            <i class="fas fa-arrow-circle-right"></i>
+                            <p>View details</p>
                         </div>                 
                     </div>
                     <div class="card-body" style="background-color:#FFBC69">
                         <h5 class="card-title">Pending Clients</h5>
-                        <div>
-                            <p class="card-text">{{ $client_counts['Pending'] }}</p>
-                            <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                        <p class="card-text">{{ $client_counts['Pending'] }}</p>
+                        <div onclick="window.open('{{ route('admin.client.index', ['filter' => 'pending']) }}')" style="cursor: pointer">
+                            <i class="fas fa-arrow-circle-right"></i>
+                            <p>View details</p>
                         </div>                   
                     </div>
                     <div class="card-body" style="background-color:#A02B2B">
                         <h5 class="card-title">Rejected Client</h5>
-                        <div>
-                            <p class="card-text">{{ $client_counts['Rejected'] }}</p>
-                            <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                        <p class="card-text">{{ $client_counts['Rejected'] }}</p>
+                        <div onclick="window.open('{{ route('admin.client.index', ['filter' => 'rejected']) }}')" style="cursor: pointer">
+                            <i class="fas fa-arrow-circle-right"></i>
+                            <p>View details</p>
                         </div>                  
                     </div> 
             </div>
@@ -124,23 +128,26 @@
                 <hr>
                 <div class="card-body" style="background-color:#145CA8">
                     <h5 class="card-title">Accepted Client</h5>
-                    <div>
-                        <p class="card-text">{{ $applicant_counts['Accepted'] }}</p>
-                        <i class="fas fa-arrow-circle-right"></i><p >View details</p>
+                    <p class="card-text">{{ $applicant_counts['Accepted'] }}</p>
+                    <div onclick="window.open('{{ route('admin.applicant.index', ['filter' => 'accepted']) }}')" style="cursor: pointer">
+                        <i class="fas fa-arrow-circle-right"></i>
+                        <p >View details</p>
                     </div>
                 </div>
                 <div class="card-body" style="background-color:#FFBC69">
                     <h5 class="card-title" >Pending Applicants</h5>
-                    <div>
-                        <p class="card-text">{{ $applicant_counts['Pending'] }}</p>
-                        <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                    <p class="card-text">{{ $applicant_counts['Pending'] }}</p>
+                    <div onclick="window.open('{{ route('admin.applicant.index', ['filter' => 'pending']) }}')" style="cursor: pointer">
+                        <i class="fas fa-arrow-circle-right"></i>
+                        <p>View details</p>
                     </div>                   
                 </div>
                 <div class="card-body" style="background-color:#A02B2B">
                     <h5 class="card-title">Rejected Applicants</h5>
-                    <div>
-                        <p class="card-text">{{ $applicant_counts['Rejected'] }}</p>
-                        <i class="fas fa-arrow-circle-right"></i><p>View details</p>
+                    <p class="card-text">{{ $applicant_counts['Rejected'] }}</p>
+                    <div onclick="window.open('{{ route('admin.applicant.index', ['filter' => 'rejected']) }}')" style="cursor: pointer">
+                        <i class="fas fa-arrow-circle-right"></i>
+                        <p>View details</p>
                     </div>                  
                 </div>
                     
@@ -155,9 +162,10 @@
                 <hr>
                 <div class="card-body" style="background-color:#145CA8">
                     <h5 class="card-title">Total Projects</h5>
-                    <div>
-                        <p class="card-text">{{ $project_count }}</p>
-                        <i class="fas fa-arrow-circle-right"></i><p >View details</p>
+                    <p class="card-text">{{ $project_count }}</p>
+                    <div onclick="window.open('{{ route('admin.project.index') }}')" style="cursor: pointer">
+                        <i class="fas fa-arrow-circle-right"></i>
+                        <p >View details</p>
                     </div>
                 </div>
 
