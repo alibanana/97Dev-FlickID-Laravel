@@ -7,7 +7,7 @@
 <!-- START OF TOP CONTENT-->
 <div class="row m-0 topPortofolioDetail" style="padding: 0px 8.5%;padding-top:6vw">
     <div class="col-md-6 p-0  wow fadeInLeft">
-        <img id="project_illustration" src="{{ asset($project->ilustration_file) }}" style="width:25vw" alt="">
+        <img id="project_illustration" src="{{ asset($project->ilustration_file) }}" style="max-width:25vw;height:auto" alt="">
     </div>
 
     <div class="col-md-6 col-xs-12 p-0 " style="" id=""> 

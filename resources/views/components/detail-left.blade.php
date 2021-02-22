@@ -4,5 +4,5 @@
 </div>
 
 <div class="col-6 wow fadeInRight" style="text-align:center;padding-top:5vw" id="">
-    <img src="{{ asset($projectDetail->ilustration_file) }}" id="project_detail_img" style="width:25vw" alt="">
+    <img src="{{ asset($projectDetail->ilustration_file) }}" id="project_detail_img" style="max-width:25vw;height:auto" alt="">
 </div>

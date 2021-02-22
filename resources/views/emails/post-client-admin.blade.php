@@ -189,7 +189,7 @@ body {font-family: 'Muli', sans-serif;}
           <tbody>
             <tr>
               <td align="center" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;">
-                  <a class="btnLogin" href="{{ route('admin.client.index') }}" style="display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none;" target="_blank">Click here to view CV</a>
+                  <a class="btnLogin" href="{{ route('admin.client.index') }}" style="display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none;" target="_blank">Click here to view client post</a>
               </td>
             </tr>
           </tbody>
