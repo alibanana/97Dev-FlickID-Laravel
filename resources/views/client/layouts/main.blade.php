@@ -207,7 +207,7 @@
         #buttonContactUs{
           border: 3px solid  #3F92D8;
           text-align: center;
-          padding: 10px !important;
+          padding: 0px !important;
           width: 50% !important;
           margin-top: 10px;
         }
@@ -224,7 +224,7 @@
         #buttonContactUs{
           border: 3px solid  #3F92D8;
           text-align: center;
-          padding: 10px !important;
+          padding: 0px !important;
           width: 50% !important;
           margin-top: 10px;
         }

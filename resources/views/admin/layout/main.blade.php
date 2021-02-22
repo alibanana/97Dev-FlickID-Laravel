@@ -110,19 +110,19 @@
           <div class="" style="padding-right:4vw">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size:1.3vw;font-family:HKGroteskBold">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/admin/services" style="margin-right:65px;color:black">Service</a>
+                <a class="nav-link" aria-current="page" href="/admin/services" style="margin-right:3vw;color:black">Service</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/admin/project" style="margin-right:65px;color:black">Portfolio</a>
+                <a class="nav-link" aria-current="page" href="/admin/project" style="margin-right:3vw;color:black">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/admin/team" style="margin-right:65px;color:black;">Team</a>
+                <a class="nav-link" href="/admin/team" style="margin-right:3vw;color:black;">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/admin/applicant" style="margin-right:65px;color:black">Applicant</a>
+                <a class="nav-link" href="/admin/applicant" style="margin-right:3vw;color:black">Applicant</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/admin/client" style="margin-right:65px;color:black">Client</a>
+                <a class="nav-link" href="/admin/client" style="margin-right:3vw;color:black">Client</a>
               </li>
               
               <li class="nav-item" style="">

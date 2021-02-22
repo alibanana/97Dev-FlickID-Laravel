@@ -87,7 +87,7 @@
               </div>
           </div>
           <p style="margin-bottom: 0px !important;">Click the link down below to change hex into filter</p>
-          <a style="margin-bottom: 2vw !important;" href="https://codepen.io/sosuke/pen/Pjoqqp">https://codepen.io/sosuke/pen/Pjoqqp</a>
+          <a style="margin-bottom: 2vw !important;" target="_blank" href="https://codepen.io/sosuke/pen/Pjoqqp">https://codepen.io/sosuke/pen/Pjoqqp</a>
           <div class="mb-3 col-6">
             <label for="Insert_invert" class="form-label">Invert</label>
             <input name="filter_invert" value="{{ old('filter_invert') }}" type="text" class="form-control border" id="Insert_invert" aria-describedby="Insert_invert" style="width:70%;">
