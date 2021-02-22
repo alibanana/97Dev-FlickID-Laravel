@@ -22,6 +22,7 @@ Route::redirect('/portofolio', '/portfolio');
 Route::redirect('/portfolios', '/portfolio');
 Route::redirect('/careers', '/career');
 Route::redirect('/admin/clients', '/admin/client');
+Route::redirect('/admin/services', '/admin/service');
 
 // Client Pages Routings (FIXED)
 Route::get('/', 'Client\PagesController@index')->name('index');
@@ -36,6 +37,10 @@ Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 // Admin Pages Routings (FIXED)
 Route::put('/admin/password/update', 'Admin\UserController@passwordUpdate')->name('admin.user.passwordUpdate');
 Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
+Route::get('/admin/service', 'Admin\ServiceController@index')->name('admin.service.index');
+Route::post('/admin/service', 'Admin\ServiceController@store')->name('admin.service.store');
+Route::put('/admin/service/{id}', 'Admin\ServiceController@update')->name('admin.service.update');
+Route::delete('/admin/service/{id}', 'Admin\ServiceController@destroy')->name('admin.service.destroy');
 Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
 Route::get('/admin/project/create', 'Admin\ProjectController@create')->name('admin.project.create');
 Route::post('/admin/project', 'Admin\ProjectController@store')->name('admin.project.store');
@@ -64,12 +69,6 @@ Route::post('/admin/question-open-ended', 'Admin\QuestionController@storeOpenEnd
 Route::delete('/admin/question/{id}', 'Admin\QuestionController@destroy')->name('admin.question.destroy');
 Route::get('/admin/applicant', 'Admin\ApplicantController@index')->name('admin.applicant.index');
 Route::put('/admin/applicant/{id}', 'Admin\ApplicantController@update')->name('admin.applicant.update');
-
-//front end routing
-Route::get('/admin/services', function () {
-    return view('admin/services');
-});
-
 
 // Admin Pages Routings
 Route::get('/email', function () {
