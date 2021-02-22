@@ -9,11 +9,10 @@
             <div class="containerImage">
                 <div style="text-align:left">   
                     <img src="/assets/client/images/Career_Background_Top.png" class="img-fluid" alt="Snow" style="width:100%">
-                    
                 </div>
                 <div class="top-left wow fadeInLeft">
                     <div style="text-align:left;padding-right:6.5vw !important;padding-left:6.5vw;padding-top:12vw">
-                        <p  style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"><b>Join our <br> incredible journey!</b></p>
+                        <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"><b>Join our <br> incredible journey!</b></p>
                     </div>
                 </div>
             </div>
@@ -52,7 +51,7 @@
         <div class="col-md-6" style="text-align:left">
           <div class="form-group">
             <label for="" style="margin:2vw 0px 7px 0px;">First Name</label>
-            <input name="firstname" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Rizha">
+            <input name="firstname" value="{{ old('firstname') }}" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Rizha">
           </div>
           @error('firstname')
           <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -64,7 +63,7 @@
         <div class="col-md-6" style="text-align:left">
           <div class="form-group">
             <label for="" style="margin:2vw 0px 7px 0px">Last Name</label>
-            <input name="lastname" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Teuku">
+            <input name="lastname" value="{{ old('lastname') }}" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Teuku">
           </div>
           @error('lastname')
           <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -76,7 +75,7 @@
         <div class="col-md-12">
           <div class="form-group">
             <label for="" style="margin:2vw 0px 7px 0px">Email</label>
-            <input name="email" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="zhoonnaga@gmail.com">
+            <input name="email" value="{{ old('email') }}" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="zhoonnaga@gmail.com">
           </div>
           @error('email')
           <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -93,7 +92,7 @@
               +62
               </div>
             </div>
-            <input name="phone" type="number" style="border:1px solid gray;border-radius: 0px 15px 15px 0px;padding:12px 15px" class="form-control" placeholder="08111377883">
+            <input name="phone" value="{{ old('phone') }}" type="number" style="border:1px solid gray;border-radius: 0px 15px 15px 0px;padding:12px 15px" class="form-control" placeholder="08111377883">
           </div>
           @error('phone')
           <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -105,7 +104,7 @@
         <div class="col-md-12">
           <div class="form-group">
             <label for="" style="margin:2vw 0px 7px 0px">Address</label>
-            <input name="address" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="">
+            <input name="address" value="{{ old('address') }}" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="">
           </div>
           @error('address')
           <span class="invalid-feedback" role="alert" style="display: block !important;">
