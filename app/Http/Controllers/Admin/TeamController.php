@@ -129,7 +129,7 @@ class TeamController extends Controller
         $input = $request->all();
 
         Validator::make($input, [
-            'title' => 'max:40',
+            'title' => 'required|max:40',
         ])->validate();
         
         $job = Job::findorfail($id);
