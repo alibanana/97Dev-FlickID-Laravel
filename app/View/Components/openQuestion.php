@@ -7,15 +7,17 @@ use Illuminate\View\Component;
 class openQuestion extends Component
 {
     public $question;
+    public $index;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($question)
+    public function __construct($question, $index)
     {
         $this->question = $question;
+        $this->index = $index;
     }
 
     /**
