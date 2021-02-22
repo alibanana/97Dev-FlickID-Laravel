@@ -79,12 +79,10 @@ class QuestionController extends Controller
         $question->save();
 
         foreach ($input['question_answers'] as $choice) {
-            if ($choice) {
-                $question_answer = new QuestionAnswer;
-                $question_answer->question_answer = $choice;
-                $question_answer->question_id = $question->id;
-                $question_answer->save();
-            }
+            $question_answer = new QuestionAnswer;
+            $question_answer->question_answer = $choice;
+            $question_answer->question_id = $question->id;
+            $question_answer->save();
         }
         
         return redirect()->route('admin.question.index')->with('success', 'A Slider Question has been added to the database!');
