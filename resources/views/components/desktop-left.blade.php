@@ -1,15 +1,15 @@
 @if($flag == 1)
 <div class="col-md-7 p-0 wow fadeInLeft" >
 @else
-<div class="col-md-7 p-0 marginTopPortofolio wow fadeInLeft" style="margin-top:-24vw" >
+<div class="col-md-7 p-0 marginTopPortofolio wow fadeInLeft" style="margin-top:-23vw" >
 @endif
     <div class="containerImage">
         <div style="text-align:left">   
             @if($featuredProject)
-            <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->project->filter_invert }}%) sepia({{ $featuredProject->project->filter_sepia }}%) saturate({{ $featuredProject->project->filter_saturate }}%) hue-rotate({{ $featuredProject->project->filter_hue_rotate }}deg) brightness({{ $featuredProject->project->filter_brightness }}%) contrast({{ $featuredProject->project->filter_contrast }}%);">
+            <img src="/assets/client/images/hex-left-new.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->project->filter_invert }}%) sepia({{ $featuredProject->project->filter_sepia }}%) saturate({{ $featuredProject->project->filter_saturate }}%) hue-rotate({{ $featuredProject->project->filter_hue_rotate }}deg) brightness({{ $featuredProject->project->filter_brightness }}%) contrast({{ $featuredProject->project->filter_contrast }}%);">
 
             @else
-            <img src="/assets/client/images/Hex_Left_Path.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $relatedProject->filter_invert }}%) sepia({{ $relatedProject->filter_sepia }}%) saturate({{ $relatedProject->filter_saturate }}%) hue-rotate({{ $relatedProject->filter_hue_rotate }}deg) brightness({{ $relatedProject->filter_brightness }}%) contrast({{ $relatedProject->filter_contrast }}%);">
+            <img src="/assets/client/images/hex-left-new.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $relatedProject->filter_invert }}%) sepia({{ $relatedProject->filter_sepia }}%) saturate({{ $relatedProject->filter_saturate }}%) hue-rotate({{ $relatedProject->filter_hue_rotate }}deg) brightness({{ $relatedProject->filter_brightness }}%) contrast({{ $relatedProject->filter_contrast }}%);">
 
             @endif
         </div>
