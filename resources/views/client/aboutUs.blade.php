@@ -22,7 +22,7 @@
             @foreach ($team_members as $team_member)
                 <div class="col-md-6 pt-5">
                     <div class="memberCard" style="display:flex;align-content:flex-start;" >
-                        <img src="{{ asset($team_member->photo_file) }}" style="width:11vw" alt="">
+                        <img src="{{ asset($team_member->photo_file) }}" style="max-width:12vw;max-height:18vw" alt="">
                         <p id="titleText" style="font-size:2vw;font-family:HKGroteskBlack;line-height:1.2;color:#142850;margin-left:3vw"> <b>{{ $team_member->name }}</b> <br> <span style="font-family:HKGroteskRegular !important">{{ $team_member->job->title }}</span></p>
                     </div>
                 </div>  

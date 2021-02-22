@@ -62,13 +62,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   @endif
-  <div class = "row"> 
-    <div class ="col-md-12">
+  <div class="row">
+    <div style="display: flex;justify-content:space-between;align-items:center">
       <h2 class="pt-4 pb-4 m-0">FlickSoftware Services</h2>
-    </div>
-    <div class="col-md-8">
-    </div>
-    <div class="col-md-4">
       <a href="#add-service" class="btn btn-warning pull-right" title="Tooltip">Add New Service</a>
     </div>
   </div>    
