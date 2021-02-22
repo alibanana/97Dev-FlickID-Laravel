@@ -44,7 +44,11 @@
         <p  style="font-size:2.8vw;margin:2vw 0vw;font-family:HKGroteskBlack;line-height:1.2;color:#3F92D8" id="titleText"> <b>Project Details</b></p>
     </div>
 </div>
-<div class="row m-0 project_detail_BG" style="padding: 0px 8.5%;">
+    @if(count($project->project_details) == 1)
+    <div class="row m-0" style="padding: 0px 8.5%;">
+    @else
+    <div class="row m-0 project_detail_BG" style="padding: 0px 8.5%;">
+    @endif
     <?php $counter = 0 ?>
     @foreach($project->project_details as $project_detail)
         @if($counter == 0)

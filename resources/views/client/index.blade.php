@@ -136,8 +136,11 @@
         .experienceSection{
           padding-top: 4vw !important;
         }
+        .experienceSection #teamText{
+          font-size:4vw !important
+        }
         .withUsSection{
-          padding-top: 5vw !important;
+          padding-top: 8vw !important;
         }
         #readyToStartWithUs{
           font-size: 4.5vw !important;
@@ -335,31 +338,10 @@
     </div>
     <!-- END OF TOP CONTENT -->
 
-
-    <!-- START OF WHAT WE PROVIDE -->
-    <div class="row m-0 DesktopView"style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
-      <div class="col-md-12"   id="whatWeProvide" >
-        <p style="font-size:5vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
-      </div>
-      @foreach ($project_types as $project_type)
-        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s"style="padding-top:4vw">
-          <div >
-            <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
-            <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
-            <div style="padding-right:100px">
-              <p style="font-size:1.2vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
-            </div>
-            <a href="/portfolio" target="_blank" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
-          </div>
-        </div>
-      @endforeach
-    </div>
-
-    <!-- END OF WHAT WE PROVIDE -->
-    
+      
     <!-- WHAT WE PROVIDE MOBILE -->
     <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
-      <div class="col-12 p-0" >
+      <div class="col-12 p-0" id="whatWeProvide" >
         <p style="font-size:10vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
       </div>
     </div>
@@ -404,6 +386,29 @@
 
     <!-- END OF WHAT WE PROVIDE MOBILE -->
 
+
+
+    <!-- START OF WHAT WE PROVIDE -->
+    <div class="row m-0 DesktopView"style="padding-left:8.5%;padding-top:19vw;padding-bottom:14vw">
+      <div class="col-md-12"   id="whatWeProvide" >
+        <p style="font-size:5vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
+      </div>
+      @foreach ($project_types as $project_type)
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s"style="padding-top:4vw">
+          <div >
+            <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
+            <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>
+            <div style="padding-right:100px">
+              <p style="font-size:1.2vw;font-family:HKGroteskRegular">{{ $project_type->description }}</p>
+            </div>
+            <a href="/portfolio" target="_blank" style="font-size:1.3vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See our work <i style="font-size:1.3vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
+          </div>
+        </div>
+      @endforeach
+    </div>
+
+    <!-- END OF WHAT WE PROVIDE -->
+  
     <!-- WHAT WE HAVE BUILD -->
     <!-- mobile view -->
     <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
@@ -537,7 +542,7 @@
             <div class="top-left" style="text-align:left">
             
               <div style="padding-left:8.5%;color:white;width:90vw !important" >
-                <p  style="font-size:5vw;margin-top:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>A team that has years of experience on developing technologies</b></p>
+                <p  style="font-size:5vw;margin-top:4vw;font-family:HKGroteskBlack;line-height:1.2" id="teamText"> <b>A team that has years of experience on developing technologies</b></p>
                 <p style="font-size:1.9vw;margin-bottom:3vw;font-family:HKGroteskRegular">Built by <span style="font-family:HKGroteskBold"> young minds  </span>to deliver techonlogies that we needs.</p>
                 <div style="display:flex"> 
                   <div class="wow fadeInUp" style="background-color:#FFA5A5;width:29vw;border-radius:1.5vw;color:#142850;padding:1.9vw;">

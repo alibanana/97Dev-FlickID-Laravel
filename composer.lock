@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "content-hash": "bcf5a9140390fba14e2893b154619297",
+
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -831,16 +832,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "2.5.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "abbf18d5ab8367f96b3205ca3c89fb2fa598c69e"
+                "reference": "032263954ca2a5258fb5fe7492962c1a16ca9f3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/abbf18d5ab8367f96b3205ca3c89fb2fa598c69e",
-                "reference": "abbf18d5ab8367f96b3205ca3c89fb2fa598c69e",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/032263954ca2a5258fb5fe7492962c1a16ca9f3c",
+                "reference": "032263954ca2a5258fb5fe7492962c1a16ca9f3c",
                 "shasum": ""
             },
             "require": {
@@ -7353,7 +7354,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "intervention/image": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
