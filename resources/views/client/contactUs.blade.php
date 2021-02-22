@@ -34,7 +34,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="" style="margin:17px 0px 7px 0px">Full Name</label>
-                    <input name="name" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Rizha Teuku">
+                    <input name="name" value="{{ old('name') }}" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Rizha Teuku">
                 </div>
                 @error('name')
                     <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -44,7 +44,7 @@
 
                 <div class="form-group">
                     <label for="" style="margin:17px 0px 7px 0px">Company or Organization Name</label>
-                    <input name="company" style="border:1px solid gray"  type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Flick">
+                    <input name="company" value="{{ old('company') }}" style="border:1px solid gray"  type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="Flick">
                 </div>
                 @error('company')
                     <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -54,7 +54,7 @@
 
                 <div class="form-group">
                     <label for="" style="margin:17px 0px 7px 0px">Phone Number</label>
-                    <input name="phone" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="08826543789">
+                    <input name="phone" value="{{ old('phone') }}" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="08826543789">
                 </div>
                 @error('phone')
                     <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -63,8 +63,8 @@
                 @enderror
                 
                 <div class="form-group">
-                    <label for="" style="margin:17px 0px 7px 0px">Email</label>
-                    <input name="email" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="zhoonnaga@gmail.com">
+                    <label for="" style="margin:17px 0px 7px 0px">Email (Optional)</label>
+                    <input name="email" value="{{ old('email') }}" style="border:1px solid gray" type="text" class="form-control" id="contactInputForm" aria-describedby="" placeholder="zhoonnaga@gmail.com">
                 </div>
                 @error('email')
                     <span class="invalid-feedback" role="alert" style="display: block !important;">
@@ -74,7 +74,7 @@
 
                 <div class="form-group">
                     <label for="" style="margin:17px 0px 7px 0px">About The Project</label>
-                    <textarea name="description" style="border:1px solid gray"  class="form-control" id="contactInputForm" rows="3" placeholder="I want to build an app that travels through time!"></textarea>
+                    <textarea name="description" style="border:1px solid gray"  class="form-control" id="contactInputForm" rows="3" placeholder="I want to build an app that travels through time!">{{ old('description') }}</textarea>
                 </div>
                 @error('description')
                     <span class="invalid-feedback" role="alert" style="display: block !important;">
