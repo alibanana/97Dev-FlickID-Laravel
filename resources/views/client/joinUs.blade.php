@@ -169,21 +169,21 @@
         @foreach ($questions as $question)
           <input type="hidden" name="question_ids[]" value="{{ $question->id }}">
           @if ($question->question_type->type == "Multiple-Choice")
-            <x-mcq-question :question="$question" />
+            <x-mcq-question :question="$question" :index="$loop->index" />
             @error('applicant_answers.'.$loop->index)
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
           @elseif ($question->question_type->type == "Slider")
-            <x-slider-question :question="$question" />
+            <x-slider-question :question="$question" :index="$loop->index" />
             @error('applicant_answers.'.$loop->index)
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
           @else
-            <x-open-question :question="$question" />
+            <x-open-question :question="$question" :index="$loop->index" />
             @error('applicant_answers.'.$loop->index)
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
