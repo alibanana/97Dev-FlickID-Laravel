@@ -43,18 +43,31 @@ class ApplicantController extends Controller
                 'applicant_answers.*' => 'max:100'
             ]);
 
-            if ($validator->fails()) {
-                if (count($input['question_ids']) != count($input['applicant_answers'])) {
-                    return redirect()->route('applicant.create')
-                        ->withErrors($validator)
-                        ->withInput()
-                        ->with('question_unanswered_error', 'All the questions must be answered!');
-                } else {
-                    return redirect()->route('applicant.create')
-                        ->withErrors($validator)
-                        ->withInput();
+            $flag_validation = false;
+
+            if (count($input['question_ids']) != count($input['applicant_answers'])) {
+                $flag_validation = true;
+            } else {
+                foreach ($input['applicant_answers'] as $applicant_answer) {
+                    if (empty($applicant_answer) || is_null($applicant_answer)) {
+                        $flag_validation = true;
+                    }
                 }
-                
+            }
+
+            if ($validator->fails() && $flag_validation) {
+                return redirect()->route('applicant.create')
+                    ->withErrors($validator)
+                    ->withInput()
+                    ->with('question_unanswered_error', 'All the questions must be answered!');
+            } else if ($validator->fails() && !$flag_validation) {
+                return redirect()->route('applicant.create')
+                    ->withErrors($validator)
+                    ->withInput();
+            } else if ($flag_validation) {
+                return redirect()->route('applicant.create')
+                    ->withInput()
+                    ->with('question_unanswered_error', 'All the questions must be answered!');
             }
         } else {
             Validator::make($input, [
