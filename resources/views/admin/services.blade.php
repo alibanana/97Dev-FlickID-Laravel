@@ -67,7 +67,8 @@
       <h2 class="pt-4 pb-4 m-0">FlickSoftware Services</h2>
       <a href="#add-service" class="btn btn-warning pull-right" title="Tooltip">Add New Service</a>
     </div>
-  </div>    
+  </div>
+  <p class="m-0" style="color: red">WARNING - Deleting a Service will delete all corresponding Projects.</p>
 </div>
       
 </div>
