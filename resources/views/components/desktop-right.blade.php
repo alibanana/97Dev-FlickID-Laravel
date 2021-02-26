@@ -7,7 +7,7 @@
                 <img src="/assets/client/images/Portofolio_Bottom_BG.png" class="img-fluid" alt="Snow" style="width:100%">
                 
             </div>
-            <div class="top-left">
+            <div class="top-left DesktopView">
                 @if (Request::path() == '/')
                 <p style="font-size:4.5vw;font-family:HKGroteskBlack;line-height:1.2;color:black"> <b>Explore more on <br> our fine works</b></p>
                 <div>

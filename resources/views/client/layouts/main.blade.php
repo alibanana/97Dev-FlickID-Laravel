@@ -23,6 +23,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- wow js -->
     <link rel="stylesheet" href="/WOW-master/css/libs/animate.css">
+
+    <!-- webicon -->
+    <link rel="shortcut icon" type="image/jpg" href="/assets/client/images/flick-logo-blue.svg"/>
  
     <title>@yield('title')</title>
 
@@ -221,6 +224,15 @@
         #navbar_text{
           font-size: 5vw !important;
         }
+        .drop-zone__prompt{
+          font-size: 4vw !important
+        }
+        input[type="radio"]{
+
+          width: 15px;
+          height: 15px;
+
+        } 
         #buttonContactUs{
           border: 3px solid  #3F92D8;
           text-align: center;
@@ -359,6 +371,7 @@
         .memberCard img{
           width: 30vw !important;
         }
+        
       }
 
     </style>

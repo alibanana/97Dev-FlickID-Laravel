@@ -193,6 +193,7 @@
       <tr>
         <th scope="col">Question</th>
         <th scope="col">Choices</th>
+        <th scope="col">Type</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -215,6 +216,8 @@
               -
             @endif
           </td>
+          <td scope="col">{{ $question->question_type->type }}</td>
+
           <td>
             <div style="display:flex;justify-content:space-between;align-items:center">
               <form action="{{ route('admin.question.destroy', $question->id) }}" method="post" style="display: inline-block">

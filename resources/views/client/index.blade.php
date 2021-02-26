@@ -15,10 +15,11 @@
     <link href="/fontawesome/css/all.css" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
-    <!-- wow js -->
-    <link rel="stylesheet" href="/WOW-master/css/libs/animate.css">
+    <link rel="icon" href="http://example.com/favicon.png">
 
-    
+    <!-- webicon -->
+    <link rel="shortcut icon" type="image/jpg" href="/assets/client/images/flick-logo-blue.svg"/>
+
     <title>Flick Software</title>
     <style>
       html{
@@ -26,6 +27,7 @@
         height:100%;
         margin:0;
         padding:0;
+        scroll-behavior: smooth;
       }
       body{
         width:100%;
@@ -299,7 +301,8 @@
                     <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portfolio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
+                    <a class="nav-link DesktopView" href="#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
+                    <a class="nav-link MobileView" href="#whatWeProvideMobile" style="margin-right:65px;color:black;display:none">Services</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/about-us" style="margin-right:65px;color:black">The Team</a>
@@ -341,13 +344,13 @@
       
     <!-- WHAT WE PROVIDE MOBILE -->
     <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
-      <div class="col-12 p-0" id="whatWeProvide" >
+      <div class="col-12 p-0" id="whatWeProvideMobile" >
         <p style="font-size:10vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
       </div>
     </div>
 
     <div class="row m-0 MobileView" style="padding-top:4vw;padding-bottom:4vw;display:none">
-      <div class="col-12 p-0" id="whatWeProvide">
+      <div class="col-12 p-0" >
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             @foreach ($project_types as $project_type)
@@ -638,9 +641,10 @@
     <!-- end of footer -->
     
 
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
 
     <!-- WOW JS -->
     <script src="/WOW-master/dist/wow.min.js"></script>
