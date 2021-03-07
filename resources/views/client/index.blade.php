@@ -109,6 +109,7 @@
       }
        /* i pad */
       @media only screen and (device-width: 768px) {
+        
         #navbar_text{
           font-size: 3vw !important;
           padding-left: 6%;
@@ -128,6 +129,20 @@
 
       /* mobile */
       @media only screen and (max-width: 600px) {
+        #our-partners{
+          font-size:10vw !important;
+          margin-top:10vw
+        }
+        .flick-partners{
+          padding-left:5vw !important;
+          padding-right:5vw !important
+        }
+        .flick-partners .partner{
+          padding:2vw
+        }
+        .flick-partners img{
+          max-width:25vw;
+        }
         .DesktopView{
           display: none !important;
         }
@@ -543,14 +558,16 @@
 
     <div class="row m-0" style="padding-bottom:10vw;">
       <div class="col-md-12">
-        <div style="text-align:center"  class="DesktopView">
-          <p style="font-size:5vw;font-family:HKGroteskBlack;margin-bottom:0px" > <b>Our Partners</b></p>
+        <div style="text-align:center"  class="">
+          <p style="font-size:5vw;font-family:HKGroteskBlack;margin-bottom:0px" id="our-partners" > <b>Our Partners</b></p>
         </div>
+        <!--
         <div class="MobileView" style="display:none;text-align:center">
           <p style="font-size:10vw;font-family:HKGroteskBlack;margin-bottom:0px;margin-top:7vw" > <b>Our Partners</b></p>
           <img src="/assets/client/images/partners/partners_mobile.png" class="img-fluid"  alt="">
         </div>
-        <div class="flick-partners DesktopView" style="display:flex;justify-content:space-around;flex-wrap:wrap;padding-left:23vw;padding-right:23vw;align-items:center">
+        -->
+        <div class="flick-partners wow fadeInRight" style="display:flex;justify-content:space-around;flex-wrap:wrap;padding-left:23vw;padding-right:23vw;align-items:center">
           <div class="partner"> 
             <img src="/assets/client/images/partners/agratek.png" style="" alt="">
           </div>
@@ -592,15 +609,15 @@
           </div>
 
 
-          <div>
+          <div class="partner"> 
             <img src="/assets/client/images/partners/verihub.png" alt="">
           </div>
           
-          <div>
+          <div class="partner"> 
             <img src="/assets/client/images/partners/mobilocal.png"  alt="">
           </div>
 
-          <div>
+          <div class="partner"> 
             <img src="/assets/client/images/partners/xfers.png"  alt="">
           </div>
         </div>

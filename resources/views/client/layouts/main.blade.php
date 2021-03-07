@@ -431,7 +431,8 @@
                 <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:5vw;color:black;padding-top:10px">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/#whatWeProvide" style="margin-right:5vw;color:black;padding-top:10px">Services</a>
+                <a class="nav-link DesktopView" href="/#whatWeProvide" style="margin-right:5vw;color:black;padding-top:10px">Services</a>
+                <a class="nav-link MobileView" href="/#whatWeProvideMobile" style="margin-right:5vw;color:black;padding-top:10px;display:none">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/about-us" style="margin-right:5vw;color:black;padding-top:10px">The Team</a>
