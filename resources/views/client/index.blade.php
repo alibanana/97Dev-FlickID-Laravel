@@ -104,6 +104,9 @@
         top: 8px;
         right: 16px;
       }
+      .flick-partners  img{
+        margin-top:5vw;
+      }
        /* i pad */
       @media only screen and (device-width: 768px) {
         #navbar_text{
@@ -535,6 +538,78 @@
       <div class="col-md-12 p-0" style="margin-bottom:15vw">
       </div>
     </div> -->
+
+    <!-- our partners section -->
+
+    <div class="row m-0" style="padding-bottom:10vw;">
+      <div class="col-md-12">
+        <div style="text-align:center"  class="DesktopView">
+          <p style="font-size:5vw;font-family:HKGroteskBlack;margin-bottom:0px" > <b>Our Partners</b></p>
+        </div>
+        <div class="MobileView" style="display:none;text-align:center">
+          <p style="font-size:10vw;font-family:HKGroteskBlack;margin-bottom:0px;margin-top:7vw" > <b>Our Partners</b></p>
+          <img src="/assets/client/images/partners/partners_mobile.png" class="img-fluid"  alt="">
+        </div>
+        <div class="flick-partners DesktopView" style="display:flex;justify-content:space-around;flex-wrap:wrap;padding-left:23vw;padding-right:23vw;align-items:center">
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/agratek.png" style="" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/artajasa.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/dartmedia.png"  alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/doku.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/flip.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/gv.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/harrisma.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/kumparan.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/ninja.png" alt="">
+          </div>
+
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/nu.png" alt="">
+          </div>
+
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/reska.png" alt="">
+          </div>
+
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/sicepat.png" alt="">
+          </div>
+
+
+          <div>
+            <img src="/assets/client/images/partners/verihub.png" alt="">
+          </div>
+          
+          <div>
+            <img src="/assets/client/images/partners/mobilocal.png"  alt="">
+          </div>
+
+          <div>
+            <img src="/assets/client/images/partners/xfers.png"  alt="">
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+
+    <!-- end of our partners section -->
 
     <div class="row m-0 experienceSection">
       <div class="col-md-12 p-0 ">
