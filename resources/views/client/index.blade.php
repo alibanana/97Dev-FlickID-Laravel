@@ -15,10 +15,11 @@
     <link href="/fontawesome/css/all.css" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
-    <!-- wow js -->
-    <link rel="stylesheet" href="/WOW-master/css/libs/animate.css">
+    <link rel="icon" href="http://example.com/favicon.png">
 
-    
+    <!-- webicon -->
+    <link rel="shortcut icon" type="image/jpg" href="/assets/client/images/flick-logo-blue.svg"/>
+
     <title>Flick Software</title>
     <style>
       html{
@@ -26,6 +27,7 @@
         height:100%;
         margin:0;
         padding:0;
+        scroll-behavior: smooth;
       }
       body{
         width:100%;
@@ -101,6 +103,9 @@
         position: absolute;
         top: 8px;
         right: 16px;
+      }
+      .flick-partners  img{
+        margin-top:5vw;
       }
        /* i pad */
       @media only screen and (device-width: 768px) {
@@ -299,7 +304,8 @@
                     <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:65px;color:black">Portfolio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
+                    <a class="nav-link DesktopView" href="#whatWeProvide" style="margin-right:65px;color:black;">Services</a>
+                    <a class="nav-link MobileView" href="#whatWeProvideMobile" style="margin-right:65px;color:black;display:none">Services</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/about-us" style="margin-right:65px;color:black">The Team</a>
@@ -341,13 +347,13 @@
       
     <!-- WHAT WE PROVIDE MOBILE -->
     <div class="row m-0 MobileView" style="padding-left:8.5%;padding-top:14vw;padding-bottom:4vw;display:none">
-      <div class="col-12 p-0" id="whatWeProvide" >
+      <div class="col-12 p-0" id="whatWeProvideMobile" >
         <p style="font-size:10vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
       </div>
     </div>
 
     <div class="row m-0 MobileView" style="padding-top:4vw;padding-bottom:4vw;display:none">
-      <div class="col-12 p-0" id="whatWeProvide">
+      <div class="col-12 p-0" >
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             @foreach ($project_types as $project_type)
@@ -533,6 +539,78 @@
       </div>
     </div> -->
 
+    <!-- our partners section -->
+
+    <div class="row m-0" style="padding-bottom:10vw;">
+      <div class="col-md-12">
+        <div style="text-align:center"  class="DesktopView">
+          <p style="font-size:5vw;font-family:HKGroteskBlack;margin-bottom:0px" > <b>Our Partners</b></p>
+        </div>
+        <div class="MobileView" style="display:none;text-align:center">
+          <p style="font-size:10vw;font-family:HKGroteskBlack;margin-bottom:0px;margin-top:7vw" > <b>Our Partners</b></p>
+          <img src="/assets/client/images/partners/partners_mobile.png" class="img-fluid"  alt="">
+        </div>
+        <div class="flick-partners DesktopView" style="display:flex;justify-content:space-around;flex-wrap:wrap;padding-left:23vw;padding-right:23vw;align-items:center">
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/agratek.png" style="" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/artajasa.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/dartmedia.png"  alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/doku.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/flip.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/gv.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/harrisma.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/kumparan.png" alt="">
+          </div>
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/ninja.png" alt="">
+          </div>
+
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/nu.png" alt="">
+          </div>
+
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/reska.png" alt="">
+          </div>
+
+          <div class="partner"> 
+            <img src="/assets/client/images/partners/sicepat.png" alt="">
+          </div>
+
+
+          <div>
+            <img src="/assets/client/images/partners/verihub.png" alt="">
+          </div>
+          
+          <div>
+            <img src="/assets/client/images/partners/mobilocal.png"  alt="">
+          </div>
+
+          <div>
+            <img src="/assets/client/images/partners/xfers.png"  alt="">
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+
+    <!-- end of our partners section -->
+
     <div class="row m-0 experienceSection">
       <div class="col-md-12 p-0 ">
         <div class="containerImage">
@@ -638,9 +716,10 @@
     <!-- end of footer -->
     
 
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
 
     <!-- WOW JS -->
     <script src="/WOW-master/dist/wow.min.js"></script>
