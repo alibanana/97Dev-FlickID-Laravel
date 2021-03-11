@@ -22,6 +22,29 @@
 
     <title>Flick Software</title>
     <style>
+        /* Portrait Ipad */
+        @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+
+        .page-container{
+          padding-left:8.5% !important;
+          padding-right:8.5% !important;
+        }
+
+        #buttonContactUs{
+          width:20vw !important;
+          border:2px solid #3F92D8;
+          text-align:center;
+          padding:1vw 1vw !important;
+          margin-top:1vw
+        }
+
+        #illustration{
+          width:13vw !important
+        }
+        .what-we-have-build{
+          padding-right:8.5% !important
+        } 
+        }
       html{
         width:100%;
         height:100%;
@@ -115,10 +138,10 @@
           padding-left: 6%;
         }
         #buttonContactUs{
-          border: 3px solid  #3F92D8;
+          border: 3px solid  #3F92D8 !important;
           text-align: center;
           padding: 10px !important;
-          width: 40% !important;
+          width: 60% !important;
           margin-top: 10px;
         }
         #mynav img{
@@ -129,6 +152,7 @@
 
       /* mobile */
       @media only screen and (max-width: 600px) {
+        
         #our-partners{
           font-size:10vw !important;
           margin-top:10vw
@@ -202,11 +226,11 @@
           font-size: 5vw !important;
         }
         #buttonContactUs{
-          border: 3px solid  #3F92D8;
-          text-align: center;
+          border: 3px solid  #3F92D8 !important;
+          text-align: center !important;
           padding: 0px !important;
           width: 50% !important;
-          margin-top: 10px;
+          margin-top: 10px !important;
         }
         .MobileView{
           display: block !important;
@@ -252,49 +276,7 @@
         }
 
       }
-      /* Portrait Ipad */
-      @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
-
-        .page-container{
-          padding-left:8.5% !important;
-          padding-right:8.5% !important;
-        }
-        #buttonContactUs{
-          width:20vw !important;
-          border:2px solid #3F92D8;
-          text-align:center;
-          padding:1vw 1vw !important;
-          margin-top:1vw
-        }
-        #illustration{
-          width:13vw !important
-        }
-        .what-we-have-build{
-          padding-right:8.5% !important
-        }
-      }
-
-      /* ipad and small laptops */
-      @media only screen and (min-width: 768px) {
-       
-      }
-
-
-       /* larger desktops and monitors */
-       @media only screen and (min-width: 1000px) {
- 
-      }
-
-      /* larger desktops and monitors */
-      @media only screen and (min-width: 1000px) and (min-height:1300px) {
-     
-      }
-
-      @media only screen and (min-width: 1200px) {
-  
-      }
-
-  
+    
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
         height: 100px;
@@ -317,7 +299,8 @@
         font-size: 30px;
         color: blue;
       }
-          
+      
+    
 
       
      

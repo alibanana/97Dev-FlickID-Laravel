@@ -470,7 +470,7 @@
               </li>
               @if (Request::path() != 'contact-us')
               <li class="nav-item" style="">
-                <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;border:3px solid #3F92D8;padding:10px 3vw;border-radius:15px;">Contact us!</a>
+              <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 60px;border-radius:1vw">Contact us!</a>
               </li>
               @endif
             </ul>
