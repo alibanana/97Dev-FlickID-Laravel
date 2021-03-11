@@ -1,7 +1,7 @@
 @if($flag == 1)
-<div class="col-md-7 p-0 wow fadeInLeft" >
+<div class="col-sm-7 p-0 wow fadeInLeft" >
 @else
-<div class="col-md-7 p-0 marginTopPortofolio wow fadeInLeft" style="margin-top:-23vw" >
+<div class="col-sm-7 p-0 marginTopPortofolio wow fadeInLeft" style="margin-top:-23vw" >
 @endif
     <div class="containerImage hexagon">
         <div style="text-align:left">   
@@ -47,7 +47,7 @@
 </div>
 
 @if($flag == 1)
-<div class="col-md-5 p-0 DesktopView">
+<div class="col-sm-5 p-0 DesktopView what-we-have-build">
     <div class="containerImage">
         <div style="">   
             <img src="/assets/client/images/Hex_-_What_weve_build.svg" class="img-fluid" alt="Snow" style="width:65%;margin-top:-40px;margin-left:-20vw">
@@ -72,12 +72,12 @@
     </div>
 </div>
 @elseif($flag ==2)
-<div class="col-md-5 p-0 DesktopView" style="margin-left:-40px;margin-top:7vw;z-index:99">
+<div class="col-sm-5 p-0 DesktopView" style="margin-left:-40px;margin-top:7vw;z-index:99">
     <p style="font-size:5vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
     <div>
         <a href="{{ url()->route('portfolio.index') }}" style="font-size:1.8vw;font-family:HKGroteskBold;text-decoration:none;color:#3F92D8">See more work <i style="font-size:1.8vw;margin-left:5px" class="fas fa-long-arrow-alt-right"></i></a>
     </div>
 </div>
 @else
-<div class="col-md-5 p-0"></div>
+<div class="col-sm-5 p-0"></div>
 @endif

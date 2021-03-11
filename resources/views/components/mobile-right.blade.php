@@ -1,5 +1,5 @@
 @if($flag ==2)
-<div class="col-md-5 p-0 DesktopView " style="margin-top:7vw;z-index:99">
+<div class="col-sm-5 p-0 DesktopView " style="margin-top:7vw;z-index:99">
     <div style="padding-left:15%">
         @if (Request::path() == '/')
         <p style="font-size:4vw;font-family:HKGroteskBlack;line-height:1.2"> <b>Explore more on <br> our fine works</b></p>
@@ -13,10 +13,10 @@
     </div>
 </div>
 @else
-<div class="col-md-5 p-0  DesktopView "></div>
+<div class="col-sm-5 p-0  DesktopView "></div>
 @endif
 
-<div class="col-md-7 p-0 marginTopPortofolio wow fadeInRight" style="margin-top:-22vw">
+<div class="col-sm-7 p-0 marginTopPortofolio wow fadeInRight" style="margin-top:-22vw">
     <div class="containerImage hexagon">
         <div style="text-align:right"> 
             @if($featuredProject)

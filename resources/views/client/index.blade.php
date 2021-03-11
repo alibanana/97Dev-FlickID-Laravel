@@ -252,6 +252,27 @@
         }
 
       }
+      /* Portrait Ipad */
+      @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+
+        .page-container{
+          padding-left:8.5% !important;
+          padding-right:8.5% !important;
+        }
+        #buttonContactUs{
+          width:20vw !important;
+          border:2px solid #3F92D8;
+          text-align:center;
+          padding:1vw 1vw !important;
+          margin-top:1vw
+        }
+        #illustration{
+          width:13vw !important
+        }
+        .what-we-have-build{
+          padding-right:8.5% !important
+        }
+      }
 
       /* ipad and small laptops */
       @media only screen and (min-width: 768px) {
@@ -308,7 +329,7 @@
     <div class="row m-0" style="padding-top:1.9vw">
       <div class="col-md-12 p-0">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
+          <div class="container-fluid page-container">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <p></p>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -420,7 +441,7 @@
         <p style="font-size:5vw;font-family:HKGroteskBlack" > <b>What we provide</b></p>
       </div>
       @foreach ($project_types as $project_type)
-        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s"style="padding-top:4vw">
+        <div class="col-4 wow fadeInUp" data-wow-delay="0.5s"style="padding-top:4vw">
           <div >
             <img src="{{ asset($project_type->ilustration_file) }}" style="width:8vw" alt="">
             <p style="font-size:2.3vw;font-family:HKGroteskBlack;margin-top:15px">{{ $project_type->type }}</p>

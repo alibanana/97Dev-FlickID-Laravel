@@ -203,6 +203,31 @@
         background-size: 80%;
       }
 
+        /* Portrait Ipad */
+        @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+
+          .page-container{
+            padding-left:8.5% !important;
+            padding-right:8.5% !important;
+          }
+          .navbar{
+            padding:20px 0vw !important
+          }
+          #buttonContactUs{
+            width:20vw !important;
+            border:2px solid #3F92D8;
+            text-align:center;
+            padding:1vw 1vw !important;
+            margin-top:1vw
+          }
+          #illustration{
+            width:13vw !important
+          }
+          .what-we-have-build{
+            padding-right:8.5% !important
+          }
+        }
+
       @media only screen and (device-width: 768px) {
         #navbar_text{
           font-size: 3vw !important;
@@ -418,7 +443,7 @@
     <!-- START OF NAVBAR -->
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 4vw">
-      <div class="container-fluid" > 
+      <div class="container-fluid page-container" > 
         <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
         <p></p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
