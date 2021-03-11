@@ -3,7 +3,7 @@
 @else
 <div class="col-md-7 p-0 marginTopPortofolio wow fadeInLeft" style="margin-top:-23vw" >
 @endif
-    <div class="containerImage">
+    <div class="containerImage hexagon">
         <div style="text-align:left">   
             @if($featuredProject)
             <img src="/assets/client/images/hex-left-new.svg" class="img-fluid" alt="Snow" style="width:93%; filter: invert({{ $featuredProject->project->filter_invert }}%) sepia({{ $featuredProject->project->filter_sepia }}%) saturate({{ $featuredProject->project->filter_saturate }}%) hue-rotate({{ $featuredProject->project->filter_hue_rotate }}deg) brightness({{ $featuredProject->project->filter_brightness }}%) contrast({{ $featuredProject->project->filter_contrast }}%);">
@@ -16,9 +16,9 @@
         <div class="top-left">
             <div style="text-align:left !important;padding-left:10%;padding-top:7%" class="portofolioTextAndImage">
                 @if($featuredProject)
-                    <img id="illustrationDesktop" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="max-width:28vw;height:auto" alt="">
+                    <img id="illustrationDesktop" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="width:28vw;height:auto" alt="">
                 @else
-                    <img id="illustrationDesktop" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="max-width:28vw;height:auto" alt="">
+                    <img id="illustrationDesktop" src="{{ asset($relatedProject->featured_ilustration_file) }}" class="img-fluid" style="width:28vw;height:auto" alt="">
                 @endif
                 <div style="margin-top:40px" id="desktopMarginTop">
                     @if($featuredProject)

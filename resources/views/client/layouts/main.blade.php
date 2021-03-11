@@ -267,20 +267,20 @@
           padding-left: 4% !important;
         }
         .portofolioTextAndImage #illustration{
-          width: 28vw !important;
+          width: 24vw !important;
         }
         .portofolioTextAndImage #illustrationDesktop{
           width: 50vw !important;
         }
         
         .portofolioTextAndImage #logo{
-          width: 20vw !important;
+          width: 25vw !important;
         }
         .portofolioTextAndImage p{
-          font-size: 3vw !important;
+          font-size: 3.5vw !important;
         }
         .portofolioTextAndImage a{
-          font-size: 3vw !important;
+          font-size: 4vw !important;
         }
         #portofolioTextPadding{
           padding-top: 0px !important;
@@ -370,6 +370,9 @@
         }
         .memberCard img{
           width: 30vw !important;
+        }
+        .hexagon img{
+          width:100% !important 
         }
         
       }

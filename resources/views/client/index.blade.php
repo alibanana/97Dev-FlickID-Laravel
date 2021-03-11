@@ -216,22 +216,24 @@
         }
         .portofolioTextAndImage{
           padding-left: 4% !important;
+          padding-top:15% !important
+
         }
         .portofolioTextAndImage #illustration{
-          width: 28vw !important;
+          width: 25vw !important;
         }
         .portofolioTextAndImage #illustrationDesktop{
-          width: 50vw !important;
+          width: 40vw !important;
         }
         
         .portofolioTextAndImage #logo{
-          width: 20vw !important;
+          width: 25vw !important;
         }
         .portofolioTextAndImage p{
-          font-size: 3vw !important;
+          font-size: 3.5vw !important;
         }
         .portofolioTextAndImage a{
-          font-size: 3vw !important;
+          font-size: 4vw !important;
         }
         #portofolioTextPadding{
           padding-top: 0px !important;
@@ -240,10 +242,13 @@
           margin-top: 1vw !important;
         }
         #portofolioTextWidth{
-          width: 40vw !important;
+          width: 80% !important;
         }
         .portofolioTextAndImageInner{
           margin-left: 15px !important;
+        }
+        .hexagon img{
+          width:100% !important 
         }
 
       }
