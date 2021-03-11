@@ -32,54 +32,54 @@
     <style>
 
 
-.drop-zone {
-  max-width: 100%;
-  height: 14vw;
-  padding: 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  cursor: pointer;
-  color: #cccccc;
-  border: 4px dashed #707070;
-  background-color: #EFEFEF;
-  border-radius: 10px;
-}
+  .drop-zone {
+    max-width: 100%;
+    height: 14vw;
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed #707070;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+  }
 
-.drop-zone--over {
-  border-style: solid;
-}
+  .drop-zone--over {
+    border-style: solid;
+  }
 
-.drop-zone__input {
-  display: none;
-}
+  .drop-zone__input {
+    display: none;
+  }
 
-.drop-zone__thumb {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #707070;
-  background-size: cover;
-  position: relative;
-}
+  .drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #707070;
+    background-size: cover;
+    position: relative;
+  }
 
-.drop-zone__thumb::after {
-  content: attr(data-label);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 5px 0;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.75);
-  font-size: 14px;
-  text-align: center;
-}
+  .drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
 
     .navbarText {
       margin-left:100px
@@ -220,7 +220,7 @@
         }
       }
       @media only screen and (max-width: 600px) {
-
+        
         #navbar_text{
           font-size: 5vw !important;
         }
@@ -267,20 +267,24 @@
           padding-left: 4% !important;
         }
         .portofolioTextAndImage #illustration{
-          width: 28vw !important;
+          width: 20vw !important;
         }
         .portofolioTextAndImage #illustrationDesktop{
-          width: 50vw !important;
+          width: 40vw !important;
+        }
+
+        .hexagon img{
+          width:100% !important 
         }
         
         .portofolioTextAndImage #logo{
           width: 20vw !important;
         }
         .portofolioTextAndImage p{
-          font-size: 3vw !important;
+          font-size: 3.5vw !important;
         }
         .portofolioTextAndImage a{
-          font-size: 3vw !important;
+          font-size: 4vw !important;
         }
         #portofolioTextPadding{
           padding-top: 0px !important;
@@ -289,8 +293,9 @@
           margin-top: 1vw !important;
         }
         #portofolioTextWidth{
-          width: 40vw !important;
+          width: 50vw !important;
         }
+        
         .portofolioTextAndImageInner{
           margin-left: 15px !important;
         }
@@ -378,7 +383,7 @@
   </head>
   <body>
     <!-- NAVBAR DESKTOP -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 0px">
       <div class="container-fluid" style="padding-left:60px"> 
           <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
 
@@ -410,48 +415,8 @@
           </div>
         </div>
       </div>
-    </nav> -->
-    <!-- END OF NAVBAR DESKTOP -->
-    <!-- START OF NAVBAR -->
-
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 4vw">
-      <div class="container-fluid" > 
-        <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
-        <p></p>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-          </ul>
-          <div class="" style="">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar_text" style="font-size:1.3vw;font-family:HKGroteskBold">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/portofolio" style="margin-right:5vw;color:black;padding-top:10px">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link DesktopView" href="/#whatWeProvide" style="margin-right:5vw;color:black;padding-top:10px">Services</a>
-                <a class="nav-link MobileView" href="/#whatWeProvideMobile" style="margin-right:5vw;color:black;padding-top:10px;display:none">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about-us" style="margin-right:5vw;color:black;padding-top:10px">The Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/join-us" style="margin-right:5vw;color:black;padding-top:10px">Career</a>
-              </li>
-              @if (Request::path() != 'contact-us')
-              <li class="nav-item" style="">
-                <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;border:3px solid #3F92D8;padding:10px 3vw;border-radius:15px;">Contact us!</a>
-              </li>
-              @endif
-            </ul>
-          </div>
-        </div>
-      </div>
     </nav>
-
-    <!-- END OF NAVBAR -->
+    <!-- END OF NAVBAR DESKTOP -->
 
         
     @yield('container')

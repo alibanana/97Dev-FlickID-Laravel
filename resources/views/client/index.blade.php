@@ -15,7 +15,7 @@
     <link href="/fontawesome/css/all.css" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
-    <link rel="icon" href="http://example.com/favicon.png">
+   <!-- <link rel="icon" href="http://example.com/favicon.png"> -->
 
     <!-- webicon -->
     <link rel="shortcut icon" type="image/jpg" href="/assets/client/images/flick-logo-blue.svg"/>
@@ -107,9 +107,29 @@
       .flick-partners  img{
         margin-top:5vw;
       }
+      /* Portrait Ipad */
+      @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+
+        .page-container{
+          padding-left:8.5% !important;
+          padding-right:8.5% !important;
+        }
+        #buttonContactUs{
+          width:20vw !important;
+          border:2px solid #3F92D8;
+          text-align:center;
+          padding:1vw 1vw !important;
+          margin-top:1vw
+        }
+        #illustration{
+          width:13vw !important
+        }
+        .what-we-have-build{
+          padding-right:8.5% !important
+        }
+      }
        /* i pad */
       @media only screen and (device-width: 768px) {
-        
         #navbar_text{
           font-size: 3vw !important;
           padding-left: 6%;
@@ -216,22 +236,23 @@
         }
         .portofolioTextAndImage{
           padding-left: 4% !important;
+          padding-top:10% !important
         }
         .portofolioTextAndImage #illustration{
-          width: 28vw !important;
+          width: 20vw !important;
         }
         .portofolioTextAndImage #illustrationDesktop{
-          width: 50vw !important;
+          width: 40vw !important;
         }
         
         .portofolioTextAndImage #logo{
-          width: 20vw !important;
+          width: 25vw !important;
         }
         .portofolioTextAndImage p{
-          font-size: 3vw !important;
+          font-size: 4vw !important;
         }
         .portofolioTextAndImage a{
-          font-size: 3vw !important;
+          font-size: 4.5vw !important;
         }
         #portofolioTextPadding{
           padding-top: 0px !important;
@@ -240,10 +261,13 @@
           margin-top: 1vw !important;
         }
         #portofolioTextWidth{
-          width: 40vw !important;
+          width: 80% !important;
         }
         .portofolioTextAndImageInner{
           margin-left: 15px !important;
+        }
+        .hexagon img{
+          width:100% !important 
         }
 
       }
@@ -303,7 +327,7 @@
     <div class="row m-0" style="padding-top:1.9vw">
       <div class="col-md-12 p-0">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
+          <div class="container-fluid page-container">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <p></p>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
