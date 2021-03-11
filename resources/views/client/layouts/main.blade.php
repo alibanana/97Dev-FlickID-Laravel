@@ -215,7 +215,7 @@
           }
           #buttonContactUs{
             width:20vw !important;
-            border:2px solid #3F92D8;
+            border:2px solid #3F92D8 !important;
             text-align:center;
             padding:1vw 1vw !important;
             margin-top:1vw
@@ -244,6 +244,7 @@
           width: 30% !important;
         }
       }
+
       @media only screen and (max-width: 600px) {
 
         #navbar_text{
@@ -442,7 +443,7 @@
     <!-- END OF NAVBAR DESKTOP -->
     <!-- START OF NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:20px 4vw">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mynav" style="padding:2vw 4vw">
       <div class="container-fluid page-container" > 
         <img src="/assets/client/images/Flick Software Logo Blue.png" class="img-fluid" style="width:15%;margin-right:18%;cursor:pointer"  alt="" onclick="window.open('/','_self');">
         <p></p>
@@ -470,7 +471,7 @@
               </li>
               @if (Request::path() != 'contact-us')
               <li class="nav-item" style="">
-              <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 60px;border-radius:1vw">Contact us!</a>
+              <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:0.5vw 3vw;border-radius:1vw;border: 3px solid  #3F92D8;">Contact us!</a>
               </li>
               @endif
             </ul>

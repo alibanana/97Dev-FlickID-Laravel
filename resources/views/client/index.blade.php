@@ -29,10 +29,9 @@
           padding-left:8.5% !important;
           padding-right:8.5% !important;
         }
-
         #buttonContactUs{
           width:20vw !important;
-          border:2px solid #3F92D8;
+          border:2px solid #3F92D8 !important;
           text-align:center;
           padding:1vw 1vw !important;
           margin-top:1vw
@@ -148,6 +147,7 @@
           margin-right: 5% !important;
           width: 30% !important;
         }
+       
       }
 
       /* mobile */
@@ -300,8 +300,7 @@
         color: blue;
       }
       
-    
-
+   
       
      
 
@@ -309,7 +308,7 @@
   </head>
   <body >
     <!-- START OF NAVBAR -->
-    <div class="row m-0" style="padding-top:1.9vw">
+    <div class="row m-0" style="padding:2vw 4vw">
       <div class="col-md-12 p-0">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid page-container">
@@ -338,7 +337,7 @@
                     <a class="nav-link" href="/join-us" style="margin-right:65px;color:black">Career</a>
                   </li>
                   <li class="nav-item" style="">
-                    <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:10px 60px;border-radius:1vw">Contact us!</a>
+                    <a class="nav-link" id="buttonContactUs" href="/contact-us" style="color:#3F92D8;background-color:#ffff;margin-right:16px;padding:0.5vw 3vw;border-radius:1vw">Contact us!</a>
                   </li>
                 </ul>
               </div>
@@ -722,8 +721,8 @@
         <div class="col-md-6 p-0" > 
           <div style="display:flex;align-items: center;align-content: flex-start;">
             <div style="display:flex;align-items: center">
-              <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:16%" alt="">
-              <h2 id="footer_h2" style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:35px"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
+              <img src="/assets/client/images/flick-logo-blue.svg" class="img-fluid" style="width:4vw" alt="">
+              <h2 id="footer_h2" style="font-family:HKGroteskRegular;color:#3F92D8;margin-left:15px;font-size:2.5vw"><span style="font-family:HKGroteskBlack"> <b>Flick</b></span>Software</h2>
             </div>
           </div>
         </div>
@@ -736,7 +735,7 @@
           </div>
         </div>
         <div class="col-12" style="text-align:right">
-          <p id="footer_a" style="font-size:20px;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;margin-top:13px;padding-right:16px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
+          <p id="footer_a" style="font-size:1.5vw;font-family:HKGroteskRegular;color:#142850;margin-bottom:0px !important;margin-top:13px;padding-right:16px">&copy;2021 PT. Kreigan Sentral Teknologi</p>
         </div>
     </div>
     <!-- end of footer -->
