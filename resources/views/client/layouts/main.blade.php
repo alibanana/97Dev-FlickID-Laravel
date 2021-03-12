@@ -292,6 +292,9 @@
         .portofolioTextAndImage{
           padding-left: 4% !important;
         }
+        .portofolioTextAndImageRight{
+          padding-left: 0px !important;
+        }
         .portofolioTextAndImage #illustration{
           width: 24vw !important;
         }

@@ -27,7 +27,7 @@
         </div>
         <div class="top-right">
             <div style="text-align:left !important;">
-                <div style="display:flex;align-items: flex-start;padding-top:18%" class="portofolioTextAndImage">
+                <div style="display:flex;align-items: flex-start;padding-top:18%" class="portofolioTextAndImageRight">
                     @if($featuredProject)
                         <img id="illustration" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="width:16vw;height:auto" alt="">
                     @else
@@ -39,7 +39,7 @@
                     @else
                         <img  id="logo" src="{{ asset($relatedProject->logo_file) }}" class="img-fluid" style="width:11vw "  alt="">
                     @endif
-                    <div style="width:22vw;padding-right:3.1vw" id="portofolioTextWidth">
+                    <div style="width:22vw;padding-right:3.1vw" id="portofolioTextWidthRight">
                     @if($featuredProject)
                         <p style="font-family:HKGroteskRegular;font-size:1.5vw;margin-top:22px;color:black">{{ $featuredProject->project->description }} <span style="font-family:HKGroteskBold">{{ $featuredProject->project->sub_description }}</span></p>
                     @else

@@ -243,6 +243,10 @@
           padding-top:15% !important
 
         }
+        .portofolioTextAndImageRight{
+          padding-left: 25% !important;
+          padding-top:15% !important
+        }
         .portofolioTextAndImage #illustration{
           width: 25vw !important;
         }
@@ -267,6 +271,9 @@
         }
         #portofolioTextWidth{
           width: 80% !important;
+        }
+        #portofolioTextWidthRight{
+          width:100%  !important
         }
         .portofolioTextAndImageInner{
           margin-left: 15px !important;
