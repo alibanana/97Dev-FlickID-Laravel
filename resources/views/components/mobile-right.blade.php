@@ -26,8 +26,8 @@
             @endif
         </div>
         <div class="top-right">
-            <div style="text-align:left !important;padding-top:18%">
-                <div style="display:flex;align-items: flex-start" class="portofolioTextAndImage">
+            <div style="text-align:left !important;">
+                <div style="display:flex;align-items: flex-start;padding-top:18%" class="portofolioTextAndImage">
                     @if($featuredProject)
                         <img id="illustration" src="{{ asset($featuredProject->project->featured_ilustration_file) }}" class="img-fluid" style="width:16vw;height:auto" alt="">
                     @else
