@@ -243,7 +243,7 @@
           padding-top:15% !important
 
         }
-        .portofolioTextAndImageRight{
+        .portofolioMobileRight{
           padding-left: 25% !important;
           padding-top:15% !important
         }
