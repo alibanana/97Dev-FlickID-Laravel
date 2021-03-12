@@ -293,7 +293,7 @@
           padding-left: 4% !important;
         }
         .portofolioMobileRight{
-          padding-left: 0px !important;
+          padding-left: 0% !important;
         }
         .portofolioTextAndImage #illustration{
           width: 24vw !important;
@@ -319,6 +319,9 @@
         }
         #portofolioTextWidth{
           width: 40vw !important;
+        }
+        #portofolioTextWidthRight{
+          width:45vw  !important
         }
         .portofolioTextAndImageInner{
           margin-left: 15px !important;

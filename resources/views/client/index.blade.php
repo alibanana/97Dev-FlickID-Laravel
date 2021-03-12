@@ -152,7 +152,10 @@
 
       /* mobile */
       @media only screen and (max-width: 600px) {
-        
+        .page-container{
+          padding-left:5.5% !important;
+          padding-right:5.5% !important;
+        }
         #our-partners{
           font-size:10vw !important;
           margin-top:10vw
