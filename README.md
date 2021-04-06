@@ -4,12 +4,12 @@
 
 FlickID is a Web Company Profile built on top of the Laravel PHP framework.
 
-Check [laravel's documentation](https://laravel.com/docs) and [laracast](https://laracasts.com) for more info regarding the framework itself.
+Check [Laravel's Documentation](https://laravel.com/docs) and [Laracast](https://laracasts.com) for more info regarding the framework itself.
 
-## Contribution
+## Contributors
 
-Some of the authors of this projects include:
-- [alibanana](https://github.com/alibanana) - Lead Back-End Developer
-- [fernndzaky](https://github.com/fernndzaky) - Lead Front-End Developer
-- [nugiedragon1](https://github.com/nugiedragon1) - Front-End Developer
-- [winsonwardana](https://github.com/winsonwardana) - Front-End Developer
+Some of the contributors of this projects include:
+- [alibanana](https://github.com/alibanana) - Lead Backend Developer
+- [fernndzaky](https://github.com/fernndzaky) - Lead Frontend Developer
+- [nugiedragon1](https://github.com/nugiedragon1) - Frontend Developer
+- [winsonwardana](https://github.com/winsonwardana) - Frontend Developer
