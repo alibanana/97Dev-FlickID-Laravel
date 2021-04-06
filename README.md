@@ -9,7 +9,7 @@ Check [laravel's documentation](https://laravel.com/docs) and [laracast](https:/
 ## Contribution
 
 Some of the authors of this projects include:
-- [alibanana](https://github.com/alibanana)
-- [fernndzaky](https://github.com/fernndzaky)
-- [nugiedragon1](https://github.com/nugiedragon1)
-- [winsonwardana](https://github.com/winsonwardana)
+- [alibanana](https://github.com/alibanana) - Lead Back-End Developer
+- [fernndzaky](https://github.com/fernndzaky) - Lead Front-End Developer
+- [nugiedragon1](https://github.com/nugiedragon1) - Front-End Developer
+- [winsonwardana](https://github.com/winsonwardana) - Front-End Developer
