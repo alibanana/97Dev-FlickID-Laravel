@@ -51,14 +51,21 @@ use Illuminate\Support\Facades\Route;
 |   Method: GET /password/reset/{token}
 |   Action: App\Http\Controllers\Auth\ResetPasswordController@showResetForm
 |   Req-Param: email (optional)
-| [5] RESET PASSWORD
+| [6] RESET PASSWORD
 |   Description: Resets the user's (from the given email) password.
 |   Name: password.update
 |   Method: POST /password/reset/{token}
 |   Action: App\Http\Controllers\Auth\ResetPasswordController@reset
 |   Req-Body: token, email, password, password_confirmation
 */
-Auth::routes();
+Auth::routes([
+    'login'    => true, 
+    'logout'   => true, 
+    'register' => false, 
+    'reset'    => true,   // for resetting passwords
+    'confirm'  => false,   // for additional password confirmations
+    'verify'   => false,  // for email verification
+]);
 
 
 // Redirects
