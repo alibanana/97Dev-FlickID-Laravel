@@ -68,7 +68,7 @@ Auth::routes([
 ]);
 
 
-// Redirects
+// Redirects User -> redirect('from_url', 'to_url')
 Route::redirect('/admin-login', '/login');
 Route::redirect('/home', '/');
 Route::redirect('/portofolio', '/portfolio');
@@ -76,6 +76,7 @@ Route::redirect('/portfolios', '/portfolio');
 Route::redirect('/careers', '/career');
 Route::redirect('/admin/clients', '/admin/client');
 Route::redirect('/admin/services', '/admin/service');
+
 
 // Client Pages Routings (FIXED)
 Route::get('/', 'Client\PagesController@index')->name('index');
@@ -86,6 +87,7 @@ Route::post('/contact-us', 'Client\ClientController@store')->name('client.store'
 Route::get('/join-us', 'Client\ApplicantController@create')->name('applicant.create');
 Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.store');
 Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
+
 
 // Admin Pages Routings (FIXED)
 Route::prefix('/admin')->name('admin.')->group(function () {
@@ -125,7 +127,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     Route::put('applicant/{id}', 'Admin\ApplicantController@update')->name('applicant.update');
 });
 
-// 
+// Additional route to test email template.
 // Route::get('/email', function () {
 //     return view('emails/email');
 // });
