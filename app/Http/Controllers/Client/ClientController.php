@@ -10,6 +10,16 @@ use Illuminate\Support\Facades\Mail;
 use App\Client;
 use App\Mail\PostClientAdminMail;
 
+/*
+|--------------------------------------------------------------------------
+| Client ClientController Class.
+|
+| Description:
+| This controller is responsible to show the "Contact Us" page as well as
+| storing new clients information & sending the information to the admin's
+| email address.
+|--------------------------------------------------------------------------
+*/ 
 class ClientController extends Controller
 {
     // Show Contact Us Page.
