@@ -14,6 +14,16 @@ use App\Applicant;
 use App\ApplicantAnswer;
 use App\Mail\PostApplicantAdminMail;
 
+/*
+|--------------------------------------------------------------------------
+| Client ApplicantController Class.
+|
+| Description:
+| This controller is responsible to show the "Career" page as well as storing
+| new applicants information, storing their CV, & sending the information to
+| the admin's email address. 
+|--------------------------------------------------------------------------
+*/ 
 class ApplicantController extends Controller
 {
     // Show Career Page.
@@ -25,6 +35,7 @@ class ApplicantController extends Controller
         return view('client/joinUs', compact('questions', 'offerable_positions'));
     }
 
+    // Store new Applicant & email info to admin.
     public function store(Request $request)
     {
         $input = $request->all();
