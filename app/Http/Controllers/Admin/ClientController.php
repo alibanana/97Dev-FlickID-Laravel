@@ -10,11 +10,6 @@ use App\Client;
 
 class ClientController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    
     public function index(Request $request)
     {
         $clients = new Client;
