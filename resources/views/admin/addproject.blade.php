@@ -90,7 +90,7 @@
           <a style="margin-bottom: 2vw !important;" target="_blank" href="https://codepen.io/sosuke/pen/Pjoqqp">https://codepen.io/sosuke/pen/Pjoqqp</a>
           <div class="mb-3 col-6">
             <label for="Insert_invert" class="form-label">Invert</label>
-            <input name="filter_invert" value="{{ old('filter_invert') }}" type="text" class="form-control border" id="Insert_invert" aria-describedby="Insert_invert" style="width:70%;">
+            <input placeholder="10" name="filter_invert" value="{{ old('filter_invert') }}" type="text" class="form-control border" id="Insert_invert" aria-describedby="Insert_invert" style="width:70%;">
             @error('filter_invert')
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
@@ -99,7 +99,7 @@
           </div>
           <div class="mb-3 col-6">
             <label for="Insert_Sepia" class="form-label">Sepia</label>
-            <input name="filter_sepia" value="{{ old('filter_sepia') }}" type="text" class="form-control border " id="Insert_Sepia" aria-describedby="Insert_invert" style="width:70%;">
+            <input placeholder="20" name="filter_sepia" value="{{ old('filter_sepia') }}" type="text" class="form-control border " id="Insert_Sepia" aria-describedby="Insert_invert" style="width:70%;">
             @error('filter_sepia')
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
@@ -108,7 +108,7 @@
           </div>
           <div class="mb-3 col-6">
             <label for="Insert_Saturate" class="form-label">Saturate</label>
-            <input name="filter_saturate" value="{{ old('filter_saturate') }}" type="text" class="form-control border " id="Insert_Saturate" aria-describedby="Insert_invert" style="width:70%;">
+            <input placeholder="825" name="filter_saturate" value="{{ old('filter_saturate') }}" type="text" class="form-control border " id="Insert_Saturate" aria-describedby="Insert_invert" style="width:70%;">
             @error('filter_saturate')
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
@@ -117,7 +117,7 @@
           </div>
           <div class="mb-3 col-6">
             <label for="Insert_Hue_Rotate" class="form-label">Hue_Rotate</label>
-            <input name="filter_hue_rotate" value="{{ old('filter_hue_rotate') }}" type="text" class="form-control border " id="Insert_Hue_Rotate" aria-describedby="Insert_invert" style="width:70%;">
+            <input placeholder="160" name="filter_hue_rotate" value="{{ old('filter_hue_rotate') }}" type="text" class="form-control border " id="Insert_Hue_Rotate" aria-describedby="Insert_invert" style="width:70%;">
             @error('filter_hue_rotate')
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
@@ -126,7 +126,7 @@
           </div>
           <div class="mb-3 col-6">
             <label for="Insert_Brightness" class="form-label">Brightness</label>
-            <input name="filter_brightness" value="{{ old('filter_brightness') }}" type="text" class="form-control border " id="Insert_Brightness" aria-describedby="Insert_invert" style="width:70%;">
+            <input placeholder="101" name="filter_brightness" value="{{ old('filter_brightness') }}" type="text" class="form-control border " id="Insert_Brightness" aria-describedby="Insert_invert" style="width:70%;">
             @error('filter_brightness')
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>
@@ -135,7 +135,7 @@
           </div>
           <div class="mb-3 col-6">
             <label for="Insert_Contrast" class="form-label">Contrast</label>
-            <input name="filter_contrast" value="{{ old('filter_contrast') }}" type="text" class="form-control border " id="Insert_Contrast" aria-describedby="Insert_invert" style="width:70%;">
+            <input placeholder="102" name="filter_contrast" value="{{ old('filter_contrast') }}" type="text" class="form-control border " id="Insert_Contrast" aria-describedby="Insert_invert" style="width:70%;">
             @error('filter_contrast')
             <span class="invalid-feedback" role="alert" style="display: block !important;">
                 <strong>{{ $message }}</strong>

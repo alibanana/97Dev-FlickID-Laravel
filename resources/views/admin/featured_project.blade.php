@@ -60,7 +60,7 @@
             <form action="{{ route('admin.featuredProject.destroy', $featured_project->id) }}" method="post" style="display: inline-block">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger" type="submit">Delete</button>
+                <button class="btn btn-danger" type="submit" onclick='return confirm("Are you sure you want to un feature this project?")'>Unfeature</button>
               </form>         
             </td>
         </div>
