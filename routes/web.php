@@ -13,10 +13,56 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+/*
+|--------------------------------------------------------------------------
+| Default Authentication Routes Used (not all functions are used).
+|
+| All the default auth routes can be found here: vendor\laravel\ui\src\AuthRouteMethods.php
+|
+| Configuration File: config\auth.php
+|--------------------------------------------------------------------------
+| [1] SHOW LOGIN FORM
+|   Description: Shows the login page.
+|   Name: login 
+|   Method: GET /login
+|   Action: App\Http\Controllers\Auth\LoginController@showLoginForm
+| [2] LOGIN
+|   Description: Logged the user (admin) in.
+|   Name: -
+|   Method: POST /login
+|   Action: App\Http\Controllers\Auth\LoginController@login
+|   Req-Body: email, password
+| [3] LOGOUT
+|   Description: Logged the user (admin) out.
+|   Name: logout
+|   Method: POST /logout
+|   Action: App\Http\Controllers\Auth\LoginController@logout
+|   Req-Body: -
+| [4] SEND RESET LINK TO EMAIL
+|   Description: Sends an password reset link to the given email.
+|   Name: password.email
+|   Method: POST /password/email
+|   Action: App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail
+|   Req-Body: email
+| [5] SHOW PASSWORD RESET FORM
+|   Description: Shows the password reset form. Link will be given through email notifications.
+|   Name: password.reset
+|   Method: GET /password/reset/{token}
+|   Action: App\Http\Controllers\Auth\ResetPasswordController@showResetForm
+|   Req-Param: email (optional)
+| [5] RESET PASSWORD
+|   Description: Resets the user's (from the given email) password.
+|   Name: password.update
+|   Method: POST /password/reset/{token}
+|   Action: App\Http\Controllers\Auth\ResetPasswordController@reset
+|   Req-Body: token, email, password, password_confirmation
+*/
 Auth::routes();
-Route::redirect('/admin-login', '/login');
+
 
 // Redirects
+Route::redirect('/admin-login', '/login');
 Route::redirect('/home', '/');
 Route::redirect('/portofolio', '/portfolio');
 Route::redirect('/portfolios', '/portfolio');
@@ -35,42 +81,44 @@ Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.sto
 Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
 // Admin Pages Routings (FIXED)
-Route::put('/admin/password/update', 'Admin\UserController@passwordUpdate')->name('admin.user.passwordUpdate');
-Route::get('/admin', 'Admin\DashboardController@index')->name('admin.index');
-Route::get('/admin/service', 'Admin\ServiceController@index')->name('admin.service.index');
-Route::post('/admin/service', 'Admin\ServiceController@store')->name('admin.service.store');
-Route::put('/admin/service/{id}', 'Admin\ServiceController@update')->name('admin.service.update');
-Route::delete('/admin/service/{id}', 'Admin\ServiceController@destroy')->name('admin.service.destroy');
-Route::get('/admin/project', 'Admin\ProjectController@index')->name('admin.project.index');
-Route::get('/admin/project/create', 'Admin\ProjectController@create')->name('admin.project.create');
-Route::post('/admin/project', 'Admin\ProjectController@store')->name('admin.project.store');
-Route::get('/admin/project/{id}/edit', 'Admin\ProjectController@edit')->name('admin.project.edit');
-Route::put('/admin/project/{id}', 'Admin\ProjectController@update')->name('admin.project.update');
-Route::delete('/admin/project/{id}', 'Admin\ProjectController@destroy')->name('admin.project.destroy');
-Route::delete('/admin/project-detail/{id}', 'Admin\ProjectController@destroyProjectDetail')->name('admin.projectDetail.destroy');
-Route::get('/admin/featured-project', 'Admin\FeaturedProjectController@index')->name('admin.featuredProject.index');
-Route::post('/admin/featured-project', 'Admin\FeaturedProjectController@store')->name('admin.featuredProject.store');
-Route::put('/admin/featured-project/{id}', 'Admin\FeaturedProjectController@update')->name('admin.featuredProject.update');
-Route::delete('/admin/featured-project/{id}', 'Admin\FeaturedProjectController@destroy')->name('admin.featuredProject.destroy');
-Route::get('/admin/client', 'Admin\ClientController@index')->name('admin.client.index');
-Route::put('/admin/client/{id}', 'Admin\ClientController@update')->name('admin.client.update');
-Route::get('/admin/team', 'Admin\TeamController@index')->name('admin.team.index');
-Route::post('/admin/team', 'Admin\TeamController@storeTeamMember')->name('admin.team.store');
-Route::put('/admin/team/{id}', 'Admin\TeamController@updateTeamMember')->name('admin.team.update');
-Route::delete('/admin/team/{id}', 'Admin\TeamController@destroyTeamMember')->name('admin.team.destroy');
-Route::post('/admin/job', 'Admin\TeamController@storeJob')->name('admin.job.store');
-Route::put('/admin/job/{id}', 'Admin\TeamController@updateJob')->name('admin.job.update');
-Route::put('/admin/job/{id}/change-offerable', 'Admin\TeamController@changeOfferable')->name('admin.job.changeOfferable');
-Route::delete('/admin/job/{id}', 'Admin\TeamController@destroyJob')->name('admin.job.destroy');
-Route::get('/admin/question', 'Admin\QuestionController@index')->name('admin.question.index');
-Route::post('/admin/question-mcq', 'Admin\QuestionController@storeMCQ')->name('admin.question.storeMCQ');
-Route::post('/admin/question-slider', 'Admin\QuestionController@storeSlider')->name('admin.question.storeSlider');
-Route::post('/admin/question-open-ended', 'Admin\QuestionController@storeOpenEnded')->name('admin.question.storeOpenEnded');
-Route::delete('/admin/question/{id}', 'Admin\QuestionController@destroy')->name('admin.question.destroy');
-Route::get('/admin/applicant', 'Admin\ApplicantController@index')->name('admin.applicant.index');
-Route::put('/admin/applicant/{id}', 'Admin\ApplicantController@update')->name('admin.applicant.update');
-
-// Admin Pages Routings
-Route::get('/email', function () {
-    return view('emails/email');
+Route::prefix('/admin')->name('admin.')->group(function () {
+    Route::put('password/update', 'Admin\UserController@passwordUpdate')->name('user.passwordUpdate');
+    Route::get('/', 'Admin\DashboardController@index')->name('index');
+    Route::get('service', 'Admin\ServiceController@index')->name('service.index');
+    Route::post('service', 'Admin\ServiceController@store')->name('service.store');
+    Route::put('service/{id}', 'Admin\ServiceController@update')->name('service.update');
+    Route::delete('service/{id}', 'Admin\ServiceController@destroy')->name('service.destroy');
+    Route::get('project', 'Admin\ProjectController@index')->name('project.index');
+    Route::get('project/create', 'Admin\ProjectController@create')->name('project.create');
+    Route::post('project', 'Admin\ProjectController@store')->name('project.store');
+    Route::get('project/{id}/edit', 'Admin\ProjectController@edit')->name('project.edit');
+    Route::put('project/{id}', 'Admin\ProjectController@update')->name('project.update');
+    Route::delete('project/{id}', 'Admin\ProjectController@destroy')->name('project.destroy');
+    Route::delete('project-detail/{id}', 'Admin\ProjectController@destroyProjectDetail')->name('projectDetail.destroy');
+    Route::get('featured-project', 'Admin\FeaturedProjectController@index')->name('featuredProject.index');
+    Route::post('featured-project', 'Admin\FeaturedProjectController@store')->name('featuredProject.store');
+    Route::put('featured-project/{id}', 'Admin\FeaturedProjectController@update')->name('featuredProject.update');
+    Route::delete('featured-project/{id}', 'Admin\FeaturedProjectController@destroy')->name('featuredProject.destroy');
+    Route::get('client', 'Admin\ClientController@index')->name('client.index');
+    Route::put('client/{id}', 'Admin\ClientController@update')->name('client.update');
+    Route::get('team', 'Admin\TeamController@index')->name('team.index');
+    Route::post('team', 'Admin\TeamController@storeTeamMember')->name('team.store');
+    Route::put('team/{id}', 'Admin\TeamController@updateTeamMember')->name('team.update');
+    Route::delete('team/{id}', 'Admin\TeamController@destroyTeamMember')->name('team.destroy');
+    Route::post('job', 'Admin\TeamController@storeJob')->name('job.store');
+    Route::put('job/{id}', 'Admin\TeamController@updateJob')->name('job.update');
+    Route::put('job/{id}/change-offerable', 'Admin\TeamController@changeOfferable')->name('job.changeOfferable');
+    Route::delete('job/{id}', 'Admin\TeamController@destroyJob')->name('job.destroy');
+    Route::get('question', 'Admin\QuestionController@index')->name('question.index');
+    Route::post('question-mcq', 'Admin\QuestionController@storeMCQ')->name('question.storeMCQ');
+    Route::post('question-slider', 'Admin\QuestionController@storeSlider')->name('question.storeSlider');
+    Route::post('question-open-ended', 'Admin\QuestionController@storeOpenEnded')->name('question.storeOpenEnded');
+    Route::delete('question/{id}', 'Admin\QuestionController@destroy')->name('question.destroy');
+    Route::get('applicant', 'Admin\ApplicantController@index')->name('applicant.index');
+    Route::put('applicant/{id}', 'Admin\ApplicantController@update')->name('applicant.update');
 });
+
+// 
+// Route::get('/email', function () {
+//     return view('emails/email');
+// });
