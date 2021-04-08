@@ -57,6 +57,7 @@ use Illuminate\Support\Facades\Route;
 |   Method: POST /password/reset/{token}
 |   Action: App\Http\Controllers\Auth\ResetPasswordController@reset
 |   Req-Body: token, email, password, password_confirmation
+|--------------------------------------------------------------------------
 */
 Auth::routes([
     'login'    => true, 
@@ -78,18 +79,44 @@ Route::redirect('/admin/clients', '/admin/client');
 Route::redirect('/admin/services', '/admin/service');
 
 
-// Client Pages Routings (FIXED)
+/*
+|--------------------------------------------------------------------------
+| Client Routes
+|
+| Controllers can be found inside -> App\Http\Controllers\Client\
+| Controllers Used:
+|   - PagesController
+|   - ClientController
+|   - ApplicantController
+|--------------------------------------------------------------------------
+*/ 
 Route::get('/', 'Client\PagesController@index')->name('index');
 Route::get('/portfolio', 'Client\PagesController@portfolio_index')->name('portfolio.index');
 Route::get('/portfolio/{id}', 'Client\PagesController@portfolio_show')->name('portfolio.show');
+Route::get('/about-us', 'Client\PagesController@aboutUs_index')->name('team.index');
 Route::get('/contact-us', 'Client\ClientController@create')->name('client.create');
 Route::post('/contact-us', 'Client\ClientController@store')->name('client.store');
 Route::get('/join-us', 'Client\ApplicantController@create')->name('applicant.create');
 Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.store');
-Route::get('/about-us', 'Client\TeamController@index')->name('team.index');
 
 
-// Admin Pages Routings (FIXED)
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|
+| Controllers can be found inside -> App\Http\Controllers\Admin\
+| Controllers Used:
+|   - UserController
+|   - DashboardController
+|   - ServiceController
+|   - ProjectController
+|   - FeaturedProjectController
+|   - ClientController
+|   - TeamController
+|   - QuestionController
+|   - ApplicantController
+|--------------------------------------------------------------------------
+*/ 
 Route::prefix('/admin')->name('admin.')->group(function () {
     Route::put('password/update', 'Admin\UserController@passwordUpdate')->name('user.passwordUpdate');
     Route::get('/', 'Admin\DashboardController@index')->name('index');
