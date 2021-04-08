@@ -104,6 +104,10 @@ Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.sto
 |--------------------------------------------------------------------------
 | Admin Routes
 |
+| Description:
+| All routes in the group below has /admin prefix, admin.* name and uses
+| 'auth' middleware (user must be logged in to access it).
+|
 | Controllers can be found inside -> App\Http\Controllers\Admin\
 | Controllers Used:
 |   - UserController
