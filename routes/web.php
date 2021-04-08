@@ -117,7 +117,7 @@ Route::post('/join-us', 'Client\ApplicantController@store')->name('applicant.sto
 |   - ApplicantController
 |--------------------------------------------------------------------------
 */ 
-Route::prefix('/admin')->name('admin.')->group(function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
     Route::put('password/update', 'Admin\UserController@passwordUpdate')->name('user.passwordUpdate');
     Route::get('/', 'Admin\DashboardController@index')->name('index');
     Route::get('service', 'Admin\ServiceController@index')->name('service.index');

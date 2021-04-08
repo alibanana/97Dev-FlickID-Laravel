@@ -10,11 +10,6 @@ use App\FeaturedProject;
 
 class FeaturedProjectController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    
     public function index()
     {
         $featured_projects = FeaturedProject::orderBy('position')->get();
