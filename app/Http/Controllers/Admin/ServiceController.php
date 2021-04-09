@@ -10,8 +10,19 @@ use Intervention\Image\ImageManagerStatic as ImageManager;
 
 use App\ProjectType;
 
+/*
+|--------------------------------------------------------------------------
+| Admin ServiceController Class.
+|
+| Description:
+| This controller is responsible to show the admin services page, create &
+| add new services to the database, update existing service as well as
+| deleting them.
+|--------------------------------------------------------------------------
+*/ 
 class ServiceController extends Controller
 {
+    // Show the Admin Services page.
     public function index()
     {
         $project_types = ProjectType::all();
@@ -19,6 +30,7 @@ class ServiceController extends Controller
         return view('admin/services', compact('project_types'));
     }
 
+    // Store new service (ProjectType) and adds them to the database.
     public function store(Request $request)
     {
         $input = $request->all();
@@ -42,6 +54,7 @@ class ServiceController extends Controller
         return redirect()->route('admin.service.index')->with('success', 'A new Service has been added to the database!');
     }
 
+    // Helper function to store images for the service.
     private function storeImage($image, $foldername, $image_type){
         $ext = strtolower($image->getClientOriginalExtension());
         $destinationPath = 'storage/images/'.$foldername;
@@ -68,6 +81,7 @@ class ServiceController extends Controller
         return $destinationPath.$newName;
     }
 
+    // Updates a chosen service (based on id). 
     public function update(Request $request, $id)
     {
         $input = $request->all();
@@ -92,6 +106,7 @@ class ServiceController extends Controller
         return redirect()->route('admin.service.index')->with('success', 'Service has been updated!');
     }
 
+    // Delete the service by id.
     public function destroy($id)
     {
         $project_type = ProjectType::findorfail($id);
