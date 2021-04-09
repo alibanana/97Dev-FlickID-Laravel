@@ -158,10 +158,10 @@
         <!-- start client total project -->
         <div class="col-md-4 p-3">
             <div class="card">
-                <h3>Projects</h3>
+                <h3>Portfolios</h3>
                 <hr>
                 <div class="card-body" style="background-color:#145CA8">
-                    <h5 class="card-title">Total Projects</h5>
+                    <h5 class="card-title">Total Portfolio</h5>
                     <p class="card-text">{{ $project_count }}</p>
                     <div onclick="window.open('{{ route('admin.project.index') }}')" style="cursor: pointer">
                         <i class="fas fa-arrow-circle-right"></i>
