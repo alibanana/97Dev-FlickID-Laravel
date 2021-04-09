@@ -1,0 +1,1 @@
+Flick Software Web Application was built with LAMP Stack (Laravel, Apache, MySQL, PHP). The laravel version that was used for this project is 7. The PHP version that was used for this project is 7.3.27.

@@ -8,13 +8,21 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+/*
+|--------------------------------------------------------------------------
+| Admin UserController Class.
+|
+| Description:
+| This controller is responsible in handling users (Admin) password update
+| when he/she is logged in.
+| 
+| Notes:
+| Any additional function relating to the users should be put here.
+|--------------------------------------------------------------------------
+*/ 
 class UserController extends Controller
-{
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    
+{   
+    // Updates the user's password.
     public function passwordUpdate(Request $request)
     {
         $input = $request->all();

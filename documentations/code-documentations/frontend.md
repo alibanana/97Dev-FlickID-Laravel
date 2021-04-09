@@ -1,0 +1,1 @@
+The frontend of the web app could be found in the resources>views folder. Down below are the brief descriptions of the frontend code

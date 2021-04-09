@@ -4,7 +4,7 @@
 
 * [Local Deployment](how-to/local-deployment.md)
 
-* [Back Office](how-to/back-office.md)
+* [Back Office](https://docs.google.com/document/d/1xLrBo4MEMFZFtBfsnYaDwlXYzQWW2_t05SarcaMP1eA/edit?usp=sharing)
 
 ## Code Documentations
 

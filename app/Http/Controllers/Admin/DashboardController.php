@@ -10,8 +10,17 @@ use App\Client;
 use App\Applicant;
 use App\Project;
 
+/*
+|--------------------------------------------------------------------------
+| Admin DashboardController Class.
+|
+| Description:
+| This controller is responsible in handling the admin's dashboard pages.
+|--------------------------------------------------------------------------
+*/ 
 class DashboardController extends Controller
 {   
+    // Shows the Admin Dashboard page.
     public function index()
     {
         $clients = Client::all();
