@@ -15,14 +15,14 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'Alifio Rasyid',
-                'email' => 'official.alifio@gmail.com',
-                'password' => bcrypt('password')
+                'name' => 'Developer 97',
+                'email' => 'ninetyseven.dev@hotmail.com',
+                'password' => bcrypt('Bajingan23')
             ],
             [
-                'name' => 'Fernandha Dzaky',
-                'email' => 'fernandhadzaky@hotmail.com',
-                'password' => bcrypt('password')
+                'name' => 'Admin FlickID',
+                'email' => 'cashitdeveloper@gmail.com',
+                'password' => bcrypt('Satusampai8')
             ]
         ];
         
