@@ -33,4 +33,4 @@ Open your terminal (CMD, gitbash, etc) and type:
  - php artisan serve
 
 ## Step 9
-Open this (link)[http:://127.0.0.1:8000/] or 127.0.0.1:8000/ on your browser.
+Open this [link](http:://127.0.0.1:8000/) or 127.0.0.1:8000/ on your browser.
