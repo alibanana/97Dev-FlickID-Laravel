@@ -14,7 +14,7 @@ Open terminal on the project folder
 Create a new database in phpmyadmin
 
 ## Step 5
-Create a new database in phpmyadmin
+Rename .env.example to .env
 
 ## Step 6
 Type:
