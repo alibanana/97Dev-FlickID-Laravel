@@ -1,0 +1,1 @@
+The backend of the web app could be found in the app>http>controllers folder. Down below are the brief descriptions of the backend code.
