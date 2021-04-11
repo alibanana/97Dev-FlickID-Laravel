@@ -12,9 +12,19 @@ use App\ProjectType;
 use App\Project;
 use App\ProjectDetail;
 
+/*
+|--------------------------------------------------------------------------
+| Admin ProjectController Class.
+|
+| Description:
+| This controller is responsible to show the admin project (or portfolio) page,
+| create & add new projects to the database, update existing projects as well as
+| deleting them.
+|--------------------------------------------------------------------------
+*/
 class ProjectController extends Controller
 {
-    // Show Admin Project Page
+    // Show Admin Project Page (Portfolio)
     public function index(Request $request)
     {
         $project_types = ProjectType::all();
@@ -64,7 +74,7 @@ class ProjectController extends Controller
         return view('admin/project', compact('project_types', 'projects'));
     }
 
-    // Show Create New Project Form
+    // Show Create New Project Page.
     public function create()
     {
         $project_types = ProjectType::all();
@@ -72,7 +82,7 @@ class ProjectController extends Controller
         return view('admin/addproject', compact('project_types'));
     }
 
-    // Store the new Project
+    // Store new Project on the database.
     public function store(Request $request)
     {
         $input = $request->all();
@@ -146,6 +156,7 @@ class ProjectController extends Controller
         return redirect()->route('admin.project.index')->with('success', 'A new project has been added to the database!');
     }
 
+    // Helper function to store images.
     private function storeImage($image, $foldername, $image_type){
         $ext = strtolower($image->getClientOriginalExtension());
         $destinationPath = 'storage/images/'.$foldername;
@@ -172,6 +183,7 @@ class ProjectController extends Controller
         return $destinationPath.$newName;
     }
 
+    // Show Update Project Page.
     public function edit($id)
     {
         $project_types = ProjectType::all();
@@ -181,6 +193,7 @@ class ProjectController extends Controller
         return view('admin/updateproject', compact('project_types', 'project'));
     }
 
+    // Update existing projects in the database.
     public function update(Request $request, $id)
     {
         $input = $request->all();
@@ -331,6 +344,7 @@ class ProjectController extends Controller
         return redirect()->route('admin.project.index')->with('success', 'Project has been updated!');
     }
     
+    // Deletes project from the database.
     public function destroy($id)
     {
         $project = Project::findorfail($id);
@@ -350,6 +364,7 @@ class ProjectController extends Controller
         return redirect()->route('admin.project.index')->with('success', 'A project has been deleted from the database!');
     }
 
+    // Deletes a projectDetail (of a project) from the database.
     public function destroyProjectDetail($id)
     {
         $project_detail = ProjectDetail::findorfail($id);
