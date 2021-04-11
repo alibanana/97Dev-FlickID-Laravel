@@ -8,8 +8,18 @@ use Illuminate\Support\Facades\Validator;
 
 use App\Client;
 
+/*
+|--------------------------------------------------------------------------
+| Admin ClientController Class.
+|
+| Description:
+| This controller is responsible to show the admin clietns page and updates
+| their status (Pending, Rejected, Accepted, Finished).
+|--------------------------------------------------------------------------
+*/ 
 class ClientController extends Controller
 {
+    // Show Admin Clients Page.
     public function index(Request $request)
     {
         $clients = new Client;
@@ -57,6 +67,7 @@ class ClientController extends Controller
         return view('admin/clients', compact('clients'));
     }
 
+    // Update client's status on the database.
     public function update(Request $request, $id)
     {
         $input = $request->all();
