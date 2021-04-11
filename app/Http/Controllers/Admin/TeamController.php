@@ -11,8 +11,19 @@ use Intervention\Image\ImageManagerStatic as ImageManager;
 use App\TeamMember;
 use App\Job;
 
+/*
+|--------------------------------------------------------------------------
+| Admin TeamController Class.
+|
+| Description:
+| This controller is responsible to; show the admin team page, store update &
+| deletes team member in the database, store update & delete a job (position)
+| in the database as well as changing their offerable status.
+|--------------------------------------------------------------------------
+*/ 
 class TeamController extends Controller
 {
+    // Show Admin Team Page.
     public function index()
     {
         $team_members = TeamMember::all();
@@ -21,6 +32,7 @@ class TeamController extends Controller
         return view('admin/teamtable', compact('team_members', 'jobs'));
     }
 
+    // Store new Team Member in the database.
     public function storeTeamMember(Request $request)
     {
         $input = $request->all();
@@ -44,6 +56,7 @@ class TeamController extends Controller
         return redirect()->route('admin.team.index')->with('success', 'A new Team Member has been added to the database!');
     }
 
+    // Helper function to store images.
     private function storeImage($image, $foldername, $image_type){
         $ext = strtolower($image->getClientOriginalExtension());
         $destinationPath = 'storage/images/'.$foldername;
@@ -70,6 +83,7 @@ class TeamController extends Controller
         return $destinationPath.$newName;
     }
 
+    // Update existing team member in the database.
     public function updateTeamMember(Request $request, $id)
     {
         $input = $request->all();
@@ -94,6 +108,7 @@ class TeamController extends Controller
         return redirect()->route('admin.team.index')->with('success', 'Team Member has been updated!');
     }
 
+    // Deletes a team member from the database.
     public function destroyTeamMember($id)
     {
         $team_member = TeamMember::findorfail($id);
@@ -104,6 +119,7 @@ class TeamController extends Controller
         return redirect()->route('admin.team.index')->with('success', 'Team Member has been removed from the database!');
     }
 
+    // Store a new job (Position) in the database.
     public function storeJob(Request $request)
     {
         $input = $request->all();
@@ -119,6 +135,7 @@ class TeamController extends Controller
         return redirect()->route('admin.team.index')->with('success', 'A new Position has been stored in the database!');
     }
 
+    // Updates an existing job (change title).
     public function updateJob(Request $request, $id)
     {
         $input = $request->all();
@@ -134,6 +151,7 @@ class TeamController extends Controller
         return redirect()->route('admin.team.index')->with('success', 'Job has been updated!');
     }
 
+    // Change the offerable status of an existing job (Position).
     public function changeOfferable($job_id)
     {
         $job = Job::findorfail($job_id);
@@ -144,6 +162,7 @@ class TeamController extends Controller
         return redirect()->route('admin.team.index')->with('success', 'Job "Offerable Status" has been changed!');
     }
 
+    // Deletes a job from the database.
     public function destroyJob($job_id)
     {
         $job = Job::findorfail($job_id);
