@@ -10,8 +10,19 @@ use App\Question;
 use App\QuestionType;
 use App\QuestionAnswer;
 
+/*
+|--------------------------------------------------------------------------
+| Admin QuestionController Class.
+|
+| Description:
+| This controller is responsible to show the admin questions page, storing new
+| [MCQ, Slider-Type & Open-Ended] questions in the database as well as deleting
+| them.
+|--------------------------------------------------------------------------
+*/ 
 class QuestionController extends Controller
 {   
+    // Show Admin Question Page.
     public function index()
     {
         $questions = Question::all();
@@ -19,6 +30,7 @@ class QuestionController extends Controller
         return view('admin/question', compact('questions'));
     }
 
+    // Stores new MCQ Question in the database.
     public function storeMCQ(Request $request)
     {
         $input = $request->all();
@@ -50,6 +62,7 @@ class QuestionController extends Controller
         return redirect()->route('admin.question.index')->with('success', 'An MCQ Question has been added to the database!');
     }
 
+    // Stores new Slider-Type Question in the database.
     public function storeSlider(Request $request)
     {
         $input = $request->all();
@@ -83,6 +96,7 @@ class QuestionController extends Controller
         return redirect()->route('admin.question.index')->with('success', 'A Slider Question has been added to the database!');
     }
 
+    // Store Open-Ended Question in the database.
     public function storeOpenEnded(Request $request)
     {
         $input = $request->all();
@@ -103,6 +117,7 @@ class QuestionController extends Controller
         return redirect()->route('admin.question.index')->with('success', 'A Slider Question has been added to the database!');
     }
 
+    // Destroy a question and remove them from the database.
     public function destroy($id)
     {
         $question = Question::findorfail($id);
