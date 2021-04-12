@@ -8,8 +8,18 @@ use Illuminate\Support\Facades\Validator;
 
 use App\Applicant;
 
+/*
+|--------------------------------------------------------------------------
+| Admin ApplicantController Class.
+|
+| Description:
+| This controller is responsible to show the admin job applicants page as
+| well as updating their status.
+|--------------------------------------------------------------------------
+*/ 
 class ApplicantController extends Controller
 {
+    // Show the Admin Job Applicants Page
     public function index(Request $request)
     {
         $applicants = new Applicant;
@@ -57,6 +67,7 @@ class ApplicantController extends Controller
         return view('admin/applicant', compact('applicants'));
     }
 
+    // Update the status of a Job Applicant (Pending, Rejected, Accepted)
     public function update(Request $request, $id)
     {
         $input = $request->all();
