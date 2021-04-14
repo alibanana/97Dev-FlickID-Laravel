@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Developer 97',
                 'email' => 'ninetyseven.dev@hotmail.com',
-                'password' => bcrypt('Bajingan23')
+                'password' => bcrypt('Satusampai97')
             ],
             [
                 'name' => 'Admin FlickID',

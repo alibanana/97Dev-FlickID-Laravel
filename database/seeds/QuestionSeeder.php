@@ -19,12 +19,8 @@ class QuestionSeeder extends Seeder
                 'question_type_id' => '1'
             ],
             [
-                'question' => 'How long have you been working in the related field?',
+                'question' => 'What is your current salary rate?',
                 'question_type_id' => '2'
-            ],
-            [
-                'question' => 'How long have you been working in the related field?',
-                'question_type_id' => '3'
             ]
         ];
 

@@ -35,23 +35,23 @@ class QuestionAnswerSeeder extends Seeder
                 'question_id' => 1,
             ],
             [
-                'question_answer' => '1',
+                'question_answer' => 'IDR 6 - 10 mil',
                 'question_id' => 2,
             ],
             [
-                'question_answer' => '10',
+                'question_answer' => 'IDR 11 - 18 mil',
                 'question_id' => 2,
             ],
             [
-                'question_answer' => '1',
+                'question_answer' => 'IDR 19 - 25 mil',
                 'question_id' => 2,
             ],
             [
-                'question_answer' => '1 year',
+                'question_answer' => 'IDR 36 - 45 mil',
                 'question_id' => 2,
             ],
             [
-                'question_answer' => '10+ year',
+                'question_answer' => 'IDR 45+ mil',
                 'question_id' => 2,
             ]
         ];

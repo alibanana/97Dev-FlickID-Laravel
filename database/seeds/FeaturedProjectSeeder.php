@@ -17,14 +17,6 @@ class FeaturedProjectSeeder extends Seeder
             [
                 'position'=>1,
                 'project_id'=>1
-            ],
-            [
-                'position'=>2,
-                'project_id'=>2
-            ],
-            [
-                'position'=>3,
-                'project_id'=>3
             ]
         ];
 

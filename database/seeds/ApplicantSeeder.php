@@ -31,7 +31,7 @@ class ApplicantSeeder extends Seeder
                     'email' => strtolower($firstname).'.'.strtolower($lastname).'@example.com',
                     'phone' => $faker->e164PhoneNumber,
                     'address' => $faker->address,
-                    'cv_file' => '/assets/seeder/applicant-cv.pdf',
+                    'cv_file' => 'assets/seeder/applicant-cv.pdf',
                     'status' => $status,
                     'job_id' => $offerable_jobs[rand(0, count($offerable_jobs)-1)]['id'],
                 ]);

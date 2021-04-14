@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
             ProjectSeeder::class,
             ProjectDetailSeeder::class,
             FeaturedProjectSeeder::class,
-            ClientSeeder::class,
+            // ClientSeeder::class,
             JobSeeder::class,
             TeamMemberSeeder::class,
             QuestionTypeSeeder::class,
             QuestionSeeder::class,
             QuestionAnswerSeeder::class,
-            ApplicantSeeder::class,
+            // ApplicantSeeder::class,
             UserSeeder::class
         ]);
     }

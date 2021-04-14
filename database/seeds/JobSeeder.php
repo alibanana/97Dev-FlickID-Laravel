@@ -18,12 +18,6 @@ class JobSeeder extends Seeder
                 'title' => 'CEO'
             ],
             [
-                'title' => 'CTO'
-            ],
-            [
-                'title' => 'CMO'
-            ],
-            [
                 'title' => 'Backend Engineer',
                 'offerable' => 1
             ],
