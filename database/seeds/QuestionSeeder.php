@@ -20,7 +20,7 @@ class QuestionSeeder extends Seeder
             ],
             [
                 'question' => 'What is your current salary rate?',
-                'question_type_id' => '2'
+                'question_type_id' => '1'
             ]
         ];
 
